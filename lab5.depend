@@ -1,0 +1,542 @@
+# depslib dependency file v1.0
+1527634189 source:c:\tareas\lab5\src\logica\cine.cpp
+	"../../include/logica/Cine.h"
+	"../Utils.h"
+
+1527646087 h"
+
+1527634172 c:\tareas\lab5\include\logica\cine.h
+	<string>
+	<map>
+	"Sala.h"
+
+1527615000 
+
+1527620018 source:c:\tareas\lab5\src\manejadores\manejadorcines.cpp
+	"ManejadorCines.h"
+
+1527620018 Cines.h"
+
+1527620018 c:\tareas\lab5\include\manejadores\manejadorcines.h
+
+1527609985 c:\tareas\lab5\include\utils.h
+	<string>
+
+1527615023 source:c:\tareas\lab5\src\datatypes\dtbanco.cpp
+	"../../include/datatypes/DtBanco.h"
+
+1527615023 lude/datatypes/DtBanco.h"
+
+1527610919 c:\tareas\lab5\include\datatypes\dtbanco.h
+
+1527615030 source:c:\tareas\lab5\src\datatypes\dtcine.cpp
+	"../../include/datatypes/DtCine.h"
+
+1527615030 lude/datatypes/DtCine.h"
+
+1527611027 c:\tareas\lab5\include\datatypes\dtcine.h
+
+1527615033 source:c:\tareas\lab5\src\datatypes\dtcomentario.cpp
+	"../../include/datatypes/DtComentario.h"
+
+1527615033 lude/datatypes/DtComentario.h"
+
+1527611038 c:\tareas\lab5\include\dtcomentario.h
+
+1527615038 source:c:\tareas\lab5\src\datatypes\dtcredito.cpp
+	"../../include/datatypes/DtCredito.h"
+
+1527615038 lude/datatypes/DtCredito.h"
+
+1527611181 c:\tareas\lab5\include\datatypes\dtcredito.h
+
+1527615036 source:c:\tareas\lab5\src\datatypes\dtdebito.cpp
+	"../../include/datatypes/DtDebito.h"
+
+1527615036 lude/datatypes/DtDebito.h"
+
+1527611169 c:\tareas\lab5\include\datatypes\dtdebito.h
+
+1527615041 source:c:\tareas\lab5\src\datatypes\dtfecha.cpp
+	"../../include/datatypes/DtFecha.h"
+
+1527615041 lude/datatypes/DtFecha.h"
+
+1527610858 c:\tareas\lab5\include\datatypes\dtfecha.h
+
+1527615044 source:c:\tareas\lab5\src\datatypes\dtfinanciera.cpp
+	"../../include/datatypes/DtFinanciera.h"
+
+1527615044 lude/datatypes/DtFinanciera.h"
+
+1527610899 c:\tareas\lab5\include\datatypes\dtfinanciera.h
+
+1527615050 source:c:\tareas\lab5\src\datatypes\dtfuncion.cpp
+	"../../include/datatypes/DtFuncion.h"
+
+1527615050 lude/datatypes/DtFuncion.h"
+
+1527611065 c:\tareas\lab5\include\datatypes\dtfuncion.h
+
+1527615047 source:c:\tareas\lab5\src\datatypes\dtpago.cpp
+	"../../include/datatypes/DtPago.h"
+
+1527615047 lude/datatypes/DtPago.h"
+
+1527611141 c:\tareas\lab5\include\datatypes\dtpago.h
+
+1527615053 source:c:\tareas\lab5\src\datatypes\dtpelicula.cpp
+	"../../include/datatypes/DtPelicula.h"
+
+1527615053 lude/datatypes/DtPelicula.h"
+
+1527610969 c:\tareas\lab5\include\datatypes\dtpelicula.h
+
+1527615056 source:c:\tareas\lab5\src\datatypes\dtreserva.cpp
+	"../../include/datatypes/DtReserva.h"
+
+1527615056 lude/datatypes/DtReserva.h"
+
+1527610983 c:\tareas\lab5\include\dtreserva.h
+
+1527615061 source:c:\tareas\lab5\src\datatypes\dtsala.cpp
+	"../../include/datatypes/DtSala.h"
+
+1527615061 lude/datatypes/DtSala.h"
+
+1527611128 c:\tareas\lab5\include\datatypes\dtsala.h
+
+1527615064 source:c:\tareas\lab5\src\datatypes\dttarjeta.cpp
+	"../../include/datatypes/DtTarjeta.h"
+
+1527615064 lude/datatypes/DtTarjeta.h"
+
+1527611157 c:\tareas\lab5\include\datatypes\dttarjeta.h
+
+1527611096 source:c:\tareas\lab5\src\datatypes\dtusuario.cpp
+	"DtUsuario.h"
+
+1527611096 .h"
+
+1527611047 c:\tareas\lab5\include\dtusuario.h
+
+1527614922 source:c:\tareas\lab5\src\logica\calificacion.cpp
+	"../../include/logica/Calificacion.h"
+
+1527614922 lude/logica/Calificacion.h"
+
+1527624003 c:\tareas\lab5\include\logica\calificacion.h
+
+1527634703 source:c:\tareas\lab5\src\logica\comentario.cpp
+	"../../include/logica/Comentario.h"
+	"Utils.h"
+
+1527646055 c:\tareas\lab5\include\logica\comentario.h
+	<string>
+
+1527632360 source:c:\tareas\lab5\src\logica\credito.cpp
+	"../../include/logica/Credito.h"
+
+1527632360 lude/logica/Credito.h"
+
+1527641963 c:\tareas\lab5\include\logica\credito.h
+	"../datatypes/DtFinanciera.h"
+	"Tarjeta.h"
+
+1527647055 "
+
+1527632370 source:c:\tareas\lab5\src\logica\debito.cpp
+	"../../include/logica/Debito.h"
+
+1527632370 lude/logica/Debito.h"
+
+1527632338 c:\tareas\lab5\include\logica\debito.h
+	"Tarjeta.h"
+	"../datatypes/DtBanco.h"
+
+1527632338 pes/DtBanco.h"
+
+1527639641 source:c:\tareas\lab5\src\logica\funcion.cpp
+	"../../include/logica/Funcion.h"
+
+1527639641 lude/logica/Funcion.h"
+
+1527641963 c:\tareas\lab5\include\logica\funcion.h
+	"DtFecha.h"
+	<string>
+	"../datatypes/DtSala.h"
+	"../datatypes/DtCine.h"
+
+1527641963 pes/DtCine.h"
+
+1527632839 source:c:\tareas\lab5\src\logica\pago.cpp
+	"../../include/logica/Pago.h"
+
+1527632839 lude/logica/Pago.h"
+
+1527632753 c:\tareas\lab5\include\logica\pago.h
+	"Tarjeta.h"
+
+1527623869 source:c:\tareas\lab5\src\logica\pelicula.cpp
+	"../../include/logica/Pelicula.h"
+
+1527623869 lude/logica/Pelicula.h"
+
+1527623854 c:\tareas\lab5\include\logica\pelicula.h
+	"Comentario.h"
+	"Calificacion.h"
+	"Funcion.h"
+
+1527624427 source:c:\tareas\lab5\src\logica\puntaje.cpp
+	"../../include/logica/Puntaje.h"
+
+1527624427 lude/logica/Puntaje.h"
+
+1527624379 c:\tareas\lab5\include\logica\puntaje.h
+	<string>
+
+1527639725 source:c:\tareas\lab5\src\logica\reserva.cpp
+	"../../include/logica/Reserva.h"
+
+1527639725 lude/logica/Reserva.h"
+
+1527639844 c:\tareas\lab5\include\logica\reserva.h
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtPelicula.h"
+	"Pago.h"
+
+1527634137 source:c:\tareas\lab5\src\logica\sala.cpp
+	"../../include/logica/Sala.h"
+
+1527634137 lude/logica/Sala.h"
+
+1527634080 c:\tareas\lab5\include\logica\sala.h
+	<string>
+
+1527632530 source:c:\tareas\lab5\src\logica\tarjeta.cpp
+	"../../include/logica/Tarjeta.h"
+
+1527632530 lude/logica/Tarjeta.h"
+
+1527632299 c:\tareas\lab5\include\logica\tarjeta.h
+	<string>
+
+1527633707 source:c:\tareas\lab5\src\logica\usuario.cpp
+	"../../include/logica/Usuario.h"
+
+1527633707 lude/logica/Usuario.h"
+
+1527633729 c:\tareas\lab5\include\logica\usuario.h
+	<map>
+	<iomanip>
+	"Reserva.h"
+	<string>
+
+1527616239 source:c:\tareas\lab5\src\manejadores\manejadorcomentarios.cpp
+	"../../include/manejadores/ManejadorComentarios.h"
+
+1527616239 lude/manejadores/ManejadorComentarios.h"
+
+1527613115 c:\tareas\lab5\include\manejadores\manejadorcomentarios.h
+
+1527613064 source:c:\tareas\lab5\src\manejadores\manejadorreservas.cpp
+	"ManejadorReservas.h"
+
+1527613064 Reservas.h"
+
+1527613064 c:\tareas\lab5\include\manejadores\manejadorreservas.h
+
+1527612886 source:c:\tareas\lab5\src\manejadores\manejadorsalas.cpp
+	"ManejadorSalas.h"
+
+1527612886 Salas.h"
+
+1527612885 c:\tareas\lab5\include\manejadores\manejadorsalas.h
+
+1527616624 source:c:\tareas\lab5\src\manejadores\manejadorusuarios.cpp
+	"../../include/manejadores/ManejadorUsuarios.h"
+
+1527616624 lude/manejadores/ManejadorUsuarios.h"
+
+1527616547 c:\tareas\lab5\include\manejadores\manejadorusuarios.h
+
+1527615000 source:c:\tareas\lab5\src\utils.cpp
+	"../include/Utils.h"
+	<sstream>
+	<iomanip>
+	<iomanip>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1527642080 source:c:\tareas\lab5\main.cpp
+	"ISistema.h"
+
+1527611081 c:\tareas\lab5\include\datatypes\dtcomentario.h
+
+1527611262 c:\tareas\lab5\include\datatypes\dtreserva.h
+
+1527623373 source:c:\tareas\lab5\src\manejadores\manejadorpeliculas.cpp
+	"../../include/manejadores/ManejadorPeliculas.h"
+
+1527623373 lude/manejadores/ManejadorPeliculas.h"
+
+1527623352 c:\tareas\lab5\include\manejadores\manejadorpeliculas.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Pelicula.h"
+
+1527623352 /Pelicula.h"
+
+1527611096 c:\tareas\lab5\include\datatypes\dtusuario.h
+
+1527647055 source:c:\tareas\lab5\src\logica\sistema.cpp
+	"Sistema.h"
+
+1527647471 c:\tareas\lab5\include\logica\sistema.h
+	"ISistema.h"
+
+1527647151 c:\tareas\lab5\include\isistema.h
+	<vector>
+	"DtSala.h"
+	"DtPelicula.h"
+	"DtPago.h"
+	"DtFuncion.h"
+	"DtFecha.h"
+	"DtCine.h"
+	<string>
+
+1527646733 source:c:\tareas\lab5\src\factory.cpp
+	"Factory.h"
+	"ISistema.h"
+	"logica/Sistema.h"
+
+1527646733 stema.h"
+
+1527646087 c:\tareas\lab5\include\factory.h
+	"ISistema.h"
+
+1527631282 source:/ens/devel01/p4gr33/tareas/lab5/main.cpp
+	"ISistema.h"
+
+1527636352 /ens/devel01/p4gr33/tareas/lab5/include/ISistema.h
+	<vector>
+	"DtSala.h"
+	"DtPelicula.h"
+	"DtPago.h"
+	"DtFuncion.h"
+	"DtFecha.h"
+	"DtCine.h"
+	<string>
+
+1527600330 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtSala.h
+
+1527600170 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtPelicula.h
+
+1527600342 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtPago.h
+
+1527600266 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtFuncion.h
+
+1527600060 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtFecha.h
+
+1527713207 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtCine.h
+	"DtSala.h"
+	<vector>
+	<string>
+
+1527712936 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtCine.cpp
+	"../../include/datatypes/DtCine.h"
+
+1527604234 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtComentario.cpp
+	"../../include/datatypes/DtComentario.h"
+
+1527600282 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtComentario.h
+
+1527604240 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtCredito.cpp
+	"../../include/datatypes/DtCredito.h"
+
+1527600382 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtCredito.h
+
+1527604238 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtDebito.cpp
+	"../../include/datatypes/DtDebito.h"
+
+1527600370 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtDebito.h
+
+1527604242 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtFecha.cpp
+	"../../include/datatypes/DtFecha.h"
+
+1527604252 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtFuncion.cpp
+	"../../include/datatypes/DtFuncion.h"
+
+1527604248 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtPago.cpp
+	"../../include/datatypes/DtPago.h"
+
+1527604254 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtPelicula.cpp
+	"../../include/datatypes/DtPelicula.h"
+
+1527604258 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtReserva.cpp
+	"../../include/datatypes/DtReserva.h"
+
+1527600464 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtReserva.h
+
+1527604262 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtSala.cpp
+	"../../include/datatypes/DtSala.h"
+
+1527604266 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtTarjeta.cpp
+	"../../include/datatypes/DtTarjeta.h"
+
+1527600358 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtTarjeta.h
+
+1527600298 source:/ens/devel01/p4gr33/tareas/lab5/src/datatypes/DtUsuario.cpp
+	"DtUsuario.h"
+
+1527600298 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtUsuario.h
+
+1527635934 source:/ens/devel01/p4gr33/tareas/lab5/src/Factory.cpp
+	"Factory.h"
+	"ISistema.h"
+	"logica/Sistema.h"
+
+1527635288 /ens/devel01/p4gr33/tareas/lab5/include/Factory.h
+	"ISistema.h"
+
+1527636672 /ens/devel01/p4gr33/tareas/lab5/include/logica/Sistema.h
+	"ISistema.h"
+
+1527623390 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Cine.cpp
+	"../../include/logica/Cine.h"
+	"../Utils.h"
+
+1527706088 /ens/devel01/p4gr33/tareas/lab5/include/logica/Cine.h
+	<string>
+	<map>
+	"Sala.h"
+
+1527623282 /ens/devel01/p4gr33/tareas/lab5/include/logica/Sala.h
+	<string>
+
+1527599186 /ens/devel01/p4gr33/tareas/lab5/include/Utils.h
+	<string>
+
+1527623904 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Comentario.cpp
+	"../../include/logica/Comentario.h"
+	"Utils.h"
+
+1527713031 /ens/devel01/p4gr33/tareas/lab5/include/logica/Comentario.h
+	"DtComentario.h"
+	<string>
+
+1527621562 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Credito.cpp
+	"../../include/logica/Credito.h"
+
+1527631164 /ens/devel01/p4gr33/tareas/lab5/include/logica/Credito.h
+	"../datatypes/DtFinanciera.h"
+	"Tarjeta.h"
+
+1527600100 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtFinanciera.h
+
+1527706031 /ens/devel01/p4gr33/tareas/lab5/include/logica/Tarjeta.h
+	<string>
+
+1527621572 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Debito.cpp
+	"../../include/logica/Debito.h"
+
+1527621540 /ens/devel01/p4gr33/tareas/lab5/include/logica/Debito.h
+	"Tarjeta.h"
+	"../datatypes/DtBanco.h"
+
+1527600120 /ens/devel01/p4gr33/tareas/lab5/include/datatypes/DtBanco.h
+
+1527628842 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Funcion.cpp
+	"../../include/logica/Funcion.h"
+
+1527716243 /ens/devel01/p4gr33/tareas/lab5/include/logica/Funcion.h
+	"../datatypes/DtFecha.h"
+	<string>
+	"Sala.h"
+	"Cine.h"
+	"Pelicula.h"
+
+1527622040 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Pago.cpp
+	"../../include/logica/Pago.h"
+
+1527621954 /ens/devel01/p4gr33/tareas/lab5/include/logica/Pago.h
+	"Tarjeta.h"
+
+1527613070 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Pelicula.cpp
+	"../../include/logica/Pelicula.h"
+
+1527613056 /ens/devel01/p4gr33/tareas/lab5/include/logica/Pelicula.h
+	"Comentario.h"
+	"Calificacion.h"
+	"Funcion.h"
+
+1527613204 /ens/devel01/p4gr33/tareas/lab5/include/logica/Calificacion.h
+
+1527613628 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Puntaje.cpp
+	"../../include/logica/Puntaje.h"
+
+1527613580 /ens/devel01/p4gr33/tareas/lab5/include/logica/Puntaje.h
+	<string>
+
+1527628926 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Reserva.cpp
+	"../../include/logica/Reserva.h"
+
+1527629046 /ens/devel01/p4gr33/tareas/lab5/include/logica/Reserva.h
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtPelicula.h"
+	"Pago.h"
+
+1527623338 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Sala.cpp
+	"../../include/logica/Sala.h"
+
+1527707593 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Sistema.cpp
+	"../../include/logica/Sistema.h"
+
+1527621732 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Tarjeta.cpp
+	"../../include/logica/Tarjeta.h"
+
+1527622908 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Usuario.cpp
+	"../../include/logica/Usuario.h"
+
+1527622930 /ens/devel01/p4gr33/tareas/lab5/include/logica/Usuario.h
+	<map>
+	<iomanip>
+	"Reserva.h"
+	<string>
+
+1527609220 source:/ens/devel01/p4gr33/tareas/lab5/src/manejadores/ManejadorCines.cpp
+	"ManejadorCines.h"
+
+1527609220 /ens/devel01/p4gr33/tareas/lab5/include/manejadores/ManejadorCines.h
+
+1527612574 source:/ens/devel01/p4gr33/tareas/lab5/src/manejadores/ManejadorPeliculas.cpp
+	"../../include/manejadores/ManejadorPeliculas.h"
+
+1527612554 /ens/devel01/p4gr33/tareas/lab5/include/manejadores/ManejadorPeliculas.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Pelicula.h"
+
+1527605826 source:/ens/devel01/p4gr33/tareas/lab5/src/manejadores/ManejadorUsuarios.cpp
+	"../../include/manejadores/ManejadorUsuarios.h"
+
+1527605748 /ens/devel01/p4gr33/tareas/lab5/include/manejadores/ManejadorUsuarios.h
+
+1527706061 source:/ens/devel01/p4gr33/tareas/lab5/src/Utils.cpp
+	"../include/Utils.h"
+	<sstream>
+	<iomanip>
+	<iomanip>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

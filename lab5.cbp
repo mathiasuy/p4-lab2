@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="lab5" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/lab5" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/manejadores" />
+					<Add directory="include/logica" />
+					<Add directory="include" />
+					<Add directory="include/datatypes" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/lab5" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/manejadores" />
+					<Add directory="include/logica" />
+					<Add directory="include" />
+					<Add directory="include/datatypes" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="include/Factory.h" />
+		<Unit filename="include/ISistema.h" />
+		<Unit filename="include/Utils.h" />
+		<Unit filename="include/datatypes/DtCine.h" />
+		<Unit filename="include/datatypes/DtComentario.h" />
+		<Unit filename="include/datatypes/DtCredito.h" />
+		<Unit filename="include/datatypes/DtDebito.h" />
+		<Unit filename="include/datatypes/DtFecha.h" />
+		<Unit filename="include/datatypes/DtFuncion.h" />
+		<Unit filename="include/datatypes/DtPelicula.h" />
+		<Unit filename="include/datatypes/DtReserva.h" />
+		<Unit filename="include/datatypes/DtSala.h" />
+		<Unit filename="include/datatypes/DtTarjeta.h" />
+		<Unit filename="include/datatypes/DtUsuario.h" />
+		<Unit filename="include/logica/Cine.h" />
+		<Unit filename="include/logica/Comentario.h" />
+		<Unit filename="include/logica/Credito.h" />
+		<Unit filename="include/logica/Debito.h" />
+		<Unit filename="include/logica/Funcion.h" />
+		<Unit filename="include/logica/Pelicula.h" />
+		<Unit filename="include/logica/Puntaje.h" />
+		<Unit filename="include/logica/Reserva.h" />
+		<Unit filename="include/logica/Sala.h" />
+		<Unit filename="include/logica/Sistema.h" />
+		<Unit filename="include/logica/Tarjeta.h" />
+		<Unit filename="include/logica/Usuario.h" />
+		<Unit filename="include/manejadores/ManejadorCines.h" />
+		<Unit filename="include/manejadores/ManejadorFunciones.h" />
+		<Unit filename="include/manejadores/ManejadorPeliculas.h" />
+		<Unit filename="include/manejadores/ManejadorUsuarios.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Factory.cpp" />
+		<Unit filename="src/Utils.cpp" />
+		<Unit filename="src/datatypes/DtCine.cpp" />
+		<Unit filename="src/datatypes/DtComentario.cpp" />
+		<Unit filename="src/datatypes/DtCredito.cpp" />
+		<Unit filename="src/datatypes/DtDebito.cpp" />
+		<Unit filename="src/datatypes/DtFecha.cpp" />
+		<Unit filename="src/datatypes/DtFuncion.cpp" />
+		<Unit filename="src/datatypes/DtPelicula.cpp" />
+		<Unit filename="src/datatypes/DtReserva.cpp" />
+		<Unit filename="src/datatypes/DtSala.cpp" />
+		<Unit filename="src/datatypes/DtTarjeta.cpp" />
+		<Unit filename="src/datatypes/DtUsuario.cpp" />
+		<Unit filename="src/logica/Cine.cpp" />
+		<Unit filename="src/logica/Comentario.cpp" />
+		<Unit filename="src/logica/Credito.cpp" />
+		<Unit filename="src/logica/Debito.cpp" />
+		<Unit filename="src/logica/Funcion.cpp" />
+		<Unit filename="src/logica/Pago.cpp" />
+		<Unit filename="src/logica/Pelicula.cpp" />
+		<Unit filename="src/logica/Puntaje.cpp" />
+		<Unit filename="src/logica/Reserva.cpp" />
+		<Unit filename="src/logica/Sala.cpp" />
+		<Unit filename="src/logica/Sistema.cpp" />
+		<Unit filename="src/logica/Tarjeta.cpp" />
+		<Unit filename="src/logica/Usuario.cpp" />
+		<Unit filename="src/manejadores/ManejadorCines.cpp" />
+		<Unit filename="src/manejadores/ManejadorFunciones.cpp" />
+		<Unit filename="src/manejadores/ManejadorPeliculas.cpp" />
+		<Unit filename="src/manejadores/ManejadorUsuarios.cpp" />
+		<Unit filename="version.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<AutoVersioning>
+				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
+				<Settings autoincrement="1" date_declarations="1" use_define="0" update_manifest="0" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
+				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
+			</AutoVersioning>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
