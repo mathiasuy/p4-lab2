@@ -1,42 +1,42 @@
 ********Progreso***************
 
-Datatype    Sala    50%
-Clase       Sala    50%
+Datatype    Sala                    50%
+Clase       Sala                    50%
 
-Datatype    Reserva    50%
-Clase       Reserva    50%
+Datatype    Reserva                 50%
+Clase       Reserva                 50%
 
-Datatype    Usuario    50%
-Clase       Usuario    50%
+Datatype    Usuario                 50%
+Clase       Usuario                 50%
 
-Datatype    Tarjeta    50%
-Clase       Tarjeta    50%
+Datatype    Tarjeta                 50%
+Clase       Tarjeta                 50%
 
-Datatype    Cine    50%
-Clase       Cine    50%
+Datatype    Cine                    50%
+Clase       Cine                    50%
 
-Datatype    Funcion    50%
-Clase       Funcion    50%
+Datatype    Funcion                 50%
+Clase       Funcion                 50%
 
-Datatype    Pelicula    50%
-Clase       Pelicula    50%
+Datatype    Pelicula                50%
+Clase       Pelicula                50%
 
-Datatype    Comentario    50%
-Clase       Comentario    50%
+Datatype    Comentario              50%
+Clase       Comentario              50%
 
-Datatype    Puntaje    50%
-Clase       Puntaje    50%
+Datatype    Puntaje                 50%
+Clase       Puntaje                 50%
 
-Datatype    dtFecha    50%
+Datatype    dtFecha                 50%
 
-Clase       Reloj    50%
+Clase       Reloj                   50%
 
-Clase       Factory     0%
-
-Clase       ManejadorFunciones     0%
-Clase       ManejadorCines         0%
-Clase       ManejadorPeliculas     0%
-Clase       ManejadorSalas         0%
-Clase       ManejadorReserva       0%
-Clase       ManejadorUsuarios      0%
-Clase       ManejadorComentarios   0%
+Clase       Factory                 0%
+    
+Clase       ManejadorFunciones      0%
+Clase       ManejadorCines          0%
+Clase       ManejadorPeliculas      0%
+Clase       ManejadorSalas          0%
+Clase       ManejadorReserva        0%
+Clase       ManejadorUsuarios       0%
+Clase       ManejadorComentarios    0%
