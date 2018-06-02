@@ -17,7 +17,7 @@
         /*  OPERACIONES BASICAS */
         bool ManejadorUsuarios::add(Usuario* usuario){
             int t1 = this->usuarios.size();
-            this->usuarios[usuario->getId()] = usuario;
+            this->usuarios[usuario->getID()] = usuario;
             int t2 = this->usuarios.size();
             return t1 == t2;
         }

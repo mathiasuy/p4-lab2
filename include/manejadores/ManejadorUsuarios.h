@@ -1,12 +1,13 @@
 #ifndef MANEJADORUSUARIOS_H
 #define MANEJADORUSUARIOS_H
-
+#include "../logica/Usuario.h"
+#include <map>
 
 class ManejadorUsuarios
 {
     private:
         static ManejadorUsuarios* instancia;
-        map<string, Usuario*> peliculas;
+        map<string, Usuario*> usuarios;
         ManejadorUsuarios();
     public:
 

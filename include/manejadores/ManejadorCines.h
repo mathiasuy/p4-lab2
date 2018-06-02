@@ -11,23 +11,23 @@
 class ManejadorCines
 {
     private:
-        static ManejadorPeliculas* instancia;
-        map<string, Pelicula*> peliculas;
-        ManejadorPeliculas();
+        static ManejadorCines* instancia;
+        map<string, Cine*> cines;
+        ManejadorCines();
     public:
 
         /*  OPERACIONES */
-        static ManejadorPeliculas* getInstancia();
+        static ManejadorCines* getInstancia();
 
         /*  OPERACIONES BASICAS */
-        bool add(Pelicula* cine);
+        bool add(Cine* cine);
         bool remove(string id);
         bool isMember(string id);
         Pelicula* find(string id);
         bool isEmpty();
 
         /*  DESTRUCTOR */
-        virtual ~ManejadorPeliculas();
+        virtual ~ManejadorCines();
 };
 
 #endif // MANEJADORCINES_H
