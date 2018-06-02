@@ -22,8 +22,8 @@ ManejadorCines *peliculas = ManejadorPeliculas::getInstancia();
             return Sistema::instancia;
         }
 
-        bool altaCine(int id, string direccion, vector<DtSala> salas){
-            Cine cineNuevo = new Cine(string, salas);
+        bool altaCine(string direccion, vector<DtSala> capacidadSalas){
+            Cine cineNuevo = new Cine(string, capacidadSalas);
             cines->add(cineNuevo);
             return true;
         };

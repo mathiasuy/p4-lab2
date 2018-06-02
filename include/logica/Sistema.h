@@ -1,6 +1,10 @@
 #ifndef SISTEMA_H
 #define SISTEMA_H
 #include "ISistema.h"
+#include "include/manejadores/ManejadorCines.h"
+#include "include/manejadores/ManejadorUsuarios.h"
+#include "include/manejadores/ManejadorFunciones.h"
+#include "include/manejadores/ManejadorPeliculas.h"
 
 class Sistema : public ISistema
 {
@@ -8,7 +12,7 @@ class Sistema : public ISistema
         static Sistema* instancia;
         Sistema(){};
     public:
-        bool altaCine(int id, string direccion, vector<DtSala> salas);
+        bool altaCine(string direccion, vector<DtSala> capacidadSalas);
 
         /*  PELICULA */
         bool altaFuncion(int asientos, float precioEntrada, DtFecha fecha, Sala* sala, Pelicula* pelicula);
