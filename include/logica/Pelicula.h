@@ -23,6 +23,11 @@ class Pelicula
         void setPoster(string poster);
         void setSinopsis(string sinopsis);
         void setPuntajePromedio();
+        
+         void agregarComentario(string nickname, string comentario);
+        void agregarComentario(string nickname, string comentario, int esRespuestaDeID);
+        void modificarComentario(int id, string comentario);
+        
 
         string getPoster();
         string getSinopsis();
