@@ -2,6 +2,7 @@
 #define CINE_H
 #include <string>
 #include <map>
+#include <vector>
 #include "Sala.h"
 
 using namespace std;
@@ -23,10 +24,10 @@ class Cine
         int getId();
         string toString();
         bool isEqual(Cine *cine);
+        bool tieneSala(int id);
 
         /* CONSTRUS Y DESTRUS */
-        Cine(int id);
-        Cine(int id, string direccion);
+        Cine(string direccion, vector<int> salas);
         virtual ~Cine();
 };
 
