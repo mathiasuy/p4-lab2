@@ -13,6 +13,7 @@ class Funcion
         int id;
         static int idGlobal;
         int asientosReservados;
+        float precioentrada;
         DtFecha fehca;
 
         Sala* sala;
@@ -22,11 +23,12 @@ class Funcion
         Pelicula* getPelicula();
         Sala* getSala();
         DtFecha getFecha();
-
+        float getPrecio();
+        
         void setSala(Sala* sala);
         void setCine(Cine* cine);
         void setFecha(DtFecha fecha);
-
+        void setPrecio(float precioentrada);
         int getId();
         string toString();
         bool isEqual(Funcion *funcion);

@@ -9,10 +9,20 @@ DtFecha* Funcion::getFecha(){
     return this->fehca;
 };
 
+float Funcion::getPrecio(){
+    return this->precioentrada;
+    
+};
+
 
 void Funcion::setFecha(DtFecha fecha){
 
 };
+
+void Funcion::setPrecio(float precioentrada){
+    this->precioentrada = precioentrada;
+};
+
 
 string Funcion::toString(){
     return "Esta es la funcion: " + this->getId();
