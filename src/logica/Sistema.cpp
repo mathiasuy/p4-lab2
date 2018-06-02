@@ -23,7 +23,8 @@ ManejadorCines *cines = ManejadorCines::getInstancia();
         };
 
         /*  PELICULA */
-        bool altaFuncion(DtPelicula pelicula, DtSala sala, DtCine cine, DtFecha fecha){
+        bool altaFuncion(int asientos, float precioEntrada, DtFecha fecha, Sala* sala, Pelicula* pelicula){
+            Funcion fnueva = new Funcion(int asientos, float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *pelicula);
             return true;
         };
 
