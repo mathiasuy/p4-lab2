@@ -1,6 +1,7 @@
 #include "../../include/logica/Reserva.h"
-#include "include/logica/Credito.h"
-#include "include/logica/Debito.h"
+#include "../../include/logica/Credito.h"
+#include "../../include/logica/Debito.h"
+
 
 
 Reserva::~Reserva()
@@ -28,14 +29,14 @@ std::string Reserva::toString(){
     return "Reserva n� "+ this->getID();
 };
 
-Reserva::~Reserva(){}
-
+//Reserva::~Reserva(){}
 
 
 Reserva::Reserva(int cantAsientos, Funcion* funcion, string financiera, float descuento, float montoTotal){
     this->id = ++idGlobal;
     this->setFuncion(funcion);
-    this->tarjeta = new Credito(montoTotal,financiera,descuento);
+    Credito* c = new Credito(montoTotal,financiera,descuento);
+    this->tarjeta =c;
     this->setCantAsientos(cantAsientos);
     this->setFuncion(funcion);
 };
@@ -43,7 +44,8 @@ Reserva::Reserva(int cantAsientos, Funcion* funcion, string financiera, float de
 Reserva::Reserva(int cantAsientos, Funcion* funcion, string  banco, float montoTotal){
     this->id = ++idGlobal;
     this->setFuncion(funcion);
-    this->tarjeta = new Debito(montoTotal,banco);
+    Debito* d = new Debito(montoTotal,banco);
+    this->tarjeta = d;
     this->setCantAsientos(cantAsientos);
     this->setFuncion(funcion);
 };

@@ -3,9 +3,11 @@
 #include <vector>
 #include <string>
 #include "datatypes/DtCine.h"
-#include "datatypes/DtCine.h"
-#include "datatypes/DtCine.h"
-#include "datatypes/DtCine.h"
+#include "datatypes/DtPelicula.h"
+#include "datatypes/DtFuncion.h"
+#include "datatypes/DtUsuario.h"
+#include "datatypes/DtFecha.h"
+
 
 
 using namespace std;
@@ -24,7 +26,7 @@ class ISistema {
 
     /* USUARIO */
     /* 1 */ virtual bool login(string nickName, string password) = 0;
-    /* 1 */ virtual bool crearReserva(string nickName, int id, int cantAsientos, DtFuncion funcion, DtPelicula pelicula, DtPago pago) = 0;
+    /* 1 */ virtual bool crearReserva(string nickName, int id, int cantAsientos, DtFuncion funcion, DtPelicula pelicula) = 0;
 
 };
 

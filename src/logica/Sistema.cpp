@@ -36,12 +36,12 @@
         };
 
         bool Sistema::puntuarPelicula(string nickName, DtPelicula pelicula){
-            
-             
+
+
             return (peliculas.isMember(pelicula.getTitulo()));
-               
+
                 }
-         
+
 
         bool Sistema::eliminarPelicula(string titulo){
             return (peliculas.isMember(titulo));
@@ -53,7 +53,7 @@
              //si esta, lo busco
              Usuario* usuario = usuarios.find(nickName);
              return (usuario->getPassword() == password);
-            
+
         }
             else return false;
         };

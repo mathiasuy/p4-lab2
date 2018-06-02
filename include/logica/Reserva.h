@@ -7,6 +7,8 @@
 
 using namespace std;
 
+class Funcion;
+
 class Reserva
 {
     private:
@@ -15,33 +17,33 @@ class Reserva
         Funcion* funcion;
         Tarjeta* tarjeta;
         int idGlobal;
-        
+
     public:
         int getID();
         int getCantAsientos();
         Funcion* getFuncion();
         Tarjeta* getTarjeta();
-        
+
         void setMontoTotal(float monto);
         void setFuncion(Funcion* funcion);
         void setTarjeta(Tarjeta* tarjeta);
         void setCantAsientos(int cantAsientos);
-        
+
         bool isEqual(Reserva * reserva);
         string toString();
 
         ~Reserva();
         Reserva(int cantAsientos, DtFuncion funcion, DtPelicula pelicula);
-        
+
         /**
          * Crear Reserva para pago con tarjeta de Credito
          */
-        Reserva(int cantAsientos, Funcion* funcion, float montoTotal, float descuento);
-        
+        Reserva(int cantAsientos, Funcion* funcion, string financiera, float montoTotal, float descuento);
+
         /**
          * Crear Reserva para pago con tarjeta de Debito
          */
-        Reserva(int cantAsientos, Funcion* funcion, float montoTotal, string  banco);
+        Reserva(int cantAsientos, Funcion* funcion, string  banco, float montoTotal);
 };
 
 #endif // RESERVA_H

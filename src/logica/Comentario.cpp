@@ -1,6 +1,8 @@
 #include "../../include/logica/Comentario.h"
 #include "Utils.h"
 
+#include "datatypes/DtComentario.h"
+
 Comentario::~Comentario()
 {
     //dtor
@@ -36,12 +38,15 @@ bool Comentario::isEqual(Comentario* comentario){
     return this->getID() == comentario->getID();
 };
 
-Comentario::Comentario(int id, string nickName, string comentario){
-    this->id = id;
+Comentario::Comentario(string nickName, string comentario){
+    this->id = ++idGlobal;
     this->nickName = nickName;
     this->setComentairo(comentario);
 };
 
-Comentario::Comentario(int id, string nickName, string comentario, int esRespuestaDeID):Comentario(id,nickName,comentario){
+Comentario::Comentario(string nickName, string comentario, int esRespuestaDeID){
+    this->id = ++idGlobal;
+    this->nickName = nickName;
+    this->setComentairo(comentario);
     this->esRespuestaDeID = esRespuestaDeID;
 };

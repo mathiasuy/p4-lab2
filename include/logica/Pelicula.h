@@ -6,12 +6,14 @@
 #include <vector>
 #include <map>
 
+class Funcion;
+
 class Pelicula
 {
     private:
         vector<Funcion> funciones;
-        map<string,Puntaje*> puntajes;
-        map<string,Comentario*> comentarios;
+        map<int,Puntaje*> puntajes;
+        map<int,Comentario*> comentarios;
         string titulo;
         string poster;
         string sinopsis;
@@ -23,13 +25,13 @@ class Pelicula
         void setPoster(string poster);
         void setSinopsis(string sinopsis);
         //void setPuntajePromedio();
-        
+
         void agregarComentario(string nickname, string comentario);
         void agregarComentario(string nickname, string comentario, int esRespuestaDeID);
         void modificarComentario(int id, string comentario);
         void agregarPuntaje(string nickName, float puntaje);
         void modificarPuntaje(string nickName, float puntaje);
-        
+
         float verPuntaje(string nickName);
         string getPoster();
         string getSinopsis();

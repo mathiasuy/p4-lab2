@@ -34,7 +34,7 @@ class Sistema : public ISistema
 
         /* USUARIO */
         bool login(string nickName, string password);
-        bool crearReserva(string nickName, int id, int cantAsientos, DtFuncion funcion, DtPelicula pelicula, DtPago pago);
+        bool crearReserva(string nickName, int id, int cantAsientos, DtFuncion funcion, DtPelicula pelicula);
 
 
         ~Sistema(){};
