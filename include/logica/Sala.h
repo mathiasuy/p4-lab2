@@ -2,6 +2,7 @@
 #define SALA_H
 #include <string>
 #include <vector>
+#include <map>
 #include "../datatypes/Funcion.h"
 
 using namespace std;
@@ -11,7 +12,7 @@ class Sala
     private:
         int id;
         int capacidad;
-        vector<Funcion*> funciones;
+        map<Funcion*> funciones;
 
     public:
         int getID();
