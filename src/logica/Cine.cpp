@@ -1,22 +1,22 @@
 #include "../../include/logica/Cine.h"
 #include "../Utils.h"
 
-Cine::Cine(int id)
-{
-    this->id = id;
-    this->setDireccion("N/D");
-    this->setPrecioEntrada(0);
-}
 
-Cine::Cine(int id, string direccion)
+Cine::Cine(string direccion, vector<int> salas)
 {
-    this->id = id;
+    this->id = ++idGlobal;
+    for (std::vector<int>::iterator it = salas.begin() ; it != salas.end(); ++it){
+    	Sala* sala = new Sala(*it);
+        this->salas[sala->getID()] = salas;
+    }
     this->setDireccion(direccion);
 }
 
 Cine::~Cine()
 {
-    // DESTRUIR SALAS
+    map<int,Sala*>::iterator it;
+    for (it = salas.begin(); it != salas.end(); ++it)
+        delete it->second;
 }
 
 int Cine::getId(){
@@ -32,9 +32,13 @@ void Cine::setDireccion(string direccion){
 }
 
 string Cine::toString(){
-    return "Cine: " + Utils::aString(this->getId()) + " " + this->getDireccion() + " " + Utils::aString(this->getPrecioEntrada());
+    return "Cine: " + Utils::aString(this->getId()) + " " + this->getDireccion() + " ";
 };
 
+
+bool Cine::tieneSala(int id){
+    return (this->salas.find(id) != this->salas.end());
+}
 
 bool Cine::isEqual(Cine *cine){
     return this->getId() == cine->getId();
