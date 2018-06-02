@@ -11,22 +11,22 @@ class Comentario
         int id;
         string nickName;
         string comentario;
-        int esRespuestaDeId;
+        int esRespuestaDeID;
         static int idGlobal;
 
     public:
-        void setEsRespuestaDeId(int id);
+        void setEsRespuestaDeID(int id);
         void setComentairo(string);
 
         DtComentario getDtComentario();
         string getComentario();
-        int getEsRespuestaDeId();
+        int getEsRespuestaDeID();
         int getID();
         string toString();
         bool isEqual(Comentario* comentario);
 
-        Comentario(int id, string nickName, string comentario);
-        Comentario(int id, string nickName, string comentario, int esRespuestaDeId);
+        Comentario(string nickName, string comentario);
+        Comentario(string nickName, string comentario, int esRespuestaDeID);
         virtual ~Comentario();
 };
 
