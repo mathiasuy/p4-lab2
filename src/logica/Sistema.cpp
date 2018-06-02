@@ -31,25 +31,29 @@
             return true;
         };
 
-        bool getPuntajePelicula(string nickName, DtPelicula pelicula){
-            return true;
+        bool Sistema::getPuntajePelicula(string nickName, DtPelicula pelicula){
+            return (peliculas.isMember(pelicula.getTitulo()));
         };
 
-        bool puntuarPelicula(string nickName, DtPelicula pelicula){
-            return true;
-        };
+        bool Sistema::puntuarPelicula(string nickName, DtPelicula pelicula){
+            
+             
+            return (peliculas.isMember(pelicula.getTitulo()));
+               
+                }
+         
 
-        bool eliminarPelicula(string titulo){
-            return true;
+        bool Sistema::eliminarPelicula(string titulo){
+            return (peliculas.isMember(titulo));
         };
 
         /* USUARIO */
-        bool login(string nickName, string password){
-            if(peliculas.isMember(nickName)){
+        bool Sistema::login(string nickName, string password){
+            if(usuarios.isMember(nickName)){
              //si esta, lo busco
-             Usuario* usuario = peliculas.find(nickName);
-             return (usuario.getPassword() == password);
-
+             Usuario* usuario = usuarios.find(nickName);
+             return (usuario->getPassword() == password);
+            
         }
             else return false;
         };
