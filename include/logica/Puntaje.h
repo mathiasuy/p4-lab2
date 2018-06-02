@@ -15,7 +15,7 @@ class Puntaje
         void setPuntaje(float puntaje);
         float getPuntaje();
 
-        string getId();
+        string getID();
         string getNickName();
         string toString();
         bool isEqual(Puntaje *puntaje);
