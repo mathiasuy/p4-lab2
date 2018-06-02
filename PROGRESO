@@ -37,3 +37,19 @@ Clase       ManejadorFunciones      0%
 Clase       ManejadorCines          0%
 Clase       ManejadorPeliculas      0%
 Clase       ManejadorUsuarios       0%
+
+
+
+********Casos de USO***************
+
+
+Iniciar Sesion                      0%
+Cerrar Sesion                       0%
+Alta Cine                           0%
+Alta Funcion                        0%
+Crear Reserva                       0%
+Puntuar Pelicula                    0%  
+Comentar Pelicula                   0%
+Eliminar Pelicula                   0%
+Ver informacion de Pelicula         0%
+Ver Reservas                        0%
