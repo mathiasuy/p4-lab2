@@ -8,11 +8,10 @@ Cine::Cine(int id)
     this->setPrecioEntrada(0);
 }
 
-Cine::Cine(int id, string direccion, float precioEntrada)
+Cine::Cine(int id, string direccion)
 {
     this->id = id;
     this->setDireccion(direccion);
-    this->setPrecioEntrada(precioEntrada);
 }
 
 Cine::~Cine()
@@ -28,16 +27,8 @@ string Cine::getDireccion(){
     return this->direccion;
 };
 
-float Cine::getPrecioEntrada(){
-    return this->precioEntrada;
-};
-
 void Cine::setDireccion(string direccion){
     this->direccion = direccion;
-}
-
-void Cine::setPrecioEntrada(float precioEntrada){
-    this->precioEntrada = precioEntrada;
 }
 
 string Cine::toString(){

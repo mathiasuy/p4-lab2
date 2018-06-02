@@ -11,7 +11,6 @@ class Cine
     private:
         int id;
         string direccion;
-        float precioEntrada;
         map<int,Sala*> salas;
         Cine();
         static int idGlobal;
@@ -19,17 +18,15 @@ class Cine
     public:
         /* GETTERS Y SETTERS */
         string getDireccion();
-        float getPrecioEntrada();
+        
         void setDireccion(string direccion);
-        void setPrecioEntrada(float precioEntrada);
-
         int getId();
         string toString();
         bool isEqual(Cine *cine);
 
         /* CONSTRUS Y DESTRUS */
         Cine(int id);
-        Cine(int id, string direccion, float precioEntrada);
+        Cine(int id, string direccion);
         virtual ~Cine();
 };
 
