@@ -3,15 +3,19 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <Funcion.h>
 
 using namespace std;
+
+class Funcion;
 
 class Sala
 {
     private:
         int id;
+        int idGlobal;
         int capacidad;
-        map<Funcion*> funciones;
+        map<int, Funcion*> funciones;
 
     public:
         int getID();
@@ -19,11 +23,11 @@ class Sala
         void setCapacidad(int id);
         bool agregarFuncion(Funcion* funcion);
         bool quitarFuncion(Funcion* funcion);
-        
+
         bool isEqual(Sala* sala);
         string toString();
 
-        Sala(int id, int capacidad);
+        Sala(int capacidad);
         virtual ~Sala();
 };
 

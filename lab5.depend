@@ -540,3 +540,255 @@
 	<stdlib.h>
 	<string.h>
 
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/main.cpp
+	"ISistema.h"
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/ISistema.h
+	<vector>
+	"DtSala.h"
+	"DtPelicula.h"
+	"DtPago.h"
+	"DtFuncion.h"
+	"DtFecha.h"
+	"DtCine.h"
+	<string>
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtSala.h
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtPelicula.h
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtPago.h
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtFuncion.h
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtFecha.h
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtCine.h
+	"DtSala.h"
+	<vector>
+	<string>
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtCine.cpp
+	"../../include/datatypes/DtCine.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtComentario.cpp
+	"../../include/datatypes/DtComentario.h"
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtComentario.h
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtCredito.cpp
+	"../../include/datatypes/DtCredito.h"
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtCredito.h
+	"../include/datatypes/DtTarjeta.h"
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtTarjeta.h
+	<string>
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtDebito.cpp
+	"../../include/datatypes/DtDebito.h"
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtDebito.h
+	"../include/datatypes/DtTarjeta.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtFecha.cpp
+	"../../include/datatypes/DtFecha.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtFuncion.cpp
+	"../../include/datatypes/DtFuncion.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtPelicula.cpp
+	"../../include/datatypes/DtPelicula.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtReserva.cpp
+	"../../include/datatypes/DtReserva.h"
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtReserva.h
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtSala.cpp
+	"../../include/datatypes/DtSala.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtTarjeta.cpp
+	"../../include/datatypes/DtTarjeta.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtUsuario.cpp
+	"DtUsuario.h"
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtUsuario.h
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/Factory.cpp
+	"Factory.h"
+	"ISistema.h"
+	"logica/Sistema.h"
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/Factory.h
+	"ISistema.h"
+
+1527979406 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Sistema.h
+	"ISistema.h"
+	"../manejadores/ManejadorCines.h"
+	"../manejadores/ManejadorFunciones.h"
+	"../manejadores/ManejadorPeliculas.h"
+	"../manejadores/ManejadorUsuarios.h"
+
+1527978361 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Cine.cpp
+	"../../include/logica/Cine.h"
+	"../Utils.h"
+
+1527978298 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Cine.h
+	<string>
+	<map>
+	<vector>
+	"Sala.h"
+
+1527977410 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Sala.h
+	<string>
+	<vector>
+	<map>
+	<Funcion.h>
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/Utils.h
+	<string>
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Comentario.cpp
+	"../../include/logica/Comentario.h"
+	"Utils.h"
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Comentario.h
+	"DtComentario.h"
+	<string>
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Credito.cpp
+	"../../include/logica/Credito.h"
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Credito.h
+	"../datatypes/DtFinanciera.h"
+	"Tarjeta.h"
+
+1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtFinanciera.h
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Tarjeta.h
+	<string>
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Debito.cpp
+	"../../include/logica/Debito.h"
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Debito.h
+	"Tarjeta.h"
+	"../datatypes/DtBanco.h"
+
+1527978619 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Funcion.cpp
+	"../../include/logica/Funcion.h"
+
+1527975605 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Funcion.h
+	"../datatypes/DtFecha.h"
+	<string>
+	"Sala.h"
+	"Cine.h"
+	"Pelicula.h"
+
+1527975588 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Pelicula.h
+	"Comentario.h"
+	"Puntaje.h"
+	"Funcion.h"
+	<vector>
+	<map>
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Puntaje.h
+	<string>
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Pago.cpp
+	"../../include/logica/Pago.h"
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Pago.h
+	"Tarjeta.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Pelicula.cpp
+	"../../include/logica/Pelicula.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Puntaje.cpp
+	"../../include/logica/Puntaje.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Reserva.cpp
+	"../../include/logica/Reserva.h"
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Reserva.h
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtPelicula.h"
+	"Pago.h"
+
+1527977455 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Sala.cpp
+	"../../include/logica/Sala.h"
+	"../../include/logica/Funcion.h"
+	<map>
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Sistema.cpp
+	"../../include/logica/Sistema.h"
+	"include/logica/Cine.h"
+	"include/manejadores/ManejadorCines.h"
+	"include/manejadores/ManejadorUsuarios.h"
+	"include/manejadores/ManejadorFunciones.h"
+	"include/manejadores/ManejadorPeliculas.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Tarjeta.cpp
+	"../../include/logica/Tarjeta.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Usuario.cpp
+	"../../include/logica/Usuario.h"
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Usuario.h
+	<map>
+	<iomanip>
+	"Reserva.h"
+	<string>
+
+1527977984 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/manejadores/ManejadorCines.cpp
+	"../../include/manejadores/ManejadorCines.h"
+
+1527977964 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/manejadores/ManejadorCines.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Cine.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/manejadores/ManejadorPeliculas.cpp
+	"../../include/manejadores/ManejadorPeliculas.h"
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/manejadores/ManejadorPeliculas.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Pelicula.h"
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/manejadores/ManejadorUsuarios.cpp
+	"../../include/manejadores/ManejadorUsuarios.h"
+
+1527974884 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/manejadores/ManejadorUsuarios.h
+	"../logica/Usuario.h"
+	<map>
+
+1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/Utils.cpp
+	"../include/Utils.h"
+	<sstream>
+	<iomanip>
+	<iomanip>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1527978114 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/manejadores/ManejadorFunciones.cpp
+	"../../include/manejadores/ManejadorFunciones.h"
+
+1527978024 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/manejadores/ManejadorFunciones.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Funcion.h"
+

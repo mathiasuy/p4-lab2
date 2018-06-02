@@ -7,6 +7,8 @@
 
 using namespace std;
 
+class Sala;
+
 class Cine
 {
     private:
@@ -19,7 +21,7 @@ class Cine
     public:
         /* GETTERS Y SETTERS */
         string getDireccion();
-        
+
         void setDireccion(string direccion);
         int getId();
         string toString();

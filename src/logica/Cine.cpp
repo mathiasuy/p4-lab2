@@ -2,12 +2,14 @@
 #include "../Utils.h"
 
 
+int Cine::idGlobal = 0;
+
 Cine::Cine(string direccion, vector<int> salas)
 {
     this->id = ++idGlobal;
     for (std::vector<int>::iterator it = salas.begin() ; it != salas.end(); ++it){
     	Sala* sala = new Sala(*it);
-        this->salas[sala->getID()] = salas;
+        this->salas[sala->getID()] = sala;
     }
     this->setDireccion(direccion);
 }

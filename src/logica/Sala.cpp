@@ -15,16 +15,15 @@ void Sala::setCapacidad(int capacidad){
     this->capacidad = capacidad;
 };
 
-bool agregarFuncion(Funcion* funcion){
+bool Sala::agregarFuncion(Funcion* funcion){
 //agrego puntero hacia funcion en el map con la clave igual al idfuncion
 
-    typedef pair<string, *funcion> componente;
-    this->funciones.insert( componente(getidFuncion(funcion), funcion) ); //getidFuncion falta 
+    this->funciones[funcion->getID()] = funcion;
 };
-    
-bool quitarFuncion(Funcion* funcion){
+
+bool Sala::quitarFuncion(Funcion* funcion){
 //quitar puntero de funcion del map
-    this->funciones.erase( getidFuncion(funcion) );
+    this->funciones.erase(funcion->getID());
 };
 
 bool Sala::isEqual(Sala* sala){
@@ -35,10 +34,10 @@ string Sala::toString(){
     return "Esta es la sala " + this->getID();
 };
 
-Sala::Sala(int id, int capacidad){
-    this->id = id;
+Sala::Sala(int capacidad){
+    this->id = ++idGlobal;
     this->setCapacidad(capacidad);
-    
+
     //creo map de punteros
     std::map<int, Funcion*> mymap;
     this->funciones = mymap;

@@ -17,23 +17,23 @@
         /*  OPERACIONES BASICAS */
         bool ManejadorFunciones::add(Funcion* funcion){
             int t1 = this->funciones.size();
-            this->funciones[funcion->getId()] = funcion;
+            this->funciones[funcion->getID()] = funcion;
             int t2 = this->funciones.size();
             return t1 == t2;
         }
 
-        bool ManejadorFunciones::remove(string id){
+        bool ManejadorFunciones::remove(int id){
             int t1 = this->funciones.size();
             this->funciones.erase(id);
             int t2 = this->funciones.size();
             return t1 == t2;
         }
 
-        bool ManejadorFunciones::isMember(string id){
+        bool ManejadorFunciones::isMember(int id){
             return (this->funciones.find(id) != this->funciones.end());
         }
 
-        Funcion* ManejadorFunciones::find(string id){
+        Funcion* ManejadorFunciones::find(int id){
             return this->funciones[id];
         }
 
@@ -44,7 +44,7 @@
 
         /*  DESTRUCTOR */
         ManejadorFunciones::~ManejadorFunciones(){
-            map<string,Funcion*>::iterator it;
+            map<int,Funcion*>::iterator it;
             for (it = funciones.begin(); it != funciones.end(); ++it)
                 delete it->second;
         }

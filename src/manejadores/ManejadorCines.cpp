@@ -22,18 +22,18 @@
             return t1 == t2;
         }
 
-        bool ManejadorCines::remove(string id){
+        bool ManejadorCines::remove(int id){
             int t1 = this->cines.size();
             this->cines.erase(id);
             int t2 = this->cines.size();
             return t1 == t2;
         }
 
-        bool ManejadorCines::isMember(string id){
+        bool ManejadorCines::isMember(int id){
             return (this->cines.find(id) != this->cines.end());
         }
 
-        Cine* ManejadorCines::find(string id){
+        Cine* ManejadorCines::find(int id){
             return this->cines[id];
         }
 
@@ -44,7 +44,7 @@
 
         /*  DESTRUCTOR */
         ManejadorCines::~ManejadorCines(){
-            map<string,Cine*>::iterator it;
+            map<int,Cine*>::iterator it;
             for (it = cines.begin(); it != cines.end(); ++it)
                 delete it->second;
         }

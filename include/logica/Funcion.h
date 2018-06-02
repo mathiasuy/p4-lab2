@@ -5,7 +5,10 @@
 #include "Sala.h"
 #include "Cine.h"
 #include "Pelicula.h"
+
 using namespace std;
+
+class Sala;
 
 class Funcion
 {
@@ -24,7 +27,7 @@ class Funcion
         Sala* getSala();
         DtFecha getFecha();
         float getPrecio();
-        
+
         void setSala(Sala* sala);
         void setPelicula(Pelicula* pelicula);
         void setFecha(DtFecha fecha);

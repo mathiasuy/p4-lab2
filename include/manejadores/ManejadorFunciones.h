@@ -13,7 +13,7 @@ using namespace std;
 class ManejadorFunciones{
     private:
         static ManejadorFunciones* instancia;
-        map<string, Funcion*> funciones;
+        map<int, Funcion*> funciones;
         ManejadorFunciones();
     public:
 
@@ -22,9 +22,9 @@ class ManejadorFunciones{
 
         /*  OPERACIONES BASICAS */
         bool add(Funcion* funcion);
-        bool remove(string id);
-        bool isMember(string id);
-        Funcion* find(string id);
+        bool remove(int id);
+        bool isMember(int id);
+        Funcion* find(int id);
         bool isEmpty();
 
         /*  DESTRUCTOR */

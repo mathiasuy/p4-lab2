@@ -1,17 +1,13 @@
-#include "../../include/logica/Sistema.h"
-#include "include/logica/Cine.h"
-#include "include/manejadores/ManejadorCines.h"
-#include "include/manejadores/ManejadorUsuarios.h"
-#include "include/manejadores/ManejadorFunciones.h"
-#include "include/manejadores/ManejadorPeliculas.h"
+#ifndef SISTEMA_H
+#define SISTEMA_H
 
-ManejadorCines *cines = ManejadorCines::getInstancia();
-ManejadorCines *funciones = Manejadorfunciones::getInstancia();
-ManejadorCines *usuarios = ManejadorUsuarios::getInstancia();
-ManejadorCines *peliculas = ManejadorPeliculas::getInstancia();
+#include "../../include/logica/Sistema.h"
+#include <string>
+#include <vector>
 
 
         Sistema* Sistema::instancia = NULL;
+
 
         Sistema* Sistema::getInstance(){
 
@@ -53,7 +49,7 @@ ManejadorCines *peliculas = ManejadorPeliculas::getInstancia();
              //si esta, lo busco
              Usuario* usuario = peliculas.find(nickName);
              return (usuario.getPassword() == password);
-            
+
         }
             else return false;
         };
@@ -61,3 +57,6 @@ ManejadorCines *peliculas = ManejadorPeliculas::getInstancia();
         bool crearReserva(string nickName, int id, int cantAsientos, DtFuncion funcion, DtPelicula pelicula, DtPago pago){
             return true;
         };
+
+
+#endif // SISTEMA_H

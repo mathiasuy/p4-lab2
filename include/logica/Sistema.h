@@ -1,16 +1,28 @@
 #ifndef SISTEMA_H
 #define SISTEMA_H
 #include "ISistema.h"
-#include "include/manejadores/ManejadorCines.h"
-#include "include/manejadores/ManejadorUsuarios.h"
-#include "include/manejadores/ManejadorFunciones.h"
-#include "include/manejadores/ManejadorPeliculas.h"
+#include "../manejadores/ManejadorCines.h"
+#include "../manejadores/ManejadorFunciones.h"
+#include "../manejadores/ManejadorPeliculas.h"
+#include "../manejadores/ManejadorUsuarios.h"
+
+class Sala;
+class Funcion;
+class Pelicula;
 
 class Sistema : public ISistema
 {
     private:
         static Sistema* instancia;
         Sistema(){};
+
+        //manejadores
+        ManejadorCines *cines = ManejadorCines::getInstancia();
+        ManejadorFunciones *funciones = ManejadorFunciones::getInstancia();
+        ManejadorUsuarios *usuarios = ManejadorUsuarios::getInstancia();
+        ManejadorPeliculas *peliculas = ManejadorPeliculas::getInstancia();
+
+
     public:
         bool altaCine(string direccion, vector<DtSala> capacidadSalas);
 

@@ -12,7 +12,7 @@ class ManejadorCines
 {
     private:
         static ManejadorCines* instancia;
-        map<string, Cine*> cines;
+        map<int, Cine*> cines;
         ManejadorCines();
     public:
 
@@ -21,9 +21,9 @@ class ManejadorCines
 
         /*  OPERACIONES BASICAS */
         bool add(Cine* cine);
-        bool remove(string id);
-        bool isMember(string id);
-        Pelicula* find(string id);
+        bool remove(int id);
+        bool isMember(int id);
+        Cine* find(int id);
         bool isEmpty();
 
         /*  DESTRUCTOR */

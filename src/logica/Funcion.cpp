@@ -1,17 +1,19 @@
 #include "../../include/logica/Funcion.h"
 
+int Funcion::idGlobal = 0;
+
 int Funcion::getID(){
     return this->id;
 };
 
 
-DtFecha* Funcion::getFecha(){
+DtFecha Funcion::getFecha(){
     return this->fehca;
 };
 
 float Funcion::getPrecio(){
     return this->precioEntrada;
-    
+
 };
 
 void Funcion::setFecha(DtFecha fecha){
@@ -20,6 +22,14 @@ void Funcion::setFecha(DtFecha fecha){
 
 void Funcion::setPrecio(float precioEntrada){
     this->precioEntrada = precioEntrada;
+};
+
+void Funcion::setPelicula(Pelicula* pelicula){
+    this->pelicula = pelicula;
+};
+
+void Funcion::setSala(Sala* sala){
+    this->sala = sala;
 };
 
 
