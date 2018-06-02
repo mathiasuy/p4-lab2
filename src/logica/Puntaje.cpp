@@ -5,15 +5,15 @@
     };
 
     float Puntaje::getPuntaje(){
-        return this->getPuntaje();
+        return this->puntaje;
     };
 
     string Puntaje::getNickName(){
-        return this->getNickName();
+        return this->nickName;
     };
 
-    string Puntaje::getId(){
-        return this->getNickName();
+    string Puntaje::getID(){
+        return this->nickName;
     };
 
     string Puntaje::toString(){
@@ -21,7 +21,7 @@
     };
 
     bool Puntaje::isEqual(Puntaje *puntaje){
-        return this->getId() == puntaje->getId();
+        return this->getID() == puntaje->getID();
     };
 
     Puntaje::Puntaje(string nickName, float puntaje){
