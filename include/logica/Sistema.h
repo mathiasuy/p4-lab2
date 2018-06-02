@@ -11,7 +11,7 @@ class Sistema : public ISistema
         bool altaCine(int id, string direccion, vector<DtSala> salas);
 
         /*  PELICULA */
-        bbool altaFuncion(int asientos, float precioEntrada, DtFecha fecha, Sala* sala, Pelicula* pelicula);
+        bool altaFuncion(int asientos, float precioEntrada, DtFecha fecha, Sala* sala, Pelicula* pelicula);
         bool getPuntajePelicula(string nickName, DtPelicula pelicula);
         bool puntuarPelicula(string nickName, DtPelicula pelicula);
         bool eliminarPelicula(string titulo);
