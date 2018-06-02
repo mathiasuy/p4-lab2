@@ -1,7 +1,7 @@
 #include "../../include/logica/Sistema.h"
 #include "include/logica/Cine.h"
 #include "include/manejadores/ManejadorCines.h"
-
+#include "include/manejadores/ManejadorUsuarios.h"
 ManejadorCines *cines = ManejadorCines::getInstancia();
 
 
