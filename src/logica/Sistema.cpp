@@ -34,7 +34,13 @@
 
         /* USUARIO */
         bool login(string nickName, string password){
-            return true;
+            if(peliculas.isMember(nickName)){
+             //si esta, lo busco
+             Usuario* usuario = peliculas.find(nickName);
+             return (usuario.getPassword() == password);
+            
+        }
+            else return false;
         };
 
         bool crearReserva(string nickName, int id, int cantAsientos, DtFuncion funcion, DtPelicula pelicula, DtPago pago){
