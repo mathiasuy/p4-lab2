@@ -24,11 +24,11 @@ void Funcion::setPrecio(float precioEntrada){
 
 
 string Funcion::toString(){
-    return "Esta es la funcion: " + this->getId();
+    return "Esta es la funcion: " + this->getID();
 };
 
 bool Funcion::isEqual(Funcion* funcion){
-    return this->getId() == funcion->getId();
+    return this->getID() == funcion->getID();
 };
 
 
