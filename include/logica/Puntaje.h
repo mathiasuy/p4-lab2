@@ -26,4 +26,4 @@ class Puntaje
 };
 
 
-#endif
+#endif // PUNTAJE_H
