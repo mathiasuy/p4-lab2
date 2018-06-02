@@ -1,6 +1,6 @@
 SOURCES := $(wildcard src/*/*.cpp src/*.cpp *.cpp)
 OBJECTS := $(subst .cpp,.o,$(SOURCES))
-EXE := ejecutable.exe
+EXE := ejecutable
 OBJDIR := obj
 LIBS :=
 INCLUDE := -I.
@@ -12,16 +12,13 @@ ejecutable: $(SOURCES)
 $(OBJDIR)/%.o: %.cpp
 	$(CC) -o $@ -c $^ $(INCLUDE)
 		
-info:
+i:
 	$(info $(SOURCES))
 	$(info $(OBJECTS))
 	
-clean:
-	rm $(EXE)
-	rm $(OBJECTS)
+c:
+	-rm $(EXE)
+	-rm $(OBJECTS)
 
-openw:
-	./ejecutable.exe
-
-openl:
+o:
 	./ejecutable
