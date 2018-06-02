@@ -1,5 +1,7 @@
 #include "../../include/logica/Sala.h"
 #include "../../include/logica/Funcion.h"
+#include <map>
+
 
 int Sala::getID(){
     return this->id;
@@ -12,7 +14,6 @@ int Sala::getCapacidad(){
 void Sala::setCapacidad(int capacidad){
     this->capacidad = capacidad;
 };
-
 
 bool agregarFuncion(Funcion* funcion){
 //agrego puntero hacia funcion en el map con la clave igual al idfuncion

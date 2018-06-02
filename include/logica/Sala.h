@@ -20,8 +20,7 @@ class Sala
         void setCapacidad(int id);
         bool agregarFuncion(Funcion* funcion);
         bool quitarFuncion(Funcion* funcion);
-        vector<Funcion*> listarFunciones();
-
+        
         bool isEqual(Sala* sala);
         string toString();
 
