@@ -1,4 +1,10 @@
 #include "../../include/logica/Sistema.h"
+#include "include/logica/Cine.h"
+#include "include/manejadores/ManejadorCines.h"
+
+ManejadorCines *cines = ManejadorCines::getInstancia();
+
+
         Sistema* Sistema::instancia = NULL;
 
         Sistema* Sistema::getInstance(){
@@ -11,7 +17,9 @@
         }
 
         bool altaCine(int id, string direccion, vector<DtSala> salas){
-
+            Cine cineNuevo = new Cine(string, salas);
+            cines->add(cineNuevo);
+ 
             return true;
         };
 
