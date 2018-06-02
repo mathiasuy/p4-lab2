@@ -1,6 +1,6 @@
 #include "../../include/logica/Funcion.h"
 
-int Funcion::getId(){
+int Funcion::getID(){
     return this->id;
 };
 
@@ -10,17 +10,16 @@ DtFecha* Funcion::getFecha(){
 };
 
 float Funcion::getPrecio(){
-    return this->precioentrada;
+    return this->precioEntrada;
     
 };
 
-
 void Funcion::setFecha(DtFecha fecha){
-
+    this->fehca = fecha;
 };
 
-void Funcion::setPrecio(float precioentrada){
-    this->precioentrada = precioentrada;
+void Funcion::setPrecio(float precioEntrada){
+    this->precioEntrada = precioEntrada;
 };
 
 
@@ -33,11 +32,12 @@ bool Funcion::isEqual(Funcion* funcion){
 };
 
 
-Funcion::Funcion(int id, DtSala* , DtCine* , DtFecha* ){
-    this->id = id;
-    this->setDtCine(cine);
-    this->setDtSala(sala);
+Funcion::Funcion(int asientosReservados, float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *pelicula){
+    this->id = ++idGlobal;
+    this->precioEntrada = precioEntrada;
     this->setFecha(fecha);
+    this->setPelicula(pelicula);
+    this->setSala(sala);
 };
 
 Funcion::~Funcion(){

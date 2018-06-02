@@ -13,7 +13,7 @@ class Funcion
         int id;
         static int idGlobal;
         int asientosReservados;
-        float precioentrada;
+        float precioEntrada;
         DtFecha fehca;
 
         Sala* sala;
@@ -26,16 +26,15 @@ class Funcion
         float getPrecio();
         
         void setSala(Sala* sala);
-        void setCine(Cine* cine);
+        void setPelicula(Pelicula* pelicula);
         void setFecha(DtFecha fecha);
-        void setPrecio(float precioentrada);
-        int getId();
+        void setPrecio(float precioEntrada);
+        int getID();
         string toString();
         bool isEqual(Funcion *funcion);
 
-        Funcion(int id);
         ~Funcion();
-        Funcion(int id, Sala* sala , Cine *cine , DtFecha);
+        Funcion(int asientosReservados, float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *pelicula);
 };
 
 #endif // FUNCION_H

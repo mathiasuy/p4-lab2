@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="94">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="include">
+        <df name="datatypes">
+          <in>DtCine.h</in>
+          <in>DtComentario.h</in>
+          <in>DtCredito.h</in>
+          <in>DtDebito.h</in>
+          <in>DtFecha.h</in>
+          <in>DtFinanciera.h</in>
+          <in>DtFuncion.h</in>
+          <in>DtPago.h</in>
+          <in>DtPelicula.h</in>
+          <in>DtReserva.h</in>
+          <in>DtSala.h</in>
+          <in>DtTarjeta.h</in>
+          <in>DtUsuario.h</in>
+        </df>
+        <df name="logica">
+          <in>Cine.h</in>
+          <in>Comentario.h</in>
+          <in>Credito.h</in>
+          <in>Debito.h</in>
+          <in>Funcion.h</in>
+          <in>Pago.h</in>
+          <in>Pelicula.h</in>
+          <in>Puntaje.h</in>
+          <in>Reserva.h</in>
+          <in>Sala.h</in>
+          <in>Sistema.h</in>
+          <in>Tarjeta.h</in>
+          <in>Usuario.h</in>
+        </df>
+        <df name="manejadores">
+          <in>ManejadorCines.h</in>
+          <in>ManejadorFunciones.h</in>
+          <in>ManejadorPeliculas.h</in>
+          <in>ManejadorUsuarios.h</in>
+        </df>
+        <in>Factory.h</in>
+        <in>ISistema.h</in>
+        <in>Utils.h</in>
+      </df>
+      <df name="obj">
+        <df name="Debug">
+          <df name="src">
+            <df name="datatypes">
+            </df>
+            <df name="logica">
+            </df>
+            <df name="manejadores">
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="src">
+        <df name="datatypes">
+          <in>DtCine.cpp</in>
+          <in>DtComentario.cpp</in>
+          <in>DtCredito.cpp</in>
+          <in>DtDebito.cpp</in>
+          <in>DtFecha.cpp</in>
+          <in>DtFinanciera.cpp</in>
+          <in>DtFuncion.cpp</in>
+          <in>DtPago.cpp</in>
+          <in>DtPelicula.cpp</in>
+          <in>DtReserva.cpp</in>
+          <in>DtSala.cpp</in>
+          <in>DtTarjeta.cpp</in>
+          <in>DtUsuario.cpp</in>
+        </df>
+        <df name="logica">
+          <in>Cine.cpp</in>
+          <in>Comentario.cpp</in>
+          <in>Credito.cpp</in>
+          <in>Debito.cpp</in>
+          <in>Funcion.cpp</in>
+          <in>Pago.cpp</in>
+          <in>Pelicula.cpp</in>
+          <in>Puntaje.cpp</in>
+          <in>Reserva.cpp</in>
+          <in>Sala.cpp</in>
+          <in>Sistema.cpp</in>
+          <in>Tarjeta.cpp</in>
+          <in>Usuario.cpp</in>
+        </df>
+        <df name="manejadores">
+          <in>ManejadorCines.cpp</in>
+          <in>ManejadorFunciones.cpp</in>
+          <in>ManejadorPeliculas.cpp</in>
+          <in>ManejadorUsuarios.cpp</in>
+        </df>
+        <in>Factory.cpp</in>
+        <in>Utils.cpp</in>
+      </df>
+      <in>main.cpp</in>
+      <in>version.h</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>
