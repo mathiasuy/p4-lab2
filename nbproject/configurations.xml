@@ -11,7 +11,6 @@
           <in>DtFecha.cpp</in>
           <in>DtFinanciera.cpp</in>
           <in>DtFuncion.cpp</in>
-          <in>DtPago.cpp</in>
           <in>DtPelicula.cpp</in>
           <in>DtReserva.cpp</in>
           <in>DtSala.cpp</in>
@@ -24,7 +23,6 @@
           <in>Credito.cpp</in>
           <in>Debito.cpp</in>
           <in>Funcion.cpp</in>
-          <in>Pago.cpp</in>
           <in>Pelicula.cpp</in>
           <in>Puntaje.cpp</in>
           <in>Reserva.cpp</in>
@@ -98,8 +96,6 @@
       </item>
       <item path="src/datatypes/DtFuncion.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/datatypes/DtPago.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/datatypes/DtPelicula.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/datatypes/DtReserva.cpp" ex="false" tool="1" flavor2="0">
@@ -119,8 +115,6 @@
       <item path="src/logica/Debito.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/logica/Funcion.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/logica/Pago.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/logica/Pelicula.cpp" ex="false" tool="1" flavor2="0">
       </item>

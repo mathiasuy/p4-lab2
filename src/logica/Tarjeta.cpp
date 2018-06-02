@@ -11,10 +11,6 @@ bool Tarjeta::isEqual(Tarjeta* t)
     return true;
 }
 
-int Tarjeta::getID(){
-    return this->id;
-}
-
 float Tarjeta::getMontoTotal(){
     return this->montoTotal;
 };
@@ -24,7 +20,6 @@ void Tarjeta::setMontoTotal(float montoTotal){
 };
 
 
-Tarjeta::Tarjeta(int id, float montoTotal){
-    this->id = id;
+Tarjeta::Tarjeta(float montoTotal){
     this->setMontoTotal(montoTotal);
 };

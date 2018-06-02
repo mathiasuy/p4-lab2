@@ -23,6 +23,12 @@ class Usuario
         void setImagen(string imagen);
         void setPassword(string password);
 
+        
+        bool agregarReservaDebito(int cantAsientos, Funcion* funcion, float montoTotal, string  banco);
+        bool agregarReservaCredito(int cantAsientos, Funcion* funcion, float montoTotal, float descuento);
+        bool quitarReserva(int id);
+        bool tieneReserva(int id);
+        
         map<int,Reserva*> getReservas();
         Usuario(string nickName, string imagen, string password);
         ~Usuario();

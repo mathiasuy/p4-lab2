@@ -1,4 +1,6 @@
 #include "../../include/logica/Reserva.h"
+#include "include/logica/Credito.h"
+#include "include/logica/Debito.h"
 
 
 Reserva::~Reserva()
@@ -14,52 +16,34 @@ int Reserva::getCantAsientos(){
     return this->cantAsientos;
 };
 
-DtFuncion Reserva::getDtFuncion(){
-    return this->dtFuncion;
-};
-
-DtPelicula Reserva::getDtPelicula(){
-    return this->dtPelicula;
-};
-
-Pago* Reserva::getPago(){
-    return this->pago;
-};
-
 void Reserva::setCantAsientos(int cantAsientos){
     this->cantAsientos = cantAsientos;
-};
-
-void Reserva::setDtFuncion(DtFuncion funcion){
-    this->dtFuncion = funcion;
-};
-
-
-void Reserva::setDtPelicula(DtPelicula pelicula){
-    this->dtPelicula = pelicula;
-};
-
-void Reserva::setPago(Pago* pago){
-    this->pago = pago;
 };
 
 bool Reserva::isEqual(Reserva * reserva){
     return this->getID() == reserva->getID();
 };
 
-string Reserva::toString(){
-    return "Reserva n° "+ this->getID();
+std::string Reserva::toString(){
+    return "Reserva nï¿½ "+ this->getID();
 };
 
-Reserva::~Reserva();
+Reserva::~Reserva(){}
 
-Reserva::Reserva(int id, int cantAsientos, DtFuncion funcion, DtPelicula pelicula){
-    this->id = id;
+
+
+Reserva::Reserva(int cantAsientos, Funcion* funcion, string financiera, float descuento, float montoTotal){
+    this->id = ++idGlobal;
+    this->setFuncion(funcion);
+    this->tarjeta = new Credito(montoTotal,financiera,descuento);
     this->setCantAsientos(cantAsientos);
-    this->setDtFuncion(funcion);
-    this->setDtPelicula(pelicula);
+    this->setFuncion(funcion);
 };
 
-Reserva::Reserva(int id, int cantAsientos, DtFuncion funcion, DtPelicula pelicula, Pago* pago):Reserva(id,cantAsientos,funcion,pelicula){
-    this->setPago(pago);
-}
+Reserva::Reserva(int cantAsientos, Funcion* funcion, string  banco, float montoTotal){
+    this->id = ++idGlobal;
+    this->setFuncion(funcion);
+    this->tarjeta = new Debito(montoTotal,banco);
+    this->setCantAsientos(cantAsientos);
+    this->setFuncion(funcion);
+};

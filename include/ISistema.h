@@ -1,13 +1,13 @@
 #ifndef ISISTEMA_H_INCLUDED
 #define ISISTEMA_H_INCLUDED
 #include <vector>
-#include "DtSala.h"
-#include "DtPelicula.h"
-#include "DtPago.h"
-#include "DtFuncion.h"
-#include "DtFecha.h"
-#include "DtCine.h"
 #include <string>
+#include "datatypes/DtCine.h"
+#include "datatypes/DtCine.h"
+#include "datatypes/DtCine.h"
+#include "datatypes/DtCine.h"
+
+
 using namespace std;
 
 class ISistema {

@@ -1,5 +1,5 @@
-#include "Factory.h"
-#include "ISistema.h"
+#include "../include/Factory.h"
+#include "../include/ISistema.h"
 #include "logica/Sistema.h"
 
 ISistema* Factory::getSistema(){

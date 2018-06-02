@@ -7,7 +7,6 @@ using namespace std;
 class Tarjeta
 {
     private:
-        int id;
         float montoTotal;
         static int idGlobal;
 
@@ -17,7 +16,7 @@ class Tarjeta
         void setMontoTotal(float montoTotal);
         virtual bool isEqual(Tarjeta* t) = 0;
         virtual string toString() = 0;
-        Tarjeta(int id, float montoTotal);
+        Tarjeta(float montoTotal);
         virtual ~Tarjeta();
 
     protected:

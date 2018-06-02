@@ -1,7 +1,6 @@
 #ifndef DEBITO_H
 #define DEBITO_H
 #include "Tarjeta.h"
-#include "../datatypes/DtBanco.h"
 
 class Debito : public Tarjeta
 {
@@ -13,7 +12,7 @@ class Debito : public Tarjeta
         bool isEqual(Tarjeta * t);
         string toString();
 
-        Debito(int id, float montoTotal, string banco);
+        Debito(float montoTotal, string banco);
         ~Debito();
 };
 

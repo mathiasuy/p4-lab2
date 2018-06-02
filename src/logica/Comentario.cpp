@@ -7,7 +7,7 @@ Comentario::~Comentario()
 }
 
 void Comentario::setEsRespuestaDeID(int id){
-    this->esRespuestaDeId = id;
+    this->esRespuestaDeID = id;
 };
 
 

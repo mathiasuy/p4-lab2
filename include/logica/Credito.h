@@ -1,6 +1,5 @@
 #ifndef CREDITO_H
 #define CREDITO_H
-#include "../datatypes/DtFinanciera.h"
 #include "Tarjeta.h"
 
 class Credito : public Tarjeta
@@ -14,7 +13,7 @@ class Credito : public Tarjeta
         string getFinanciera();
         float getDescuento();
 
-        Credito(int id, float montoTotal, string financiera, float descuento);
+        Credito(float montoTotal, string financiera, float descuento);
 
         bool isEqual(Tarjeta * t);
         string toString();

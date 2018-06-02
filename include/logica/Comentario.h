@@ -1,6 +1,5 @@
 #ifndef COMENTARIO_H
 #define COMENTARIO_H
-#include "DtComentario.h"
 
 #include <string>
 using namespace std;

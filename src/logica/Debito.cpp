@@ -22,6 +22,6 @@ string Debito::toString(){
     return "Esta es la tarjeta de debito " + this->getID();
 };
 
-Debito::Debito(int id, float montoTotal, string banco):Tarjeta(id,montoTotal){
+Debito::Debito(float montoTotal, string banco):Tarjeta(montoTotal){
     this->setBanco(banco);
 };

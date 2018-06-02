@@ -18,7 +18,7 @@ float Credito::getDescuento(){
     return this->descuento;
 };
 
-Credito::Credito(int id, float montoTotal, string financiera, float descuento):Tarjeta(id,montoTotal){
+Credito::Credito(float montoTotal, string financiera, float descuento):Tarjeta(montoTotal){
     this->setFinanciera(financiera);
     this->setDescuento(descuento);
 };
