@@ -6,7 +6,7 @@ Comentario::~Comentario()
     //dtor
 }
 
-void Comentario::setEsRespuestaDeId(int id){
+void Comentario::setEsRespuestaDeID(int id){
     this->esRespuestaDeId = id;
 };
 
@@ -19,8 +19,8 @@ string Comentario::getComentario(){
     return this->comentario;
 };
 
-int Comentario::getEsRespuestaDeId(){
-    return this->esRespuestaDeId;
+int Comentario::getEsRespuestaDeID(){
+    return this->esRespuestaDeID;
 };
 
 int Comentario::getID(){
@@ -42,6 +42,6 @@ Comentario::Comentario(int id, string nickName, string comentario){
     this->setComentairo(comentario);
 };
 
-Comentario::Comentario(int id, string nickName, string comentario, int esRespuestaDeId):Comentario(id,nickName,comentario){
-    this->esRespuestaDeId = esRespuestaDeId;
+Comentario::Comentario(int id, string nickName, string comentario, int esRespuestaDeID):Comentario(id,nickName,comentario){
+    this->esRespuestaDeID = esRespuestaDeID;
 };
