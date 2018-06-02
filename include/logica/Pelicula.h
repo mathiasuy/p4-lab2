@@ -1,19 +1,15 @@
 #include "Comentario.h"
 #include "Puntaje.h"
 #include "Funcion.h"
-
-#include <vector>
-#include <map>
-
 #ifndef PELICULA_H
 #define PELICULA_H
-
-class Funcion;
+#include <vector>
+#include <map>
 
 class Pelicula
 {
     private:
-        std::vector<Funcion> funciones;
+        vector<Funcion> funciones;
         map<string,Puntaje*> puntajes;
         map<string,Comentario*> comentarios;
         string titulo;
@@ -26,13 +22,15 @@ class Pelicula
     /* GETTER Y SETTERS */
         void setPoster(string poster);
         void setSinopsis(string sinopsis);
-        void setPuntajePromedio();
-
-         void agregarComentario(string nickname, string comentario);
+        //void setPuntajePromedio();
+        
+        void agregarComentario(string nickname, string comentario);
         void agregarComentario(string nickname, string comentario, int esRespuestaDeID);
         void modificarComentario(int id, string comentario);
-
-
+        void agregarPuntaje(string nickName, float puntaje);
+        void modificarPuntaje(string nickName, float puntaje);
+        
+        float verPuntaje(string nickName);
         string getPoster();
         string getSinopsis();
         float getPuntajePromedio();
