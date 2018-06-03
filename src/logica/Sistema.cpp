@@ -1,7 +1,6 @@
-#ifndef SISTEMA_H
-#define SISTEMA_H
 
 #include "../../include/logica/Sistema.h"
+
 #include <string>
 #include <vector>
 
@@ -9,14 +8,17 @@
         Sistema* Sistema::instancia = NULL;
 
 
+
         Sistema* Sistema::getInstance(){
 
-            if (Sistema::instancia == NULL){
-                Sistema::instancia = new Sistema();
+            if (instancia == NULL){
+                instancia = new Sistema;
             }
 
             return Sistema::instancia;
         }
+
+
 
         bool altaCine(string direccion, vector<DtSala> capacidadSalas){
             Cine cineNuevo = new Cine(string, capacidadSalas);
@@ -63,4 +65,4 @@
         };
 
 
-#endif // SISTEMA_H
+

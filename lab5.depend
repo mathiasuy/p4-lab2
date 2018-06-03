@@ -623,7 +623,7 @@
 1527974883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/Factory.h
 	"ISistema.h"
 
-1527981735 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Sistema.h
+1527984080 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Sistema.h
 	"ISistema.h"
 	"../manejadores/ManejadorCines.h"
 	"../manejadores/ManejadorFunciones.h"
@@ -793,4 +793,13 @@
 	<map>
 	<iomanip>
 	"../logica/Funcion.h"
+
+1527981685 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/ISistema.h
+	<vector>
+	<string>
+	"datatypes/DtCine.h"
+	"datatypes/DtPelicula.h"
+	"datatypes/DtFuncion.h"
+	"datatypes/DtUsuario.h"
+	"datatypes/DtFecha.h"
 

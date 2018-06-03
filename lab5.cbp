@@ -40,7 +40,6 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/Factory.h" />
-		<Unit filename="include/ISistema.h" />
 		<Unit filename="include/Utils.h" />
 		<Unit filename="include/datatypes/DtCine.h" />
 		<Unit filename="include/datatypes/DtComentario.h" />
@@ -58,6 +57,7 @@
 		<Unit filename="include/logica/Credito.h" />
 		<Unit filename="include/logica/Debito.h" />
 		<Unit filename="include/logica/Funcion.h" />
+		<Unit filename="include/logica/ISistema.h" />
 		<Unit filename="include/logica/Pelicula.h" />
 		<Unit filename="include/logica/Puntaje.h" />
 		<Unit filename="include/logica/Reserva.h" />
