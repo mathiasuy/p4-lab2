@@ -23,6 +23,7 @@ class Sala
         void setCapacidad(int id);
         bool agregarFuncion(Funcion* funcion);
         bool quitarFuncion(Funcion* funcion);
+        bool tieneFuncion(int id);
 
         bool isEqual(Sala* sala);
         string toString();
