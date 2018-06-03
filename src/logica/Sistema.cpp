@@ -1,4 +1,3 @@
-
 #include "../../include/logica/Sistema.h"
 
 #include <string>
@@ -46,7 +45,31 @@
 
 
         bool Sistema::eliminarPelicula(string titulo){
-            return (peliculas.isMember(titulo));
+            if(peliculas->isMember(titulo)){
+                //aca tengo un puntero al objeto
+                Pelicula* pelicula = peliculas->find(titulo);
+                map<int,Funcion*> funciones = pelicula->listarFunciones();
+                for (std::map<int, Funcion*>::iterator it = funciones.begin(); it != funciones.end(); ++it)
+                {
+                  Funcion* funcion = it->second;
+                  usuarios::iterator iu = usuarios.begin();
+                  while(iu != usuarios.end()){
+                      Usuario* usuario = iu->second;
+                      if (usuario->tieneReservaFuncion(funcion->getID())){
+                          usuario->eliminarReservaConFuncion(funcion->getID());
+                      };
+                  }
+                  Sala *sala = funcion->getSala();
+                  if (sala->tieneFuncion(funcion->getID())){
+                      sala->quitarFuncion(funcion->getID());
+                  }
+                  pelicula->quitarFuncion(funcion->getID());
+                  delete funcion; 
+                }
+                delete pelicua;
+                return true;
+            }
+            else return false;
         };
 
         /* USUARIO */
