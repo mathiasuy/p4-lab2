@@ -1,10 +1,17 @@
 #include "../../include/logica/Pelicula.h"
 #include "../../include/logica/Comentario.h"
 #include "../../include/logica/Puntaje.h"
-Pelicula::~Pelicula()
-{
-    //dtor
-}
+        
+        Pelicula::~Pelicula()
+        {
+            map<string,Puntaje*>::iterator it;
+            for (it = puntajes.begin(); it != puntajes.end(); ++it)
+                delete it->second;
+            map<string,Comentario*>::iterator it;
+            for (it = comentarios.begin(); it != comentarios.end(); ++it)
+                delete it->second;
+        }        
+        
         void Pelicula::setPoster(string poster){
             this->poster = poster;
         };
@@ -88,5 +95,3 @@ Pelicula::~Pelicula()
             this->setPoster("N/D");
             this->setSinopsis("N/D");
         };
-
-        Pelicula::~Pelicula();
