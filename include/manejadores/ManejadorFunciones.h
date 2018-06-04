@@ -14,6 +14,7 @@ class ManejadorFunciones{
     private:
         static ManejadorFunciones* instancia;
         map<int, Funcion*> funciones;
+        map<int,Funcion*>::iterator it;        
         ManejadorFunciones();
     public:
 
@@ -26,6 +27,9 @@ class ManejadorFunciones{
         bool isMember(int id);
         Funcion* find(int id);
         bool isEmpty();
+        void beginIterator();
+        void next();
+        Funcion* getElement();        
 
         /*  DESTRUCTOR */
         virtual ~ManejadorFunciones();

@@ -4,13 +4,13 @@
 
 class DtSala
 {
-    public:
-        DtSala();
-        virtual ~DtSala();
-
-    protected:
-
-    private:
+private:
+    int idSala;
+    int cantAsientos;
+    
+public:
+        DtSala(int idSala, int cantAsientos);
+        ~DtSala();
 };
 
 #endif // DTSALA_H

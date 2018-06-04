@@ -41,7 +41,24 @@
             return this->funciones.empty();
         }
 
-
+        void ManejadorFunciones::beginIterator(){
+            this->it = funciones.begin();
+        }
+        
+        
+        Funcion* ManejadorFunciones::getElement(){
+            if (it != funciones.end()){
+                return it->second;
+            }
+            else{
+                return NULL;
+            }
+        }
+        
+        void ManejadorFunciones::next(){
+            this->it++;
+        };
+        
         /*  DESTRUCTOR */
         ManejadorFunciones::~ManejadorFunciones(){
             map<int,Funcion*>::iterator it;

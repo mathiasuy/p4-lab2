@@ -4,13 +4,12 @@
 
 class DtFuncion
 {
+    private:
+        
     public:
         DtFuncion();
         virtual ~DtFuncion();
 
-    protected:
-
-    private:
 };
 
 #endif // DTFUNCION_H

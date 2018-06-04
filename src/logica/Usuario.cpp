@@ -1,4 +1,5 @@
 #include "../../include/logica/Usuario.h"
+#include "../../include/logica/Funcion.h"
 
 Usuario::~Usuario()
 {
@@ -7,6 +8,10 @@ Usuario::~Usuario()
 
 
 string Usuario::getNickName(){
+    return this->nickName;
+};
+
+string Usuario::getID(){
     return this->nickName;
 };
 
@@ -36,13 +41,23 @@ Usuario::Usuario(string nickName, string imagen, string password){
     this->setPassword(password);
 };
 
-bool Usuario::agregarReservaDebito(int cantAsientos, Funcion* funcion, float montoTotal, string  banco){
-    Reserva reserva = new Reserva(cantAsientos,funcion,montoTotal,banco);
+bool Usuario::agregarReservaDebito(int cantAsientos, Funcion* funcion, string  banco, float montoTotal){
+    Reserva* reserva = new Reserva(cantAsientos,funcion,banco,montoTotal);
     this->reservas[reserva->getID()] = reserva;
 };
 
-bool Usuario::agregarReservaCredito(int cantAsientos, Funcion* funcion, float montoTotal, float descuento){
-    Reserva reserva = new Reserva(cantAsientos,funcion,montoTotal,descuento);
+void Usuario::eliminarReservaConFuncion(int idFuncion){
+    map<int,Reserva*>::iterator it = reservas.begin();
+    bool encontre = false;
+    while (it != this->reservas.end() && !encontre){
+        if (it->second->tieneFuncion(idFuncion)){
+            delete it->second;
+        }
+    }
+};
+
+bool Usuario::agregarReservaCredito(int cantAsientos, Funcion* funcion,string financiera, float descuento, float montoTotal){
+    Reserva* reserva = new Reserva(cantAsientos,funcion,financiera,descuento,montoTotal);
     this->reservas[reserva->getID()] = reserva;
 };
 
@@ -53,3 +68,15 @@ bool Usuario::quitarReserva(int id){
 bool Usuario::tieneReserva(int id){
     return (this->reservas.find(id) != this->reservas.end());
 };
+
+bool Usuario::tieneReservaFuncion(int id){
+    map<int,Reserva*>::iterator it = this->reservas.begin();
+    while (it != this->reservas.end()){
+        if (it->second->getFuncion()->getID() == id){
+            return true;
+        }
+    }
+    return false;
+};
+
+

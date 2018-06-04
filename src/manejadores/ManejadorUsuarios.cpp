@@ -42,6 +42,24 @@
         }
 
 
+        void ManejadorUsuarios::beginIterator(){
+            this->it = usuarios.begin();
+        }
+
+
+        Usuario* ManejadorUsuarios::getElement(){
+            if (this->it != this->usuarios.end()){
+                return it->second;
+            }
+            else{
+                return NULL;
+            }
+        }
+
+        void ManejadorUsuarios::next(){
+            this->it++;
+        };
+
         /*  DESTRUCTOR */
         ManejadorUsuarios::~ManejadorUsuarios(){
             map<string,Usuario*>::iterator it;

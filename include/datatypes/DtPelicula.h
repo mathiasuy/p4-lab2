@@ -1,16 +1,23 @@
 #ifndef DTPELICULA_H
 #define DTPELICULA_H
+#include <string>
 
+using namespace std;
 
 class DtPelicula
 {
+private:
+    string titulo;
+    string poster;
+    float puntajePromedio;
+
     public:
-        DtPelicula();
-        virtual ~DtPelicula();
-
-    protected:
-
-    private:
+        string getID();
+        string getTitulo();
+        string getPoster();
+        float getPuntajePromedio();
+        DtPelicula(string titulo, string poster, float puntajePromedio);
+        ~DtPelicula();
 };
 
 #endif // DTPELICULA_H

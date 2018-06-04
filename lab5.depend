@@ -803,3 +803,266 @@
 	"datatypes/DtUsuario.h"
 	"datatypes/DtFecha.h"
 
+1528075218 source:c:\cygwin64\home\tareas\lab1\main.cpp
+	"include/ISistema.h"
+	"include/Factory.h"
+
+1528073253 c:\cygwin64\home\tareas\lab1\include\isistema.h
+	<vector>
+	<map>
+	<string>
+	"datatypes/DtTest.h"
+	"datatypes/DtCine.h"
+	"datatypes/DtComentario.h"
+	"datatypes/DtCredito.h"
+	"datatypes/DtDebito.h"
+	"datatypes/DtFecha.h"
+	"datatypes/DtFuncion.h"
+	"datatypes/DtPelicula.h"
+	"datatypes/DtPuntaje.h"
+	"datatypes/DtReserva.h"
+	"datatypes/DtSala.h"
+	"datatypes/DtUsuario.h"
+	"manejadores/ManejadorCines.h"
+	"manejadores/ManejadorFunciones.h"
+	"manejadores/ManejadorPeliculas.h"
+	"manejadores/ManejadorUsuarios.h"
+
+1528046177 c:\cygwin64\home\tareas\lab1\include\datatypes\dtcine.h
+	"DtSala.h"
+	<vector>
+	<string>
+
+1528044532 c:\cygwin64\home\tareas\lab1\include\datatypes\dtsala.h
+
+1528065204 c:\cygwin64\home\tareas\lab1\include\datatypes\dtcomentario.h
+	<string>
+
+1528059951 c:\cygwin64\home\tareas\lab1\include\datatypes\dtcredito.h
+	"DtTarjeta.h"
+
+1528065593 c:\cygwin64\home\tareas\lab1\include\datatypes\dttarjeta.h
+	<string>
+
+1528046512 c:\cygwin64\home\tareas\lab1\include\datatypes\dtdebito.h
+	"../datatypes/DtTarjeta.h"
+
+1528060319 c:\cygwin64\home\tareas\lab1\include\datatypes\dtfecha.h
+	<ctime>
+
+1528045582 c:\cygwin64\home\tareas\lab1\include\datatypes\dtfuncion.h
+
+1528060486 c:\cygwin64\home\tareas\lab1\include\datatypes\dtpelicula.h
+	<string>
+
+1528045406 c:\cygwin64\home\tareas\lab1\include\datatypes\dtpuntaje.h
+	<string>
+
+1527986167 c:\cygwin64\home\tareas\lab1\include\datatypes\dtreserva.h
+
+1527986167 c:\cygwin64\home\tareas\lab1\include\datatypes\dtusuario.h
+
+1528064605 c:\cygwin64\home\tareas\lab1\include\manejadores\manejadorcines.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Cine.h"
+
+1528064542 c:\cygwin64\home\tareas\lab1\include\logica\cine.h
+	<string>
+	<map>
+	<vector>
+	"Sala.h"
+	"../Utils.h"
+
+1528071396 c:\cygwin64\home\tareas\lab1\include\logica\sala.h
+	<string>
+	<vector>
+	<map>
+	"Funcion.h"
+	"Cine.h"
+
+1528070938 c:\cygwin64\home\tareas\lab1\include\logica\funcion.h
+	"../datatypes/DtFecha.h"
+	<string>
+	"Cine.h"
+	"Pelicula.h"
+
+1528074412 c:\cygwin64\home\tareas\lab1\include\logica\pelicula.h
+	"Comentario.h"
+	"Puntaje.h"
+	"Funcion.h"
+	"../datatypes/DtPelicula.h"
+	<vector>
+	<map>
+
+1528063728 c:\cygwin64\home\tareas\lab1\include\logica\comentario.h
+	<string>
+	"../datatypes/DtComentario.h"
+	"../Utils.h"
+
+1528061140 c:\cygwin64\home\tareas\lab1\include\logica\puntaje.h
+	"../datatypes/DtPuntaje.h"
+	"../logica/Pelicula.h"
+	<string>
+
+1528004166 c:\cygwin64\home\tareas\lab1\include\manejadores\manejadorfunciones.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Funcion.h"
+
+1528004172 c:\cygwin64\home\tareas\lab1\include\manejadores\manejadorpeliculas.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Pelicula.h"
+
+1528004177 c:\cygwin64\home\tareas\lab1\include\manejadores\manejadorusuarios.h
+	"../logica/Usuario.h"
+	<map>
+
+1528064139 c:\cygwin64\home\tareas\lab1\include\logica\usuario.h
+	<map>
+	<iomanip>
+	"Reserva.h"
+	<string>
+
+1528010140 c:\cygwin64\home\tareas\lab1\include\logica\reserva.h
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtPelicula.h"
+	"../logica/Tarjeta.h"
+
+1528065828 c:\cygwin64\home\tareas\lab1\include\logica\tarjeta.h
+	<string>
+
+1528065516 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtdebito.cpp
+	"../../include/datatypes/DtDebito.h"
+
+1527986167 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtfuncion.cpp
+	"../../include/datatypes/DtFuncion.h"
+
+1527986167 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtreserva.cpp
+	"../../include/datatypes/DtReserva.h"
+
+1528065419 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dttarjeta.cpp
+	"../../include/datatypes/DtTarjeta.h"
+
+1528063323 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtusuario.cpp
+	"../../include/datatypes/DtUsuario.h"
+
+1528066130 source:c:\cygwin64\home\tareas\lab1\src\logica\comentario.cpp
+	"../../include/logica/Comentario.h"
+
+1528067263 c:\cygwin64\home\tareas\lab1\include\utils.h
+	<string>
+	<sstream>
+	<iomanip>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1528065864 source:c:\cygwin64\home\tareas\lab1\src\logica\credito.cpp
+	"../../include/logica/Credito.h"
+
+1528065816 c:\cygwin64\home\tareas\lab1\include\logica\credito.h
+	"Tarjeta.h"
+
+1528065870 source:c:\cygwin64\home\tareas\lab1\src\logica\debito.cpp
+	"../../include/logica/Debito.h"
+
+1528065810 c:\cygwin64\home\tareas\lab1\include\logica\debito.h
+	"Tarjeta.h"
+	<string>
+
+1528065906 source:c:\cygwin64\home\tareas\lab1\src\logica\tarjeta.cpp
+	"../../include/logica/Tarjeta.h"
+
+1528075110 source:c:\cygwin64\home\tareas\lab1\src\utils.cpp
+	"../include/Utils.h"
+
+1528046195 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtcine.cpp
+	"../../include/datatypes/DtCine.h"
+
+1528065196 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtcomentario.cpp
+	"../../include/datatypes/DtComentario.h"
+
+1528065483 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtcredito.cpp
+	"../../include/datatypes/DtCredito.h"
+
+1528074047 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtfecha.cpp
+	"../../include/datatypes/DtFecha.h"
+
+1528060467 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtpelicula.cpp
+	"../../include/datatypes/DtPelicula.h"
+
+1528044572 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtsala.cpp
+	"../../include/datatypes/DtSala.h"
+
+1528069537 source:c:\cygwin64\home\tareas\lab1\src\factory.cpp
+	"../include/Factory.h"
+	"../include/logica/Sistema.h"
+
+1528069533 c:\cygwin64\home\tareas\lab1\include\factory.h
+	"ISistema.h"
+	"ISistema.h"
+
+1528073220 c:\cygwin64\home\tareas\lab1\include\logica\sistema.h
+	"../ISistema.h"
+
+1528071231 source:c:\cygwin64\home\tareas\lab1\src\logica\cine.cpp
+	"../../include/logica/Cine.h"
+
+1528066297 source:c:\cygwin64\home\tareas\lab1\src\logica\funcion.cpp
+	"../../include/logica/Funcion.h"
+
+1528061579 source:c:\cygwin64\home\tareas\lab1\src\logica\puntaje.cpp
+	"../../include/logica/Puntaje.h"
+
+1528067144 source:c:\cygwin64\home\tareas\lab1\src\logica\reserva.cpp
+	"../../include/logica/Reserva.h"
+	"../../include/logica/Credito.h"
+	"../../include/logica/Debito.h"
+	"../../include/logica/Funcion.h"
+
+1528071444 source:c:\cygwin64\home\tareas\lab1\src\logica\sala.cpp
+	"../../include/logica/Sala.h"
+	"../../include/logica/Funcion.h"
+	<map>
+
+1528074424 source:c:\cygwin64\home\tareas\lab1\src\logica\pelicula.cpp
+	"../../include/logica/Pelicula.h"
+
+1528075095 source:c:\cygwin64\home\tareas\lab1\src\logica\sistema.cpp
+	"../../include/logica/Sistema.h"
+
+1528064624 source:c:\cygwin64\home\tareas\lab1\src\manejadores\manejadorcines.cpp
+	"../../include/manejadores/ManejadorCines.h"
+
+1528067119 source:c:\cygwin64\home\tareas\lab1\src\logica\usuario.cpp
+	"../../include/logica/Usuario.h"
+	"../../include/logica/Funcion.h"
+
+1528004347 source:c:\cygwin64\home\tareas\lab1\src\manejadores\manejadorfunciones.cpp
+	"../../include/manejadores/ManejadorFunciones.h"
+
+1528074672 source:c:\cygwin64\home\tareas\lab1\src\manejadores\manejadorpeliculas.cpp
+	"../../include/manejadores/ManejadorPeliculas.h"
+
+1528062515 source:c:\cygwin64\home\tareas\lab1\src\manejadores\manejadorusuarios.cpp
+	"../../include/manejadores/ManejadorUsuarios.h"
+
+1528045498 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtpuntaje.cpp
+	"../../include/datatypes/DtPuntaje.h"
+
+1528073649 c:\cygwin64\home\tareas\lab1\include\datatypes\dttest.h
+
+1528073623 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dttest.cpp
+	"../../include/datatypes/DtTest.h"
+

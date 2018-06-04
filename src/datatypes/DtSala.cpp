@@ -1,8 +1,9 @@
 #include "../../include/datatypes/DtSala.h"
 
-DtSala::DtSala()
+DtSala::DtSala(int idSala, int cantAsientos)
 {
-    //ctor
+    this->cantAsientos = cantAsientos;
+    this->idSala = idSala;
 }
 
 DtSala::~DtSala()

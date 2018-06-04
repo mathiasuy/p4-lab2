@@ -14,12 +14,8 @@ string Debito::getBanco(){
     return this->banco;
 };
 
-bool Debito::isEqual(Tarjeta * t){
-    return this->getID() == t->getID();
-};
-
 string Debito::toString(){
-    return "Esta es la tarjeta de debito " + this->getID();
+    return "Esta es la tarjeta de debito ";
 };
 
 Debito::Debito(float montoTotal, string banco):Tarjeta(montoTotal){

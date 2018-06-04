@@ -1,32 +1,23 @@
 #include "../../include/datatypes/DtCredito.h"
 
-DtCredito::DtCredito()
-{
-    //ctor
-}
-
-DtCredito::DtCredito(string financiera, float descuento){
-this->financiera = financiera;
-this->descuento = descuento;
+DtCredito::DtCredito(int idTarjeta, float montoTotal, string financiera, float descuento):DtTarjeta(idTarjeta,montoTotal){
+    this->financiera = financiera;
+    this->descuento = descuento;
 };
 
 string DtCredito::getFinanciera(){
-return this->financiera;
-}
-
-bool DtCredito:: isEqual(DtTarjeta *t){
-return true;
+    return this->financiera;
 }
 
 float DtCredito:: getDescuento(){
-return this->descuento; }
-
-float DtCredito:: getMontoTotal(float precio){
-float res = (this->descuento * precio) / 100
-
+    return this->descuento;
 }
 
 DtCredito::~DtCredito()
 {
     //dtor
+}
+
+string DtCredito::toString(){
+    return "credito";
 }

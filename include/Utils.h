@@ -1,7 +1,11 @@
 #ifndef UTILS_H
 #define UTILS_H
 #include <string>
-
+#include <sstream> // stringstream
+#include <iomanip> // setprecision
+#include <sstream> // stringstream
+#include <stdio.h>
+#include <stdlib.h>
 
 class Utils
 {

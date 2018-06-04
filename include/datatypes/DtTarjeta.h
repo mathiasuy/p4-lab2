@@ -17,8 +17,8 @@ class DtTarjeta
         DtTarjeta(int idTarjeta, float montoTotal);
         virtual ~DtTarjeta();
         int getIdTarjeta();
-        virtual float getMontoTotal(float precio);
-        virtual bool isEqual(DtTarjeta* t) = 0;
+        virtual float getMontoTotal();
+        virtual bool isEqual(DtTarjeta* t);
         virtual string toString() = 0;
 
     //protected:

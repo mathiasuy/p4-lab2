@@ -15,7 +15,6 @@ class Credito : public Tarjeta
 
         Credito(float montoTotal, string financiera, float descuento);
 
-        bool isEqual(Tarjeta * t);
         string toString();
         ~Credito();
 };

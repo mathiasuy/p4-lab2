@@ -1,7 +1,6 @@
 #include "../../include/manejadores/ManejadorPeliculas.h"
 
         ManejadorPeliculas* ManejadorPeliculas::instancia = NULL;
-        map<int, Pelicula*> peliculas;
 
         ManejadorPeliculas::ManejadorPeliculas(){}
 
@@ -17,7 +16,7 @@
         /*  OPERACIONES BASICAS */
         bool ManejadorPeliculas::add(Pelicula* pelicula){
             int t1 = this->peliculas.size();
-            this->peliculas[pelicula->getId()] = pelicula;
+            this->peliculas[pelicula->getID()] = pelicula;
             int t2 = this->peliculas.size();
             return t1 == t2;
         }
@@ -41,6 +40,23 @@
             return this->peliculas.empty();
         }
 
+        void ManejadorPeliculas::beginIterator(){
+            this->it = peliculas.begin();
+        }
+
+
+        Pelicula* ManejadorPeliculas::getElement(){
+            if (it != peliculas.end()){
+                return it->second;
+            }
+            else{
+                return NULL;
+            }
+        }
+
+        void ManejadorPeliculas::next(){
+            this->it++;
+        };
 
         /*  DESTRUCTOR */
         ManejadorPeliculas::~ManejadorPeliculas(){

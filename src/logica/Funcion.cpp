@@ -33,6 +33,7 @@ void Funcion::setSala(Sala* sala){
 };
 
 
+
 string Funcion::toString(){
     return "Esta es la funcion: " + this->getID();
 };
@@ -42,12 +43,29 @@ bool Funcion::isEqual(Funcion* funcion){
 };
 
 
-Funcion::Funcion(int asientosReservados, float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *pelicula){
+Funcion::Funcion(float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *pelicula){
+    this->asientosReservados = 0;
     this->id = ++idGlobal;
     this->precioEntrada = precioEntrada;
     this->setFecha(fecha);
     this->setPelicula(pelicula);
     this->setSala(sala);
+};
+
+int Funcion::getAsientosReservados(){
+    this->asientosReservados;
+};
+
+int Funcion::getAsientosLibres(){
+    return this->getSala()->getCapacidad() - this->getAsientosReservados();
+}
+
+Sala* Funcion::getSala()
+{
+    return this->sala;
+}
+void Funcion::agregarAsientosReservados(int aumento){
+    this->asientosReservados+= aumento;
 };
 
 Funcion::~Funcion(){

@@ -13,6 +13,14 @@ DtTarjeta::DtTarjeta(int id, float montoTotal){
 };
 
 
+bool DtTarjeta:: isEqual(DtTarjeta *t){
+    return this->getIdTarjeta() == t->getIdTarjeta();
+}
+
+float DtTarjeta::getMontoTotal(){
+    return this->montoTotal;
+};
+
 
 
 int DtTarjeta::getIdTarjeta(){

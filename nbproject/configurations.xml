@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="94">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
+      <df name="include">
+        <df name="datatypes">
+          <in>DtPuntaje.h</in>
+        </df>
+      </df>
       <df name="src">
         <df name="datatypes">
           <in>DtCine.cpp</in>
@@ -12,6 +17,7 @@
           <in>DtFinanciera.cpp</in>
           <in>DtFuncion.cpp</in>
           <in>DtPelicula.cpp</in>
+          <in>DtPuntaje.cpp</in>
           <in>DtReserva.cpp</in>
           <in>DtSala.cpp</in>
           <in>DtTarjeta.cpp</in>
@@ -75,7 +81,13 @@
             </incDir>
           </ccTool>
         </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
       </makefileType>
+      <item path="include/datatypes/DtPuntaje.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Factory.cpp" ex="false" tool="1" flavor2="0">
@@ -97,6 +109,8 @@
       <item path="src/datatypes/DtFuncion.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/datatypes/DtPelicula.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/datatypes/DtPuntaje.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/datatypes/DtReserva.cpp" ex="false" tool="1" flavor2="0">
       </item>

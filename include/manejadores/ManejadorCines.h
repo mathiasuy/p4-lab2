@@ -13,11 +13,14 @@ class ManejadorCines
     private:
         static ManejadorCines* instancia;
         map<int, Cine*> cines;
+        map<int,Cine*>::iterator it;
         ManejadorCines();
     public:
 
         /*  OPERACIONES */
         static ManejadorCines* getInstancia();
+
+
 
         /*  OPERACIONES BASICAS */
         bool add(Cine* cine);
@@ -25,6 +28,9 @@ class ManejadorCines
         bool isMember(int id);
         Cine* find(int id);
         bool isEmpty();
+        void beginIterator();
+        void next();
+        Cine* getElement();
 
         /*  DESTRUCTOR */
         virtual ~ManejadorCines();

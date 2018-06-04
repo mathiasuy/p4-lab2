@@ -1,7 +1,6 @@
 #include "../../include/manejadores/ManejadorCines.h"
 
         ManejadorCines* ManejadorCines::instancia = NULL;
-        map<int, Cine*> cines;
 
         ManejadorCines::ManejadorCines(){}
 
@@ -17,7 +16,7 @@
         /*  OPERACIONES BASICAS */
         bool ManejadorCines::add(Cine* cine){
             int t1 = this->cines.size();
-            this->cines[cine->getId()] = cine;
+            this->cines[cine->getID()] = cine;
             int t2 = this->cines.size();
             return t1 == t2;
         }
@@ -48,3 +47,23 @@
             for (it = cines.begin(); it != cines.end(); ++it)
                 delete it->second;
         }
+
+
+
+        void ManejadorCines::beginIterator(){
+            this->it = cines.begin();
+        }
+
+
+        Cine* ManejadorCines::getElement(){
+            if (it != cines.end()){
+                return it->second;
+            }
+            else{
+                return NULL;
+            }
+        }
+
+        void ManejadorCines::next(){
+            this->it++;
+        };

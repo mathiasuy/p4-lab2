@@ -6,10 +6,6 @@ Tarjeta::~Tarjeta()
     //dtor
 }
 
-bool Tarjeta::isEqual(Tarjeta* t)
-{
-    return true;
-}
 
 float Tarjeta::getMontoTotal(){
     return this->montoTotal;

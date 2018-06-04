@@ -1,26 +1,21 @@
 #ifndef DTCREDITO_H
 #define DTCREDITO_H
-#include "../include/datatypes/DtTarjeta.h"
+#include "DtTarjeta.h"
 using namespace std;
 
 class DtCredito: public DtTarjeta
 {
     private:
-         string banco;
+         string financiera;
          float descuento;
-
-
     public:
-        DtCredito(string financiera, float descuento);
-        DtCredito();
+        DtCredito(int idTarjeta, float montoTotal, string financiera, float descuento);
+        ~DtCredito();
+
         string getFinanciera();
-        virtual ~DtCredito();
-        virtual float getMontoTotal();
-        virtual bool isEqual(DtTarjeta* t) = 0;
-        virtual string toString() = 0;
-    protected:
+        float getDescuento();
 
-
+        string toString();
 };
 
 #endif // DTCREDITO_H

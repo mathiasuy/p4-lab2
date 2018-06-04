@@ -2,12 +2,12 @@
 #define FUNCION_H
 #include "../datatypes/DtFecha.h"
 #include <string>
-#include "Sala.h"
 #include "Cine.h"
 #include "Pelicula.h"
 
 using namespace std;
 
+class Pelicula;
 class Sala;
 
 class Funcion
@@ -27,6 +27,9 @@ class Funcion
         Sala* getSala();
         DtFecha getFecha();
         float getPrecio();
+        int getAsientosReservados();
+        int getAsientosLibres();
+        void agregarAsientosReservados(int aumento);
 
         void setSala(Sala* sala);
         void setPelicula(Pelicula* pelicula);
@@ -37,7 +40,7 @@ class Funcion
         bool isEqual(Funcion *funcion);
 
         ~Funcion();
-        Funcion(int asientosReservados, float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *pelicula);
+        Funcion(float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *pelicula);
 };
 
 #endif // FUNCION_H

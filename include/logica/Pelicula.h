@@ -1,17 +1,21 @@
+#ifndef PELICULA_H
+#define PELICULA_H
 #include "Comentario.h"
 #include "Puntaje.h"
 #include "Funcion.h"
-#ifndef PELICULA_H
-#define PELICULA_H
+#include "../datatypes/DtPelicula.h"
 #include <vector>
 #include <map>
+
+class Funcion;
+class Puntaje;
 
 class Pelicula
 {
     private:
         map<int, Funcion*> funciones;
         map<string,Puntaje*> puntajes;
-        map<string,Comentario*> comentarios;
+        map<int,Comentario*> comentarios;
         string titulo;
         string poster;
         string sinopsis;
@@ -23,11 +27,14 @@ class Pelicula
         void setPoster(string poster);
         void setSinopsis(string sinopsis);
         void setPuntajePromedio();
-        
-         void agregarComentario(string nickname, string comentario);
+
+        void agregarComentario(string nickname, string comentario);
         void agregarComentario(string nickname, string comentario, int esRespuestaDeID);
         void modificarComentario(int id, string comentario);
-        
+        void agregarPuntaje(string nickName, float puntaje);
+        float getPuntaje(string nickName);
+        void setPuntaje(string nickName, float puntaje);
+        DtPelicula getDtPuntaje(string nickName);
 
         string getPoster();
         string getSinopsis();
@@ -37,15 +44,14 @@ class Pelicula
         bool tieneFuncion(int id);
         Funcion* getFuncion(int id);
         map<int,Funcion*> listarFunciones();
-        
-        string getId();
+
+        string getID();
         string getTitulo();
         string toString();
         bool isEqual(Pelicula* pelicula);
 
         /* CONSTRUS Y DESTRUS */
-        Pelicula(string titulo);
-        Pelicula(string titulo, string poster, string sinopsis, float puntajePromedio);
+        Pelicula(string titulo, string poster, string sinopsis);
         virtual ~Pelicula();
 
 };

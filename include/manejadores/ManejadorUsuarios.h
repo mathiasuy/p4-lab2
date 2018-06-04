@@ -8,6 +8,7 @@ class ManejadorUsuarios
     private:
         static ManejadorUsuarios* instancia;
         map<string, Usuario*> usuarios;
+        map<string,Usuario*>::iterator it;        
         ManejadorUsuarios();
     public:
 
@@ -20,6 +21,9 @@ class ManejadorUsuarios
         bool isMember(string id);
         Usuario* find(string id);
         bool isEmpty();
+        void beginIterator();
+        void next();
+        Usuario* getElement();
 
         /*  DESTRUCTOR */
         virtual ~ManejadorUsuarios();

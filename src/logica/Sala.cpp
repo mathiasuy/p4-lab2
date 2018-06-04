@@ -34,7 +34,13 @@ string Sala::toString(){
     return "Esta es la sala " + this->getID();
 };
 
-Sala::Sala(int capacidad){
+
+Cine* Sala::getCine(){
+    return this->cine;
+};
+
+Sala::Sala(int capacidad, Cine* cine){
+    this->cine = cine;
     this->id = ++idGlobal;
     this->setCapacidad(capacidad);
 
@@ -44,3 +50,8 @@ Sala::Sala(int capacidad){
 };
 
 Sala::~Sala(){};
+
+
+bool Sala::tieneFuncion(int id){
+    return this->funciones.find(id) != this->funciones.end();
+}

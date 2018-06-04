@@ -1,6 +1,9 @@
 #ifndef DEBITO_H
 #define DEBITO_H
 #include "Tarjeta.h"
+#include <string>
+
+using namespace std;
 
 class Debito : public Tarjeta
 {
@@ -9,7 +12,6 @@ class Debito : public Tarjeta
     public:
         void setBanco(string banco);
         string getBanco();
-        bool isEqual(Tarjeta * t);
         string toString();
 
         Debito(float montoTotal, string banco);

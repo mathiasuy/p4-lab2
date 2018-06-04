@@ -1,17 +1,15 @@
 #include "../../include/logica/Pelicula.h"
-#include "../../include/logica/Comentario.h"
-#include "../../include/logica/Puntaje.h"
-        
+
         Pelicula::~Pelicula()
         {
-            map<string,Puntaje*>::iterator it;
+            std::map<string,Puntaje*>::iterator it;
             for (it = puntajes.begin(); it != puntajes.end(); ++it)
                 delete it->second;
-            map<string,Comentario*>::iterator it;
-            for (it = comentarios.begin(); it != comentarios.end(); ++it)
+            std::map<int,Comentario*>::iterator it2;
+            for (it2 = comentarios.begin(); it2 != comentarios.end(); ++it2)
                 delete it->second;
-        }        
-        
+        }
+
         void Pelicula::setPoster(string poster){
             this->poster = poster;
         };
@@ -27,29 +25,44 @@
             Comentario* comentari = new Comentario(nickname, comentario, esRespuestaDeID);
             comentarios[comentari->getID()] = comentari;
         }
-/*
+
         void Pelicula::modificarComentario(int id, string comentario) {
+           Comentario* comen = this->comentarios.find(id)->second;
+           if (comen != NULL){
+               comen->setComentairo(comentario);
+           }
+        }
 
-           Comentario* comen = this->comentarios.find(id);
-           comen->setComentairo(comentario);
+        map<int,Funcion*> Pelicula::listarFunciones(){
+            return this->funciones;
+        }
 
+        bool Pelicula::quitarFuncion(int id){
+            this->funciones.erase(id);
         }
 
         void Pelicula::agregarPuntaje(string nickName, float puntaje){
             Puntaje* puntaj = new Puntaje(nickName, puntaje);
-            puntajes[puntaj->getID()] = puntaj;
+            this->puntajes[puntaj->getID()] = puntaj;
         }
 
-        void Pelicula::modificarPuntaje(string nickName, float puntaje) {
-            Puntaje punt = this->puntajes.find(puntaje);
-            punt->setPuntaje(puntaje);
+        void Pelicula::setPuntaje(string nickName, float puntaje) {
+            Puntaje* punt = this->puntajes.find(nickName)->second;
+            if (punt != NULL){
+                punt->setPuntaje(puntaje);
+            }else{
+                this->agregarPuntaje(nickName,puntaje);
+            }
         }
 
-        float Pelicula::verPuntaje(string nickName) {
-            Puntaje p = this->puntajes.find(nickName);
-            return p->getPuntaje(); //PUEDE SER PUNTO O GUION?
+        /**
+         * Retorna -1 si nunca puntuo
+         * */
+        float Pelicula::getPuntaje(string nickName) {
+            Puntaje* p = this->puntajes.find(nickName)->second;
+            return ((p != NULL)?(p->getPuntaje()):-1); //PUEDE SER PUNTO O GUION?
         }
-*/
+
         string Pelicula::getPoster(){
             return this->poster;
         };
@@ -57,22 +70,22 @@
         string Pelicula::getSinopsis(){
             return this->sinopsis;
         };
-/*
+
         float Pelicula::getPuntajePromedio(){
-            map<int,Puntaje*>::iterator it = puntajes.begin();
-            float suma, aux = 0;
+            map<string,Puntaje*>::iterator it = puntajes.begin();
+            float suma = 0;
             while (it != puntajes.end()){
-                suma += puntajes[it->second()];
+                suma += puntajes[it->second->getID()]->getPuntaje();
                 it++;
             }
             return suma/puntajes.size(); // CREO QUE ESTA TODO MAL....(O SEA SEGURAMENTE ESTE MAL, PORQUE LO HIZO EL CAMARADA)
         };
-*/
+
         string Pelicula::getTitulo(){
             return this->getTitulo();
         };
 
-        string Pelicula::getId(){
+        string Pelicula::getID(){
             return this->getTitulo();
         };
 
@@ -81,16 +94,13 @@
         };
 
         bool Pelicula::isEqual(Pelicula *pelicula){
-            return this->getId() == pelicula->getId();
+            return this->getID() == pelicula->getID();
         };
 
 
         /* CONSTRUS Y DESTRUS */
-        Pelicula::Pelicula(string titulo){
-            this->titulo = titulo;
-        };
 
-        Pelicula::Pelicula(string titulo, string poster, string sinopsis, float puntajePromedio){
+        Pelicula::Pelicula(string titulo, string poster, string sinopsis){
             this->titulo = titulo;
             this->setPoster("N/D");
             this->setSinopsis("N/D");

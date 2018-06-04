@@ -40,6 +40,7 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/Factory.h" />
+		<Unit filename="include/ISistema.h" />
 		<Unit filename="include/Utils.h" />
 		<Unit filename="include/datatypes/DtCine.h" />
 		<Unit filename="include/datatypes/DtComentario.h" />
@@ -48,16 +49,17 @@
 		<Unit filename="include/datatypes/DtFecha.h" />
 		<Unit filename="include/datatypes/DtFuncion.h" />
 		<Unit filename="include/datatypes/DtPelicula.h" />
+		<Unit filename="include/datatypes/DtPuntaje.h" />
 		<Unit filename="include/datatypes/DtReserva.h" />
 		<Unit filename="include/datatypes/DtSala.h" />
 		<Unit filename="include/datatypes/DtTarjeta.h" />
+		<Unit filename="include/datatypes/DtTest.h" />
 		<Unit filename="include/datatypes/DtUsuario.h" />
 		<Unit filename="include/logica/Cine.h" />
 		<Unit filename="include/logica/Comentario.h" />
 		<Unit filename="include/logica/Credito.h" />
 		<Unit filename="include/logica/Debito.h" />
 		<Unit filename="include/logica/Funcion.h" />
-		<Unit filename="include/logica/ISistema.h" />
 		<Unit filename="include/logica/Pelicula.h" />
 		<Unit filename="include/logica/Puntaje.h" />
 		<Unit filename="include/logica/Reserva.h" />
@@ -79,16 +81,17 @@
 		<Unit filename="src/datatypes/DtFecha.cpp" />
 		<Unit filename="src/datatypes/DtFuncion.cpp" />
 		<Unit filename="src/datatypes/DtPelicula.cpp" />
+		<Unit filename="src/datatypes/DtPuntaje.cpp" />
 		<Unit filename="src/datatypes/DtReserva.cpp" />
 		<Unit filename="src/datatypes/DtSala.cpp" />
 		<Unit filename="src/datatypes/DtTarjeta.cpp" />
+		<Unit filename="src/datatypes/DtTest.cpp" />
 		<Unit filename="src/datatypes/DtUsuario.cpp" />
 		<Unit filename="src/logica/Cine.cpp" />
 		<Unit filename="src/logica/Comentario.cpp" />
 		<Unit filename="src/logica/Credito.cpp" />
 		<Unit filename="src/logica/Debito.cpp" />
 		<Unit filename="src/logica/Funcion.cpp" />
-		<Unit filename="src/logica/Pago.cpp" />
 		<Unit filename="src/logica/Pelicula.cpp" />
 		<Unit filename="src/logica/Puntaje.cpp" />
 		<Unit filename="src/logica/Reserva.cpp" />

@@ -1,12 +1,14 @@
 #include "../../include/logica/Reserva.h"
 #include "../../include/logica/Credito.h"
 #include "../../include/logica/Debito.h"
+#include "../../include/logica/Funcion.h"
 
 
 
 Reserva::~Reserva()
 {
-    //dtor
+    this->funcion = NULL;
+    delete this->tarjeta;
 }
 
 int Reserva::getID(){
@@ -25,12 +27,20 @@ bool Reserva::isEqual(Reserva * reserva){
     return this->getID() == reserva->getID();
 };
 
+void Reserva::setFuncion(Funcion* funcion){
+    this->funcion = funcion;
+};
+
 std::string Reserva::toString(){
     return "Reserva n� "+ this->getID();
 };
 
 //Reserva::~Reserva(){}
 
+
+Funcion* Reserva::getFuncion(){
+    return this->funcion;
+}
 
 Reserva::Reserva(int cantAsientos, Funcion* funcion, string financiera, float descuento, float montoTotal){
     this->id = ++idGlobal;
@@ -39,6 +49,7 @@ Reserva::Reserva(int cantAsientos, Funcion* funcion, string financiera, float de
     this->tarjeta =c;
     this->setCantAsientos(cantAsientos);
     this->setFuncion(funcion);
+    funcion->agregarAsientosReservados(cantAsientos);
 };
 
 Reserva::Reserva(int cantAsientos, Funcion* funcion, string  banco, float montoTotal){
@@ -48,4 +59,10 @@ Reserva::Reserva(int cantAsientos, Funcion* funcion, string  banco, float montoT
     this->tarjeta = d;
     this->setCantAsientos(cantAsientos);
     this->setFuncion(funcion);
+    funcion->agregarAsientosReservados(cantAsientos);
 };
+
+
+bool Reserva::tieneFuncion(int id){
+    return this->funcion->getID() == id;
+}

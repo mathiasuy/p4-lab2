@@ -2,7 +2,8 @@
 #define COMENTARIO_H
 
 #include <string>
-#include "datatypes/DtComentario.h"
+#include "../datatypes/DtComentario.h"
+#include "../Utils.h"
 
 using namespace std;
 

@@ -4,6 +4,7 @@
 #include <map>
 #include <vector>
 #include "Sala.h"
+#include "../Utils.h"
 
 using namespace std;
 
@@ -23,10 +24,11 @@ class Cine
         string getDireccion();
 
         void setDireccion(string direccion);
-        int getId();
+        int getID();
         string toString();
         bool isEqual(Cine *cine);
         bool tieneSala(int id);
+        Sala* getSala(int id);
 
         /* CONSTRUS Y DESTRUS */
         Cine(string direccion, vector<int> salas);

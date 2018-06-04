@@ -12,18 +12,14 @@ class DtCine
         int id;
         string direccion;
         float precioEntrada;
-        void setDireccion(string direccion);
-        void setPrecioEntradas(float precioEntrada);
-        vector<DtSala> salas;
     public:
         int getID();
         string getDireccion();
-        float getPrecioEntrada();
 
         bool isEqual(DtCine dtCine);
         string toString();
 
-        DtCine(int id, string direccion, float precioEntrada, vector<DtSala> salas);
+        DtCine(int id, string direccion);
         virtual ~DtCine();
 
 };

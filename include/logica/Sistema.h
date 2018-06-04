@@ -1,10 +1,6 @@
 #ifndef SISTEMA_H
 #define SISTEMA_H
-#include "ISistema.h"
-#include "../manejadores/ManejadorCines.h"
-#include "../manejadores/ManejadorFunciones.h"
-#include "../manejadores/ManejadorPeliculas.h"
-#include "../manejadores/ManejadorUsuarios.h"
+#include "../ISistema.h"
 
 class Sala;
 class Funcion;
@@ -14,32 +10,36 @@ class Sistema : public ISistema
 {
     private:
         static Sistema* instancia;
-        Sistema(){};
+        Sistema();
 
-        //manejadores
-        ManejadorCines *cines = ManejadorCines::getInstancia();
-        ManejadorFunciones *funciones = ManejadorFunciones::getInstancia();
-        ManejadorUsuarios *usuarios = ManejadorUsuarios::getInstancia();
-        ManejadorPeliculas *peliculas = ManejadorPeliculas::getInstancia();
+        /*  LISTAS  */
+        static ManejadorCines *cines;
+        static ManejadorFunciones *funciones;
+        static ManejadorUsuarios *usuarios;
+        static ManejadorPeliculas *peliculas;
 
 
     public:
-        bool altaCine(string direccion, vector<DtSala> capacidadSalas);
+        /*    CINE    */
+        bool altaCine(string direccion, vector<int> capacidadSalas) ;
 
         /*  PELICULA */
-        bool altaFuncion(int asientos, float precioEntrada, DtFecha fecha, Sala* sala, Pelicula* pelicula);
-        bool getPuntajePelicula(string nickName, DtPelicula pelicula);
-        bool puntuarPelicula(string nickName, DtPelicula pelicula);
-        bool eliminarPelicula(string titulo);
+        bool altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula) ;
+        float getPuntajePelicula(string nickName, string tituloPelicula) ;
+        bool puntuarPelicula(string nickName, string tituloPelicula, float puntaje) ;
+        bool comentarPelicula(string nickName, string tituloPelicula, string comentario, int esRespuestaDeID) ;
+        bool comentarPelicula(string nickName, string tituloPelicula, string comentario) ;
+        bool eliminarPelicula(string titulo) ;
 
-        /* USUARIO */
-        bool login(string nickName, string password);
-        bool crearReserva(string nickName, int id, int cantAsientos, DtFuncion funcion, DtPelicula pelicula);
+        /*  USUARIO  */
+        bool login(string nickName, string password) ;
+        bool crearReserva(string nickName,int cantAsientos, int idFuncion, string financiera, float descuento, float montoTotal) ;
+        bool crearReserva(string nickName, int cantAsientos, int idFuncion, string banco, float montoTotal) ;
 
-
-        ~Sistema(){};
+        /*  SISTEMA  */
+        DtTest test();
         static Sistema* getInstance();
-
+        ~Sistema(){};
 };
 
 #endif // SISTEMA_H

@@ -1,5 +1,6 @@
 #include "../../include/logica/Puntaje.h"
 
+
     void Puntaje::setPuntaje(float puntaje){
         this->puntaje = puntaje;
     };
@@ -30,3 +31,7 @@
     }
 
     Puntaje::~Puntaje(){};
+
+    DtPuntaje Puntaje::getDtPuntaje(){
+        return DtPuntaje(this->getNickName(),this->getPuntaje());
+    };

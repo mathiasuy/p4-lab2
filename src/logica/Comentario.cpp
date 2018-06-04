@@ -1,7 +1,7 @@
 #include "../../include/logica/Comentario.h"
-#include "Utils.h"
 
-#include "datatypes/DtComentario.h"
+
+int Comentario::idGlobal = 0;
 
 Comentario::~Comentario()
 {

@@ -23,11 +23,8 @@ Credito::Credito(float montoTotal, string financiera, float descuento):Tarjeta(m
     this->setDescuento(descuento);
 };
 
-bool Credito::isEqual(Tarjeta * t){
-    return this->getID() == t->getID();
-};
 string Credito::toString(){
-    return "Esta es la tarjeta de credito " + this->getID();
+    return "Esta es la tarjeta de credito ";
 };
 
 Credito::~Credito(){

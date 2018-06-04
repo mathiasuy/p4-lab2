@@ -1,6 +1,7 @@
 #ifndef FACTORY_H
 #define FACTORY_H
 #include "ISistema.h"
+#include "ISistema.h"
 
 class Factory
 {

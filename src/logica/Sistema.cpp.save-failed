@@ -110,22 +110,13 @@
         };
         DtTest Sistema::test(){
 
-            int m1[] = {3, 2, 1, 0, 4, 6, 7, 8};
-            vector<int> v1(m1, m1 + sizeof(m1) / sizeof (*m1) );        
-            this->altaCine("18 de Julio 2042",v1);
-            
-            int m2[] = {3, 2, 1, 0, 4, 6, 7, 8};
-            vector<int> v2(m2, m2 + sizeof(m2) / sizeof (*m2) );
-            this->altaCine("Av. Garzon 555",v2);
-            
-            int m3[] = {3, 2, 1, 0, 4, 6, 7, 8};
-            vector<int> v3(m3, m3 + sizeof(m3) / sizeof (*m3) );            
-            this->altaCine("Julio Herrera y Reissing 565",v3);
+            this->altaCine("18 de Julio 2042",{50,30,5});
+/*
+            this->altaCine("Av. Garzon 555",{50,30,5});
+            this->altaCine("Julio Herrera y Reissing 565",{5,30,5});
 
             Pelicula* p = new Pelicula("La Matanza","https://www.fing.edu.uy/inco/cursos/p4/parciales/bienvenida.jpg","Un grupo de estudiantes luchan por sobrevivir al InCo");
-
             this->peliculas->add(p);
-/*            
             p = new Pelicula("Hola m","img/foto1.jpg","bla, bla, bla, bla, esto es una sinopsis");
             this->peliculas->add(p);
             p = new Pelicula("Teens Russians","img/foto2.jpg","Un grupo de chicas estudiantes luchan por conseguir la paz en un mundo tan descontrolado. Actuan: Milka Ferreira");

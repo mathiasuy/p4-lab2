@@ -29,6 +29,7 @@ class Reserva
         void setTarjeta(Tarjeta* tarjeta);
         void setCantAsientos(int cantAsientos);
 
+        bool tieneFuncion(int id);
         bool isEqual(Reserva * reserva);
         string toString();
 

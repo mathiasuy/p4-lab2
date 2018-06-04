@@ -1,5 +1,5 @@
 #include "../../include/logica/Cine.h"
-#include "../Utils.h"
+
 
 
 int Cine::idGlobal = 0;
@@ -8,7 +8,7 @@ Cine::Cine(string direccion, vector<int> salas)
 {
     this->id = ++idGlobal;
     for (std::vector<int>::iterator it = salas.begin() ; it != salas.end(); ++it){
-    	Sala* sala = new Sala(*it);
+    	Sala* sala = new Sala(*it,this);
         this->salas[sala->getID()] = sala;
     }
     this->setDireccion(direccion);
@@ -21,7 +21,7 @@ Cine::~Cine()
         delete it->second;
 }
 
-int Cine::getId(){
+int Cine::getID(){
     return this->id;
 }
 
@@ -34,7 +34,7 @@ void Cine::setDireccion(string direccion){
 }
 
 string Cine::toString(){
-    return "Cine: " + Utils::aString(this->getId()) + " " + this->getDireccion() + " ";
+    return "Cine: " + Utils::aString(this->getID()) + " " + this->getDireccion() + " ";
 };
 
 
@@ -43,12 +43,16 @@ bool Cine::tieneSala(int id){
 }
 
 bool Cine::isEqual(Cine *cine){
-    return this->getId() == cine->getId();
+    return this->getID() == cine->getID();
+}
+
+Sala* Cine::getSala(const int id){
+    return this->salas.find(id)->second;
 }
 
 /*
 bool operator==( Cine& c1,  Cine& c2)
 {
-    c1.isEqual( c2 ) && c1.getId() == c2.getId();
+    c1.isEqual( c2 ) && c1.getID() == c2.getID();
 }
 */

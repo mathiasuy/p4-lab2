@@ -10,10 +10,6 @@
             return this->direccion;
         };
 
-        float DtCine::getPrecioEntrada(){
-            return this->precioEntrada;
-        };
-
         bool DtCine::isEqual(DtCine dtCine){
              return this->getID() == dtCine.getID();
         };
@@ -22,9 +18,7 @@
             return "Datos del cine " + this->getID();
         };
 
-        DtCine::DtCine(int id, string direccion, float precioEntrada, vector<DtSala> salas){
+        DtCine::DtCine(int id, string direccion){
             this->id = id;
             this->direccion = direccion;
-            this->precioEntrada = precioEntrada;
-            this->salas = salas;
         };
