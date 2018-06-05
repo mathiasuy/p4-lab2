@@ -121,24 +121,46 @@
         /***********************************************************************************/        
         
         /* LISTAR TODAS LAS PELICULAS */
-        List<DtPelicula> listarPeliculas();
+        map<string,DtPelicula> listarPeliculas(){
+            return NULL;
+        };
+        
         /* LISTAR TODOS LOS CINES */
-        List<DtCine> listarCines();
+        map<int,DtCine> listarCines(){
+            return NULL;
+        };
+        
         /* LISTAR SALAS X CINE */
-        List<DtSala> listarSalas(int idCine);
+        map<int,DtSala> listarSalas(int idCine){
+            return NULL;
+        };
+        
         /* LISTAR CINES X PELICULA */
-        List<DtCine> listarCines(string titulo);
+        map<int,DtCine> listarCines(string titulo){
+            return NULL;
+        };
+        
         /* LISTAR COMENTARIOS X PELICULA */
-        List<DtComentairo> listarComentarios(string titulo);
+        map<int,DtComentairo> listarComentarios(string titulo){
+            return NULL;
+        };
+        
         /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
-        List<DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha);
+        map<int,DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha){
+            return NULL;
+        };
+        
         /* LISTAR PUNTAJES X PELICULA */
-        List<DtPuntaje> listarPuntajes(string titulo);
+        map<string,DtPuntaje> listarPuntajes(string titulo){
+            return NULL;
+        };
+        
         /* LISTAR RESERVAS X USUARIO */
-        List<DtReserva> listarReservas(string nickName);
+        map<int,DtReserva> listarReservas(string nickName){
+            return NULL;
+        };
+        
 
-        
-        
         /***********************************************************************/        
         /***********************************************************************/        
         /***********************************************************************/        
@@ -146,10 +168,6 @@
         /***********************************************************************/        
         /***********************************************************************/        
 
-        
-        
-        
-        
         
         DtTest Sistema::test(){
 
