@@ -36,6 +36,36 @@ class Sistema : public ISistema
         bool crearReserva(string nickName,int cantAsientos, int idFuncion, string financiera, float descuento, float montoTotal) ;
         bool crearReserva(string nickName, int cantAsientos, int idFuncion, string banco, float montoTotal) ;
 
+        /***********************************************************************************/
+        /***********************************************************************************/
+        /*****************************     N U E V O S     *********************************/
+        /***********************************************************************************/
+        /***********************************************************************************/        
+        
+        /* LISTAR TODAS LAS PELICULAS */
+        map<string,DtPelicula> listarPeliculas();
+        /* LISTAR TODOS LOS CINES */
+        map<int,DtCine> listarCines();
+        /* LISTAR SALAS X CINE */
+        map<int,DtSala> listarSalas(int idCine);
+        /* LISTAR CINES X PELICULA */
+        map<int,DtCine> listarCines(string titulo);
+        /* LISTAR COMENTARIOS X PELICULA */
+        map<int,DtComentairo> listarComentarios(string titulo);
+        /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
+        map<int,DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha);
+        /* LISTAR PUNTAJES X PELICULA */
+        map<string,DtPuntaje> listarPuntajes(string titulo);
+        /* LISTAR RESERVAS X USUARIO */
+        map<int,DtReserva> listarReservas(string nickName);
+
+        /***********************************************************************/        
+        /***********************************************************************/        
+        /***********************************************************************/        
+        /***********************************************************************/        
+        /***********************************************************************/        
+        /***********************************************************************/        
+
         /*  SISTEMA  */
         DtTest test();
         static Sistema* getInstance();
