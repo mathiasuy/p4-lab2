@@ -108,6 +108,49 @@
                 return false;
             }
         };
+        
+        
+        
+        
+        
+        
+        /***********************************************************************************/
+        /***********************************************************************************/
+        /*****************************     N U E V O S     *********************************/
+        /***********************************************************************************/
+        /***********************************************************************************/        
+        
+        /* LISTAR TODAS LAS PELICULAS */
+        List<DtPelicula> listarPeliculas();
+        /* LISTAR TODOS LOS CINES */
+        List<DtCine> listarCines();
+        /* LISTAR SALAS X CINE */
+        List<DtSala> listarSalas(int idCine);
+        /* LISTAR CINES X PELICULA */
+        List<DtCine> listarCines(string titulo);
+        /* LISTAR COMENTARIOS X PELICULA */
+        List<DtComentairo> listarComentarios(string titulo);
+        /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
+        List<DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha);
+        /* LISTAR PUNTAJES X PELICULA */
+        List<DtPuntaje> listarPuntajes(string titulo);
+        /* LISTAR RESERVAS X USUARIO */
+        List<DtReserva> listarReservas(string nickName);
+
+        
+        
+        /***********************************************************************/        
+        /***********************************************************************/        
+        /***********************************************************************/        
+        /***********************************************************************/        
+        /***********************************************************************/        
+        /***********************************************************************/        
+
+        
+        
+        
+        
+        
         DtTest Sistema::test(){
 
             int m1[] = {3, 2, 1, 0, 4, 6, 7, 8};
