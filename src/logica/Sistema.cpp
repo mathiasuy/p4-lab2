@@ -110,10 +110,6 @@
         };
 
 
-
-
-
-
         /***********************************************************************************/
         /***********************************************************************************/
         /*****************************     N U E V O S     *********************************/
@@ -126,6 +122,7 @@
             ListaDt<string,DtPelicula> dt;
             while (this->peliculas->end()){
                 dt.add(this->peliculas->getElement());
+                this->peliculas->next();
             }
             return dt;
         };
@@ -136,6 +133,7 @@
             ListaDt<string,DtCine> dt;
             while (this->cines->end()){
                 dt.add(this->cines->getElement());
+                this->cines->next();
             }
             return dt;
         };
@@ -157,6 +155,7 @@
                 if (f->getPelicula()->isEqual(pelicula)){
                     dt.add(f->getSala()->getCine()->getDtCine());
                 }
+                it++;
             }
             return dt;
         };
@@ -177,6 +176,7 @@
                 if (!fs.second->getSala()->getCine()->getID() == titulo){
                     dt.add(fs.second);
                 }
+                it++;
             }
             return dt;
         };
