@@ -108,85 +108,118 @@
                 return false;
             }
         };
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /***********************************************************************************/
         /***********************************************************************************/
         /*****************************     N U E V O S     *********************************/
         /***********************************************************************************/
-        /***********************************************************************************/        
-        
+        /***********************************************************************************/
+
         /* LISTAR TODAS LAS PELICULAS */
-        map<string,DtPelicula> listarPeliculas(){
-            return NULL;
+        ListaDt<string,DtPelicula> listarPeliculas(){
+            this->peliculas.beginIterator();
+            ListaDt<string,DtPelicula> dt;
+            while (this->peliculas->end()){
+                dt.add(this->peliculas->getElement());
+            }
+            return dt;
         };
-        
+
         /* LISTAR TODOS LOS CINES */
-        map<int,DtCine> listarCines(){
-            return NULL;
+        ListaDt<int,DtCine> listarCines(){
+            this->peliculas.beginIterator();
+            ListaDt<string,DtCine> dt;
+            while (this->cines->end()){
+                dt.add(this->cines->getElement());
+            }
+            return dt;
         };
-        
+
         /* LISTAR SALAS X CINE */
-        map<int,DtSala> listarSalas(int idCine){
-            return NULL;
+        ListaDt<int,DtSala> listarSalas(int idCine){
+            Cine* cine = this->cines->find(idCine);
+            return cine->listarDtSalas();
         };
-        
+
         /* LISTAR CINES X PELICULA */
-        map<int,DtCine> listarCines(string titulo){
-            return NULL;
+        ListaDt<int,DtCine> listarCines(string titulo){
+            Pelicula* pelicula = this->peliculas.find(titulo);
+            map<int,Funcion*> funciones = pelicula->listarFunciones();
+            map<int,Funcion*>::iterator it = funciones.begin();
+            ListaDt<int,DtCine> dt;
+            while (it != funciones.end()){
+                Funcion* f = it->second;
+                if (f->getPelicula()->isEqual(pelicula)){
+                    dt.add(f->getSala()->getCine()->getDtCine());
+                }
+            }
+            return dt;
         };
-        
+
         /* LISTAR COMENTARIOS X PELICULA */
-        map<int,DtComentairo> listarComentarios(string titulo){
-            return NULL;
+        ListaDt<int,DtComentairo> listarComentarios(string titulo){
+            Pelicula* pelicula = this->peliculas->find(titulo);
+            return pelicula->listarDtComentarios();
         };
-        
+
         /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
-        map<int,DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha){
-            return NULL;
+        ListaDt<int,DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha){
+            Cine* cine = this->cines->find(idCine);
+            map<int,Funcion*> fs = this->peliculas->find(titulo)->listarFunciones();
+            map<int,Funcion*>::iterator it = it.begin();
+            ListDt<string,Funcion> dt;
+            while (it != fs.end()){
+                if (!fs.second->getSala()->getCine()->getID() == titulo){
+                    dt.add(fs.second);
+                }
+            }
+            return dt;
         };
-        
+
         /* LISTAR PUNTAJES X PELICULA */
-        map<string,DtPuntaje> listarPuntajes(string titulo){
-            return NULL;
+        ListaDt<string,DtPuntaje> listarPuntajes(string titulo){
+            Pelicula* pelicula = this->peliculas->find(titulo);
+            return pelicula->listarDtPuntajes();
         };
-        
+
         /* LISTAR RESERVAS X USUARIO */
-        map<int,DtReserva> listarReservas(string nickName){
-            return NULL;
+        ListaDt<int,DtReserva> listarReservas(string nickName){
+            Reserva* reserva = this->usuarios->find(nickName)->listarReservas();
+            return pelicula->listarDtPuntajes();
         };
-        
 
-        /***********************************************************************/        
-        /***********************************************************************/        
-        /***********************************************************************/        
-        /***********************************************************************/        
-        /***********************************************************************/        
-        /***********************************************************************/        
 
-        
+        /***********************************************************************/
+        /***********************************************************************/
+        /***********************************************************************/
+        /***********************************************************************/
+        /***********************************************************************/
+        /***********************************************************************/
+
+
         DtTest Sistema::test(){
 
             int m1[] = {3, 2, 1, 0, 4, 6, 7, 8};
-            vector<int> v1(m1, m1 + sizeof(m1) / sizeof (*m1) );        
+            vector<int> v1(m1, m1 + sizeof(m1) / sizeof (*m1) );
             this->altaCine("18 de Julio 2042",v1);
-            
+
             int m2[] = {3, 2, 1, 0, 4, 6, 7, 8};
             vector<int> v2(m2, m2 + sizeof(m2) / sizeof (*m2) );
             this->altaCine("Av. Garzon 555",v2);
-            
+
             int m3[] = {3, 2, 1, 0, 4, 6, 7, 8};
-            vector<int> v3(m3, m3 + sizeof(m3) / sizeof (*m3) );            
+            vector<int> v3(m3, m3 + sizeof(m3) / sizeof (*m3) );
             this->altaCine("Julio Herrera y Reissing 565",v3);
 
             Pelicula* p = new Pelicula("La Matanza","https://www.fing.edu.uy/inco/cursos/p4/parciales/bienvenida.jpg","Un grupo de estudiantes luchan por sobrevivir al InCo");
 
             this->peliculas->add(p);
-/*            
+/*
             p = new Pelicula("Hola m","img/foto1.jpg","bla, bla, bla, bla, esto es una sinopsis");
             this->peliculas->add(p);
             p = new Pelicula("Teens Russians","img/foto2.jpg","Un grupo de chicas estudiantes luchan por conseguir la paz en un mundo tan descontrolado. Actuan: Milka Ferreira");
