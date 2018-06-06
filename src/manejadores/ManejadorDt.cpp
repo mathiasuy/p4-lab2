@@ -25,8 +25,9 @@
         this->i++;
     };
 
+    using namespace std;
     template <typename K, typename T>
-    ostream& operator<<(ostream& os, Util::Coleccion<K,T>& dt)
+    std::ostream& operator<<(std::ostream& os, Util::Coleccion<K,T>& dt)
     {
         dt.start();
         string st = "";
