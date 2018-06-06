@@ -16,7 +16,7 @@
     };
 
     template <typename K, typename T>
-    T Util::Coleccion<K,T>::getElement(){
+    T& Util::Coleccion<K,T>::getElement(){
         return this->i->second;
     };
 
