@@ -16,7 +16,7 @@ namespace Util{
             void add(T t);
             void start();
             bool end();
-            T getElement();
+            T& getElement();
             T& operator[] (K x){
                 return this->_map[x];
             };
