@@ -1,6 +1,7 @@
 #ifndef COLECCION_H
 #define COLECCION_H
 #include <map>
+#include <string>
 
 using namespace std;
 
@@ -21,10 +22,10 @@ namespace Util{
             };
             void next();
     };
-    
+
 }
 
-/*  
+/*
     Otra forma de hacerlo, pero que da mas limitacion:
     template class Util::Coleccion<string,ObjetoA>;
     template class Util::Coleccion<int,ObjetoB>;
