@@ -5,8 +5,9 @@
 class DtFuncion
 {
     private:
-        
+
     public:
+        int getID();
         DtFuncion();
         virtual ~DtFuncion();
 

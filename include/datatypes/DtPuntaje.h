@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   DtPuntaje.h
  * Author: user6
  *
@@ -20,8 +20,10 @@ private:
         std::string nickName;
         float puntaje;
 public:
+        std::string getID();
     std::string getNickName();
     float getPuntaje();
+    DtPuntaje();
     DtPuntaje(std::string nickName, float puntaje);
     virtual ~DtPuntaje();
 };

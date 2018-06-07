@@ -19,6 +19,7 @@ class DtCine
         bool isEqual(DtCine dtCine);
         string toString();
 
+        DtCine();
         DtCine(int id, string direccion);
         virtual ~DtCine();
 

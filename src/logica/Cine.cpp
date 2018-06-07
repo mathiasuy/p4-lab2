@@ -14,6 +14,19 @@ Cine::Cine(string direccion, vector<int> salas)
     this->setDireccion(direccion);
 }
 
+ListaDt<int,DtSala> Cine::listarDtSalas(){
+    map<int,Sala*>::iterator it = this->salas.begin();
+    ListaDt<int,DtSala> dt;
+    while(it != this->salas.end()){
+        dt.add(it->second->getDtSala());
+    }
+    return dt;
+};
+
+DtCine Cine::getDtCine(){
+    return DtCine(this->getID(),this->getDireccion());
+}
+
 Cine::~Cine()
 {
     map<int,Sala*>::iterator it;

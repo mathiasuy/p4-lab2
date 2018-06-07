@@ -38,7 +38,7 @@
         }
 
         bool Pelicula::quitarFuncion(int id){
-            this->funciones.erase(id);
+            return this->funciones.erase(id);
         }
 
         void Pelicula::agregarPuntaje(string nickName, float puntaje){
@@ -54,6 +54,16 @@
                 this->agregarPuntaje(nickName,puntaje);
             }
         }
+
+        ListaDt<int,DtComentario> Pelicula::listarDtComentarios(){
+            map<int,Comentario*>::iterator it = this->comentarios.begin();
+            ListaDt<int, DtComentario> dt;
+            while (it != this->comentarios.end()){
+                dt.add(it->second->getDtComentario());
+                it++;
+            }
+            return dt;
+        };
 
         /**
          * Retorna -1 si nunca puntuo

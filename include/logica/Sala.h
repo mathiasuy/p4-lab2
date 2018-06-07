@@ -5,6 +5,7 @@
 #include <map>
 #include "Funcion.h"
 #include "Cine.h"
+#include "../datatypes/DtCine.h"
 
 using namespace std;
 
@@ -24,10 +25,13 @@ class Sala
         int getID();
         int getCapacidad();
         Cine* getCine();
+        DtCine getDtCine();
+        DtSala getDtSala();
         void setCapacidad(int id);
         bool agregarFuncion(Funcion* funcion);
         bool quitarFuncion(Funcion* funcion);
         bool tieneFuncion(int id);
+        bool perteneceA(Cine* cine);
 
         bool isEqual(Sala* sala);
         string toString();

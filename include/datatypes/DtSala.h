@@ -7,8 +7,10 @@ class DtSala
 private:
     int idSala;
     int cantAsientos;
-    
+
 public:
+        int getID();
+    DtSala();
         DtSala(int idSala, int cantAsientos);
         ~DtSala();
 };

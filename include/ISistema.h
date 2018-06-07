@@ -19,8 +19,10 @@
 #include "manejadores/ManejadorFunciones.h"
 #include "manejadores/ManejadorPeliculas.h"
 #include "manejadores/ManejadorUsuarios.h"
+#include "manejadores/ListaDtH.h"
 
 using namespace std;
+using namespace Util;
 
 class ISistema {
 
@@ -39,37 +41,37 @@ class ISistema {
         virtual bool login(string nickName, string password)=0;
         virtual bool crearReserva(string nickName,int cantAsientos, int idFuncion, string financiera, float descuento, float montoTotal)=0;
         virtual bool crearReserva(string nickName, int cantAsientos, int idFuncion, string banco, float montoTotal)=0;
-        
+
         /***********************************************************************************/
         /***********************************************************************************/
         /*****************************     N U E V O S     *********************************/
         /***********************************************************************************/
-        /***********************************************************************************/        
-        
-        /* LISTAR TODAS LAS PELICULAS */
-        virtual map<string,DtPelicula> listarPeliculas()=0;
-        /* LISTAR TODOS LOS CINES */
-        virtual map<int,DtCine> listarCines()=0;
-        /* LISTAR SALAS X CINE */
-        virtual map<int,DtSala> listarSalas(int idCine)=0;
-        /* LISTAR CINES X PELICULA */
-        virtual map<int,DtCine> listarCines(string titulo)=0;
-        /* LISTAR COMENTARIOS X PELICULA */
-        virtual map<int,DtComentario> listarComentarios(string titulo)=0;
-        /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
-        virtual map<int,DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha)=0;
-        /* LISTAR PUNTAJES X PELICULA */
-        virtual map<string,DtPuntaje> listarPuntajes(string titulo)=0;
-        /* LISTAR RESERVAS X USUARIO */
-        virtual map<int,DtReserva> listarReservas(string nickName)=0;
+        /***********************************************************************************/
 
-        /***********************************************************************/        
-        /***********************************************************************/        
-        /***********************************************************************/        
-        /***********************************************************************/        
-        /***********************************************************************/        
-        /***********************************************************************/             
-        
+        /* LISTAR TODAS LAS PELICULAS */
+        virtual ListaDt<string,DtPelicula> listarPeliculas()=0;
+        /* LISTAR TODOS LOS CINES */
+        virtual ListaDt<int,DtCine> listarCines()=0;
+        /* LISTAR SALAS X CINE */
+        virtual ListaDt<int,DtSala> listarSalas(int idCine)=0;
+        /* LISTAR CINES X PELICULA */
+        virtual ListaDt<int,DtCine> listarCines(string titulo)=0;
+        /* LISTAR COMENTARIOS X PELICULA */
+        virtual ListaDt<int,DtComentario> listarComentarios(string titulo)=0;
+        /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
+        virtual ListaDt<int,DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha)=0;
+        /* LISTAR PUNTAJES X PELICULA */
+        virtual ListaDt<string,DtPuntaje> listarPuntajes(string titulo)=0;
+        /* LISTAR RESERVAS X USUARIO */
+        virtual ListaDt<int,DtReserva> listarReservas(string nickName)=0;
+
+        /***********************************************************************/
+        /***********************************************************************/
+        /***********************************************************************/
+        /***********************************************************************/
+        /***********************************************************************/
+        /***********************************************************************/
+
         virtual DtTest test()=0;
 };
 

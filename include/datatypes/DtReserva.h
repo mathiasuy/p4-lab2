@@ -5,6 +5,7 @@
 class DtReserva
 {
     public:
+        int getID();
         DtReserva();
         virtual ~DtReserva();
 

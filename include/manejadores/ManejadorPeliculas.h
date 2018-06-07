@@ -14,7 +14,7 @@ class ManejadorPeliculas
     private:
         static ManejadorPeliculas* instancia;
         map<string, Pelicula*> peliculas;
-        map<string,Pelicula*>::iterator it;                
+        map<string,Pelicula*>::iterator it;
         ManejadorPeliculas();
     public:
 
@@ -29,7 +29,7 @@ class ManejadorPeliculas
         bool isEmpty();
         void beginIterator();
         void next();
-        Pelicula* getElement();        
+        Pelicula* getElement();
 
         /*  DESTRUCTOR */
         virtual ~ManejadorPeliculas();

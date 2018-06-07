@@ -8,6 +8,7 @@ class DtTest
         int puntaje1;
         int puntaje2;
     public:
+        int getID();//poner que devuelva cualquier cualquier cosa, es para poder realizar test nomas
         int getPuntaje1();
         int getPuntaje2();
 

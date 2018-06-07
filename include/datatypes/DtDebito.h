@@ -9,11 +9,13 @@ class DtDebito : public DtTarjeta
          string banco;
 
     public:
+        int getID();
         DtDebito(int idTarjeta, float monto, string banco);
         string getBanco();
         ~DtDebito();
         bool isEqual(DtDebito* t);
         string toString();
+        DtDebito();
 };
 
 #endif // DTDEBITO_H

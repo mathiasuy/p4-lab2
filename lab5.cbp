@@ -67,6 +67,8 @@
 		<Unit filename="include/logica/Sistema.h" />
 		<Unit filename="include/logica/Tarjeta.h" />
 		<Unit filename="include/logica/Usuario.h" />
+		<Unit filename="include/manejadores/ListaDt.h" />
+		<Unit filename="include/manejadores/ListaDtH.h" />
 		<Unit filename="include/manejadores/ManejadorCines.h" />
 		<Unit filename="include/manejadores/ManejadorFunciones.h" />
 		<Unit filename="include/manejadores/ManejadorPeliculas.h" />
@@ -99,6 +101,7 @@
 		<Unit filename="src/logica/Sistema.cpp" />
 		<Unit filename="src/logica/Tarjeta.cpp" />
 		<Unit filename="src/logica/Usuario.cpp" />
+		<Unit filename="src/manejadores/ListaDt.cpp" />
 		<Unit filename="src/manejadores/ManejadorCines.cpp" />
 		<Unit filename="src/manejadores/ManejadorFunciones.cpp" />
 		<Unit filename="src/manejadores/ManejadorPeliculas.cpp" />
