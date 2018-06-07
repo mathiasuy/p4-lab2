@@ -4,11 +4,16 @@
 #include "Puntaje.h"
 #include "Funcion.h"
 #include "../datatypes/DtPelicula.h"
+#include "../datatypes/DtComentario.h"
+#include "../datatypes/DtPuntaje.h"
+#include "../manejadores/ListaDt.h"
 #include <vector>
 #include <map>
 
 class Funcion;
 class Puntaje;
+
+using namespace Util;
 
 class Pelicula
 {
@@ -35,6 +40,8 @@ class Pelicula
         float getPuntaje(string nickName);
         void setPuntaje(string nickName, float puntaje);
         DtPelicula getDtPuntaje(string nickName);
+
+        ListaDt<int,DtComentario> listarDtComentarios();
 
         string getPoster();
         string getSinopsis();

@@ -1,4 +1,5 @@
 #include "../../include/logica/Sistema.h"
+#include "../../include/manejadores/ListaDt.h"
 
         Sistema* Sistema::instancia = NULL;
         ManejadorCines* Sistema::cines = ManejadorCines::getInstancia();
@@ -116,44 +117,46 @@
         /***********************************************************************************/
         /***********************************************************************************/
 
+        using namespace Util;
+
         /* LISTAR TODAS LAS PELICULAS */
-        ListaDt<string,DtPelicula> listarPeliculas(){
-            this->peliculas.beginIterator();
+        ListaDt<string,DtPelicula> Sistema::listarPeliculas(){
+            this->peliculas->beginIterator();
             ListaDt<string,DtPelicula> dt;
-            while (this->peliculas->end()){
-                dt.add(this->peliculas->getElement());
+            while (this->peliculas->getElement()){
+                dt.add(this->peliculas->getElement()->getDtPelicula());
                 this->peliculas->next();
             }
             return dt;
         };
 
         /* LISTAR TODOS LOS CINES */
-        ListaDt<int,DtCine> listarCines(){
-            this->peliculas.beginIterator();
-            ListaDt<string,DtCine> dt;
-            while (this->cines->end()){
-                dt.add(this->cines->getElement());
+        ListaDt<int,DtCine> Sistema::listarCines(){
+            this->peliculas->beginIterator();
+            ListaDt<int,DtCine> dt;
+            while (this->cines->getElement()){
+                dt.add(this->cines->getElement()->getDtCine());
                 this->cines->next();
             }
             return dt;
         };
 
         /* LISTAR SALAS X CINE */
-        ListaDt<int,DtSala> listarSalas(int idCine){
+        ListaDt<int,DtSala> Sistema::listarSalas(int idCine){
             Cine* cine = this->cines->find(idCine);
             return cine->listarDtSalas();
         };
 
         /* LISTAR CINES X PELICULA */
-        ListaDt<int,DtCine> listarCines(string titulo){
-            Pelicula* pelicula = this->peliculas.find(titulo);
+        ListaDt<int,DtCine> Sistema::listarCines(string titulo){
+            Pelicula* pelicula = this->peliculas->find(titulo);
             map<int,Funcion*> funciones = pelicula->listarFunciones();
             map<int,Funcion*>::iterator it = funciones.begin();
             ListaDt<int,DtCine> dt;
             while (it != funciones.end()){
                 Funcion* f = it->second;
                 if (f->getPelicula()->isEqual(pelicula)){
-                    dt.add(f->getSala()->getCine()->getDtCine());
+                    dt.add(f->getSala()->getDtCine());
                 }
                 it++;
             }
@@ -161,20 +164,20 @@
         };
 
         /* LISTAR COMENTARIOS X PELICULA */
-        ListaDt<int,DtComentario> listarComentarios(string titulo){
+        ListaDt<int,DtComentario> Sistema::listarComentarios(string titulo){
             Pelicula* pelicula = this->peliculas->find(titulo);
             return pelicula->listarDtComentarios();
         };
 
         /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
-        ListaDt<int,DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha){
+        ListaDt<int,DtFuncion> Sistema::listarFunciones(int idCine, string titulo, DtFecha fecha){
             Cine* cine = this->cines->find(idCine);
             map<int,Funcion*> fs = this->peliculas->find(titulo)->listarFunciones();
-            map<int,Funcion*>::iterator it = it.begin();
-            ListDt<string,Funcion> dt;
+            map<int,Funcion*>::iterator it = fs.begin();
+            ListaDt<int,DtFuncion> dt;
             while (it != fs.end()){
-                if (!fs.second->getSala()->getCine()->getID() == titulo){
-                    dt.add(fs.second);
+                if (!(it->second->getSala()->perteneceA(cine))){
+                    dt.add(it->second->getDtFuncion());
                 }
                 it++;
             }
@@ -182,15 +185,14 @@
         };
 
         /* LISTAR PUNTAJES X PELICULA */
-        ListaDt<string,DtPuntaje> listarPuntajes(string titulo){
+        ListaDt<string,DtPuntaje> Sistema::listarPuntajes(string titulo){
             Pelicula* pelicula = this->peliculas->find(titulo);
             return pelicula->listarDtPuntajes();
         };
 
         /* LISTAR RESERVAS X USUARIO */
-        ListaDt<int,DtReserva> listarReservas(string nickName){
-            Reserva* reserva = this->usuarios->find(nickName)->listarReservas();
-            return pelicula->listarDtPuntajes();
+        ListaDt<int,DtReserva> Sistema::listarReservas(string nickName){
+            return this->usuarios->find(nickName)->listarDtReservas();
         };
 
 

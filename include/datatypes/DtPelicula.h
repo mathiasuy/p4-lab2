@@ -15,6 +15,7 @@ private:
         string getID();
         string getTitulo();
         string getPoster();
+        DtPelicula();
         float getPuntajePromedio();
         DtPelicula(string titulo, string poster, float puntajePromedio);
         ~DtPelicula();

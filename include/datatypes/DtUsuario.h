@@ -5,6 +5,7 @@
 class DtUsuario
 {
     public:
+        int getID();
         DtUsuario();
         virtual ~DtUsuario();
 

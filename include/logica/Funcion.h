@@ -4,6 +4,7 @@
 #include <string>
 #include "Cine.h"
 #include "Pelicula.h"
+#include "../datatypes/DtFuncion.h"
 
 using namespace std;
 
@@ -27,6 +28,7 @@ class Funcion
         Sala* getSala();
         DtFecha getFecha();
         float getPrecio();
+        DtFuncion getDtFuncion();
         int getAsientosReservados();
         int getAsientosLibres();
         void agregarAsientosReservados(int aumento);

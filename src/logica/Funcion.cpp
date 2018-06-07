@@ -53,7 +53,7 @@ Funcion::Funcion(float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *peli
 };
 
 int Funcion::getAsientosReservados(){
-    this->asientosReservados;
+    return this->asientosReservados;
 };
 
 int Funcion::getAsientosLibres(){

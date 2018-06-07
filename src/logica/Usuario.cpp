@@ -44,6 +44,7 @@ Usuario::Usuario(string nickName, string imagen, string password){
 bool Usuario::agregarReservaDebito(int cantAsientos, Funcion* funcion, string  banco, float montoTotal){
     Reserva* reserva = new Reserva(cantAsientos,funcion,banco,montoTotal);
     this->reservas[reserva->getID()] = reserva;
+    return true;
 };
 
 void Usuario::eliminarReservaConFuncion(int idFuncion){
@@ -59,10 +60,11 @@ void Usuario::eliminarReservaConFuncion(int idFuncion){
 bool Usuario::agregarReservaCredito(int cantAsientos, Funcion* funcion,string financiera, float descuento, float montoTotal){
     Reserva* reserva = new Reserva(cantAsientos,funcion,financiera,descuento,montoTotal);
     this->reservas[reserva->getID()] = reserva;
+    return true;
 };
 
 bool Usuario::quitarReserva(int id){
-    this->reservas.erase(id);
+    return this->reservas.erase(id);
 };
 
 bool Usuario::tieneReserva(int id){
