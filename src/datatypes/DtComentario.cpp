@@ -13,6 +13,19 @@
         int DtComentario::getEsRespuestaDeID(){
             return this->esRespuestaDeID;
         };
+        
+        void DtComentario::setNickName(string nickName){
+            this->nickName = nickName;
+        };
+        
+        void DtComentario::setComentario(string comentario){
+            this->comentario = comentario;
+        };
+        
+        void DtComentario::setEsRespuestaDeID(int esRespuestaDeID){
+            this->esRespuestaDeID = esRespuestaDeID;
+        };
+        
         bool DtComentario::isEqual(DtComentario* comentario){
             return this->getID() == comentario->getID();
         };

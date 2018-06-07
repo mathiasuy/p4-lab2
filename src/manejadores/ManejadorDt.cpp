@@ -1,33 +1,33 @@
 #include "../../include/manejadores/ManejadorDt.h"
 
     template <typename K, typename T>
-    void Util::Coleccion<K,T>::add(T t){
+    void Util::ListaDt<K,T>::add(T t){
         this->_map[t.getID()] = t;
     }
 
     template <typename K, typename T>
-    void Util::Coleccion<K,T>::start(){
+    void Util::ListaDt<K,T>::start(){
         this->i = this->_map.begin();
     };
 
     template <typename K, typename T>
-    bool Util::Coleccion<K,T>::end(){
+    bool Util::ListaDt<K,T>::end(){
         return this->i != this->_map.end();
     };
 
     template <typename K, typename T>
-    T& Util::Coleccion<K,T>::getElement(){
+    T& Util::ListaDt<K,T>::getElement(){
         return this->i->second;
     };
 
     template <typename K, typename T>
-    void Util::Coleccion<K,T>::next(){
+    void Util::ListaDt<K,T>::next(){
         this->i++;
     };
 
     using namespace std;
     template <typename K, typename T>
-    std::ostream& operator<<(std::ostream& os, Util::Coleccion<K,T>& dt)
+    std::ostream& operator<<(std::ostream& os, Util::ListaDt<K,T>& dt)
     {
         dt.start();
         string st = "";

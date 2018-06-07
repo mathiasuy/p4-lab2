@@ -55,7 +55,7 @@ class ISistema {
         /* LISTAR CINES X PELICULA */
         virtual map<int,DtCine> listarCines(string titulo)=0;
         /* LISTAR COMENTARIOS X PELICULA */
-        virtual map<int,DtComentairo> listarComentarios(string titulo)=0;
+        virtual map<int,DtComentario> listarComentarios(string titulo)=0;
         /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
         virtual map<int,DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha)=0;
         /* LISTAR PUNTAJES X PELICULA */

@@ -15,6 +15,11 @@ public:
         string getNickName();
         string getComentario();
         int getEsRespuestaDeID();
+        
+        void setNickName(string nickName);
+        void setComentario(string comentario);
+        void setEsRespuestaDeID(int esRespuestaDeID);
+        
         bool isEqual(DtComentario* comentario);
         DtComentario(string nickName, string comentario);
         DtComentario(string nickName, string comentario, int esRespuestaDeID);

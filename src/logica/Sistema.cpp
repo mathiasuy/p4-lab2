@@ -161,7 +161,7 @@
         };
 
         /* LISTAR COMENTARIOS X PELICULA */
-        ListaDt<int,DtComentairo> listarComentarios(string titulo){
+        ListaDt<int,DtComentario> listarComentarios(string titulo){
             Pelicula* pelicula = this->peliculas->find(titulo);
             return pelicula->listarDtComentarios();
         };

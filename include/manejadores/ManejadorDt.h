@@ -8,7 +8,7 @@ using namespace std;
 namespace Util{
 
     template <typename K, typename T>
-    class Coleccion{
+    class ListaDt{
         private:
             map<K,T> _map;
             typename map<K,T>::iterator i;

@@ -51,7 +51,7 @@ class Sistema : public ISistema
         /* LISTAR CINES X PELICULA */
         map<int,DtCine> listarCines(string titulo);
         /* LISTAR COMENTARIOS X PELICULA */
-        map<int,DtComentairo> listarComentarios(string titulo);
+        map<int,DtComentario> listarComentarios(string titulo);
         /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
         map<int,DtFuncion> listarFunciones(int idCine, string titulo, DtFecha fecha);
         /* LISTAR PUNTAJES X PELICULA */
