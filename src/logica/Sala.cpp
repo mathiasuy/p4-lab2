@@ -42,7 +42,7 @@ DtSala Sala::getDtSala(){
 };
 
 bool Sala::perteneceA(Cine* cine){
-    this->cine->isEqual(cine);
+    return this->cine->isEqual(cine);
 }
 
 string Sala::toString(){

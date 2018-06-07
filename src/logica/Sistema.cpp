@@ -1,5 +1,4 @@
 #include "../../include/logica/Sistema.h"
-#include "../../include/manejadores/ListaDt.h"
 
         Sistema* Sistema::instancia = NULL;
         ManejadorCines* Sistema::cines = ManejadorCines::getInstancia();

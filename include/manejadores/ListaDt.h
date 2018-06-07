@@ -34,7 +34,7 @@ namespace Util{
     };
 }
 //  Otra forma de hacerlo:
-/*
+
     template class Util::ListaDt<string,DtPelicula>;
     template class Util::ListaDt<int,DtCine>;
     template class Util::ListaDt<int,DtComentario>;
@@ -46,7 +46,7 @@ namespace Util{
     template class Util::ListaDt<int,DtSala>;
     template class Util::ListaDt<int,DtUsuario>;
     template class Util::ListaDt<int,DtTest>;
-*/
+
 
 
 

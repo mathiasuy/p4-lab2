@@ -1,5 +1,6 @@
 #include "../../include/logica/Cine.h"
-
+#include "../../include/logica/Cine.h"
+#include "../../include/manejadores/ListaDtH.h"
 
 
 int Cine::idGlobal = 0;

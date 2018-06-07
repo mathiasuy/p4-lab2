@@ -19,7 +19,7 @@
 #include "manejadores/ManejadorFunciones.h"
 #include "manejadores/ManejadorPeliculas.h"
 #include "manejadores/ManejadorUsuarios.h"
-#include "manejadores/ListaDtH.h"
+#include "manejadores/ListaDt.h"
 
 using namespace std;
 using namespace Util;
