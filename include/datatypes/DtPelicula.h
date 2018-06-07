@@ -2,7 +2,9 @@
 #define DTPELICULA_H
 #include <string>
 
+
 using namespace std;
+
 
 class DtPelicula
 {
@@ -16,6 +18,7 @@ private:
         string getTitulo();
         string getPoster();
         DtPelicula();
+        
         float getPuntajePromedio();
         DtPelicula(string titulo, string poster, float puntajePromedio);
         ~DtPelicula();

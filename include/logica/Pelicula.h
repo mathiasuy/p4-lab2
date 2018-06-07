@@ -42,6 +42,11 @@ class Pelicula
         DtPelicula getDtPuntaje(string nickName);
 
         ListaDt<int,DtComentario> listarDtComentarios();
+        
+        
+        DtPelicula getDtPelicula();
+        
+        ListaDt<string,DtPuntaje> listarDtPuntajes();
 
         string getPoster();
         string getSinopsis();

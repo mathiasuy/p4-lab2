@@ -81,6 +81,26 @@
             return this->sinopsis;
         };
 
+
+
+        DtPelicula getDtPelicula(){
+            return  DtPelicula();
+        //ESTA MAL, es para compilar
+        };
+        
+        ListaDt<string,DtPuntaje> Pelicula::listarDtPuntajes(){
+            map<string,Puntaje*>::iterator it = this->puntajes.begin();
+            ListaDt<string, DtPuntaje> dt;
+            while (it != this->puntajes.end()){
+                dt.add(it->second->getDtPuntaje());
+                it++;
+            }
+            return dt;
+        };
+
+
+
+
         float Pelicula::getPuntajePromedio(){
             map<string,Puntaje*>::iterator it = puntajes.begin();
             float suma = 0;

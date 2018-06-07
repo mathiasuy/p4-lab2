@@ -2,6 +2,7 @@
 #define RESERVA_H
 #include "../datatypes/DtFuncion.h"
 #include "../datatypes/DtPelicula.h"
+#include "../datatypes/DtReserva.h"
 
 #include "../logica/Tarjeta.h"
 
@@ -32,6 +33,8 @@ class Reserva
         bool tieneFuncion(int id);
         bool isEqual(Reserva * reserva);
         string toString();
+
+        DtReserva getDtReserva();
 
         ~Reserva();
         Reserva(int cantAsientos, DtFuncion funcion, DtPelicula pelicula);

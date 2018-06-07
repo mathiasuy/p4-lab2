@@ -3,7 +3,10 @@
 #include <map>
 #include <iomanip>
 #include "Reserva.h"
+#include "../manejadores/ListaDt.h"
 #include <string>
+
+using namespace Util;
 using namespace std;
 
 class Usuario
@@ -29,6 +32,8 @@ class Usuario
         bool agregarReservaCredito(int cantAsientos, Funcion* funcion, string financiera, float descuento, float montoTotal);
         bool quitarReserva(int id);
         bool tieneReserva(int id);
+
+        ListaDt<int,DtReserva> listarDtReservas();
         
         map<int,Reserva*> getReservas();
         Usuario(string nickName, string imagen, string password);
