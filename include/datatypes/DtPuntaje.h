@@ -10,11 +10,12 @@ private:
         float puntaje;
 public:
     DtPuntaje();
-    DtPuntaje(std::string nickName, float puntaje);
+    DtPuntaje(string nickName, float puntaje);
    
     string getID();
     string getNickName();
     float getPuntaje();
+    string toString();
    
     virtual ~DtPuntaje();
 };

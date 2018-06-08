@@ -23,6 +23,7 @@ private:
         string getSinopsis();
         string getPoster();
         float getPuntajePromedio();
+        string toString();
         
         virtual ~DtPelicula();
 };

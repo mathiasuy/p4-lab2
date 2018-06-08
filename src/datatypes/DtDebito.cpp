@@ -1,7 +1,7 @@
 #include "../../include/datatypes/DtDebito.h"
 
 
-DtDebito:: DtDebito(int idTarjeta, float monto,string banco):DtTarjeta(idTarjeta, monto){
+DtDebito:: DtDebito(float monto,string banco):DtTarjeta(idTarjeta, monto){
     this->banco = banco;
 }
 
@@ -14,7 +14,7 @@ string DtDebito::getBanco(){
 };
 
 string DtDebito::toString(){
-    return "DtDebito";
+    return "Debito:" + this->getBanco();
 }
 
 DtDebito::~DtDebito()

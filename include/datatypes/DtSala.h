@@ -15,10 +15,10 @@ private:
 public:
     DtSala();
     DtSala(int idSala, int cantAsientos, DtCine cine);
-    
-    
+        
     int getID();
     int getCantAsientos();
+    string toString();
     
     virtual ~DtSala();
 };

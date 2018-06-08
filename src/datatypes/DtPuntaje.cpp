@@ -5,7 +5,7 @@
         puntaje = 0;
     };
     
-    DtPuntaje::DtPuntaje(std::string nickName, float puntaje) {
+    DtPuntaje::DtPuntaje(string nickName, float puntaje){
         this->nickName = nickName;
         this->puntaje = puntaje;
     };
@@ -20,6 +20,10 @@
     
     float DtPuntaje::getPuntaje(){
         return this->puntaje;        
+    };
+    
+    string DtPuntaje::toString(){
+        return "Puntaje: " + this->getPuntaje();
     };
     
     DtPuntaje::~DtPuntaje() {

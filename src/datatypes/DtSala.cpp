@@ -20,6 +20,11 @@ int DtSala::getCantAsientos(){
     return this->cantAsientos;
 };
 
+string toString(){
+   return "Datos de la sala " + this->getID() + ": " + this->getCantAsientos() + this->cine->toString();
+};
+
+
 DtSala::~DtSala()
 {
     //dtor

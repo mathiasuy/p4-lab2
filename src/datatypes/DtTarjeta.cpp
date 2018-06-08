@@ -6,8 +6,7 @@ DtTarjeta::DtTarjeta(){
     //ctor
 }
 
-DtTarjeta::DtTarjeta(int id, float montoTotal){
-    this->idTarjeta = id;
+DtTarjeta::DtTarjeta(float montoTotal){
     this->montoTotal = montoTotal;
 };
 

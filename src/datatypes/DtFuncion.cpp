@@ -6,10 +6,12 @@ DtFuncion::DtFuncion(){
     this->precioEntrada = 0;//ctor
 }
 
-DtFuncion::DtFuncion(int id, int asientosReservados, float precioEntrada){
+DtFuncion::DtFuncion(int id, int asientosReservados, float precioEntrada, DtSala sala, DtPelicula pelicula){
     this->id = id;
     this->asientosReservados = asientosReservados;
     this->precioEntrada = precioEntrada;
+    this->sala = sala;
+    this->pelicula = pelicula;
 };
 
 int DtFuncion::getID(){
@@ -28,7 +30,7 @@ bool DtFuncion::isEqual(DtFuncion* Funcion){
 };
 
  string DtFuncion::toString(){
-     return "Datos de la funcion " + this->getID();
+     return "Datos de la funcion " + this->getID() + this->sala->toString();
  };
 
 

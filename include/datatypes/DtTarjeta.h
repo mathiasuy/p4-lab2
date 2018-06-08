@@ -7,7 +7,6 @@ class DtTarjeta
 {
 
     private:
-        int idTarjeta;
         float montoTotal;
 
     public:
@@ -18,8 +17,6 @@ class DtTarjeta
         virtual string toString();
         
          virtual ~DtTarjeta();
-
-    //protected:
 
 };
 

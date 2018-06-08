@@ -6,11 +6,11 @@ DtPelicula::DtPelicula(){
     puntajePromedio = 0;
 };
 
-DtPelicula::DtPelicula(string titulo, string poster, float puntajePromedio)
-{
+DtPelicula::DtPelicula(string titulo, string poster, string sinopsis float puntajePromedio){
     this->poster = poster;
+    this->sinopsis = sinopsis;
     this->puntajePromedio = puntajePromedio;
-    this->titulo = poster;
+    this->titulo = titulo;
 };
 
 string DtPelicula::getID(){
@@ -27,6 +27,10 @@ string DtPelicula::getSinopsis(){
 };
 float DtPelicula::getPuntajePromedio(){
     return this->puntajePromedio;
+};
+
+string DtPelicula::toString(){
+    return "Pelicula:" + this->getID() + this->getPoster() + this->getSinopsis() ;
 };
 
 DtPelicula::~DtPelicula()
