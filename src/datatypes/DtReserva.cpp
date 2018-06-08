@@ -13,18 +13,6 @@ DtReserva::DtReserva(int id, int cantAsientos){
     //ctor
 }
 
-DtReserva::DtReserva(int id, int cantAsientos, string financiera, float montoTotal, float descuento){
-    this->id = id;
-    this->cantAsientos = cantAsientos;
-    
-};
-  
-DtReserva::DtReserva(int id, int cantAsientos, string  banco, float montoTotal){
-    this->id = id;
-    this->cantAsientos = cantAsientos;
-    
-};
-
 int DtReserva::getID(){
     return this->id;
 }
@@ -37,7 +25,7 @@ bool DtReserva::isEqual(DtReserva* t){
     return this->id == DtReserva.getID(t);
 };
 
-string DtCredito::toString(){
+string DtReserva::toString(){
     return "Datos de la reserva " + this->getID();
 }
 DtReserva::~DtReserva()

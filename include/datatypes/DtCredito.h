@@ -1,5 +1,7 @@
 #ifndef DTCREDITO_H
 #define DTCREDITO_H
+
+#include <string>
 #include "DtTarjeta.h"
 using namespace std;
 
@@ -16,7 +18,7 @@ class DtCredito: public DtTarjeta
         float getDescuento();
         string toString();
   
-        ~DtCredito();
+        virtual ~DtCredito();
 };
 
 #endif // DTCREDITO_H

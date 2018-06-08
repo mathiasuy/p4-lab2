@@ -1,5 +1,7 @@
 #ifndef DTDEBITO_H
 #define DTDEBITO_H
+
+#include <string>
 #include "../datatypes/DtTarjeta.h"
 using namespace std;
 
@@ -16,7 +18,7 @@ class DtDebito : public DtTarjeta
         bool isEqual(DtDebito* t);
         string toString();
         
-        ~DtDebito();
+        virtual ~DtDebito();
 };
 
 #endif // DTDEBITO_H

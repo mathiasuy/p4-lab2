@@ -1,10 +1,9 @@
 #include "../../include/datatypes/DtFuncion.h"
 
 DtFuncion::DtFuncion(){
-    id = 0;
-    nickName = "";
-    comentario = "";
-    esRespuestaDeID = 0;//ctor
+    this->id = 0;
+    this->asientosReservados = 0;
+    this->precioEntrada = 0;//ctor
 }
 
 DtFuncion::DtFuncion(int id, int asientosReservados, float precioEntrada){
@@ -17,19 +16,15 @@ int DtFuncion::getID(){
     return this->id;
 };
 
-string DtFuncion::getNickName(){
-    return this->nickName;
+int DtFuncion::getAsientosReservados(){
+    return this->asientosReservados;
 };
-string DtFuncion::getComentario(){
-    return this->comentario;
-};
-
-int DtFuncion::getEsRespuestaDeID(){
-    return this->esRespuestaDeID;
+float DtFuncion::getPrecio(){
+    return this->precioEntrada;
 };
 
 bool DtFuncion::isEqual(DtFuncion* Funcion){
-    return this->getID() == funcion->getID();
+    return this->getID() == Funcion->getID();
 };
 
  string DtFuncion::toString(){

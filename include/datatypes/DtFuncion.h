@@ -1,6 +1,8 @@
 #ifndef DTFUNCION_H
 #define DTFUNCION_H
+#include <string>
 
+using namespace std;
 
 class DtFuncion
 {
@@ -20,7 +22,7 @@ class DtFuncion
         string toString();
         bool isEqual(DtFuncion *funcion);
 
-        ~Funcion();
+        virtual ~DtFuncion();
 };
 
 #endif // DTFUNCION_H

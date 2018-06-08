@@ -1,6 +1,9 @@
 #ifndef DTRESERVA_H
 #define DTRESERVA_H
 
+#include <string>
+
+using namespace std;
 
 class DtReserva
 {
@@ -10,16 +13,12 @@ class DtReserva
         
     public:
         DtReserva();
-        DTReserva(int id, int cantAsientos);
-        /**         * Crear Reserva para pago con tarjeta de Credito         */
-        DtReserva(int id, int cantAsientos, string financiera, float montoTotal, float descuento);
-        /*** Crear Reserva para pago con tarjeta de Debito*/
-        DtReserva(int id, int cantAsientos, string  banco, float montoTotal);
+        DtReserva(int id, int cantAsientos);
     
         int getID();
         int getCantAsientos();
        
-        bool isEqual(Reserva * reserva);
+        bool isEqual(DtReserva* reserva);
         string toString();
 
         virtual ~DtReserva();

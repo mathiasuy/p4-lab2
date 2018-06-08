@@ -1,7 +1,8 @@
 #ifndef DTUSUARIO_H
 #define DTUSUARIO_H
+#include <string>
 
-
+using namespace std;
 class DtUsuario
 {
     private:
@@ -18,7 +19,7 @@ class DtUsuario
         string getImagen();
         string getPassword();
 
-        string toString(){
+        string toString();
 
         virtual ~DtUsuario();
 };

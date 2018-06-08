@@ -1,6 +1,8 @@
 #ifndef DTSALA_H
 #define DTSALA_H
+#include <string>
 
+using namespace std;
 
 class DtSala
 {
@@ -13,9 +15,9 @@ public:
     DtSala(int idSala, int cantAsientos);
     
     int getID();
-    int getCanAsientos;
+    int getCantAsientos();
     
-    ~DtSala();
+    virtual ~DtSala();
 };
 
 #endif // DTSALA_H

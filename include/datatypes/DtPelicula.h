@@ -24,7 +24,7 @@ private:
         string getPoster();
         float getPuntajePromedio();
         
-        ~DtPelicula();
+        virtual ~DtPelicula();
 };
 
 #endif // DTPELICULA_H

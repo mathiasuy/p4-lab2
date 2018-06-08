@@ -13,7 +13,7 @@ DtUsuario::DtUsuario(string nickName, string imagen, string password){
 };
 
 string DtUsuario::getID(){
-    return this->nickname;
+    return this->nickName;
 };
 
 string DtUsuario::getNickName(){

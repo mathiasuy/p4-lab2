@@ -2,16 +2,18 @@
 #define DTPUNTAJE_H
 #include <string>
 
+using namespace std;
+
 class DtPuntaje {
 private:
-        std::string nickName;
+        string nickName;
         float puntaje;
 public:
     DtPuntaje();
     DtPuntaje(std::string nickName, float puntaje);
    
-    std::string getID();
-    std::string getNickName();
+    string getID();
+    string getNickName();
     float getPuntaje();
    
     virtual ~DtPuntaje();
