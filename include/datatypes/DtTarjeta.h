@@ -10,16 +10,16 @@ class DtTarjeta
              int idTarjeta;
              float montoTotal;
 
-
-
     public:
         DtTarjeta();
         DtTarjeta(int idTarjeta, float montoTotal);
-        virtual ~DtTarjeta();
+       
         int getIdTarjeta();
         virtual float getMontoTotal();
         virtual bool isEqual(DtTarjeta* t);
         virtual string toString() = 0;
+        
+         virtual ~DtTarjeta();
 
     //protected:
 

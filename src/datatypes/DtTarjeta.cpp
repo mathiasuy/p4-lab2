@@ -1,9 +1,8 @@
 #include "../../include/datatypes/DtTarjeta.h"
 
-DtTarjeta::DtTarjeta()
-{
-
-
+DtTarjeta::DtTarjeta(){
+    idTarjeta = 0;
+    montoTotal = 0;
     //ctor
 }
 
@@ -12,19 +11,16 @@ DtTarjeta::DtTarjeta(int id, float montoTotal){
     this->montoTotal = montoTotal;
 };
 
-
-bool DtTarjeta:: isEqual(DtTarjeta *t){
-    return this->getIdTarjeta() == t->getIdTarjeta();
+int DtTarjeta::getIdTarjeta(){
+    return this->idTarjeta;
 }
 
 float DtTarjeta::getMontoTotal(){
     return this->montoTotal;
 };
 
-
-
-int DtTarjeta::getIdTarjeta(){
-return this->idTarjeta;
+bool DtTarjeta:: isEqual(DtTarjeta *t){
+    return this->getIdTarjeta() == t->getIdTarjeta();
 }
 
 DtTarjeta::~DtTarjeta()

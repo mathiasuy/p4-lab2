@@ -11,16 +11,16 @@ class DtCine
     private:
         int id;
         string direccion;
-        float precioEntrada;
-    public:
+     
+     public:
+        DtCine();
+        DtCine(int id, string direccion);
+        
         int getID();
         string getDireccion();
-
         bool isEqual(DtCine dtCine);
         string toString();
 
-        DtCine();
-        DtCine(int id, string direccion);
         virtual ~DtCine();
 
 };

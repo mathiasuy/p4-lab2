@@ -9,15 +9,14 @@ class DtCredito: public DtTarjeta
          string financiera;
          float descuento;
     public:
-        int getID();
         DtCredito(int idTarjeta, float montoTotal, string financiera, float descuento);
-        ~DtCredito();
+        DtCredito();
 
         string getFinanciera();
         float getDescuento();
-
-        DtCredito();
         string toString();
+  
+        ~DtCredito();
 };
 
 #endif // DTCREDITO_H

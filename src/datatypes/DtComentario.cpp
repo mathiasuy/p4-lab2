@@ -40,5 +40,5 @@
             this->esRespuestaDeID = esRespuestaDeID;
         };
         DtComentario::~DtComentario(){
-
+            
         };

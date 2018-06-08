@@ -81,11 +81,10 @@
             return this->sinopsis;
         };
 
-
-
         DtPelicula getDtPelicula(){
             return  DtPelicula();
-        //ESTA MAL, es para compilar
+          
+        //creamos un DtPelicula a partir del objeto pelicula?
         };
         
         ListaDt<string,DtPuntaje> Pelicula::listarDtPuntajes(){
@@ -97,9 +96,6 @@
             }
             return dt;
         };
-
-
-
 
         float Pelicula::getPuntajePromedio(){
             map<string,Puntaje*>::iterator it = puntajes.begin();

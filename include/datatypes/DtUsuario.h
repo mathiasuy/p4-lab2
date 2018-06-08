@@ -4,14 +4,23 @@
 
 class DtUsuario
 {
-    public:
-        int getID();
-        DtUsuario();
-        virtual ~DtUsuario();
-
-    protected:
-
     private:
+        string nickName;
+        string imagen;
+        string password;
+       
+    public:
+        DtUsuario();
+        DtUsuario(string nickName, string imagen, string password);
+        
+        string getID();
+        string getNickName();
+        string getImagen();
+        string getPassword();
+
+        string toString(){
+
+        virtual ~DtUsuario();
 };
 
 #endif // DTUSUARIO_H

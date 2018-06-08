@@ -1,7 +1,15 @@
 #include "../../include/datatypes/DtCine.h"
-
-        DtCine::~DtCine(){}
-
+        
+        DtCine::DtCine(){
+            this->id = 0;
+            this->direccion = "";
+        };
+        
+        DtCine::DtCine(int id, string direccion){
+            this->id = id;
+            this->direccion = direccion;
+        };
+        
         int DtCine::getID(){
             return this->id;
         };
@@ -18,7 +26,5 @@
             return "Datos del cine " + this->getID();
         };
 
-        DtCine::DtCine(int id, string direccion){
-            this->id = id;
-            this->direccion = direccion;
-        };
+        DtCine::~DtCine(){
+        }

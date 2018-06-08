@@ -1,30 +1,36 @@
 ********Progreso***************
 
-Datatype    Sala                    50%
+Datatype    Sala                    100%
 Clase       Sala                    50%
 
 Datatype    Reserva                 50%
 Clase       Reserva                 50%
 
-Datatype    Usuario                 50%
+Datatype    Usuario                 100%
 Clase       Usuario                 50%
 
-Datatype    Tarjeta                 50%
+Datatype    Tarjeta                 100%
 Clase       Tarjeta                 50%
 
-Datatype    Cine                    50%
+Datatype    Cine                    100%
 Clase       Cine                    50%
 
-Datatype    Funcion                 50%
+Datatype    Funcion                 100%
 Clase       Funcion                 50%
 
-Datatype    Pelicula                50%
+Datatype    Pelicula                100%
 Clase       Pelicula                50%
 
-Datatype    Comentario              50%
+Datatype    Credito                 100%
+Clase       Credito                 50%
+
+Datatype    Debito                  100%
+Clase       Debito                  50%
+
+Datatype    Comentario              100%
 Clase       Comentario              50%
 
-Datatype    Puntaje                 50%
+Datatype    Puntaje                 100%
 Clase       Puntaje                 50%
 
 Datatype    dtFecha                 50%

@@ -1,15 +1,16 @@
 #include "../../include/datatypes/DtPelicula.h"
 
+DtPelicula(){
+    titulo = "";
+    poster = "";
+    puntajePromedio = 0;
+};
+
 DtPelicula::DtPelicula(string titulo, string poster, float puntajePromedio)
 {
     this->poster = poster;
     this->puntajePromedio = puntajePromedio;
     this->titulo = poster;
-}
-
-DtPelicula::~DtPelicula()
-{
-    //dtor
 }
 
 string DtPelicula::getID(){
@@ -21,6 +22,14 @@ string DtPelicula::getTitulo(){
 string DtPelicula::getPoster(){
     return this->poster;
 };
+string DtPelicula::getSinopsis(){
+    return this->sinopsis;
+};
 float DtPelicula::getPuntajePromedio(){
     return this->puntajePromedio;
 };
+
+DtPelicula::~DtPelicula()
+{
+    //dtor
+}

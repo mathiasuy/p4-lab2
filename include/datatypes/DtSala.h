@@ -9,10 +9,13 @@ private:
     int cantAsientos;
 
 public:
-        int getID();
     DtSala();
-        DtSala(int idSala, int cantAsientos);
-        ~DtSala();
+    DtSala(int idSala, int cantAsientos);
+    
+    int getID();
+    int getCanAsientos;
+    
+    ~DtSala();
 };
 
 #endif // DTSALA_H
