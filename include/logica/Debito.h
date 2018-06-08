@@ -13,6 +13,7 @@ class Debito : public Tarjeta
         void setBanco(string banco);
         string getBanco();
         string toString();
+        DtDebito getDt();
 
         Debito(float montoTotal, string banco);
         ~Debito();

@@ -30,3 +30,7 @@ string Credito::toString(){
 Credito::~Credito(){
 
 };
+
+DtCredito Credito::getDt(){
+    return DtCredito(montoTota,financiera,descuento);
+}

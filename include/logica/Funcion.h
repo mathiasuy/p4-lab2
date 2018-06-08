@@ -28,7 +28,7 @@ class Funcion
         Sala* getSala();
         DtFecha getFecha();
         float getPrecio();
-        DtFuncion getDtFuncion();
+        DtFuncion getDt();
         int getAsientosReservados();
         int getAsientosLibres();
         void agregarAsientosReservados(int aumento);

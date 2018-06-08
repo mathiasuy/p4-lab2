@@ -1,6 +1,8 @@
 #ifndef DTFUNCION_H
 #define DTFUNCION_H
 #include <string>
+#include "DtPelicula.h"
+#include "DtSala.h"
 
 using namespace std;
 
@@ -10,10 +12,12 @@ class DtFuncion
         int id;
         int asientosReservados;
         float precioEntrada;
+        DtSala sala;
+        DtPelicula pelicula;
         
     public:
         DtFuncion();
-        DtFuncion(int id, int asientosReservados, float precioEntrada);
+        DtFuncion(int id, int asientosReservados, float precioEntrada, DtSala sala, DtPelicula pelicula);
         
         int getID();
         int getAsientosReservados();

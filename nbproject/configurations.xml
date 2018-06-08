@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="100">
+<configurationDescriptor version="94">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
-      <df name="include">
-        <df name="datatypes">
-          <in>DtPuntaje.h</in>
-        </df>
-      </df>
       <df name="src">
         <df name="datatypes">
           <in>DtCine.cpp</in>
@@ -14,13 +9,13 @@
           <in>DtCredito.cpp</in>
           <in>DtDebito.cpp</in>
           <in>DtFecha.cpp</in>
-          <in>DtFinanciera.cpp</in>
           <in>DtFuncion.cpp</in>
           <in>DtPelicula.cpp</in>
           <in>DtPuntaje.cpp</in>
           <in>DtReserva.cpp</in>
           <in>DtSala.cpp</in>
           <in>DtTarjeta.cpp</in>
+          <in>DtTest.cpp</in>
           <in>DtUsuario.cpp</in>
         </df>
         <df name="logica">
@@ -38,6 +33,7 @@
           <in>Usuario.cpp</in>
         </df>
         <df name="manejadores">
+          <in>ListaDt.cpp</in>
           <in>ManejadorCines.cpp</in>
           <in>ManejadorFunciones.cpp</in>
           <in>ManejadorPeliculas.cpp</in>
@@ -81,13 +77,7 @@
             </incDir>
           </ccTool>
         </makeTool>
-        <preBuild>
-          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
-          <preBuildCommand></preBuildCommand>
-        </preBuild>
       </makefileType>
-      <item path="include/datatypes/DtPuntaje.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Factory.cpp" ex="false" tool="1" flavor2="0">
@@ -104,8 +94,6 @@
       </item>
       <item path="src/datatypes/DtFecha.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/datatypes/DtFinanciera.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/datatypes/DtFuncion.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/datatypes/DtPelicula.cpp" ex="false" tool="1" flavor2="0">
@@ -117,6 +105,8 @@
       <item path="src/datatypes/DtSala.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/datatypes/DtTarjeta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/datatypes/DtTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/datatypes/DtUsuario.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -143,6 +133,8 @@
       <item path="src/logica/Tarjeta.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/logica/Usuario.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/manejadores/ListaDt.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/manejadores/ManejadorCines.cpp" ex="false" tool="1" flavor2="0">
       </item>

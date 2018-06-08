@@ -29,12 +29,11 @@ class Reserva
         void setFuncion(Funcion* funcion);
         void setTarjeta(Tarjeta* tarjeta);
         void setCantAsientos(int cantAsientos);
+        DtReserva getDt();
 
         bool tieneFuncion(int id);
         bool isEqual(Reserva * reserva);
         string toString();
-
-        DtReserva getDtReserva();
 
         ~Reserva();
         Reserva(int cantAsientos, DtFuncion funcion, DtPelicula pelicula);

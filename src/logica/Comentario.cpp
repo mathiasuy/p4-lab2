@@ -50,3 +50,7 @@ Comentario::Comentario(string nickName, string comentario, int esRespuestaDeID){
     this->setComentairo(comentario);
     this->esRespuestaDeID = esRespuestaDeID;
 };
+
+Comentario Comentario::getDt(){
+    return DtComentario(this->nickName, this->comentario, this->esRespuestaDeID);
+}

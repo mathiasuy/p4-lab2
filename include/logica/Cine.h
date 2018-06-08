@@ -33,6 +33,7 @@ class Cine
         bool isEqual(Cine *cine);
         bool tieneSala(int id);
         Sala* getSala(int id);
+        DtCine getDt();
         ListaDt<int,DtSala> listarDtSalas();
 
         /* CONSTRUS Y DESTRUS */

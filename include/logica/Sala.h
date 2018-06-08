@@ -25,8 +25,7 @@ class Sala
         int getID();
         int getCapacidad();
         Cine* getCine();
-        DtCine getDtCine();
-        DtSala getDtSala();
+        DtSala getDt();
         void setCapacidad(int id);
         bool agregarFuncion(Funcion* funcion);
         bool quitarFuncion(Funcion* funcion);

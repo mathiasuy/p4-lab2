@@ -28,3 +28,7 @@
 
         DtCine::~DtCine(){
         }
+
+        string DtCine::toString(){
+            return "C" + this->getID() + ": " + this->getDireccion();
+        };

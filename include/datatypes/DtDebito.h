@@ -3,6 +3,7 @@
 
 #include <string>
 #include "../datatypes/DtTarjeta.h"
+
 using namespace std;
 
 class DtDebito : public DtTarjeta
@@ -11,13 +12,12 @@ class DtDebito : public DtTarjeta
          string banco;
 
     public:
-        DtDebito(int idTarjeta, float monto, string banco);
+        DtDebito(float monto, string banco);
         DtDebito();
-        
+
         string getBanco();
-        bool isEqual(DtDebito* t);
         string toString();
-        
+
         virtual ~DtDebito();
 };
 

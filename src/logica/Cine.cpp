@@ -24,7 +24,7 @@ ListaDt<int,DtSala> Cine::listarDtSalas(){
     return dt;
 };
 
-DtCine Cine::getDtCine(){
+DtCine Cine::getDt(){
     return DtCine(this->getID(),this->getDireccion());
 }
 

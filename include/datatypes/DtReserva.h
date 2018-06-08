@@ -10,10 +10,12 @@ class DtReserva
    private:
         int id;
         int cantAsientos;
+        DtTarjeta tarjeta;
+        DtFuncion funcion;
         
     public:
         DtReserva();
-        DtReserva(int id, int cantAsientos);
+        DtReserva(int id, int cantAsientos, DtTarjeta tarjeta, DtFuncion funcion);
     
         int getID();
         int getCantAsientos();

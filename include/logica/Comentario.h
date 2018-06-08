@@ -20,7 +20,7 @@ class Comentario
         void setEsRespuestaDeID(int id);
         void setComentairo(string);
 
-        DtComentario getDtComentario();
+        DtComentario getDt();
         string getComentario();
         int getEsRespuestaDeID();
         int getID();

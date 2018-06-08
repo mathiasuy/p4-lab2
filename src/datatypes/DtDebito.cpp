@@ -13,11 +13,6 @@ string DtDebito::getBanco(){
     return this->banco;
 };
 
-bool DtDebito::isEqual(DtDebito* t){
-    return this->banco == DtDebito.getBanco(t);
-};
-
-
 string DtDebito::toString(){
     return "DtDebito";
 }

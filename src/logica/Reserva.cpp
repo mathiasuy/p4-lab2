@@ -67,7 +67,9 @@ bool Reserva::tieneFuncion(int id){
     return this->funcion->getID() == id;
 }
 
-DtReserva getDtReserva(){
-    return DtReserva();
+DtReserva Reserva::getDt(){
+    DtTarjeta t = this->tarjeta->getDt();
+    DtFuncion f = this->funcion->getDt();
+    return DtReserva(int cantAsientos, DtFuncion funcion, string  banco, float montoTotal, DtTarjeta tarjeta);
     //ESTA MAL CORREGIR
 };

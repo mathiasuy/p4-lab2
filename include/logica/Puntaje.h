@@ -19,7 +19,7 @@ class Puntaje
         string getID();
         string getNickName();
         string toString();
-        DtPuntaje getDtPuntaje();
+        DtPuntaje getDt();
         bool isEqual(Puntaje *puntaje);
 
         /* CONSTRUS Y DESTRUS */

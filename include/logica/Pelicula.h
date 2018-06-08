@@ -40,11 +40,11 @@ class Pelicula
         float getPuntaje(string nickName);
         void setPuntaje(string nickName, float puntaje);
         DtPelicula getDtPuntaje(string nickName);
-
+        
         ListaDt<int,DtComentario> listarDtComentarios();
         
         
-        DtPelicula getDtPelicula();
+        DtPelicula getDt();
         
         ListaDt<string,DtPuntaje> listarDtPuntajes();
 

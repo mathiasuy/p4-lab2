@@ -11,9 +11,10 @@ class Tarjeta
         static int idGlobal;
 
     public:
-        float getMontoTotal();
         void setMontoTotal(float montoTotal);
+        virtual DtTarjeta getDt()=0;
         virtual string toString() = 0;
+        virtual float getMontoTotal()=0;        
         Tarjeta(float montoTotal);
         virtual ~Tarjeta();
 

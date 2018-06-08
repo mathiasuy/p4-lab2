@@ -11,17 +11,9 @@ DtTarjeta::DtTarjeta(int id, float montoTotal){
     this->montoTotal = montoTotal;
 };
 
-int DtTarjeta::getIdTarjeta(){
-    return this->idTarjeta;
-}
-
 float DtTarjeta::getMontoTotal(){
     return this->montoTotal;
 };
-
-bool DtTarjeta:: isEqual(DtTarjeta *t){
-    return this->getIdTarjeta() == t->getIdTarjeta();
-}
 
 DtTarjeta::~DtTarjeta()
 {

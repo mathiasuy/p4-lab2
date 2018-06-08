@@ -86,9 +86,10 @@
             if(usuarios->isMember(nickName)){
              //si esta, lo busco
              Usuario* usuario = usuarios->find(nickName);
-             return ((usuario != NULL)?(usuario->getPassword() == password):false);
+             return usuario->getPassword() == password;
             }
-            else return false;
+            else
+                return false;
         };
         bool Sistema::crearReserva(string nickName,int cantAsientos,int idFuncion,string financiera, float descuento, float montoTotal){
             Funcion* funcion = this->funciones->find(idFuncion);
@@ -123,7 +124,7 @@
             this->peliculas->beginIterator();
             ListaDt<string,DtPelicula> dt;
             while (this->peliculas->getElement()){
-                dt.add(this->peliculas->getElement()->getDtPelicula());
+                dt.add(this->peliculas->getElement()->getDt());
                 this->peliculas->next();
             }
             return dt;
@@ -134,7 +135,7 @@
             this->peliculas->beginIterator();
             ListaDt<int,DtCine> dt;
             while (this->cines->getElement()){
-                dt.add(this->cines->getElement()->getDtCine());
+                dt.add(this->cines->getElement()->getDt());
                 this->cines->next();
             }
             return dt;
@@ -168,7 +169,7 @@
             return pelicula->listarDtComentarios();
         };
 
-        /* LISTAR FUNCIONES X PELICULA Y CINE  POSTARIOR A FECHA Y HORA ACTUAL*/
+        /* LISTAR FUNCIONES X PELICULA Y CINE */
         ListaDt<int,DtFuncion> Sistema::listarFunciones(int idCine, string titulo, DtFecha fecha){
             Cine* cine = this->cines->find(idCine);
             map<int,Funcion*> fs = this->peliculas->find(titulo)->listarFunciones();

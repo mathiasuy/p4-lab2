@@ -1,5 +1,5 @@
 called: g++
-	/ens/home01/m/mathias.battistella/lab1/lab1
+	/ens/home01/m/mathias.battistella/Documents/lab1
 	g++
 	-o
 	ejecutable
@@ -8,7 +8,6 @@ called: g++
 	src/logica/Funcion.cpp
 	src/logica/Credito.cpp
 	src/logica/Debito.cpp
-	src/logica/Pago.cpp
 	src/logica/Puntaje.cpp
 	src/logica/Tarjeta.cpp
 	src/logica/Pelicula.cpp
@@ -17,18 +16,19 @@ called: g++
 	src/logica/Comentario.cpp
 	src/logica/Sistema.cpp
 	src/datatypes/DtComentario.cpp
+	src/datatypes/DtPuntaje.cpp
 	src/datatypes/DtUsuario.cpp
 	src/datatypes/DtPelicula.cpp
 	src/datatypes/DtDebito.cpp
 	src/datatypes/DtCine.cpp
-	src/datatypes/DtFinanciera.cpp
 	src/datatypes/DtCredito.cpp
 	src/datatypes/DtTarjeta.cpp
 	src/datatypes/DtFecha.cpp
 	src/datatypes/DtFuncion.cpp
+	src/datatypes/DtTest.cpp
 	src/datatypes/DtSala.cpp
 	src/datatypes/DtReserva.cpp
-	src/datatypes/DtPago.cpp
+	src/manejadores/ListaDt.cpp
 	src/manejadores/ManejadorUsuarios.cpp
 	src/manejadores/ManejadorFunciones.cpp
 	src/manejadores/ManejadorPeliculas.cpp
@@ -39,7 +39,7 @@ called: g++
 	-I.
 
 called: /usr/bin/g++
-	/ens/home01/m/mathias.battistella/lab1/lab1
+	/ens/home01/m/mathias.battistella/Documents/lab1
 	/usr/bin/g++
 	-o
 	ejecutable
@@ -48,7 +48,6 @@ called: /usr/bin/g++
 	src/logica/Funcion.cpp
 	src/logica/Credito.cpp
 	src/logica/Debito.cpp
-	src/logica/Pago.cpp
 	src/logica/Puntaje.cpp
 	src/logica/Tarjeta.cpp
 	src/logica/Pelicula.cpp
@@ -57,18 +56,19 @@ called: /usr/bin/g++
 	src/logica/Comentario.cpp
 	src/logica/Sistema.cpp
 	src/datatypes/DtComentario.cpp
+	src/datatypes/DtPuntaje.cpp
 	src/datatypes/DtUsuario.cpp
 	src/datatypes/DtPelicula.cpp
 	src/datatypes/DtDebito.cpp
 	src/datatypes/DtCine.cpp
-	src/datatypes/DtFinanciera.cpp
 	src/datatypes/DtCredito.cpp
 	src/datatypes/DtTarjeta.cpp
 	src/datatypes/DtFecha.cpp
 	src/datatypes/DtFuncion.cpp
+	src/datatypes/DtTest.cpp
 	src/datatypes/DtSala.cpp
 	src/datatypes/DtReserva.cpp
-	src/datatypes/DtPago.cpp
+	src/manejadores/ListaDt.cpp
 	src/manejadores/ManejadorUsuarios.cpp
 	src/manejadores/ManejadorFunciones.cpp
 	src/manejadores/ManejadorPeliculas.cpp

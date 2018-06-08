@@ -20,6 +20,8 @@ public:
         void setComentario(string comentario);
         void setEsRespuestaDeID(int esRespuestaDeID);
 
+        string toString();
+        
         bool isEqual(DtComentario* comentario);
         DtComentario();
         DtComentario(string nickName, string comentario);

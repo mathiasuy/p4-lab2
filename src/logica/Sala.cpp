@@ -32,13 +32,9 @@ bool Sala::isEqual(Sala* sala){
     return this->getID() == sala->getID();
 };
 
-DtCine Sala::getDtCine(){
+DtSala Sala::getDt(){
     Cine* cine = this->getCine();
-    return cine->getDtCine();
-};
-
-DtSala Sala::getDtSala(){
-    return DtSala(this->getID(),this->getCapacidad());
+    return DtSala(this->getID(),this->getCapacidad(), cine->getDt());
 };
 
 bool Sala::perteneceA(Cine* cine){

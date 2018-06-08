@@ -1,4 +1,5 @@
 #include "../../include/logica/Tarjeta.h"
+#include "include/datatypes/DtTarjeta.h"
 
 
 Tarjeta::~Tarjeta()
@@ -19,3 +20,4 @@ void Tarjeta::setMontoTotal(float montoTotal){
 Tarjeta::Tarjeta(float montoTotal){
     this->setMontoTotal(montoTotal);
 };
+

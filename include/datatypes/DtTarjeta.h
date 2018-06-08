@@ -7,17 +7,15 @@ class DtTarjeta
 {
 
     private:
-             int idTarjeta;
-             float montoTotal;
+        int idTarjeta;
+        float montoTotal;
 
     public:
         DtTarjeta();
-        DtTarjeta(int idTarjeta, float montoTotal);
+        DtTarjeta(float montoTotal);
        
-        int getIdTarjeta();
         virtual float getMontoTotal();
-        virtual bool isEqual(DtTarjeta* t);
-        virtual string toString() = 0;
+        virtual string toString();
         
          virtual ~DtTarjeta();
 

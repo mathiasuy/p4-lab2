@@ -5,8 +5,9 @@ DtSala::DtSala(){
     this->idSala = 0;
 };
 
-DtSala::DtSala(int idSala, int cantAsientos)
+DtSala::DtSala(int idSala, int cantAsientos, DtCine cine)
 {
+    this->cine = cine;
     this->cantAsientos = cantAsientos;
     this->idSala = idSala;
 };

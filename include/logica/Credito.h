@@ -12,7 +12,7 @@ class Credito : public Tarjeta
         void setDescuento (float descuento);
         string getFinanciera();
         float getDescuento();
-
+        DtCredito getDt();
         Credito(float montoTotal, string financiera, float descuento);
 
         string toString();

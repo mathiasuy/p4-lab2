@@ -3,6 +3,7 @@
 
 #include <string>
 #include "DtTarjeta.h"
+
 using namespace std;
 
 class DtCredito: public DtTarjeta
@@ -11,7 +12,7 @@ class DtCredito: public DtTarjeta
          string financiera;
          float descuento;
     public:
-        DtCredito(int idTarjeta, float montoTotal, string financiera, float descuento);
+        DtCredito(float montoTotal, string financiera, float descuento);
         DtCredito();
 
         string getFinanciera();

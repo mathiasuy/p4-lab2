@@ -1,236 +1,27 @@
-g++ -o ejecutable src/logica/Reserva.cpp src/logica/Cine.cpp src/logica/Funcion.cpp src/logica/Credito.cpp src/logica/Debito.cpp src/logica/Pago.cpp src/logica/Puntaje.cpp src/logica/Tarjeta.cpp src/logica/Pelicula.cpp src/logica/Sala.cpp src/logica/Usuario.cpp src/logica/Comentario.cpp src/logica/Sistema.cpp src/datatypes/DtComentario.cpp src/datatypes/DtUsuario.cpp src/datatypes/DtPelicula.cpp src/datatypes/DtDebito.cpp src/datatypes/DtCine.cpp src/datatypes/DtFinanciera.cpp src/datatypes/DtCredito.cpp src/datatypes/DtTarjeta.cpp src/datatypes/DtFecha.cpp src/datatypes/DtFuncion.cpp src/datatypes/DtSala.cpp src/datatypes/DtReserva.cpp src/datatypes/DtPago.cpp src/manejadores/ManejadorUsuarios.cpp src/manejadores/ManejadorFunciones.cpp src/manejadores/ManejadorPeliculas.cpp src/manejadores/ManejadorCines.cpp src/Utils.cpp src/Factory.cpp main.cpp -I. 
-In file included from src/logica/../../include/logica/Cine.h:6:0,
-                 from src/logica/Cine.cpp:1:
-src/logica/../../include/logica/Sala.h:6:34: fatal error: ../datatypes/Funcion.h: No such file or directory
- #include "../datatypes/Funcion.h"
-                                  ^
-compilation terminated.
-In file included from src/logica/../../include/logica/Funcion.h:5:0,
-                 from src/logica/Funcion.cpp:1:
-src/logica/../../include/logica/Sala.h:6:34: fatal error: ../datatypes/Funcion.h: No such file or directory
- #include "../datatypes/Funcion.h"
-                                  ^
-compilation terminated.
-In file included from src/logica/Debito.cpp:1:0:
-src/logica/../../include/logica/Debito.h:4:34: fatal error: ../datatypes/DtBanco.h: No such file or directory
- #include "../datatypes/DtBanco.h"
-                                  ^
-compilation terminated.
-In file included from src/logica/../../include/logica/Pelicula.h:1:0,
-                 from src/logica/Pelicula.cpp:1:
-src/logica/../../include/logica/Comentario.h:3:26: fatal error: DtComentario.h: No such file or directory
- #include "DtComentario.h"
-                          ^
-compilation terminated.
-In file included from src/logica/Sala.cpp:1:0:
-src/logica/../../include/logica/Sala.h:6:34: fatal error: ../datatypes/Funcion.h: No such file or directory
- #include "../datatypes/Funcion.h"
-                                  ^
-compilation terminated.
-In file included from src/logica/Comentario.cpp:1:0:
-src/logica/../../include/logica/Comentario.h:3:26: fatal error: DtComentario.h: No such file or directory
- #include "DtComentario.h"
-                          ^
-compilation terminated.
-In file included from src/logica/Sistema.cpp:1:0:
-src/logica/../../include/logica/Sistema.h:3:22: fatal error: ISistema.h: No such file or directory
- #include "ISistema.h"
-                      ^
-compilation terminated.
-src/datatypes/DtComentario.cpp:3:27: error: expected constructor, destructor, or type conversion before ‘(’ token
- DtComentario::DtComentario(string nickname, string comentario, int id)
-                           ^
-src/datatypes/DtComentario.cpp:13:27: error: expected constructor, destructor, or type conversion before ‘(’ token
- DtComentario::DtComentario(string nickname, string comentario, int id, int esRespuestaDeId)
-                           ^
-src/datatypes/DtComentario.cpp:22:1: error: ‘string’ does not name a type
- string DtComentario::getComentario()
- ^~~~~~
-src/datatypes/DtComentario.cpp:27:1: error: ‘string’ does not name a type
- string DtComentario::getNickname(){
- ^~~~~~
-src/datatypes/DtComentario.cpp:31:25: error: no ‘int DtComentario::getId()’ member function declared in class ‘DtComentario’
- int DtComentario::getId() {
-                         ^
-src/datatypes/DtComentario.cpp:35:38: error: no ‘int DtComentario::getEsRespuestaDeId()’ member function declared in class ‘DtComentario’
- int DtComentario::getEsRespuestaDeId(){
-                                      ^
-src/datatypes/DtComentario.cpp:39:53: error: no ‘bool DtComentario::isEqual(DtComentario)’ member function declared in class ‘DtComentario’
- bool DtComentario::isEqual(DtComentario dtComentario) {
-                                                     ^
-src/datatypes/DtComentario.cpp:43:1: error: ‘string’ does not name a type
- string DtComentario::toString(){
- ^~~~~~
-src/datatypes/DtUsuario.cpp:1:23: fatal error: DtUsuario.h: No such file or directory
- #include "DtUsuario.h"
-                       ^
-compilation terminated.
-In file included from src/datatypes/DtDebito.cpp:1:0:
-src/datatypes/../../include/datatypes/DtDebito.h:3:44: fatal error: ../include/datatypes/DtTarjeta.h: No such file or directory
- #include "../include/datatypes/DtTarjeta.h"
-                                            ^
-compilation terminated.
-In file included from src/datatypes/DtCredito.cpp:1:0:
-src/datatypes/../../include/datatypes/DtCredito.h:3:44: fatal error: ../include/datatypes/DtTarjeta.h: No such file or directory
- #include "../include/datatypes/DtTarjeta.h"
-                                            ^
-compilation terminated.
-src/datatypes/DtFecha.cpp: In constructor ‘DtFecha::DtFecha()’:
-src/datatypes/DtFecha.cpp:6:13: error: base operand of ‘->’ has non-pointer type ‘DtFecha’
-     temporal->getFechaActual();
-             ^~
-src/datatypes/DtFecha.cpp:7:11: error: ‘class DtFecha’ has no member named ‘dia’
-     this->dia = temporal->getDia();//ctor
-           ^~~
-src/datatypes/DtFecha.cpp:7:25: error: base operand of ‘->’ has non-pointer type ‘DtFecha’
-     this->dia = temporal->getDia();//ctor
-                         ^~
-src/datatypes/DtFecha.cpp:8:11: error: ‘class DtFecha’ has no member named ‘mes’
-     this->mes = temporal->getMes();
-           ^~~
-src/datatypes/DtFecha.cpp:8:25: error: base operand of ‘->’ has non-pointer type ‘DtFecha’
-     this->mes = temporal->getMes();
-                         ^~
-src/datatypes/DtFecha.cpp:9:11: error: ‘class DtFecha’ has no member named ‘anio’
-     this->anio = temporal->getAnio();
-           ^~~~
-src/datatypes/DtFecha.cpp:9:26: error: base operand of ‘->’ has non-pointer type ‘DtFecha’
-     this->anio = temporal->getAnio();
-                          ^~
-src/datatypes/DtFecha.cpp:10:11: error: ‘class DtFecha’ has no member named ‘hora’
-     this->hora = 0;
-           ^~~~
-src/datatypes/DtFecha.cpp:11:11: error: ‘class DtFecha’ has no member named ‘minuto’
-     this->minuto = 0;
-           ^~~~~~
-src/datatypes/DtFecha.cpp: At global scope:
-src/datatypes/DtFecha.cpp:14:1: error: prototype for ‘DtFecha::DtFecha(int, int, int, int, int)’ does not match any in class ‘DtFecha’
- DtFecha::DtFecha(int dia, int mes, int anio, int minuto, int hora)
- ^~~~~~~
-In file included from src/datatypes/DtFecha.cpp:1:0:
-src/datatypes/../../include/datatypes/DtFecha.h:5:7: error: candidates are: constexpr DtFecha::DtFecha(const DtFecha&)
- class DtFecha
-       ^~~~~~~
-src/datatypes/DtFecha.cpp:3:1: error:                 DtFecha::DtFecha()
- DtFecha::DtFecha() //CONSTRUCTOR HORA ACTUAL
- ^~~~~~~
-src/datatypes/DtFecha.cpp:23:22: error: no ‘int DtFecha::getAnio()’ member function declared in class ‘DtFecha’
- int DtFecha::getAnio() {
-                      ^
-src/datatypes/DtFecha.cpp:27:21: error: no ‘int DtFecha::getDia()’ member function declared in class ‘DtFecha’
- int DtFecha::getDia() {
-                     ^
-src/datatypes/DtFecha.cpp:31:33: error: no ‘DtFecha DtFecha::getFechaActual()’ member function declared in class ‘DtFecha’
- DtFecha DtFecha::getFechaActual() {
+g++ -o ejecutable src/logica/Reserva.cpp src/logica/Cine.cpp src/logica/Funcion.cpp src/logica/Credito.cpp src/logica/Debito.cpp src/logica/Puntaje.cpp src/logica/Tarjeta.cpp src/logica/Pelicula.cpp src/logica/Sala.cpp src/logica/Usuario.cpp src/logica/Comentario.cpp src/logica/Sistema.cpp src/datatypes/DtComentario.cpp src/datatypes/DtPuntaje.cpp src/datatypes/DtUsuario.cpp src/datatypes/DtPelicula.cpp src/datatypes/DtDebito.cpp src/datatypes/DtCine.cpp src/datatypes/DtCredito.cpp src/datatypes/DtTarjeta.cpp src/datatypes/DtFecha.cpp src/datatypes/DtFuncion.cpp src/datatypes/DtTest.cpp src/datatypes/DtSala.cpp src/datatypes/DtReserva.cpp src/manejadores/ListaDt.cpp src/manejadores/ManejadorUsuarios.cpp src/manejadores/ManejadorFunciones.cpp src/manejadores/ManejadorPeliculas.cpp src/manejadores/ManejadorCines.cpp src/Utils.cpp src/Factory.cpp main.cpp -I. 
+src/datatypes/DtDebito.cpp: In member function ‘bool DtDebito::isEqual(DtDebito*)’:
+src/datatypes/DtDebito.cpp:17:35: error: expected primary-expression before ‘.’ token
+     return this->banco == DtDebito.getBanco(t);
+                                   ^
+src/datatypes/DtReserva.cpp: In member function ‘bool DtReserva::isEqual(DtReserva*)’:
+src/datatypes/DtReserva.cpp:25:33: error: expected primary-expression before ‘.’ token
+     return this->id == DtReserva.getID(t);
                                  ^
-src/datatypes/DtFecha.cpp:39:22: error: no ‘int DtFecha::getHora()’ member function declared in class ‘DtFecha’
- int DtFecha::getHora(){
-                      ^
-src/datatypes/DtFecha.cpp:43:21: error: no ‘int DtFecha::getMes()’ member function declared in class ‘DtFecha’
- int DtFecha::getMes() {
-                     ^
-src/datatypes/DtFecha.cpp:47:24: error: no ‘int DtFecha::getMinuto()’ member function declared in class ‘DtFecha’
- int DtFecha::getMinuto(){
-                        ^
-In file included from src/manejadores/ManejadorUsuarios.cpp:1:0:
-src/manejadores/../../include/manejadores/ManejadorUsuarios.h:9:9: error: ‘map’ does not name a type
-         map<string, Usuario*> peliculas;
-         ^~~
-src/manejadores/../../include/manejadores/ManejadorUsuarios.h:17:18: error: ‘Usuario’ has not been declared
-         bool add(Usuario* cine);
-                  ^~~~~~~
-src/manejadores/../../include/manejadores/ManejadorUsuarios.h:18:21: error: ‘string’ has not been declared
-         bool remove(string id);
-                     ^~~~~~
-src/manejadores/../../include/manejadores/ManejadorUsuarios.h:19:23: error: ‘string’ has not been declared
-         bool isMember(string id);
-                       ^~~~~~
-src/manejadores/../../include/manejadores/ManejadorUsuarios.h:20:9: error: ‘Usuario’ does not name a type
-         Usuario* find(string id);
-         ^~~~~~~
-src/manejadores/ManejadorUsuarios.cpp:3:59: error: ‘NULL’ was not declared in this scope
-         ManejadorUsuarios* ManejadorUsuarios::instancia = NULL;
-                                                           ^~~~
-src/manejadores/ManejadorUsuarios.cpp:4:9: error: ‘map’ does not name a type
-         map<int, Usuario*> usuarios;
-         ^~~
-src/manejadores/ManejadorUsuarios.cpp: In static member function ‘static ManejadorUsuarios* ManejadorUsuarios::getInstancia()’:
-src/manejadores/ManejadorUsuarios.cpp:11:49: error: ‘NULL’ was not declared in this scope
-             if (ManejadorUsuarios::instancia == NULL){
-                                                 ^~~~
-src/manejadores/ManejadorUsuarios.cpp: At global scope:
-src/manejadores/ManejadorUsuarios.cpp:18:37: error: ‘bool ManejadorUsuarios::add’ is not a static data member of ‘class ManejadorUsuarios’
-         bool ManejadorUsuarios::add(Usuario* usuario){
-                                     ^~~~~~~
-src/manejadores/ManejadorUsuarios.cpp:18:37: error: ‘Usuario’ was not declared in this scope
-src/manejadores/ManejadorUsuarios.cpp:18:46: error: ‘usuario’ was not declared in this scope
-         bool ManejadorUsuarios::add(Usuario* usuario){
-                                              ^~~~~~~
-src/manejadores/ManejadorUsuarios.cpp:25:40: error: ‘bool ManejadorUsuarios::remove’ is not a static data member of ‘class ManejadorUsuarios’
-         bool ManejadorUsuarios::remove(string id){
-                                        ^~~~~~
-src/manejadores/ManejadorUsuarios.cpp:25:40: error: ‘string’ was not declared in this scope
-src/manejadores/ManejadorUsuarios.cpp:32:42: error: ‘bool ManejadorUsuarios::isMember’ is not a static data member of ‘class ManejadorUsuarios’
-         bool ManejadorUsuarios::isMember(string id){
-                                          ^~~~~~
-src/manejadores/ManejadorUsuarios.cpp:32:42: error: ‘string’ was not declared in this scope
-src/manejadores/ManejadorUsuarios.cpp:36:9: error: ‘Usuario’ does not name a type
-         Usuario* ManejadorUsuarios::find(string id){
-         ^~~~~~~
-src/manejadores/ManejadorUsuarios.cpp: In member function ‘bool ManejadorUsuarios::isEmpty()’:
-src/manejadores/ManejadorUsuarios.cpp:41:26: error: ‘class ManejadorUsuarios’ has no member named ‘usuarios’
-             return this->usuarios.empty();
-                          ^~~~~~~~
-src/manejadores/ManejadorUsuarios.cpp: In destructor ‘virtual ManejadorUsuarios::~ManejadorUsuarios()’:
-src/manejadores/ManejadorUsuarios.cpp:47:13: error: ‘map’ was not declared in this scope
-             map<string,Usuario*>::iterator it;
-             ^~~
-src/manejadores/ManejadorUsuarios.cpp:47:17: error: ‘string’ was not declared in this scope
-             map<string,Usuario*>::iterator it;
-                 ^~~~~~
-src/manejadores/ManejadorUsuarios.cpp:47:24: error: ‘Usuario’ was not declared in this scope
-             map<string,Usuario*>::iterator it;
-                        ^~~~~~~
-src/manejadores/ManejadorUsuarios.cpp:47:32: error: expected primary-expression before ‘>’ token
-             map<string,Usuario*>::iterator it;
-                                ^
-src/manejadores/ManejadorUsuarios.cpp:47:33: error: ‘::iterator’ has not been declared
-             map<string,Usuario*>::iterator it;
-                                 ^~
-src/manejadores/ManejadorUsuarios.cpp:48:18: error: ‘it’ was not declared in this scope
-             for (it = usuarios.begin(); it != usuarios.end(); ++it)
-                  ^~
-src/manejadores/ManejadorUsuarios.cpp:48:23: error: ‘usuarios’ was not declared in this scope
-             for (it = usuarios.begin(); it != usuarios.end(); ++it)
-                       ^~~~~~~~
-In file included from src/manejadores/../../include/manejadores/../logica/Funcion.h:5:0,
-                 from src/manejadores/../../include/manejadores/ManejadorFunciones.h:9,
-                 from src/manejadores/ManejadorFunciones.cpp:1:
-src/manejadores/../../include/manejadores/../logica/Sala.h:6:34: fatal error: ../datatypes/Funcion.h: No such file or directory
- #include "../datatypes/Funcion.h"
-                                  ^
-compilation terminated.
-In file included from src/manejadores/../../include/manejadores/../logica/Pelicula.h:1:0,
-                 from src/manejadores/../../include/manejadores/ManejadorPeliculas.h:8,
-                 from src/manejadores/ManejadorPeliculas.cpp:1:
-src/manejadores/../../include/manejadores/../logica/Comentario.h:3:26: fatal error: DtComentario.h: No such file or directory
- #include "DtComentario.h"
-                          ^
-compilation terminated.
-In file included from src/manejadores/../../include/manejadores/../logica/Cine.h:6:0,
-                 from src/manejadores/../../include/manejadores/ManejadorCines.h:9,
-                 from src/manejadores/ManejadorCines.cpp:1:
-src/manejadores/../../include/manejadores/../logica/Sala.h:6:34: fatal error: ../datatypes/Funcion.h: No such file or directory
- #include "../datatypes/Funcion.h"
-                                  ^
-compilation terminated.
-src/Factory.cpp:1:21: fatal error: Factory.h: No such file or directory
- #include "Factory.h"
-                     ^
-compilation terminated.
-main.cpp:1:22: fatal error: ISistema.h: No such file or directory
- #include "ISistema.h"
-                      ^
-compilation terminated.
+src/manejadores/ListaDt.cpp: In instantiation of ‘void Util::ListaDt<K, T>::add(T) [with K = int; T = DtUsuario]’:
+src/manejadores/../../include/manejadores/ListaDt.h:45:26:   required from here
+src/manejadores/ListaDt.cpp:6:19: error: no match for ‘operator[]’ (operand types are ‘std::map<int, DtUsuario, std::less<int>, std::allocator<std::pair<const int, DtUsuario> > >’ and ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’)
+         this->_map[t.getID()] = t;
+         ~~~~~~~~~~^
+In file included from /usr/include/c++/6.2.1/map:61:0,
+                 from src/manejadores/../../include/manejadores/ListaDt.h:3,
+                 from src/manejadores/ListaDt.cpp:1:
+/usr/include/c++/6.2.1/bits/stl_map.h:474:7: note: candidate: std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](const key_type&) [with _Key = int; _Tp = DtUsuario; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, DtUsuario> >; std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type = DtUsuario; std::map<_Key, _Tp, _Compare, _Alloc>::key_type = int]
+       operator[](const key_type& __k)
+       ^~~~~~~~
+/usr/include/c++/6.2.1/bits/stl_map.h:474:7: note:   no known conversion for argument 1 from ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ to ‘const key_type& {aka const int&}’
+/usr/include/c++/6.2.1/bits/stl_map.h:494:7: note: candidate: std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](std::map<_Key, _Tp, _Compare, _Alloc>::key_type&&) [with _Key = int; _Tp = DtUsuario; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, DtUsuario> >; std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type = DtUsuario; std::map<_Key, _Tp, _Compare, _Alloc>::key_type = int]
+       operator[](key_type&& __k)
+       ^~~~~~~~
+/usr/include/c++/6.2.1/bits/stl_map.h:494:7: note:   no known conversion for argument 1 from ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ to ‘std::map<int, DtUsuario, std::less<int>, std::allocator<std::pair<const int, DtUsuario> > >::key_type&& {aka int&&}’
 Makefile:10: recipe for target 'ejecutable' failed
 gmake: *** [ejecutable] Error 1

@@ -9,7 +9,7 @@ DtReserva::DtReserva(){
 DtReserva::DtReserva(int id, int cantAsientos){
     this->id = id;
     this->cantAsientos = cantAsientos;
-    
+
     //ctor
 }
 
@@ -22,7 +22,7 @@ int DtReserva:: getCantAsientos(){
 }
 
 bool DtReserva::isEqual(DtReserva* t){
-    return this->id == DtReserva.getID(t);
+    return this->getID() == t->getID();
 };
 
 string DtReserva::toString(){
