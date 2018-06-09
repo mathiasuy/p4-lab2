@@ -34,3 +34,8 @@ Credito::~Credito(){
 DtTarjeta Credito::getDt(){
     return DtCredito(this->getMontoTotal(),this->financiera,this->descuento);
 }
+
+
+float Credito::getMontoTotal(){
+    return this->montoTotal*DESCUENTO_FINANCIERA/100;
+};

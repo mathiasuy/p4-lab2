@@ -21,6 +21,10 @@ string Comentario::getComentario(){
     return this->comentario;
 };
 
+string Comentario::getNickName(){
+    return this->nickName;
+};
+
 int Comentario::getEsRespuestaDeID(){
     return this->esRespuestaDeID;
 };
@@ -51,6 +55,6 @@ Comentario::Comentario(string nickName, string comentario, int esRespuestaDeID){
     this->esRespuestaDeID = esRespuestaDeID;
 };
 
-Comentario Comentario::getDt(){
-    return DtComentario(this->nickName, this->comentario, this->esRespuestaDeID);
+DtComentario Comentario::getDt(){
+    return DtComentario(this->getID(), this->getNickName(), this->getComentario(), this->getEsRespuestaDeID());
 }

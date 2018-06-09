@@ -1,27 +1,189 @@
-g++ -o ejecutable src/logica/Reserva.cpp src/logica/Cine.cpp src/logica/Funcion.cpp src/logica/Credito.cpp src/logica/Debito.cpp src/logica/Puntaje.cpp src/logica/Tarjeta.cpp src/logica/Pelicula.cpp src/logica/Sala.cpp src/logica/Usuario.cpp src/logica/Comentario.cpp src/logica/Sistema.cpp src/datatypes/DtComentario.cpp src/datatypes/DtPuntaje.cpp src/datatypes/DtUsuario.cpp src/datatypes/DtPelicula.cpp src/datatypes/DtDebito.cpp src/datatypes/DtCine.cpp src/datatypes/DtCredito.cpp src/datatypes/DtTarjeta.cpp src/datatypes/DtFecha.cpp src/datatypes/DtFuncion.cpp src/datatypes/DtTest.cpp src/datatypes/DtSala.cpp src/datatypes/DtReserva.cpp src/manejadores/ListaDt.cpp src/manejadores/ManejadorUsuarios.cpp src/manejadores/ManejadorFunciones.cpp src/manejadores/ManejadorPeliculas.cpp src/manejadores/ManejadorCines.cpp src/Utils.cpp src/Factory.cpp main.cpp -I. 
-src/datatypes/DtDebito.cpp: In member function ‘bool DtDebito::isEqual(DtDebito*)’:
-src/datatypes/DtDebito.cpp:17:35: error: expected primary-expression before ‘.’ token
-     return this->banco == DtDebito.getBanco(t);
-                                   ^
-src/datatypes/DtReserva.cpp: In member function ‘bool DtReserva::isEqual(DtReserva*)’:
-src/datatypes/DtReserva.cpp:25:33: error: expected primary-expression before ‘.’ token
-     return this->id == DtReserva.getID(t);
-                                 ^
-src/manejadores/ListaDt.cpp: In instantiation of ‘void Util::ListaDt<K, T>::add(T) [with K = int; T = DtUsuario]’:
-src/manejadores/../../include/manejadores/ListaDt.h:45:26:   required from here
-src/manejadores/ListaDt.cpp:6:19: error: no match for ‘operator[]’ (operand types are ‘std::map<int, DtUsuario, std::less<int>, std::allocator<std::pair<const int, DtUsuario> > >’ and ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’)
-         this->_map[t.getID()] = t;
-         ~~~~~~~~~~^
-In file included from /usr/include/c++/6.2.1/map:61:0,
-                 from src/manejadores/../../include/manejadores/ListaDt.h:3,
+g++ -o ejecutable src/logica/Reserva.cpp src/logica/Cine.cpp src/logica/Reloj.cpp src/logica/Funcion.cpp src/logica/Credito.cpp src/logica/Debito.cpp src/logica/Puntaje.cpp src/logica/Tarjeta.cpp src/logica/Pelicula.cpp src/logica/Sala.cpp src/logica/Usuario.cpp src/logica/Comentario.cpp src/logica/Sistema.cpp src/datatypes/DtComentario.cpp src/datatypes/DtPuntaje.cpp src/datatypes/DtUsuario.cpp src/datatypes/DtPelicula.cpp src/datatypes/DtDebito.cpp src/datatypes/DtCine.cpp src/datatypes/DtCredito.cpp src/datatypes/DtTarjeta.cpp src/datatypes/DtFecha.cpp src/datatypes/DtFuncion.cpp src/datatypes/DtTest.cpp src/datatypes/DtSala.cpp src/datatypes/DtReserva.cpp src/manejadores/ListaDt.cpp src/manejadores/ManejadorUsuarios.cpp src/manejadores/ManejadorFunciones.cpp src/manejadores/ManejadorPeliculas.cpp src/manejadores/ManejadorCines.cpp src/Utils.cpp src/Factory.cpp main.cpp -I. 
+src/logica/Reserva.cpp: In constructor ‘Reserva::Reserva(int, Funcion*, std::__cxx11::string, float, float)’:
+src/logica/Reserva.cpp:44:5: error: ‘Credito’ was not declared in this scope
+     Credito* c = new Credito(montoTotal,financiera,descuento);
+     ^~~~~~~
+src/logica/Reserva.cpp:44:14: error: ‘c’ was not declared in this scope
+     Credito* c = new Credito(montoTotal,financiera,descuento);
+              ^
+src/logica/Reserva.cpp:44:22: error: expected type-specifier before ‘Credito’
+     Credito* c = new Credito(montoTotal,financiera,descuento);
+                      ^~~~~~~
+src/logica/Reserva.cpp: In constructor ‘Reserva::Reserva(int, Funcion*, std::__cxx11::string, float)’:
+src/logica/Reserva.cpp:54:5: error: ‘Debito’ was not declared in this scope
+     Debito* d = new Debito(montoTotal,banco);
+     ^~~~~~
+src/logica/Reserva.cpp:54:13: error: ‘d’ was not declared in this scope
+     Debito* d = new Debito(montoTotal,banco);
+             ^
+src/logica/Reserva.cpp:54:21: error: expected type-specifier before ‘Debito’
+     Debito* d = new Debito(montoTotal,banco);
+                     ^~~~~~
+In file included from src/logica/../../include/logica/../manejadores/../logica/Funcion.h:6:0,
+                 from src/logica/../../include/logica/../manejadores/ListaDt.h:15,
+                 from src/logica/../../include/logica/Cine.h:9,
+                 from src/logica/Cine.cpp:1:
+src/logica/../../include/logica/../manejadores/../logica/Pelicula.h:16:20: error: ‘Puntaje’ was not declared in this scope
+         map<string,Puntaje*> puntajes;
+                    ^~~~~~~
+src/logica/../../include/logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 2 is invalid
+         map<string,Puntaje*> puntajes;
+                            ^
+src/logica/../../include/logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 4 is invalid
+src/logica/../../include/logica/../manejadores/../logica/Pelicula.h:39:9: error: ‘Util’ does not name a type
+         Util::ListaDt<int,DtComentario> listarDtComentarios();
+         ^~~~
+src/logica/../../include/logica/../manejadores/../logica/Pelicula.h:44:9: error: ‘Util’ does not name a type
+         Util::ListaDt<string,DtPuntaje> listarDtPuntajes();
+         ^~~~
+src/logica/Sala.cpp: In member function ‘bool Sala::agregarFuncion(Funcion*)’:
+src/logica/Sala.cpp:19:28: error: invalid use of incomplete type ‘class Funcion’
+     this->funciones[funcion->getID()] = funcion;
+                            ^~
+In file included from src/logica/Sala.cpp:1:0:
+src/logica/../../include/logica/Sala.h:13:7: note: forward declaration of ‘class Funcion’
+ class Funcion;
+       ^~~~~~~
+src/logica/Sala.cpp: In member function ‘bool Sala::quitarFuncion(Funcion*)’:
+src/logica/Sala.cpp:25:41: error: invalid use of incomplete type ‘class Funcion’
+     return this->funciones.erase(funcion->getID());
+                                         ^~
+In file included from src/logica/Sala.cpp:1:0:
+src/logica/../../include/logica/Sala.h:13:7: note: forward declaration of ‘class Funcion’
+ class Funcion;
+       ^~~~~~~
+src/logica/Sala.cpp: In member function ‘DtSala Sala::getDt()’:
+src/logica/Sala.cpp:35:59: error: invalid use of incomplete type ‘class Cine’
+     return DtSala(this->getID(),this->getCapacidad(), cine->getDt());
+                                                           ^~
+In file included from src/logica/Sala.cpp:1:0:
+src/logica/../../include/logica/Sala.h:12:7: note: forward declaration of ‘class Cine’
+ class Cine;
+       ^~~~
+src/logica/Sala.cpp: In member function ‘bool Sala::perteneceA(Cine*)’:
+src/logica/Sala.cpp:39:22: error: invalid use of incomplete type ‘class Cine’
+     return this->cine->isEqual(cine);
+                      ^~
+In file included from src/logica/Sala.cpp:1:0:
+src/logica/../../include/logica/Sala.h:12:7: note: forward declaration of ‘class Cine’
+ class Cine;
+       ^~~~
+src/logica/Sala.cpp: In member function ‘bool Sala::esDeCine(int)’:
+src/logica/Sala.cpp:69:27: error: invalid use of incomplete type ‘class Cine’
+     return this->getCine()->getID() == idCine;
+                           ^~
+In file included from src/logica/Sala.cpp:1:0:
+src/logica/../../include/logica/Sala.h:12:7: note: forward declaration of ‘class Cine’
+ class Cine;
+       ^~~~
+In file included from src/logica/../../include/logica/../manejadores/../logica/../manejadores/../logica/Funcion.h:6:0,
+                 from src/logica/../../include/logica/../manejadores/../logica/../manejadores/ListaDt.h:15,
+                 from src/logica/../../include/logica/../manejadores/../logica/Cine.h:9,
+                 from src/logica/../../include/logica/../manejadores/ManejadorCines.h:9,
+                 from src/logica/../../include/logica/../ISistema.h:17,
+                 from src/logica/../../include/logica/Sistema.h:3,
+                 from src/logica/Sistema.cpp:1:
+src/logica/../../include/logica/../manejadores/../logica/../manejadores/../logica/Pelicula.h:16:20: error: ‘Puntaje’ was not declared in this scope
+         map<string,Puntaje*> puntajes;
+                    ^~~~~~~
+src/logica/../../include/logica/../manejadores/../logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 2 is invalid
+         map<string,Puntaje*> puntajes;
+                            ^
+src/logica/../../include/logica/../manejadores/../logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 4 is invalid
+src/logica/../../include/logica/../manejadores/../logica/../manejadores/../logica/Pelicula.h:39:9: error: ‘Util’ does not name a type
+         Util::ListaDt<int,DtComentario> listarDtComentarios();
+         ^~~~
+src/logica/../../include/logica/../manejadores/../logica/../manejadores/../logica/Pelicula.h:44:9: error: ‘Util’ does not name a type
+         Util::ListaDt<string,DtPuntaje> listarDtPuntajes();
+         ^~~~
+src/logica/Sistema.cpp: In member function ‘virtual Util::ListaDt<int, DtComentario> Sistema::listarComentarios(std::__cxx11::string)’:
+src/logica/Sistema.cpp:168:30: error: ‘class Pelicula’ has no member named ‘listarDtComentarios’; did you mean ‘agregarComentario’?
+             return pelicula->listarDtComentarios();
+                              ^~~~~~~~~~~~~~~~~~~
+src/logica/Sistema.cpp: In member function ‘virtual Util::ListaDt<std::__cxx11::basic_string<char>, DtPuntaje> Sistema::listarPuntajes(std::__cxx11::string)’:
+src/logica/Sistema.cpp:189:30: error: ‘class Pelicula’ has no member named ‘listarDtPuntajes’; did you mean ‘getDtPuntaje’?
+             return pelicula->listarDtPuntajes();
+                              ^~~~~~~~~~~~~~~~
+src/datatypes/DtUsuario.cpp:1:47: fatal error: ../../include/datatypes/DtUsuario.h: No such file or directory
+ #include "../../include/datatypes/DtUsuario.h"
+                                               ^
+compilation terminated.
+src/datatypes/DtSala.cpp:2:22: fatal error: ../Utils.h: No such file or directory
+ #include "../Utils.h"
+                      ^
+compilation terminated.
+In file included from src/manejadores/../../include/manejadores/../logica/Funcion.h:6:0,
+                 from src/manejadores/../../include/manejadores/ListaDt.h:15,
                  from src/manejadores/ListaDt.cpp:1:
-/usr/include/c++/6.2.1/bits/stl_map.h:474:7: note: candidate: std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](const key_type&) [with _Key = int; _Tp = DtUsuario; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, DtUsuario> >; std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type = DtUsuario; std::map<_Key, _Tp, _Compare, _Alloc>::key_type = int]
-       operator[](const key_type& __k)
-       ^~~~~~~~
-/usr/include/c++/6.2.1/bits/stl_map.h:474:7: note:   no known conversion for argument 1 from ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ to ‘const key_type& {aka const int&}’
-/usr/include/c++/6.2.1/bits/stl_map.h:494:7: note: candidate: std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](std::map<_Key, _Tp, _Compare, _Alloc>::key_type&&) [with _Key = int; _Tp = DtUsuario; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, DtUsuario> >; std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type = DtUsuario; std::map<_Key, _Tp, _Compare, _Alloc>::key_type = int]
-       operator[](key_type&& __k)
-       ^~~~~~~~
-/usr/include/c++/6.2.1/bits/stl_map.h:494:7: note:   no known conversion for argument 1 from ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ to ‘std::map<int, DtUsuario, std::less<int>, std::allocator<std::pair<const int, DtUsuario> > >::key_type&& {aka int&&}’
+src/manejadores/../../include/manejadores/../logica/Pelicula.h:16:20: error: ‘Puntaje’ was not declared in this scope
+         map<string,Puntaje*> puntajes;
+                    ^~~~~~~
+src/manejadores/../../include/manejadores/../logica/Pelicula.h:16:28: error: template argument 2 is invalid
+         map<string,Puntaje*> puntajes;
+                            ^
+src/manejadores/../../include/manejadores/../logica/Pelicula.h:16:28: error: template argument 4 is invalid
+src/manejadores/../../include/manejadores/../logica/Pelicula.h:39:9: error: ‘Util’ does not name a type
+         Util::ListaDt<int,DtComentario> listarDtComentarios();
+         ^~~~
+src/manejadores/../../include/manejadores/../logica/Pelicula.h:44:9: error: ‘Util’ does not name a type
+         Util::ListaDt<string,DtPuntaje> listarDtPuntajes();
+         ^~~~
+In file included from src/manejadores/../../include/manejadores/../logica/../manejadores/../logica/Funcion.h:6:0,
+                 from src/manejadores/../../include/manejadores/../logica/../manejadores/ListaDt.h:15,
+                 from src/manejadores/../../include/manejadores/../logica/Cine.h:9,
+                 from src/manejadores/../../include/manejadores/ManejadorCines.h:9,
+                 from src/manejadores/ManejadorCines.cpp:1:
+src/manejadores/../../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:16:20: error: ‘Puntaje’ was not declared in this scope
+         map<string,Puntaje*> puntajes;
+                    ^~~~~~~
+src/manejadores/../../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 2 is invalid
+         map<string,Puntaje*> puntajes;
+                            ^
+src/manejadores/../../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 4 is invalid
+src/manejadores/../../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:39:9: error: ‘Util’ does not name a type
+         Util::ListaDt<int,DtComentario> listarDtComentarios();
+         ^~~~
+src/manejadores/../../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:44:9: error: ‘Util’ does not name a type
+         Util::ListaDt<string,DtPuntaje> listarDtPuntajes();
+         ^~~~
+In file included from src/../include/manejadores/../logica/../manejadores/../logica/Funcion.h:6:0,
+                 from src/../include/manejadores/../logica/../manejadores/ListaDt.h:15,
+                 from src/../include/manejadores/../logica/Cine.h:9,
+                 from src/../include/manejadores/ManejadorCines.h:9,
+                 from src/../include/ISistema.h:17,
+                 from src/../include/Factory.h:3,
+                 from src/Factory.cpp:1:
+src/../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:16:20: error: ‘Puntaje’ was not declared in this scope
+         map<string,Puntaje*> puntajes;
+                    ^~~~~~~
+src/../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 2 is invalid
+         map<string,Puntaje*> puntajes;
+                            ^
+src/../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 4 is invalid
+src/../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:39:9: error: ‘Util’ does not name a type
+         Util::ListaDt<int,DtComentario> listarDtComentarios();
+         ^~~~
+src/../include/manejadores/../logica/../manejadores/../logica/Pelicula.h:44:9: error: ‘Util’ does not name a type
+         Util::ListaDt<string,DtPuntaje> listarDtPuntajes();
+         ^~~~
+In file included from include/manejadores/../logica/../manejadores/../logica/Funcion.h:6:0,
+                 from include/manejadores/../logica/../manejadores/ListaDt.h:15,
+                 from include/manejadores/../logica/Cine.h:9,
+                 from include/manejadores/ManejadorCines.h:9,
+                 from include/ISistema.h:17,
+                 from main.cpp:1:
+include/manejadores/../logica/../manejadores/../logica/Pelicula.h:16:20: error: ‘Puntaje’ was not declared in this scope
+         map<string,Puntaje*> puntajes;
+                    ^~~~~~~
+include/manejadores/../logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 2 is invalid
+         map<string,Puntaje*> puntajes;
+                            ^
+include/manejadores/../logica/../manejadores/../logica/Pelicula.h:16:28: error: template argument 4 is invalid
+include/manejadores/../logica/../manejadores/../logica/Pelicula.h:39:9: error: ‘Util’ does not name a type
+         Util::ListaDt<int,DtComentario> listarDtComentarios();
+         ^~~~
+include/manejadores/../logica/../manejadores/../logica/Pelicula.h:44:9: error: ‘Util’ does not name a type
+         Util::ListaDt<string,DtPuntaje> listarDtPuntajes();
+         ^~~~
 Makefile:10: recipe for target 'ejecutable' failed
 gmake: *** [ejecutable] Error 1

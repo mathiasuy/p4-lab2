@@ -1,6 +1,4 @@
 #include "../../include/logica/Sala.h"
-#include "../../include/logica/Funcion.h"
-#include <map>
 
 
 int Sala::getID(){
@@ -66,3 +64,7 @@ Sala::~Sala(){};
 bool Sala::tieneFuncion(int id){
     return this->funciones.find(id) != this->funciones.end();
 }
+
+bool Sala::esDeCine(int idCine){
+    return this->getCine()->getID() == idCine;
+};

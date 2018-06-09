@@ -1,8 +1,4 @@
 #include "../../include/logica/Reserva.h"
-#include "../../include/logica/Credito.h"
-#include "../../include/logica/Debito.h"
-#include "../../include/logica/Funcion.h"
-
 
 
 Reserva::~Reserva()

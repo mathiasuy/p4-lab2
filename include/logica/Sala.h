@@ -1,16 +1,16 @@
 #ifndef SALA_H
-#define SALA_H    map<int,Reserva*>::iterator it = this->reservas.begin();
+#define SALA_H
 #include <string>
 #include <vector>
 #include <map>
-#include "Funcion.h"
-#include "Cine.h"
+#include "../datatypes/DtSala.h"
 #include "../datatypes/DtCine.h"
 
 using namespace std;
 
-class Funcion;
+
 class Cine;
+class Funcion;
 
 class Sala
 {
@@ -24,8 +24,9 @@ class Sala
     public:
         int getID();
         int getCapacidad();
-        Cine* getCine();
+        bool esDeCine(int idCine);
         DtSala getDt();
+        Cine* getCine();
         void setCapacidad(int id);
         bool agregarFuncion(Funcion* funcion);
         bool quitarFuncion(Funcion* funcion);

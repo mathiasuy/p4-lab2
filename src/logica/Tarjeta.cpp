@@ -1,5 +1,4 @@
 #include "../../include/logica/Tarjeta.h"
-#include "include/datatypes/DtTarjeta.h"
 
 
 Tarjeta::~Tarjeta()

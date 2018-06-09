@@ -1,19 +1,13 @@
 #ifndef PELICULA_H
 #define PELICULA_H
+#include <vector>
+#include <map>
 #include "Comentario.h"
-#include "Puntaje.h"
-#include "Funcion.h"
 #include "../datatypes/DtPelicula.h"
 #include "../datatypes/DtComentario.h"
 #include "../datatypes/DtPuntaje.h"
 #include "../manejadores/ListaDt.h"
-#include <vector>
-#include <map>
 
-class Funcion;
-class Puntaje;
-
-using namespace Util;
 
 class Pelicula
 {
@@ -33,6 +27,7 @@ class Pelicula
         void setSinopsis(string sinopsis);
         void setPuntajePromedio();
 
+
         void agregarComentario(string nickname, string comentario);
         void agregarComentario(string nickname, string comentario, int esRespuestaDeID);
         void modificarComentario(int id, string comentario);
@@ -40,13 +35,13 @@ class Pelicula
         float getPuntaje(string nickName);
         void setPuntaje(string nickName, float puntaje);
         DtPelicula getDtPuntaje(string nickName);
-        
-        ListaDt<int,DtComentario> listarDtComentarios();
-        
-        
+
+        Util::ListaDt<int,DtComentario> listarDtComentarios();
+
+
         DtPelicula getDt();
-        
-        ListaDt<string,DtPuntaje> listarDtPuntajes();
+
+        Util::ListaDt<string,DtPuntaje> listarDtPuntajes();
 
         string getPoster();
         string getSinopsis();

@@ -32,6 +32,6 @@
 
     Puntaje::~Puntaje(){};
 
-    DtPuntaje Puntaje::getDtPuntaje(){
+    DtPuntaje Puntaje::getDt(){
         return DtPuntaje(this->getNickName(),this->getPuntaje());
     };

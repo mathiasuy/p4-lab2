@@ -1,6 +1,4 @@
 #include "../../include/logica/Cine.h"
-#include "../../include/logica/Cine.h"
-#include "../../include/manejadores/ListaDtH.h"
 
 
 int Cine::idGlobal = 0;
@@ -15,9 +13,13 @@ Cine::Cine(string direccion, vector<int> salas)
     this->setDireccion(direccion);
 }
 
-ListaDt<int,DtSala> Cine::listarDtSalas(){
-    ListaDt<int,DtSala> dt;
-    dt.add(this->salas);
+Util::ListaDt<int,DtSala> Cine::listarDtSalas(){
+    Util::ListaDt<int,DtSala> dt;
+    map<int, Sala*>::iterator it = salas.begin();
+    while (it != salas.end()){
+        dt.add(it->second->getDt());
+        it++;
+    }
     return dt;
 };
 

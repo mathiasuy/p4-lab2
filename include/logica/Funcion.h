@@ -1,15 +1,14 @@
 #ifndef FUNCION_H
 #define FUNCION_H
-#include "../datatypes/DtFecha.h"
-#include <string>
-#include "Cine.h"
-#include "Pelicula.h"
 #include "../datatypes/DtFuncion.h"
+#include "../datatypes/DtFecha.h"
+#include "Sala.h"
+#include "Pelicula.h"
 
 using namespace std;
 
 class Pelicula;
-class Sala;
+class Cine;
 
 class Funcion
 {

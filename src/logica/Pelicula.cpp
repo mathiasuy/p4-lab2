@@ -55,11 +55,15 @@
             }
         }
 
-        ListaDt<int,DtComentario> Pelicula::listarDtComentarios(){
-            ListaDt<int, DtComentario> dt;
-            dt.add(this->comentarios);
+        Util::ListaDt<int,DtComentario> Pelicula::listarDtComentarios(){
+            map<int,Comentario*>::iterator it = this->comentarios.begin();
+            Util::ListaDt<int, DtComentario> dt;
+            while (it != this->comentarios.end()){
+                dt.add(it->second->getDt());
+                it++;
+            }
             return dt;
-        };
+        }
 
         /**
          * Retorna -1 si nunca puntuo
@@ -80,10 +84,14 @@
         DtPelicula Pelicula::getDt(){
             return  DtPelicula(this->titulo, this->poster, this->sinopsis, this->getPuntajePromedio());
         };
-        
-        ListaDt<string,DtPuntaje> Pelicula::listarDtPuntajes(){
-            ListaDt<string, DtPuntaje> dt;
-            dt.add(this->puntajes);
+
+        Util::ListaDt<string,DtPuntaje> Pelicula::listarDtPuntajes(){
+            Util::ListaDt<string,DtPuntaje> dt;
+            map<string, Puntaje*>::iterator it = puntajes.begin();
+            while (it != puntajes.end()){
+                dt.add(it->second->getDt());
+                it++;
+            }
             return dt;
         };
 

@@ -156,9 +156,7 @@
             ListaDt<int,DtCine> dt;
             while (it != funciones.end()){
                 Funcion* f = it->second;
-                if (f->getPelicula()->isEqual(pelicula)){
-                    dt.add(f->getSala()->getDt());
-                }
+                dt.add(f->getSala()->getCine()->getDt());
                 it++;
             }
             return dt;
@@ -177,7 +175,7 @@
             map<int,Funcion*>::iterator it = fs.begin();
             ListaDt<int,DtFuncion> dt;
             while (it != fs.end()){
-                if (!(it->second->getSala()->perteneceA(cine))){
+                if (!(it->second->getSala()->esDeCine(idCine))){
                     dt.add(it->second->getDt());
                 }
                 it++;

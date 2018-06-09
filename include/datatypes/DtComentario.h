@@ -21,11 +21,11 @@ public:
         void setEsRespuestaDeID(int esRespuestaDeID);
 
         string toString();
-        
+
         bool isEqual(DtComentario* comentario);
         DtComentario();
-        DtComentario(string nickName, string comentario);
-        DtComentario(string nickName, string comentario, int esRespuestaDeID);
+        DtComentario(int id, string nickName, string comentario);
+        DtComentario(int id, string nickName, string comentario, int esRespuestaDeID);
 
         ~DtComentario();
 };

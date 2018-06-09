@@ -62,6 +62,7 @@
 		<Unit filename="include/logica/Funcion.h" />
 		<Unit filename="include/logica/Pelicula.h" />
 		<Unit filename="include/logica/Puntaje.h" />
+		<Unit filename="include/logica/Reloj.h" />
 		<Unit filename="include/logica/Reserva.h" />
 		<Unit filename="include/logica/Sala.h" />
 		<Unit filename="include/logica/Sistema.h" />
@@ -96,6 +97,7 @@
 		<Unit filename="src/logica/Funcion.cpp" />
 		<Unit filename="src/logica/Pelicula.cpp" />
 		<Unit filename="src/logica/Puntaje.cpp" />
+		<Unit filename="src/logica/Reloj.cpp" />
 		<Unit filename="src/logica/Reserva.cpp" />
 		<Unit filename="src/logica/Sala.cpp" />
 		<Unit filename="src/logica/Sistema.cpp" />

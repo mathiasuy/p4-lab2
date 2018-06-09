@@ -22,6 +22,7 @@ class Comentario
 
         DtComentario getDt();
         string getComentario();
+        string getNickName();
         int getEsRespuestaDeID();
         int getID();
         string toString();

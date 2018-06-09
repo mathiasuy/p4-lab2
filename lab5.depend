@@ -1740,7 +1740,7 @@
 	<string>
 	"../../include/datatypes/DtCine.h"
 
-1528496180 /ens/home01/m/mathias.battistella/Documents/lab1/include/datatypes/DtComentario.h
+1528570314 /ens/home01/m/mathias.battistella/Documents/lab1/include/datatypes/DtComentario.h
 	<string>
 
 1528497170 /ens/home01/m/mathias.battistella/Documents/lab1/include/datatypes/DtCredito.h
@@ -1784,43 +1784,39 @@
 	<iomanip>
 	"../logica/Cine.h"
 
-1528503391 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Cine.h
+1528573760 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Cine.h
 	<string>
 	<map>
 	<vector>
-	"Sala.h"
 	"../datatypes/DtCine.h"
 	"../datatypes/DtSala.h"
+	"Sala.h"
 	"../manejadores/ListaDt.h"
 	"../Utils.h"
 
-1528503374 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Sala.h
+1528573831 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Sala.h
 	<string>
 	<vector>
 	<map>
-	"Funcion.h"
-	"Cine.h"
+	"../datatypes/DtSala.h"
 	"../datatypes/DtCine.h"
 
-1528489345 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Funcion.h
+1528573811 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Funcion.h
 	"../datatypes/DtFecha.h"
+	"Sala.h"
 	<string>
-	"Cine.h"
-	"Pelicula.h"
 	"../datatypes/DtFuncion.h"
 
-1528489375 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Pelicula.h
+1528573525 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Pelicula.h
+	<vector>
+	<map>
 	"Comentario.h"
-	"Puntaje.h"
-	"Funcion.h"
 	"../datatypes/DtPelicula.h"
 	"../datatypes/DtComentario.h"
 	"../datatypes/DtPuntaje.h"
 	"../manejadores/ListaDt.h"
-	<vector>
-	<map>
 
-1528489316 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Comentario.h
+1528570421 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Comentario.h
 	<string>
 	"../datatypes/DtComentario.h"
 	"../Utils.h"
@@ -1833,12 +1829,11 @@
 	<stdio.h>
 	<stdlib.h>
 
-1528489385 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Puntaje.h
+1528571189 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Puntaje.h
 	"../datatypes/DtPuntaje.h"
-	"../logica/Pelicula.h"
 	<string>
 
-1528504815 /ens/home01/m/mathias.battistella/Documents/lab1/include/manejadores/ListaDt.h
+1528570978 /ens/home01/m/mathias.battistella/Documents/lab1/include/manejadores/ListaDt.h
 	<map>
 	"../datatypes/DtTest.h"
 	"../datatypes/DtCine.h"
@@ -1889,7 +1884,8 @@
 	"../datatypes/DtFuncion.h"
 	"../logica/Tarjeta.h"
 
-1528497915 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Tarjeta.h
+1528571501 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Tarjeta.h
+	"../datatypes/DtTarjeta.h"
 	<string>
 
 1528488218 /ens/home01/m/mathias.battistella/Documents/lab1/include/Factory.h
@@ -1900,7 +1896,7 @@
 	"../../include/datatypes/DtCine.h"
 	"../../include/Utils.h"
 
-1528495712 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtComentario.cpp
+1528570393 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtComentario.cpp
 	"../../include/datatypes/DtComentario.h"
 
 1528503154 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtCredito.cpp
@@ -1942,54 +1938,58 @@
 1528488218 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Sistema.h
 	"../ISistema.h"
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Cine.cpp
+1528573557 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Cine.cpp
 	"../../include/logica/Cine.h"
 	"../../include/logica/Cine.h"
 	"../../include/manejadores/ListaDtH.h"
 
 1528488218 /ens/home01/m/mathias.battistella/Documents/lab1/include/manejadores/ListaDtH.h
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Comentario.cpp
+1528570456 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Comentario.cpp
 	"../../include/logica/Comentario.h"
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Credito.cpp
+1528571468 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Credito.cpp
 	"../../include/logica/Credito.h"
 
-1528488218 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Credito.h
+1528571340 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Credito.h
 	"Tarjeta.h"
+	"../datatypes/DtCredito.h"
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Debito.cpp
+1528571384 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Debito.cpp
 	"../../include/logica/Debito.h"
 
-1528488218 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Debito.h
+1528571352 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Debito.h
 	"Tarjeta.h"
+	"../datatypes/DtDebito.h"
+	"../datatypes/DtTarjeta.h"
 	<string>
 
 1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Funcion.cpp
 	"../../include/logica/Funcion.h"
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Pelicula.cpp
+1528573619 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Pelicula.cpp
 	"../../include/logica/Pelicula.h"
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Puntaje.cpp
+1528571225 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Puntaje.cpp
 	"../../include/logica/Puntaje.h"
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Reserva.cpp
+1528571299 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Reserva.cpp
 	"../../include/logica/Reserva.h"
 	"../../include/logica/Credito.h"
 	"../../include/logica/Debito.h"
 	"../../include/logica/Funcion.h"
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Sala.cpp
+1528569523 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Sala.cpp
 	"../../include/logica/Sala.h"
 	"../../include/logica/Funcion.h"
 	<map>
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Sistema.cpp
+1528570062 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Sistema.cpp
 	"../../include/logica/Sistema.h"
 
-1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Tarjeta.cpp
+1528571555 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Tarjeta.cpp
 	"../../include/logica/Tarjeta.h"
+	"../../include/datatypes/DtTarjeta.h"
 
 1528488218 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Usuario.cpp
 	"../../include/logica/Usuario.h"

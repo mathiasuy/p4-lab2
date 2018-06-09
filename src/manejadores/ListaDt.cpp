@@ -38,13 +38,3 @@
         os << st;
         return os;
     }
-
-    
-    template <typename K, typename T>
-    void Util::ListaDt<K,T>::add(map<K,T> lista){
-        map<K,T>::iterator it = lista.begin();
-        while (it != end){
-            this->add(it->second);
-            it++;
-        }
-    };

@@ -20,8 +20,6 @@ using namespace std;
 
 namespace Util{
 
-    class Funcion;
-
     template <typename K, typename T>
     class ListaDt{
         private:
@@ -30,7 +28,6 @@ namespace Util{
         public:
             void add(T t);
             void add(map<K,T> lista);
-            void add(map<K,Funcion*> lista);
             void start();
             bool end();
             T& getElement();
@@ -39,7 +36,9 @@ namespace Util{
             };
             void next();
     };
+
 }
+
 //  Otra forma de hacerlo:
 
     template class Util::ListaDt<string,DtPelicula>;

@@ -1,5 +1,4 @@
 #include "../../include/logica/Usuario.h"
-#include "../../include/logica/Funcion.h"
 
 Usuario::~Usuario()
 {
@@ -82,8 +81,12 @@ bool Usuario::tieneReservaFuncion(int id){
 };
 
 ListaDt<int,DtReserva> Usuario::listarDtReservas(){
-    ListaDt<int, DtReserva> dt;
-    dt.add(this->reservas);
+    ListaDt<int,DtReserva> dt;
+    map<int, Reserva*>::iterator it = reservas.begin();
+    while (it != reservas.end()){
+        dt.add(it->second->getDt());
+        it++;
+    }
     return dt;
 };
 

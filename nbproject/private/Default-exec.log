@@ -5,6 +5,7 @@ called: g++
 	ejecutable
 	src/logica/Reserva.cpp
 	src/logica/Cine.cpp
+	src/logica/Reloj.cpp
 	src/logica/Funcion.cpp
 	src/logica/Credito.cpp
 	src/logica/Debito.cpp
@@ -45,6 +46,7 @@ called: /usr/bin/g++
 	ejecutable
 	src/logica/Reserva.cpp
 	src/logica/Cine.cpp
+	src/logica/Reloj.cpp
 	src/logica/Funcion.cpp
 	src/logica/Credito.cpp
 	src/logica/Debito.cpp

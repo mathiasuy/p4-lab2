@@ -29,6 +29,7 @@
           <in>Funcion.h</in>
           <in>Pelicula.h</in>
           <in>Puntaje.h</in>
+          <in>Reloj.h</in>
           <in>Reserva.h</in>
           <in>Sala.h</in>
           <in>Sistema.h</in>
@@ -83,6 +84,7 @@
           <in>Funcion.cpp</in>
           <in>Pelicula.cpp</in>
           <in>Puntaje.cpp</in>
+          <in>Reloj.cpp</in>
           <in>Reserva.cpp</in>
           <in>Sala.cpp</in>
           <in>Sistema.cpp</in>

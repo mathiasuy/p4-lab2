@@ -26,6 +26,7 @@
           <in>Funcion.cpp</in>
           <in>Pelicula.cpp</in>
           <in>Puntaje.cpp</in>
+          <in>Reloj.cpp</in>
           <in>Reserva.cpp</in>
           <in>Sala.cpp</in>
           <in>Sistema.cpp</in>
@@ -123,6 +124,8 @@
       <item path="src/logica/Pelicula.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/logica/Puntaje.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/logica/Reloj.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/logica/Reserva.cpp" ex="false" tool="1" flavor2="0">
       </item>

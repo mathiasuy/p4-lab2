@@ -1,7 +1,6 @@
 #ifndef PUNTAJE_H
 #define PUNTAJE_H
 #include "../datatypes/DtPuntaje.h"
-#include "../logica/Pelicula.h"
 #include <string>
 using namespace std;
 

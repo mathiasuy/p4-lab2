@@ -1,5 +1,4 @@
 #include "../../include/logica/Debito.h"
-#include "include/datatypes/DtDebito.h"
 
 
 Debito::~Debito()
@@ -25,4 +24,10 @@ Debito::Debito(float montoTotal, string banco):Tarjeta(montoTotal){
 
 DtTarjeta Debito::getDt(){
     return DtDebito(this->getMontoTotal(),this->banco);
+};
+
+
+
+float Debito::getMontoTotal(){
+    return this->montoTotal;
 };
