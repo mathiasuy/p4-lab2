@@ -1,5 +1,5 @@
 #ifndef SALA_H
-#define SALA_H
+#define SALA_H    map<int,Reserva*>::iterator it = this->reservas.begin();
 #include <string>
 #include <vector>
 #include <map>

@@ -16,15 +16,15 @@ private:
 
     public:
         DtPelicula();
-        DtPelicula(string titulo, string poster, float puntajePromedio);
-        
+        DtPelicula(string titulo, string poster, string sinopsis, float puntajePromedio);
+
         string getID();
         string getTitulo();
         string getSinopsis();
         string getPoster();
         float getPuntajePromedio();
         string toString();
-        
+
         virtual ~DtPelicula();
 };
 

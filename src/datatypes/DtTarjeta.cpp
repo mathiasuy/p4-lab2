@@ -1,9 +1,8 @@
 #include "../../include/datatypes/DtTarjeta.h"
+#include "../../include/Utils.h"
 
 DtTarjeta::DtTarjeta(){
-    idTarjeta = 0;
     montoTotal = 0;
-    //ctor
 }
 
 DtTarjeta::DtTarjeta(float montoTotal){
@@ -18,3 +17,7 @@ DtTarjeta::~DtTarjeta()
 {
     //dtor
 }
+
+string DtTarjeta::toString(){
+    return "Monto total $" + Utils::aString(this->getMontoTotal());
+};

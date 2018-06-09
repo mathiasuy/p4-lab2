@@ -1,4 +1,5 @@
 #include "../../include/datatypes/DtSala.h"
+#include "../Utils.h"
 
 DtSala::DtSala(){
     this->cantAsientos = 0;
@@ -20,8 +21,8 @@ int DtSala::getCantAsientos(){
     return this->cantAsientos;
 };
 
-string toString(){
-   return "Datos de la sala " + this->getID() + ": " + this->getCantAsientos() + this->cine->toString();
+string DtSala::toString(){
+   return "Datos de la sala " + Utils::aString(this->getID()) + ": " + Utils::aString(this->getCantAsientos()) + this->cine.toString();
 };
 
 

@@ -82,12 +82,8 @@ bool Usuario::tieneReservaFuncion(int id){
 };
 
 ListaDt<int,DtReserva> Usuario::listarDtReservas(){
-    map<int,Reserva*>::iterator it = this->reservas.begin();
     ListaDt<int, DtReserva> dt;
-    while (it != this->reservas.end()){
-        dt.add(it->second->getDtReserva());
-        it++;
-        }
+    dt.add(this->reservas);
     return dt;
 };
 

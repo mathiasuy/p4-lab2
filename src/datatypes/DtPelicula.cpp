@@ -6,7 +6,7 @@ DtPelicula::DtPelicula(){
     puntajePromedio = 0;
 };
 
-DtPelicula::DtPelicula(string titulo, string poster, string sinopsis float puntajePromedio){
+DtPelicula::DtPelicula(string titulo, string poster, string sinopsis, float puntajePromedio){
     this->poster = poster;
     this->sinopsis = sinopsis;
     this->puntajePromedio = puntajePromedio;

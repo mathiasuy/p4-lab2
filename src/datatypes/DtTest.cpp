@@ -24,3 +24,5 @@ DtTest::~DtTest()
         int DtTest::getPuntaje2(){
             return this->puntaje2;
         };
+
+        

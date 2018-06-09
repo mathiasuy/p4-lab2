@@ -20,20 +20,18 @@ class Cine
         int id;
         string direccion;
         map<int,Sala*> salas;
-        Cine();
         static int idGlobal;
 
     public:
         /* GETTERS Y SETTERS */
         string getDireccion();
-        DtCine getDtCine();
+        DtCine getDt();
         void setDireccion(string direccion);
         int getID();
         string toString();
         bool isEqual(Cine *cine);
         bool tieneSala(int id);
         Sala* getSala(int id);
-        DtCine getDt();
         ListaDt<int,DtSala> listarDtSalas();
 
         /* CONSTRUS Y DESTRUS */

@@ -9,34 +9,34 @@ ISistema* interface = Factory::getSistema();
  */
 int tipoUsuario;
 string nickName;
+bool esAdmin;
 
 /*  PANTALLA INICIAL  */
 void pantallaInicial(){
     cout << "································"<<endl;
     cout << "································"<<endl;
     cout << "································"<<endl;
-    cout << "0 - Ver info Pelicula." << endl;
-    cout << "1 - Ver comentarios y puntaje de pelicula." << endl;
-    cout << "································"<<endl;
-    cout << "2 - Crear Reserva."<<endl;
-    cout << "3 - Puntuar Pelicula."<<endl;
-    cout << "4 - Comentar Pelicula."<<endl;
-    cout << "································"<<endl;
-    cout << "5 - Alta Cine."<< endl;
-    cout << "6 - Alta Funcion." << endl;
-    cout << "7 - Eliminar Pelicula." << endl;
-    cout << "8 - Logout ."<< endl;
+    cout << "1 - Ver info Pelicula." << endl;
+    cout << "2 - Ver comentarios y puntaje de pelicula." << endl;
+    cout << " ·······························"<<endl;
+    cout << "3 - Crear Reserva."<<endl;
+    cout << "4 - Puntuar Pelicula."<<endl;
+    cout << "5 - Comentar Pelicula."<<endl;
+    cout << " ································"<<endl;
+    cout << "6 - Alta Cine."<< endl;
+    cout << "7 - Alta Funcion." << endl;
+    cout << "8 - Eliminar Pelicula." << endl;
+    cout << "9 - " << ((tipoUsuario>0)?"Logout":"Login")<< endl;
     cout << "································"<<endl;
 }
-
 
 
 /*  PANTALLA LOGIN */
 void casoLogin(){
     string pass;
-    cout << "·····························" << endl;    
-    cout << "·····························" << endl;    
-    cout << "" << endl;        
+    cout << "·····························" << endl;
+    cout << "·····························" << endl;
+    cout << "" << endl;
     cout << "1 - Usuario: " << endl;
     cin >> nickName;
     cout << "2 - Pass: " << endl;
@@ -50,25 +50,17 @@ void casoLogin(){
 
 int main()
 {
+/*
     string entrada = "";
     do{
-        do{
-            pantallaAdmin()
-        }while (entrada != "0" && entrada != "1" && entrada != "2" && entrada != "3");
+        pantallaInicial();
         switch (entrada){
             case "0" : casoLogin(); break;
             case "1" : casoVerInfoPelicula(); break;
             case "2" : casoVerComentariosEInfoPelicula(); break;
             case "3" : casoTest(); break;
         }
-        cas
-        
-cout <<        cines;
-        
     }while(!entrada != "0");
+    */
     return 0;
-}
-
-void casoLogin(){
-    pantallaLogin();
 }

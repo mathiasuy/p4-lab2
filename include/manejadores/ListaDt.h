@@ -12,11 +12,16 @@
 #include "../datatypes/DtPuntaje.h"
 #include "../datatypes/DtReserva.h"
 #include "../datatypes/DtSala.h"
-#include "../datatypes/DtUsuario.h"
+#include "../logica/Funcion.h"
+#include "../logica/Comentario.h"
+#include "../logica/Puntaje.h"
 
 using namespace std;
 
 namespace Util{
+
+    class Funcion;
+
     template <typename K, typename T>
     class ListaDt{
         private:
@@ -24,6 +29,8 @@ namespace Util{
             typename map<K,T>::iterator i;
         public:
             void add(T t);
+            void add(map<K,T> lista);
+            void add(map<K,Funcion*> lista);
             void start();
             bool end();
             T& getElement();

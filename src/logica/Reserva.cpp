@@ -70,6 +70,5 @@ bool Reserva::tieneFuncion(int id){
 DtReserva Reserva::getDt(){
     DtTarjeta t = this->tarjeta->getDt();
     DtFuncion f = this->funcion->getDt();
-    return DtReserva(int cantAsientos, DtFuncion funcion, string  banco, float montoTotal, DtTarjeta tarjeta);
-    //ESTA MAL CORREGIR
+    return DtReserva(this->getID(), this->cantAsientos, t, f );
 };

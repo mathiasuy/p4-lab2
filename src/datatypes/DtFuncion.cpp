@@ -1,4 +1,5 @@
 #include "../../include/datatypes/DtFuncion.h"
+#include "../../include/Utils.h"
 
 DtFuncion::DtFuncion(){
     this->id = 0;
@@ -30,7 +31,7 @@ bool DtFuncion::isEqual(DtFuncion* Funcion){
 };
 
  string DtFuncion::toString(){
-     return "Datos de la funcion " + this->getID() + this->sala->toString();
+     return "Datos de la funcion " + Utils::aString(this->getID()) + this->sala.toString();
  };
 
 

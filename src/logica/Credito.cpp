@@ -31,6 +31,6 @@ Credito::~Credito(){
 
 };
 
-DtCredito Credito::getDt(){
-    return DtCredito(montoTota,financiera,descuento);
+DtTarjeta Credito::getDt(){
+    return DtCredito(this->getMontoTotal(),this->financiera,this->descuento);
 }

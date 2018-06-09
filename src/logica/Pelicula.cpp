@@ -56,12 +56,8 @@
         }
 
         ListaDt<int,DtComentario> Pelicula::listarDtComentarios(){
-            map<int,Comentario*>::iterator it = this->comentarios.begin();
             ListaDt<int, DtComentario> dt;
-            while (it != this->comentarios.end()){
-                dt.add(it->second->getDtComentario());
-                it++;
-            }
+            dt.add(this->comentarios);
             return dt;
         };
 
@@ -81,19 +77,13 @@
             return this->sinopsis;
         };
 
-        DtPelicula getDtPelicula(){
-            return  DtPelicula();
-          
-        //creamos un DtPelicula a partir del objeto pelicula?
+        DtPelicula Pelicula::getDt(){
+            return  DtPelicula(this->titulo, this->poster, this->sinopsis, this->getPuntajePromedio());
         };
         
         ListaDt<string,DtPuntaje> Pelicula::listarDtPuntajes(){
-            map<string,Puntaje*>::iterator it = this->puntajes.begin();
             ListaDt<string, DtPuntaje> dt;
-            while (it != this->puntajes.end()){
-                dt.add(it->second->getDtPuntaje());
-                it++;
-            }
+            dt.add(this->puntajes);
             return dt;
         };
 

@@ -14,7 +14,6 @@
 #include "datatypes/DtPuntaje.h"
 #include "datatypes/DtReserva.h"
 #include "datatypes/DtSala.h"
-#include "datatypes/DtUsuario.h"
 #include "manejadores/ManejadorCines.h"
 #include "manejadores/ManejadorFunciones.h"
 #include "manejadores/ManejadorPeliculas.h"
@@ -22,6 +21,7 @@
 #include "manejadores/ListaDt.h"
 
 using namespace std;
+
 using namespace Util;
 
 class ISistema {

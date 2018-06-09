@@ -1,6 +1,7 @@
 #include "../../include/datatypes/DtCredito.h"
+#include "../../include/Utils.h"
 
-DtCredito::DtCredito(float montoTotal, string financiera, float descuento):DtTarjeta(idTarjeta,montoTotal){
+DtCredito::DtCredito(float monto, string financiera, float descuento):DtTarjeta(monto){
     this->financiera = financiera;
     this->descuento = descuento;
 };
@@ -19,7 +20,7 @@ float DtCredito:: getDescuento(){
 }
 
 string DtCredito::toString(){
-    return "credito: " + this->getDescuento() + this->getFinanciera();
+    return DtTarjeta::toString() + "credito: " + Utils::aString(this->getDescuento()) + this->getFinanciera();
 }
 
 DtCredito::~DtCredito()

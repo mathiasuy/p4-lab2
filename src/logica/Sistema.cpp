@@ -141,6 +141,7 @@
             return dt;
         };
 
+
         /* LISTAR SALAS X CINE */
         ListaDt<int,DtSala> Sistema::listarSalas(int idCine){
             Cine* cine = this->cines->find(idCine);
@@ -156,7 +157,7 @@
             while (it != funciones.end()){
                 Funcion* f = it->second;
                 if (f->getPelicula()->isEqual(pelicula)){
-                    dt.add(f->getSala()->getDtCine());
+                    dt.add(f->getSala()->getDt());
                 }
                 it++;
             }
@@ -177,7 +178,7 @@
             ListaDt<int,DtFuncion> dt;
             while (it != fs.end()){
                 if (!(it->second->getSala()->perteneceA(cine))){
-                    dt.add(it->second->getDtFuncion());
+                    dt.add(it->second->getDt());
                 }
                 it++;
             }
