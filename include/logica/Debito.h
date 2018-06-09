@@ -2,8 +2,6 @@
 #define DEBITO_H
 #include "Tarjeta.h"
 #include "../datatypes/DtDebito.h"
-#include "../datatypes/DtTarjeta.h"
-#include <string>
 
 using namespace std;
 
@@ -16,9 +14,9 @@ class Debito : public Tarjeta
         string getBanco();
         string toString();
         DtTarjeta getDt();
-        float getMontoTotal();
+        float getMonto();
 
-        Debito(float montoTotal, string banco);
+        Debito(float monto, string banco);
         ~Debito();
 };
 

@@ -1,8 +1,9 @@
 #ifndef RELOJ_H
 #define RELOJ_H
 #include <string>
-#include "../datatypes/DtFecha.h"
 #include "../Utils.h"
+#include "../datatypes/DtFecha.h"
+
 class Reloj {
 
 private:

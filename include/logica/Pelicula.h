@@ -1,13 +1,13 @@
 #ifndef PELICULA_H
 #define PELICULA_H
-#include <vector>
 #include <map>
+#include "Funcion.h"
 #include "Comentario.h"
-#include "../datatypes/DtPelicula.h"
-#include "../datatypes/DtComentario.h"
-#include "../datatypes/DtPuntaje.h"
+#include "Puntaje.h"
 #include "../manejadores/ListaDt.h"
+#include "../datatypes/DtPelicula.h"
 
+using namespace std;
 
 class Pelicula
 {

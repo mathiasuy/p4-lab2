@@ -1,5 +1,8 @@
 #include "../../include/logica/Funcion.h"
 
+#include "../../include/logica/Pelicula.h"
+#include "../../include/logica/Sala.h"
+
 int Funcion::idGlobal = 0;
 
 int Funcion::getID(){
@@ -8,7 +11,7 @@ int Funcion::getID(){
 
 
 DtFecha Funcion::getFecha(){
-    return this->fehca;
+    return this->fecha;
 };
 
 float Funcion::getPrecio(){
@@ -16,8 +19,13 @@ float Funcion::getPrecio(){
 
 };
 
+
+DtFuncion Funcion::getDt(){
+    return DtFuncion(this->id,this->asientosReservados,this->precioEntrada,this->sala->getDt(),this->pelicula->getDt());
+};
+
 void Funcion::setFecha(DtFecha fecha){
-    this->fehca = fecha;
+    this->fecha = fecha;
 };
 
 void Funcion::setPrecio(float precioEntrada){
@@ -57,7 +65,7 @@ int Funcion::getAsientosReservados(){
 };
 
 int Funcion::getAsientosLibres(){
-    return this->getSala()->getCapacidad() - this->getAsientosReservados();
+    return (this->sala->getCapacidad() - this->getAsientosReservados());
 }
 
 Sala* Funcion::getSala()

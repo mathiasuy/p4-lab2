@@ -7,16 +7,19 @@ Tarjeta::~Tarjeta()
 }
 
 
-float Tarjeta::getMontoTotal(){
-    return this->montoTotal;
+float Tarjeta::getMonto(){
+    return this->monto;
 };
 
-void Tarjeta::setMontoTotal(float montoTotal){
-    this->montoTotal= montoTotal;
+void Tarjeta::setMonto(float monto){
+    this->monto= monto;
 };
 
 
-Tarjeta::Tarjeta(float montoTotal){
-    this->setMontoTotal(montoTotal);
+Tarjeta::Tarjeta(float monto){
+    this->setMonto(monto);
 };
 
+string Tarjeta::toString(){
+    return "Tarjeta: bal bla bal";
+}

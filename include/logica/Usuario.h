@@ -1,10 +1,7 @@
 #ifndef USUARIO_H
 #define USUARIO_H
-#include <map>
-#include <iomanip>
 #include "Reserva.h"
 #include "../manejadores/ListaDt.h"
-#include <string>
 
 using namespace Util;
 using namespace std;

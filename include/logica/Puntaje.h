@@ -1,7 +1,9 @@
 #ifndef PUNTAJE_H
 #define PUNTAJE_H
-#include "../datatypes/DtPuntaje.h"
 #include <string>
+#include "../datatypes/DtPuntaje.h"
+#include "../Utils.h"
+
 using namespace std;
 
 class Puntaje

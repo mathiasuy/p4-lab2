@@ -46,6 +46,10 @@
 
         };
 
+        DtComentario::DtComentario(){
+
+        };
+
         string DtComentario::toString(){
             return this->getNickName() + ":" + this->getComentario();
         };

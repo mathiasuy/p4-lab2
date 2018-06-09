@@ -48,7 +48,6 @@ namespace Util{
     template class Util::ListaDt<int,DtFuncion>;
     template class Util::ListaDt<string,DtPuntaje>;
     template class Util::ListaDt<int,DtSala>;
-    template class Util::ListaDt<int,DtTest>;
 
 
 

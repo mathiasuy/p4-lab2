@@ -3,6 +3,9 @@
 #include "Tarjeta.h"
 #include "../datatypes/DtCredito.h"
 
+using namespace std;
+
+
 class Credito : public Tarjeta
 {
     private:
@@ -13,9 +16,9 @@ class Credito : public Tarjeta
         void setDescuento (float descuento);
         string getFinanciera();
         float getDescuento();
-        float getMontoTotal();
+        float getMonto();
         DtTarjeta getDt();
-        Credito(float montoTotal, string financiera, float descuento);
+        Credito(float monto, string financiera, float descuento);
 
         string toString();
         ~Credito();

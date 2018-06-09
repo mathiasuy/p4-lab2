@@ -1,14 +1,14 @@
 #ifndef FUNCION_H
 #define FUNCION_H
+#include <string>
 #include "../datatypes/DtFuncion.h"
 #include "../datatypes/DtFecha.h"
-#include "Sala.h"
-#include "Pelicula.h"
+#include "../datatypes/DtFuncion.h"
 
 using namespace std;
 
 class Pelicula;
-class Cine;
+class Sala;
 
 class Funcion
 {
@@ -17,7 +17,7 @@ class Funcion
         static int idGlobal;
         int asientosReservados;
         float precioEntrada;
-        DtFecha fehca;
+        DtFecha fecha;
 
         Sala* sala;
         Pelicula* pelicula;

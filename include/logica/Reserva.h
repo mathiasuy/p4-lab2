@@ -1,10 +1,9 @@
 #ifndef RESERVA_H
 #define RESERVA_H
 #include "../datatypes/DtReserva.h"
-#include "../datatypes/DtTarjeta.h"
-#include "../datatypes/DtFuncion.h"
-#include "../logica/Funcion.h"
-#include "../logica/Tarjeta.h"
+#include "Credito.h"
+#include "Debito.h"
+#include "Funcion.h"
 
 using namespace std;
 

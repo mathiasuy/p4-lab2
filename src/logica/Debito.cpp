@@ -18,16 +18,15 @@ string Debito::toString(){
     return "Esta es la tarjeta de debito ";
 };
 
-Debito::Debito(float montoTotal, string banco):Tarjeta(montoTotal){
+Debito::Debito(float monto, string banco):Tarjeta(monto){
     this->setBanco(banco);
 };
 
 DtTarjeta Debito::getDt(){
-    return DtDebito(this->getMontoTotal(),this->banco);
+    return DtDebito(this->getMonto(),this->banco);
 };
 
 
-
-float Debito::getMontoTotal(){
-    return this->montoTotal;
+float Debito::getMonto(){
+    return this->monto;
 };

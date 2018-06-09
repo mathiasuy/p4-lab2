@@ -1,5 +1,5 @@
 #include "../../include/logica/Sala.h"
-
+#include "../../include/logica/Cine.h"
 
 int Sala::getID(){
     return this->id;

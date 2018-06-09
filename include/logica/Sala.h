@@ -1,16 +1,10 @@
 #ifndef SALA_H
 #define SALA_H
-#include <string>
-#include <vector>
 #include <map>
+#include "Funcion.h"
 #include "../datatypes/DtSala.h"
-#include "../datatypes/DtCine.h"
-
-using namespace std;
-
 
 class Cine;
-class Funcion;
 
 class Sala
 {

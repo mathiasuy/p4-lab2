@@ -1,18 +1,13 @@
 #ifndef CINE_H
 #define CINE_H
-#include <string>
-#include <map>
-#include <vector>
-#include "../datatypes/DtCine.h"
-#include "../datatypes/DtSala.h"
 #include "Sala.h"
-#include "../manejadores/ListaDt.h"
+#include "../datatypes/DtCine.h"
 #include "../Utils.h"
-
+#include "../manejadores/ListaDt.h"
 
 using namespace std;
-using namespace Util;
 
+using namespace Util;
 
 class Cine
 {
