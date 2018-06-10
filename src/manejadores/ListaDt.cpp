@@ -28,12 +28,12 @@
 
      template <typename K, typename T>
      string Util::ListaDt<K,T>::toString(){
-        dt.start();
+        typename map<K,T>::iterator it = _map.begin();
         string st="";
-        while (dt.end()){
-            st += dt.getElement().toString();
+        while (it != _map.end()){
+            st += it->second.toString();
             st += "\n";
-            dt.next();
+            it++;
         }
         return st;
      }
