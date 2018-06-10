@@ -68,13 +68,8 @@ int main()
         switch (opcion){
             case 1 : if (tipoUsuario>=0){
                             string titulo;
-                            ListaDt<string,DtPelicula> l = interface->listarPeliculas();
-                            l.start();
-                            while(l.end()){
-                                cout <<l.getElement().toString();
-                                l.next();
-                            }
-                            //cout << l  << endl;
+                            cout << interface->listarPeliculas().toString();
+                            
                             cout << "Escriba el titulo de la pelicula que desea ver:" <<endl;
                             getline (cin, titulo);
                             if (titulo != "")// Si el usuario quiere cancelar, que aprete Enter (string vacio)
@@ -87,12 +82,7 @@ int main()
                                 int e = 0;
                                 cin >> e;
                                 if (e==1){
-                                    ListaDt<int,DtCine> l = interface->listarCines(titulo);
-                                    l.start();
-                                    while(l.end()){
-                                        cout <<l.getElement().toString();
-                                        l.next();
-                                    }
+                                    cout << interface->listarCines(titulo).toString();
                                 }
                                 cout << "Seleccione un cine:";
                                 cin >> e;
