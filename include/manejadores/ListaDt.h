@@ -35,6 +35,7 @@ namespace Util{
                 return this->_map[x];
             };
             void next();
+            string toString();
     };
 
 }
