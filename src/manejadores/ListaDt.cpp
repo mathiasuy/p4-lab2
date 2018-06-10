@@ -26,6 +26,18 @@
         this->i++;
     };
 
+     template <typename K, typename T>
+     string Util::ListaDt<K,T>::toString(){
+        dt.start();
+        string st="";
+        while (dt.end()){
+            st += dt.getElement().toString();
+            st += "\n";
+            dt.next();
+        }
+        return st;
+     }
+
     template <typename K, typename T>
     ostream& operator<<(ostream& os, Util::ListaDt<K,T>& dt)
     {
