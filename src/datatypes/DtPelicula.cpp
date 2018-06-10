@@ -30,10 +30,22 @@ float DtPelicula::getPuntajePromedio(){
 };
 
 string DtPelicula::toString(){
-    return "Pelicula:" + this->getID() + this->getPoster() + this->getSinopsis() ;
+    return this->getID() + "\n";
 };
 
 DtPelicula::~DtPelicula()
 {
     //dtor
 }
+
+    ostream& operator<<(ostream& os, DtPelicula& dt)
+    {
+        string b = "";
+        b += "**********\n";
+        b += dt.getPoster() + "\n";
+        b += string("*********") + "\n";
+        b += dt.getSinopsis() + "\n";
+        b += "*********\n";
+        os << b;
+        return os;
+    }

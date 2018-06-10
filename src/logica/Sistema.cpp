@@ -5,6 +5,7 @@
         ManejadorFunciones* Sistema::funciones = ManejadorFunciones::getInstancia();
         ManejadorUsuarios* Sistema::usuarios = ManejadorUsuarios::getInstancia();
         ManejadorPeliculas* Sistema::peliculas = ManejadorPeliculas::getInstancia();
+        Reloj* reloj = Reloj::getInstancia();
 
         Sistema::Sistema(){};
         Sistema* Sistema::getInstance(){
@@ -13,6 +14,21 @@
             }
             return Sistema::instancia;
         }
+
+        /*  RELOJ  */
+        DtFecha Sistema::getFechaActual(){
+            return reloj->getFechaActual();
+        }
+
+        void Sistema::setFechaActual(int dia, int mes, int anio, int hora, int minuto){
+            reloj->setAnio(anio);
+            reloj->setMes(mes);
+            reloj->setDia(dia);
+            reloj->setHora(hora);
+            reloj->setMinuto(minuto);
+        }
+
+
         /*   CINES   */
         bool Sistema::altaCine(string direccion, vector<int> capacidadSalas){
             Cine* cineNuevo = new Cine(direccion, capacidadSalas);
@@ -20,6 +36,9 @@
             return true;
         };
         /*  PELICULA */
+        DtPelicula Sistema::getPelicula(string titulo){
+            return this->peliculas->find(titulo)->getDt();
+        }
         bool Sistema::altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula){
             Sala* sala = this->cines->find(idCine)->getSala(idSala);
             Pelicula* pelicula = this->peliculas->find(tituloPelicula);

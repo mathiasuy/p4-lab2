@@ -1705,15 +1705,17 @@
 1528374688 source:c:\cygwin64\home\ultimo\src\manejadores\manejadorcines.cpp
 	"../../include/manejadores/ManejadorCines.h"
 
-1528503055 source:/ens/home01/m/mathias.battistella/Documents/lab1/main.cpp
+1528589350 source:/ens/home01/m/mathias.battistella/Documents/lab1/main.cpp
 	"include/ISistema.h"
 	"include/Factory.h"
+	<iostream>
 
-1528503984 /ens/home01/m/mathias.battistella/Documents/lab1/include/ISistema.h
+1528589210 /ens/home01/m/mathias.battistella/Documents/lab1/include/ISistema.h
 	<vector>
 	<map>
 	<string>
 	"datatypes/DtTest.h"
+	"logica/Reloj.h"
 	"datatypes/DtCine.h"
 	"datatypes/DtComentario.h"
 	"datatypes/DtCredito.h"
@@ -1886,7 +1888,7 @@
 	"../../include/datatypes/DtCine.h"
 	"../../include/Utils.h"
 
-1528570393 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtComentario.cpp
+1528583969 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtComentario.cpp
 	"../../include/datatypes/DtComentario.h"
 
 1528503154 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtCredito.cpp
@@ -1903,7 +1905,7 @@
 	"../../include/datatypes/DtFuncion.h"
 	"../../include/Utils.h"
 
-1528501053 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtPelicula.cpp
+1528589385 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtPelicula.cpp
 	"../../include/datatypes/DtPelicula.h"
 
 1528503312 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtReserva.cpp
@@ -1925,7 +1927,7 @@
 	"../include/Factory.h"
 	"../include/logica/Sistema.h"
 
-1528488218 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Sistema.h
+1528589201 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Sistema.h
 	"../ISistema.h"
 
 1528575003 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Cine.cpp
@@ -1955,7 +1957,7 @@
 	"../../include/logica/Pelicula.h"
 	"../../include/logica/Sala.h"
 
-1528573619 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Pelicula.cpp
+1528588029 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Pelicula.cpp
 	"../../include/logica/Pelicula.h"
 
 1528571225 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Puntaje.cpp
@@ -1968,7 +1970,7 @@
 	"../../include/logica/Sala.h"
 	"../../include/logica/Cine.h"
 
-1528570062 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Sistema.cpp
+1528589421 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Sistema.cpp
 	"../../include/logica/Sistema.h"
 
 1528583517 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Tarjeta.cpp

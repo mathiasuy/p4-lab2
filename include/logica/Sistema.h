@@ -23,10 +23,15 @@ class Sistema : public ISistema
 
 
     public:
+
+        /* RELOJ */
+        DtFecha getFechaActual();
+        void setFechaActual(int dia, int mes, int anio, int hora, int minuto);
         /*    CINE    */
         bool altaCine(string direccion, vector<int> capacidadSalas) ;
 
         /*  PELICULA */
+        DtPelicula getPelicula(string titulo);
         bool altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula) ;
         float getPuntajePelicula(string nickName, string tituloPelicula) ;
         bool puntuarPelicula(string nickName, string tituloPelicula, float puntaje) ;
