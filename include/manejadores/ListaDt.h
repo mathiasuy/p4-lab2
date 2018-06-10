@@ -36,6 +36,7 @@ namespace Util{
             };
             void next();
             string toString();
+            int size();
     };
 
 }
