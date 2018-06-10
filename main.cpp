@@ -22,16 +22,17 @@ void pantallaInicial(){
     cout << ((tipoUsuario>=0)?"2 - Ver comentarios y puntaje de pelicula.":"") << endl;
     cout << " ·······························"<<endl;
     cout << ((tipoUsuario==1)?"3 - Crear Reserva.\n":"");
-    cout << ((tipoUsuario==1)?"4 - Puntuar Pelicula.\n":"");
-    cout << ((tipoUsuario==1)?"5 - Comentar Pelicula.\n":"");
+    cout << ((tipoUsuario==1)?"4 - Ver Reservas.\n":"");
+    cout << ((tipoUsuario==1)?"5 - Puntuar Pelicula.\n":"");
+    cout << ((tipoUsuario==1)?"6 - Comentar Pelicula.\n":"");
     cout << " ································"<< endl;
-    cout << ((tipoUsuario==2)?"6 - Alta Cine.\n":"");
-    cout << ((tipoUsuario==2)?"7 - Alta Funcion.\n":"");
-    cout << ((tipoUsuario==2)?"8 - Eliminar Pelicula.\n":"");
+    cout << ((tipoUsuario==2)?"7 - Alta Cine.\n":"");
+    cout << ((tipoUsuario==2)?"8 - Alta Funcion.\n":"");
+    cout << ((tipoUsuario==2)?"9 - Eliminar Pelicula.\n":"");
     cout << "································"<<endl;
-    cout << "9 - " << ((tipoUsuario>0)?"Logout":"Login")<< endl;
-    cout << "11 - " << ((tipoUsuario==0)?"Test\n":"")<< endl;
-    cout << "12 - " << ((tipoUsuario>=0)?"Cambiar hora\n":"")<< endl;
+    cout << "10 - " << ((tipoUsuario>0)?"Logout":"Login")<< endl;
+    cout << "12 - " << ((tipoUsuario==0)?"Test\n":"")<< endl;
+    cout << "13 - " << ((tipoUsuario>=0)?"Cambiar hora\n":"")<< endl;
 
     cout << "0 - Salir." << endl;
     cout << "································"<<endl;
@@ -69,7 +70,7 @@ int main()
             case 1 : if (tipoUsuario>=0){
                             string titulo;
                             cout << interface->listarPeliculas().toString();
-                            
+
                             cout << "Escriba el titulo de la pelicula que desea ver:" <<endl;
                             getline (cin, titulo);
                             if (titulo != "")// Si el usuario quiere cancelar, que aprete Enter (string vacio)
@@ -97,7 +98,36 @@ int main()
                         break;
             case 2 : if (tipoUsuario>=0){
 
-                        };
+                          string titulo;
+                        ListaDt<string,DtPelicula> listaDePeliculas = interface->listarPeliculas();
+
+                        //REVISEN DESDE ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                        listaDePeliculas.start();
+                        while(listaDePeliculas.end()){
+                         string texto = (listaDePeliculas.getElement()).getTitulo() + (listaDePeliculas.getElement()).getPoster();
+                         cout << texto;
+                        }
+
+                          cout << "Escriba el titulo de la pelicula que desea ver:" <<endl;
+                          getline (cin, titulo);
+                          //ACA NO DICE QUE EL USUARIO PUEDE CANCELAR
+                          DtPelicula p = interface->getPelicula(titulo);
+                          //VOY A VER CUANTOS USUARIOS PUNTUARON ESA PELICULA PARA ESO NECESITO RECORRER
+                          //LA COLECCION DE PUNTAJES DE ESA PELICULA
+                          int a = interface->listarPuntajes(titulo).size(); //supuestamente aca devuelvo el total de usuarios que puntuaron la pelicula
+                          //AHORA NECESITO LOS COMENTARIOS DE LA PELICULA interface->ListarComentarios(titulo).toString;
+                          cout << p.getTitulo() <<endl;
+                          cout << "Puntaje promedio: " << p.getPuntajePromedio() << " (" << a << " usuarios)"<<endl;
+                          //ahora los comentarios
+                          cout << "Comentarios" <<endl;
+                          cout << interface->listarComentarios(titulo).toString();
+                          //Y AHORA FALTAN LOS PUNTAJES
+                          cout << "Puntajes" <<endl;
+                          cout << interface->listarPuntajes(titulo).toString();
+
+                             //NO SE SI TERMINA ACA O QUE
+
+                             };
                         break;
             case 3 : if (tipoUsuario==1){
 
@@ -124,7 +154,11 @@ int main()
                         };
                         break;
             case 9 : if (tipoUsuario>0){
-                            tipoUsuario = 0;
+
+                        };
+                        break;
+            case 10 : if (tipoUsuario>=0){
+                         tipoUsuario = 0;
                             nickName = "";
                             cout << "Hasta luego." << endl;
                         }else{
