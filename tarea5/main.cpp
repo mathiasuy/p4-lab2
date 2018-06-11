@@ -130,7 +130,7 @@ int main()
                              };
                         break;
             case 3 : if (tipoUsuario==1){
-                          //CREAR RESERVA
+                          //CREAR RESERVA*************** ESTO ES UN BOSQUEJO*****************
                           int ciclo = 1;
                           while(ciclo){
                            string titulo;
@@ -146,7 +146,7 @@ int main()
                                 cout << "Ver lista de cines con esa pleicula?";
                                 cout << "1- Si." <<endl;
                                 cout << "2- No." <<endl;
-                                bool k;
+                                int k;
                                 cin >> k;
                                 if(k==1){
                                   cout << interface->listarCines(titulo).toString();
@@ -157,7 +157,64 @@ int main()
                                 cin >> e;
                                 if (e != 0){
                                     DtFecha f = interface->getFechaActual();
-                                    interface->listarFunciones(e,titulo,f);
+                                  cout <<  interface->listarFunciones(e,titulo,f).toString();
+                                    cout << "Seleccione la funcion que desea reservar: "<<endl;
+                                    cout << "0- Salir."<<endl;
+                                    int func;
+                                    cin >> func;
+                                    if(func!=0){
+
+                                   //AHORA CUANTOS ASIENTOS QUIERE
+                                   cout << "Seleccione la cantidad de asientos que desea reservar: " <<endl;
+                                   //ACA HAY QUE VER CON EXCEPCIONES QUE PONGA ASIENTOS MAYOR A 0, LUEGO LO VEO BIEN
+                                   int cantasien;
+                                   cin >>cantasien;
+                                   cout << "Seleccione metodo de pago: " <<endl;
+                                   cout << "1- Credito." <<endl;
+                                   cout << "2- Debito." <<endl;
+                                   int tipotar;
+                                   cin >> tipotar;
+                                   if(tipotar == 2){
+                                   cout << "Ingrese el nombre del banco que la emite: "<<endl;
+                                   string nombanc;
+                                   cin >> nombanc;
+                                   }
+                                   else{
+                                   cout << "Ingrese el nombre de la financiera que la emite: "<<endl;
+                                   string nomfin;
+                                   cin >> nomfin;
+                                   //EL SISTEMA LE MUESTRA EL DESCUENTO QUE TIENE
+                                   bool tienedescuento;
+                                   if(tienedescuento){
+
+                                    //CON ESTO TENGO EL PRECIO DE LA ENTRADA.
+                                   ListaDt<int,DtFuncion>  a = interface->listarFunciones(e,titulo,f);
+                                    a[e].getPrecio();
+
+
+
+                                   cout <<  <<endl;
+                                   }
+                                  }
+                                  //AHORA SE VA A CREAR LA RESERVA
+                                  cout << "Quiere confirmar la reserva?" <<endl;
+                                  cout<< "1- Si."<<endl;
+                                  cout <<"2- No."<<endl;
+                                  int confres;
+                                  if(confres ==1){
+                                  if(tipotar==1)//CREDITO
+                                  interface->crearReserva(nickName, cantasien, func, nombanc, interface->((listarFunciones(e, titulo,f)).getElement()).getPrecioEntrada());
+                                  }
+
+
+
+                                   }
+
+
+
+
+
+
                                 cout << "Desea repetir este proceso para otra película?" <<endl;
                                 cout <<"1- Si." <<endl;
                                 cout <<"2- No." <<endl;
