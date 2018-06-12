@@ -81,6 +81,7 @@ int main()
         cin >> opcion;
         switch (opcion){
             case 1 : if (tipoUsuario>=0){
+//VER INFO PELICULA
                             string titulo;
                             ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
                             cout << peliculas.toString();
@@ -117,7 +118,7 @@ int main()
                         };
                         break;
             case 2 : if (tipoUsuario>=0){
-
+// VER COMENTARIOS Y PUNTAJE PELICULA
                           string titulo;
                         ListaDt<string,DtPelicula> listaDePeliculas = interface->listarPeliculas();
 
@@ -152,8 +153,7 @@ int main()
                              };
                         break;
           case 3 : if (tipoUsuario==1){
-   //CREAR RESERVA
-
+//CREAR RESERVA
 
        int b = 1;
             while(b == 1){
@@ -168,11 +168,11 @@ int main()
           string nomfin;
           int confres = 0;
 
-    ListaDt<string, DtPelicula> peliculas = interface->listarPeliculas();
-   cout << peliculas.toString();
-   cout << "Escriba el titulo de la pelicula que desea ver:" <<endl;
-   std::cin.ignore();
-   getline (cin, titulo);
+            ListaDt<string, DtPelicula> peliculas = interface->listarPeliculas();
+           cout << peliculas.toString();
+           cout << "Escriba el titulo de la pelicula que desea ver:" <<endl;
+           std::cin.ignore();
+           getline (cin, titulo);
 
     if (titulo != "")// Si el usuario quiere cancelar, que aprete Enter (string vacio)
       {
@@ -303,7 +303,45 @@ int main()
                         };
                         break;
             case 7 : if (tipoUsuario==2){
-
+//CREAR CINE
+                            bool seguirAgregando = true;
+                            bool a;
+                            string titulo;
+                            int asientos;
+                            
+                            cout << "Escriba la direccion del cine: " << endl;
+                            std::cin.ignore();
+                            std::getline(cin,titulo);
+                            
+                            //Creo vector donde ingreso las salas
+                            int m1[10] ;
+                            vector<int> v1(0, m1 + sizeof(m1) / sizeof (*m1) );
+                            std::vector<int>::iterator it;
+                            it = v1.begin();
+                            //bucle para ir preguntando por salas
+                            while (seguirAgregando){
+                                cout << "Escriba la cantidad de asientos de la sala: " << endl;
+                                std::cin.ignore();
+                                std::getline(cin,asientos);
+                                v1.insert(it,res);
+                                it = v1.last();
+                                cout << "¿Desea seguir agregando salas? " << p.getTitulo() <<"?" <<endl;
+                                cout <<"1- Si."<<endl;
+                                cout <<"2- No."<<endl;
+                                cin >> res;
+                                if(res == 2){
+                                   seguirAgregando = false;
+                                }
+                            }
+                            cout << "¿Desea confirmar el nuevo cine? " << p.getTitulo() <<"?" <<endl;
+                            cout <<"1- Si."<<endl;
+                            cout <<"2- No."<<endl;
+                            cin >> res;
+                            if(res == 1){
+                                a = interface->altaCine(titulo, v1);
+                            };
+                            if (a){
+                                cout << "*****El Cine se agrego correctamente*****" << endl;
                         };
                         break;
             case 8 : if (tipoUsuario==2){
@@ -311,7 +349,7 @@ int main()
                         };
                         break;
             case 9 : if (tipoUsuario>0){
-                         //ELIMINAR PELICULA
+//ELIMINAR PELICULA
                            string titulo;
                            ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
                            cout << peliculas.toString();
