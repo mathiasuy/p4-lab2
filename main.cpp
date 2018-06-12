@@ -294,9 +294,37 @@ int main()
 
                         };
                         break;
-            case 5 : if (tipoUsuario==1){
+            case 5 : if (tipoUsuario==1){//PUNTUAR PELICULA
 
-                        };
+                                               //DECLARACIONES DE VARIABLES
+                                                string nomPelicula;
+                                                int respuesta;
+                                                float puntajeNuevo;
+
+                                                ListaDt<string, DtPelicula> peliculas = interface->listarPeliculas();
+                                                cout << peliculas.toString();
+                                                cout << "Ingrese el nombre de la película que desea puntuar: ";
+                                                std::cin.ignore();
+                                                std::getline(cin,nomPelicula);
+                                                //DtPelicula p = peliculas[nomPelicula];
+                                                if (interface->getPuntajePelicula(nickName, nomPelicula) != -1) {
+                                                    cout << "Su actual puntaje a esta película es: " + Utils::aString(interface->getPuntajePelicula(nickName, nomPelicula)); //CREO QUE FALTA UN "BARRA" N ACA
+                                                    cout << "Desea modificar el puntaje de la pelicula?    1- Sí       2- No "
+                                                    cin >> respuesta;
+                                                                if (respuesta == 1) {
+                                                                    cout << "Ingrese el nuevo puntaje de la pelicula";
+                                                                    cin >> puntajeNuevo;
+                                                                    interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
+                                                                }
+                                                }
+                                            //SI ENTRO ACA ES PORQUE NO TENIA NINGUN PUNTAJE ESA PELICULA (ACORDARSE QUE RETORNA -1 SI NO ESTA PUNTUADA)
+                                                else {
+                                                                        cout << "Ingrese el nuevo puntaje de la pelicula";
+                                                                    cin >> puntajeNuevo;
+                                                                    interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
+                                                        }      //END ELSE
+
+                        }; //END CASO DE USO
                         break;
             case 6 : if (tipoUsuario==2){
 
