@@ -315,7 +315,7 @@ int main()
                             
                             //Creo vector donde ingreso las salas
                             int m1[10] ;
-                            vector<int> v1(0, m1 + sizeof(m1) / sizeof (*m1) );
+                            vector<int>;
                             std::vector<int>::iterator it;
                             it = v1.begin();
                             //bucle para ir preguntando por salas
