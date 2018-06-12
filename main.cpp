@@ -304,44 +304,42 @@ int main()
                         break;
             case 7 : if (tipoUsuario==2){
 //CREAR CINE
-                            bool seguirAgregando = true;
-                            bool a;
-                            string titulo;
-                            int asientos;
-                            
-                            cout << "Escriba la direccion del cine: " << endl;
+                        bool seguirAgregando = true;
+                        bool a;
+                        string titulo;
+                        int asientos, res;
+                        
+                        cout << "Escriba la direccion del cine: " << endl;
+                        std::cin.ignore();
+                        std::getline(cin,titulo);
+                        
+                        //Creo vector donde ingreso las salas
+                        int m1[10] ;
+                        vector<int> v1;
+                        //bucle para ir preguntando por salas
+                        while (seguirAgregando){
+                            cout << "Escriba la cantidad de asientos de la sala: " << endl;
                             std::cin.ignore();
-                            std::getline(cin,titulo);
-                            
-                            //Creo vector donde ingreso las salas
-                            int m1[10] ;
-                            vector<int>;
-                            std::vector<int>::iterator it;
-                            it = v1.begin();
-                            //bucle para ir preguntando por salas
-                            while (seguirAgregando){
-                                cout << "Escriba la cantidad de asientos de la sala: " << endl;
-                                std::cin.ignore();
-                                std::getline(cin,asientos);
-                                v1.insert(it,res);
-                                it = v1.last();
-                                cout << "¿Desea seguir agregando salas? " << p.getTitulo() <<"?" <<endl;
-                                cout <<"1- Si."<<endl;
-                                cout <<"2- No."<<endl;
-                                cin >> res;
-                                if(res == 2){
-                                   seguirAgregando = false;
-                                }
-                            }
-                            cout << "¿Desea confirmar el nuevo cine? " << p.getTitulo() <<"?" <<endl;
+                            cin >> asientos;
+                            v1.push_back(asientos);
+                            cout << "¿Desea seguir agregando salas? " << endl;
                             cout <<"1- Si."<<endl;
                             cout <<"2- No."<<endl;
                             cin >> res;
-                            if(res == 1){
-                                a = interface->altaCine(titulo, v1);
-                            };
-                            if (a){
-                                cout << "*****El Cine se agrego correctamente*****" << endl;
+                            if(res == 2){
+                               seguirAgregando = false;
+                            }
+                        }
+                        cout << "¿Desea confirmar el alta del nuevo cine? " <<endl;
+                        cout <<"1- Si."<<endl;
+                        cout <<"2- No."<<endl;
+                        cin >> res;
+                        if(res == 1){
+                            a = interface->altaCine(titulo, v1);
+                        };
+                        if (a){
+                            cout << "*****El Cine se agrego correctamente*****" << endl;
+                        };
                         };
                         break;
             case 8 : if (tipoUsuario==2){
