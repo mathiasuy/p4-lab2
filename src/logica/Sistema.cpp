@@ -40,6 +40,10 @@
             reloj->setMinuto(minuto);
         }
 
+        DtFecha Sistema::CrearDtFecha(int dia,int mes,int anio,int hora,int minuto){
+            return DtFecha f =  DtFecha(dia, mes, anio, hora, minuto);
+        };
+
 
         /*   CINES   */
         bool Sistema::altaCine(string direccion, vector<int> capacidadSalas){
@@ -141,7 +145,6 @@
                 return false;
             }
         };
-
 
         /***********************************************************************************/
         /***********************************************************************************/
