@@ -381,7 +381,7 @@ int main()
                         cin >> precio;
                         
                         cout <<((interface->altaFuncion(precio, f, res, id, titulo)?"La pelicula se elimino con exito.":"No se pudo eliminar")<<endl;
-                        };                                                };
+                        };                                               
                         break;
             case 9 : if (tipoUsuario>0){
 //ELIMINAR PELICULA

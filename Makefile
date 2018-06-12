@@ -5,7 +5,7 @@ OBJDIR := obj
 LIBS :=
 INCLUDE := -I.
 FLAGS :=
-CC := g++
+CC := g++ -std=c++11
 ejecutable: $(SOURCES)
 	$(CC) -o $@ $^ $(INCLUDE) $(LIBS)
 
