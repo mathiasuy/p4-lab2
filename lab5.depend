@@ -2012,3 +2012,308 @@
 1528567908 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/manejadores/ListaDt.cpp
 	"../../include/manejadores/ListaDt.h"
 
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtcine.cpp
+	"../../include/datatypes/DtCine.h"
+	"../../include/Utils.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtcine.h
+	<vector>
+	<string>
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\utils.h
+	<string>
+	<sstream>
+	<iomanip>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtcomentario.cpp
+	"../../include/datatypes/DtComentario.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtcomentario.h
+	<string>
+
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtcredito.cpp
+	"../../include/datatypes/DtCredito.h"
+	"../../include/Utils.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtcredito.h
+	<string>
+	"DtTarjeta.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dttarjeta.h
+	<string>
+
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtdebito.cpp
+	"../../include/datatypes/DtDebito.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtdebito.h
+	<string>
+	"../datatypes/DtTarjeta.h"
+
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtfecha.cpp
+	"../../include/datatypes/DtFecha.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtfecha.h
+	<ctime>
+
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtfuncion.cpp
+	"../../include/datatypes/DtFuncion.h"
+	"../../include/Utils.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtfuncion.h
+	<string>
+	"DtPelicula.h"
+	"DtSala.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtpelicula.h
+	<string>
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtsala.h
+	<string>
+	"../../include/datatypes/DtCine.h"
+
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtpelicula.cpp
+	"../../include/datatypes/DtPelicula.h"
+
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtpuntaje.cpp
+	"../../include/datatypes/DtPuntaje.h"
+	"../../include/Utils.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtpuntaje.h
+	<string>
+
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtreserva.cpp
+	"../../include/datatypes/DtReserva.h"
+	"../../include/datatypes/DtFuncion.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dtreserva.h
+	"DtTarjeta.h"
+	"DtFuncion.h"
+	<string>
+
+1528758545 source:c:\cygwin64\home\tareas\tareatv\src\factory.cpp
+	"../include/Factory.h"
+	"../include/logica/Sistema.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\factory.h
+	"ISistema.h"
+	"ISistema.h"
+
+1528760564 c:\cygwin64\home\tareas\tareatv\include\isistema.h
+	<vector>
+	<map>
+	<string>
+	"datatypes/DtTest.h"
+	"logica/Reloj.h"
+	"datatypes/DtCine.h"
+	"datatypes/DtComentario.h"
+	"datatypes/DtCredito.h"
+	"datatypes/DtDebito.h"
+	"datatypes/DtFecha.h"
+	"datatypes/DtFuncion.h"
+	"datatypes/DtPelicula.h"
+	"datatypes/DtPuntaje.h"
+	"datatypes/DtReserva.h"
+	"datatypes/DtSala.h"
+	"manejadores/ManejadorCines.h"
+	"manejadores/ManejadorFunciones.h"
+	"manejadores/ManejadorPeliculas.h"
+	"manejadores/ManejadorUsuarios.h"
+	"manejadores/ListaDt.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\datatypes\dttest.h
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\reloj.h
+	<string>
+	"../Utils.h"
+	"../datatypes/DtFecha.h"
+
+1528769540 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorcines.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Cine.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\cine.h
+	"Sala.h"
+	"../datatypes/DtCine.h"
+	"../Utils.h"
+	"../manejadores/ListaDt.h"
+
+1528772082 c:\cygwin64\home\tareas\tareatv\include\logica\sala.h
+	<map>
+	"Funcion.h"
+	"../datatypes/DtSala.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\funcion.h
+	<string>
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtFecha.h"
+	"../datatypes/DtFuncion.h"
+
+1528760468 c:\cygwin64\home\tareas\tareatv\include\manejadores\listadt.h
+	<map>
+	"../datatypes/DtTest.h"
+	"../datatypes/DtCine.h"
+	"../datatypes/DtComentario.h"
+	"../datatypes/DtCredito.h"
+	"../datatypes/DtDebito.h"
+	"../datatypes/DtFecha.h"
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtPelicula.h"
+	"../datatypes/DtPuntaje.h"
+	"../datatypes/DtReserva.h"
+	"../datatypes/DtSala.h"
+	"../logica/Funcion.h"
+	"../logica/Comentario.h"
+	"../logica/Puntaje.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\comentario.h
+	"../datatypes/DtComentario.h"
+	"../Utils.h"
+	<string>
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\puntaje.h
+	<string>
+	"../datatypes/DtPuntaje.h"
+	"../Utils.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorfunciones.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Funcion.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorpeliculas.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Pelicula.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\pelicula.h
+	<map>
+	"Funcion.h"
+	"Comentario.h"
+	"Puntaje.h"
+	"../manejadores/ListaDt.h"
+	"../datatypes/DtPelicula.h"
+
+1528762963 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorusuarios.h
+	"../logica/Usuario.h"
+	<map>
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\usuario.h
+	"Reserva.h"
+	"../manejadores/ListaDt.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\reserva.h
+	"../datatypes/DtReserva.h"
+	"Credito.h"
+	"Debito.h"
+	"Funcion.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\credito.h
+	"Tarjeta.h"
+	"../datatypes/DtCredito.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\tarjeta.h
+	<string>
+	"../datatypes/DtTarjeta.h"
+
+1528758545 c:\cygwin64\home\tareas\tareatv\include\logica\debito.h
+	"Tarjeta.h"
+	"../datatypes/DtDebito.h"
+
+1528760554 c:\cygwin64\home\tareas\tareatv\include\logica\sistema.h
+	"../ISistema.h"
+
+1528772617 source:c:\cygwin64\home\tareas\tareatv\src\utils.cpp
+	"../include/Utils.h"
+
+1528774366 source:c:\cygwin64\home\tareas\tareatv\main.cpp
+	"include/ISistema.h"
+	"include/Factory.h"
+	<iostream>
+	<string>
+	<stdlib.h>
+	<stdexcept>
+	<stddef.h>
+
+1528760674 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dtsala.cpp
+	"../../include/datatypes/DtSala.h"
+	"../../include/Utils.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dttarjeta.cpp
+	"../../include/datatypes/DtTarjeta.h"
+	"../../include/Utils.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dttest.cpp
+	"../../include/datatypes/DtTest.h"
+
+1528774332 source:c:\cygwin64\home\tareas\tareatv\src\logica\cine.cpp
+	"../../include/logica/Cine.h"
+	<iostream>
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\comentario.cpp
+	"../../include/logica/Comentario.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\credito.cpp
+	"../../include/logica/Credito.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\debito.cpp
+	"../../include/logica/Debito.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\funcion.cpp
+	"../../include/logica/Funcion.h"
+	"../../include/logica/Pelicula.h"
+	"../../include/logica/Sala.h"
+
+1528763868 source:c:\cygwin64\home\tareas\tareatv\src\logica\pelicula.cpp
+	"../../include/logica/Pelicula.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\puntaje.cpp
+	"../../include/logica/Puntaje.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\reloj.cpp
+	"../../include/logica/Reloj.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\reserva.cpp
+	"../../include/logica/Reserva.h"
+
+1528772865 source:c:\cygwin64\home\tareas\tareatv\src\logica\sala.cpp
+	"../../include/logica/Sala.h"
+	"../../include/logica/Cine.h"
+	<iostream>
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\tarjeta.cpp
+	"../../include/logica/Tarjeta.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\usuario.cpp
+	"../../include/logica/Usuario.h"
+
+1528760437 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\listadt.cpp
+	"../../include/manejadores/ListaDt.h"
+
+1528769427 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorcines.cpp
+	"../../include/manejadores/ManejadorCines.h"
+
+1528758546 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorfunciones.cpp
+	"../../include/manejadores/ManejadorFunciones.h"
+
+1528763828 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorpeliculas.cpp
+	"../../include/manejadores/ManejadorPeliculas.h"
+
+1528763009 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorusuarios.cpp
+	"../../include/manejadores/ManejadorUsuarios.h"
+
+1528775072 source:c:\cygwin64\home\tareas\tareatv\src\logica\sistema.cpp
+	"../../include/logica/Sistema.h"
+

@@ -40,12 +40,15 @@
         bool ManejadorFunciones::isEmpty(){
             return this->funciones.empty();
         }
+        bool ManejadorFunciones::size(){
+            return this->funciones.size();
+        }
 
         void ManejadorFunciones::beginIterator(){
             this->it = funciones.begin();
         }
-        
-        
+
+
         Funcion* ManejadorFunciones::getElement(){
             if (it != funciones.end()){
                 return it->second;
@@ -54,11 +57,11 @@
                 return NULL;
             }
         }
-        
+
         void ManejadorFunciones::next(){
             this->it++;
         };
-        
+
         /*  DESTRUCTOR */
         ManejadorFunciones::~ManejadorFunciones(){
             map<int,Funcion*>::iterator it;

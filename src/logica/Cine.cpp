@@ -1,14 +1,19 @@
 #include "../../include/logica/Cine.h"
-
+#include <iostream>
 
 int Cine::idGlobal = 0;
 
 Cine::Cine(string direccion, vector<int> salas)
 {
     this->id = ++idGlobal;
-    for (std::vector<int>::iterator it = salas.begin() ; it != salas.end(); ++it){
-    	Sala* sala = new Sala(*it,this);
+//    cout << "Direccion; " << direccion;
+
+    int j = 0;
+    for (int i : salas){
+//        cout << "Capacidad; " << i << "\n";
+    	Sala* sala = new Sala(++j,i,this);
         this->salas[sala->getID()] = sala;
+        cout << this->salas[sala->getID()]->toString();
     }
     this->setDireccion(direccion);
 }
@@ -47,8 +52,10 @@ void Cine::setDireccion(string direccion){
 }
 
 string Cine::toString(){
+
     return "Cine: " + Utils::aString(this->getID()) + " " + this->getDireccion() + " ";
 };
+
 
 
 bool Cine::tieneSala(int id){

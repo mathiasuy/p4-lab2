@@ -25,12 +25,17 @@ class ManejadorCines
         /*  OPERACIONES BASICAS */
         bool add(Cine* cine);
         bool remove(int id);
+        int size();
         bool isMember(int id);
         Cine* find(int id);
         bool isEmpty();
         void beginIterator();
         void next();
         Cine* getElement();
+        Cine* getElement(int i);
+        Cine* operator[] (int x){
+            return (this->cines[x]);
+        };
 
         /*  DESTRUCTOR */
         virtual ~ManejadorCines();

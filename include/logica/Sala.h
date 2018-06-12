@@ -10,13 +10,13 @@ class Sala
 {
     private:
         int id;
-        int idGlobal;
         int capacidad;
         Cine* cine;
         map<int, Funcion*> funciones;
 
     public:
         int getID();
+        void setID(int id);
         int getCapacidad();
         bool esDeCine(int idCine);
         DtSala getDt();
@@ -30,7 +30,7 @@ class Sala
         bool isEqual(Sala* sala);
         string toString();
 
-        Sala(int capacidad, Cine* cine);
+        Sala(int id, int capacidad, Cine* cine);
         virtual ~Sala();
 };
 

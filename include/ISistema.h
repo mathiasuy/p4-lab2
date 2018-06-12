@@ -29,13 +29,13 @@ class ISistema {
 
     public:
         /* RELOJ */
+        virtual float getDescuento(string financiera)=0;
         virtual DtFecha getFechaActual()=0;
         virtual void setFechaActual(int dia, int mes, int anio, int hora, int minuto)=0;
 
         virtual bool altaCine(string direccion, vector<int> capacidadSalas)=0;
 
         /*  PELICULA */
-        virtual DtPelicula getPelicula(string titulo)=0;
         virtual bool altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula)=0;
         virtual float getPuntajePelicula(string nickName, string tituloPelicula)=0;
         virtual bool puntuarPelicula(string nickName, string tituloPelicula, float puntaje)=0;

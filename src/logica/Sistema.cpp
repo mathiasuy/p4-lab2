@@ -5,6 +5,18 @@
         ManejadorFunciones* Sistema::funciones = ManejadorFunciones::getInstancia();
         ManejadorUsuarios* Sistema::usuarios = ManejadorUsuarios::getInstancia();
         ManejadorPeliculas* Sistema::peliculas = ManejadorPeliculas::getInstancia();
+
+        float Sistema::getDescuento(string financiera){
+            map<string,float> financieras;
+            financieras["F1"] = 1;
+            financieras["F2"] = 2;
+            financieras["SD"] = 0;
+            financieras["F4"] = 4;
+            return financieras[financiera];
+        }
+
+
+
         Reloj* reloj = Reloj::getInstancia();
 
         Sistema::Sistema(){};
@@ -36,9 +48,6 @@
             return true;
         };
         /*  PELICULA */
-        DtPelicula Sistema::getPelicula(string titulo){
-            return this->peliculas->find(titulo)->getDt();
-        }
         bool Sistema::altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula){
             Sala* sala = this->cines->find(idCine)->getSala(idSala);
             Pelicula* pelicula = this->peliculas->find(tituloPelicula);
@@ -82,7 +91,7 @@
                 {
                   Funcion* funcion = it->second;
                   usuarios->beginIterator();
-                  while(usuarios->getElement()){
+                  while(usuarios->getElement() != NULL){
                       if(usuarios->getElement()->tieneReservaFuncion(funcion->getID())){
                           usuarios->getElement()->eliminarReservaConFuncion(funcion->getID());
                       };
@@ -95,6 +104,7 @@
                   pelicula->quitarFuncion(funcion->getID());
                   delete funcion;
                 }
+                this->peliculas->remove(titulo);
                 delete pelicula;
                 return true;
             }
@@ -142,7 +152,7 @@
         ListaDt<string,DtPelicula> Sistema::listarPeliculas(){
             this->peliculas->beginIterator();
             ListaDt<string,DtPelicula> dt;
-            while (this->peliculas->getElement()){
+            while (this->peliculas->getElement() != NULL){
                 dt.add(this->peliculas->getElement()->getDt());
                 this->peliculas->next();
             }
@@ -151,15 +161,14 @@
 
         /* LISTAR TODOS LOS CINES */
         ListaDt<int,DtCine> Sistema::listarCines(){
-            this->peliculas->beginIterator();
+            this->cines->beginIterator();
             ListaDt<int,DtCine> dt;
-            while (this->cines->getElement()){
+            while (this->cines->getElement() != NULL){
                 dt.add(this->cines->getElement()->getDt());
                 this->cines->next();
             }
             return dt;
         };
-
 
         /* LISTAR SALAS X CINE */
         ListaDt<int,DtSala> Sistema::listarSalas(int idCine){
@@ -189,7 +198,6 @@
 
         /* LISTAR FUNCIONES X PELICULA Y CINE */
         ListaDt<int,DtFuncion> Sistema::listarFunciones(int idCine, string titulo, DtFecha fecha){
-            Cine* cine = this->cines->find(idCine);
             map<int,Funcion*> fs = this->peliculas->find(titulo)->listarFunciones();
             map<int,Funcion*>::iterator it = fs.begin();
             ListaDt<int,DtFuncion> dt;
@@ -224,42 +232,16 @@
 
         DtTest Sistema::test(){
 
-            int m1[] = {3, 2, 1, 0, 4, 6, 7, 8};
-            vector<int> v1(m1, m1 + sizeof(m1) / sizeof (*m1) );
-            this->altaCine("18 de Julio 2042",v1);
 
-            int m2[] = {3, 2, 1, 0, 4, 6, 7, 8};
-            vector<int> v2(m2, m2 + sizeof(m2) / sizeof (*m2) );
-            this->altaCine("Av. Garzon 555",v2);
-
-            int m3[] = {3, 2, 1, 0, 4, 6, 7, 8};
-            vector<int> v3(m3, m3 + sizeof(m3) / sizeof (*m3) );
-            this->altaCine("Julio Herrera y Reissing 565",v3);
-
-            Pelicula* p = new Pelicula("La Matanza","https://www.fing.edu.uy/inco/cursos/p4/parciales/bienvenida.jpg","Un grupo de estudiantes luchan por sobrevivir al InCo");
-
-            this->peliculas->add(p);
-/*
-            p = new Pelicula("Hola m","img/foto1.jpg","bla, bla, bla, bla, esto es una sinopsis");
-            this->peliculas->add(p);
-            p = new Pelicula("Teens Russians","img/foto2.jpg","Un grupo de chicas estudiantes luchan por conseguir la paz en un mundo tan descontrolado. Actuan: Milka Ferreira");
-            this->peliculas->add(p);
-
-
-            DtFecha f1(5,10,2016,14,0);
-            DtFecha f2(5,10,2017,15,0);
-            DtFecha f3(5,10,2018,14,0);
-            DtFecha f4(5,10,2019,14,0);
-            this->altaFuncion(5,f1,1,1,"La Matanza");
-            this->altaFuncion(5,f4,2,2,"Hola m");
-            this->altaFuncion(5,f3,2,2,"Hola m");
-            this->altaFuncion(5,f4,2,2,"Teens Russians");
-
+            //cout << "ANTES: " << Utils::aString(usuarios->size());
             Usuario* u = new Usuario("Admin","imagenAdmin","A");
             this->usuarios->add(u);
+            u = new Usuario("ale_ulises","avatar","p");
+            this->usuarios->add(u);
+            //cout << "DESPUES: " << Utils::aString(usuarios->size());
             u = new Usuario("A","imagenA","A");
             this->usuarios->add(u);
-            u = new Usuario("B","imagenB","A");
+                        u = new Usuario("B","imagenB","A");
             this->usuarios->add(u);
             u = new Usuario("C","imagenC","C");
             this->usuarios->add(u);
@@ -267,6 +249,53 @@
             this->usuarios->add(u);
             u = new Usuario("E","imagenE","E");
             this->usuarios->add(u);
+
+
+            cout << "Cantidad de Cines: "<< this->cines->size() << endl;
+            //int m1[] = {3, 2, 1, 0, 4, 6, 7, 8};
+            //vector<int> v1(m1, m1 + sizeof(m1) / sizeof (*m1) );
+            cout << ((this->altaCine("18 de Julio 2042",{3, 2, 1, 0, 4, 6, 7, 8}))?"Correcto":"MAL") << endl;
+
+            cout << "Cantidad de Cines: "<< this->cines->size() << endl;
+            int m2[] = {3, 2, 1, 0, 4, 6, 7, 8};
+            vector<int> v2(m2, m2 + sizeof(m2) / sizeof (*m2) );
+            cout << ((this->altaCine("Av. Garzon 555",v2))?"Correcto":"MAL");
+
+            cout << "Cantidad de Cines: "<< this->cines->size() << endl;
+            int m3[] = {3, 2, 1, 0, 4, 6, 7, 8};
+            vector<int> v3(m3, m3 + sizeof(m3) / sizeof (*m3) );
+            cout << ((this->altaCine("Julio Herrera y Reissing 565",v3))?"Correcto":"MAL");
+
+            cout << "Cantidad de Cines: "<< this->cines->size() << endl;
+
+
+            cout << "\nchuppame " << (((this->cines->getElement(1)) == NULL)?"ES NULL":"NO ES NULL");
+            this->cines->beginIterator();
+            while(this->cines->getElement() != NULL){
+                cout << "\nchuppame " << this->cines->getElement()->toString();
+                this->cines->next();
+            }
+
+
+
+            Pelicula* p = new Pelicula("La Matanza","https://www.fing.edu.uy/inco/cursos/p4/parciales/bienvenida.jpg","Un grupo de estudiantes luchan por sobrevivir al InCo");
+            this->peliculas->add(p);
+            p = new Pelicula("Hola m","img/foto1.jpg","bla, bla, bla, bla, esto es una sinopsis");
+            this->peliculas->add(p);
+            p = new Pelicula("Teens Russians","img/foto2.jpg","Un grupo de chicas estudiantes luchan por conseguir la paz en un mundo tan descontrolado. Actuan: Milka Ferreira");
+            this->peliculas->add(p);
+
+
+            DtFecha f1(5,10,2019,14,0);
+            DtFecha f2(5,10,2019,15,0);
+            DtFecha f3(5,10,2019,14,0);
+            DtFecha f4(5,10,2019,14,0);
+            this->altaFuncion(5,f1,1,1,"La Matanza");
+            this->altaFuncion(5,f4,2,2,"Hola m");
+            this->altaFuncion(5,f3,2,2,"Hola m");
+            this->altaFuncion(5,f4,2,2,"Teens Russians");
+
+/*
 
             this->crearReserva("A",12,1,"BROU", 5);
             this->crearReserva("B",5,2,"Abitab",5,10);
@@ -289,6 +318,7 @@
             return d;
 */
 			DtTest v;
+
 			return v;
 
         };

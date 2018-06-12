@@ -15,10 +15,11 @@
 
         /*  OPERACIONES BASICAS */
         bool ManejadorCines::add(Cine* cine){
-            int t1 = this->cines.size();
+//            int t1 = this->cines.size();
             this->cines[cine->getID()] = cine;
-            int t2 = this->cines.size();
-            return t1 == t2;
+//            int t2 = this->cines.size();
+//            return t1 == t2;
+            return true;
         }
 
         bool ManejadorCines::remove(int id){
@@ -38,6 +39,10 @@
 
         bool ManejadorCines::isEmpty(){
             return this->cines.empty();
+        }
+
+        int ManejadorCines::size(){
+            return this->cines.size();
         }
 
 
@@ -62,6 +67,11 @@
             else{
                 return NULL;
             }
+        }
+
+
+        Cine* ManejadorCines::getElement(int i){
+            return this->cines[i];
         }
 
         void ManejadorCines::next(){

@@ -1,5 +1,5 @@
 #include "../../include/datatypes/DtSala.h"
-#include "../Utils.h"
+#include "../../include/Utils.h"
 
 DtSala::DtSala(){
     this->cantAsientos = 0;

@@ -24,6 +24,7 @@ class ManejadorPeliculas
         /*  OPERACIONES BASICAS */
         bool add(Pelicula* cine);
         bool remove(string id);
+        int size();
         bool isMember(string id);
         Pelicula* find(string id);
         bool isEmpty();

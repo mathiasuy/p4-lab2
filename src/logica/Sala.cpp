@@ -1,9 +1,17 @@
 #include "../../include/logica/Sala.h"
 #include "../../include/logica/Cine.h"
+#include <iostream>
+
+
 
 int Sala::getID(){
     return this->id;
 };
+
+void Sala::setID(int id){
+    this->id = id;
+};
+
 
 int Sala::getCapacidad(){
     return capacidad;
@@ -40,7 +48,8 @@ bool Sala::perteneceA(Cine* cine){
 }
 
 string Sala::toString(){
-    return "Esta es la sala " + this->getID();
+    //cout << "\nID Sala: _" << this->getID() << "_\n" ;
+    return "Esta es la sala " + Utils::aString(this->getID());// + Utils::aString(this->getID());
 };
 
 
@@ -48,9 +57,9 @@ Cine* Sala::getCine(){
     return this->cine;
 };
 
-Sala::Sala(int capacidad, Cine* cine){
+Sala::Sala(int id, int capacidad, Cine* cine){
+    this->id = id;
     this->cine = cine;
-    this->id = ++idGlobal;
     this->setCapacidad(capacidad);
 
     //creo map de punteros

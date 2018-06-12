@@ -15,10 +15,11 @@
 
         /*  OPERACIONES BASICAS */
         bool ManejadorPeliculas::add(Pelicula* pelicula){
-            int t1 = this->peliculas.size();
+            cout << "llego 20";
+            cout << "ID: " + pelicula->getID();
             this->peliculas[pelicula->getID()] = pelicula;
-            int t2 = this->peliculas.size();
-            return t1 == t2;
+            cout << "llego 21";
+            return true;
         }
 
         bool ManejadorPeliculas::remove(string id){
@@ -38,6 +39,10 @@
 
         bool ManejadorPeliculas::isEmpty(){
             return this->peliculas.empty();
+        }
+
+        bool ManejadorPeliculas::size(){
+            return this->peliculas.size();
         }
 
         void ManejadorPeliculas::beginIterator(){

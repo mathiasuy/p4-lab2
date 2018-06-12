@@ -29,6 +29,10 @@
             return t1 == t2;
         }
 
+        int ManejadorUsuarios::size(){
+            return this->usuarios.size();
+        }
+
         bool ManejadorUsuarios::isMember(string id){
             return (this->usuarios.find(id) != this->usuarios.end());
         }

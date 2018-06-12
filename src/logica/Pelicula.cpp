@@ -106,7 +106,7 @@
         };
 
         string Pelicula::getTitulo(){
-            return this->getTitulo();
+            return this->titulo;
         };
 
         string Pelicula::getID(){

@@ -8,7 +8,7 @@ class ManejadorUsuarios
     private:
         static ManejadorUsuarios* instancia;
         map<string, Usuario*> usuarios;
-        map<string,Usuario*>::iterator it;        
+        map<string,Usuario*>::iterator it;
         ManejadorUsuarios();
     public:
 
@@ -20,6 +20,7 @@ class ManejadorUsuarios
         bool remove(string id);
         bool isMember(string id);
         Usuario* find(string id);
+        int size();
         bool isEmpty();
         void beginIterator();
         void next();

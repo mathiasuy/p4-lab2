@@ -17,6 +17,11 @@
     };
 
     template <typename K, typename T>
+    int Util::ListaDt<K,T>::size(){
+        return this->_map.size();
+    };
+
+    template <typename K, typename T>
     T& Util::ListaDt<K,T>::getElement(){
         return this->i->second;
     };

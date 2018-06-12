@@ -54,7 +54,6 @@
 		<Unit filename="include/datatypes/DtSala.h" />
 		<Unit filename="include/datatypes/DtTarjeta.h" />
 		<Unit filename="include/datatypes/DtTest.h" />
-		<Unit filename="include/datatypes/DtUsuario.h" />
 		<Unit filename="include/logica/Cine.h" />
 		<Unit filename="include/logica/Comentario.h" />
 		<Unit filename="include/logica/Credito.h" />
@@ -89,7 +88,6 @@
 		<Unit filename="src/datatypes/DtSala.cpp" />
 		<Unit filename="src/datatypes/DtTarjeta.cpp" />
 		<Unit filename="src/datatypes/DtTest.cpp" />
-		<Unit filename="src/datatypes/DtUsuario.cpp" />
 		<Unit filename="src/logica/Cine.cpp" />
 		<Unit filename="src/logica/Comentario.cpp" />
 		<Unit filename="src/logica/Credito.cpp" />

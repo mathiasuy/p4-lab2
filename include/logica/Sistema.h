@@ -31,7 +31,7 @@ class Sistema : public ISistema
         bool altaCine(string direccion, vector<int> capacidadSalas) ;
 
         /*  PELICULA */
-        DtPelicula getPelicula(string titulo);
+        float getDescuento(string financiera);
         bool altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula) ;
         float getPuntajePelicula(string nickName, string tituloPelicula) ;
         bool puntuarPelicula(string nickName, string tituloPelicula, float puntaje) ;

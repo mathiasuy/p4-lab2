@@ -30,13 +30,13 @@ namespace Util{
             void add(map<K,T> lista);
             void start();
             bool end();
+            int size();
             T& getElement();
             T& operator[] (K x){
                 return this->_map[x];
             };
             void next();
             string toString();
-            int size();
     };
 
 }
