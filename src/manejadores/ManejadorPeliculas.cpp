@@ -41,7 +41,7 @@
             return this->peliculas.empty();
         }
 
-        bool ManejadorPeliculas::size(){
+        int ManejadorPeliculas::size(){
             return this->peliculas.size();
         }
 

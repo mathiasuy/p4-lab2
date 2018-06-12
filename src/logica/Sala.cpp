@@ -31,7 +31,6 @@ bool Sala::agregarFuncion(Funcion* funcion){
 bool Sala::quitarFuncion(Funcion* funcion){
 //quitar puntero de funcion del map
     return this->funciones.erase(funcion->getID());
-
 };
 
 bool Sala::isEqual(Sala* sala){

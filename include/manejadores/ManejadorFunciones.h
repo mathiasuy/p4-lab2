@@ -31,6 +31,9 @@ class ManejadorFunciones{
         void beginIterator();
         void next();
         Funcion* getElement();
+        Funcion& operator[] (int x){
+            return *funciones[x];
+        };
 
         /*  DESTRUCTOR */
         virtual ~ManejadorFunciones();

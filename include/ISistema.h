@@ -58,6 +58,8 @@ class ISistema {
         virtual ListaDt<string,DtPelicula> listarPeliculas()=0;
         /* LISTAR TODOS LOS CINES */
         virtual ListaDt<int,DtCine> listarCines()=0;
+        /* LISTAR TODAS LAS FUNCIONES */
+        virtual ListaDt<int,DtFuncion> listarFunciones()=0;
         /* LISTAR SALAS X CINE */
         virtual ListaDt<int,DtSala> listarSalas(int idCine)=0;
         /* LISTAR CINES X PELICULA */

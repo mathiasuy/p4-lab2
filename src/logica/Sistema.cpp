@@ -50,8 +50,11 @@
         /*  PELICULA */
         bool Sistema::altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula){
             Sala* sala = this->cines->find(idCine)->getSala(idSala);
+            cout << "\nSALA: " << sala->toString();
             Pelicula* pelicula = this->peliculas->find(tituloPelicula);
+            cout << "\nPELICULA: " << pelicula->toString();
             Funcion* fnueva = new Funcion(precioEntrada, fecha, sala, pelicula);
+            cout << "\nFUNCION: " << fnueva->toString();
             this->funciones->add(fnueva);
             return true;
         };
@@ -170,6 +173,18 @@
             return dt;
         };
 
+        /* LISTAR TODAS LAS FUNCIONES */
+        ListaDt<int,DtFuncion> Sistema::listarFunciones(){
+            cout << "llegosdsd";
+            this->funciones->beginIterator();
+            ListaDt<int,DtFuncion> dt;
+            while (this->funciones->getElement() != NULL){
+               //dt.add(this->funciones->getElement()->getDt());
+               this->funciones->next();
+            }
+            return dt;
+        };
+
         /* LISTAR SALAS X CINE */
         ListaDt<int,DtSala> Sistema::listarSalas(int idCine){
             Cine* cine = this->cines->find(idCine);
@@ -254,27 +269,27 @@
             cout << "Cantidad de Cines: "<< this->cines->size() << endl;
             //int m1[] = {3, 2, 1, 0, 4, 6, 7, 8};
             //vector<int> v1(m1, m1 + sizeof(m1) / sizeof (*m1) );
-            cout << ((this->altaCine("18 de Julio 2042",{3, 2, 1, 0, 4, 6, 7, 8}))?"Correcto":"MAL") << endl;
+            cout << ((this->altaCine("18 de Julio 2042",{3, 2, 1, 0, 4, 6, 7, 8}))?"":"MAL") << endl;
 
             cout << "Cantidad de Cines: "<< this->cines->size() << endl;
             int m2[] = {3, 2, 1, 0, 4, 6, 7, 8};
             vector<int> v2(m2, m2 + sizeof(m2) / sizeof (*m2) );
-            cout << ((this->altaCine("Av. Garzon 555",v2))?"Correcto":"MAL");
+            cout << ((this->altaCine("Av. Garzon 555",v2))?"":"MAL");
 
             cout << "Cantidad de Cines: "<< this->cines->size() << endl;
             int m3[] = {3, 2, 1, 0, 4, 6, 7, 8};
             vector<int> v3(m3, m3 + sizeof(m3) / sizeof (*m3) );
-            cout << ((this->altaCine("Julio Herrera y Reissing 565",v3))?"Correcto":"MAL");
+            cout << ((this->altaCine("Julio Herrera y Reissing 565",v3))?"":"MAL");
 
             cout << "Cantidad de Cines: "<< this->cines->size() << endl;
 
 
-            cout << "\nchuppame " << (((this->cines->getElement(1)) == NULL)?"ES NULL":"NO ES NULL");
-            this->cines->beginIterator();
-            while(this->cines->getElement() != NULL){
-                cout << "\nchuppame " << this->cines->getElement()->toString();
-                this->cines->next();
-            }
+            //cout << "\nchuppame " << (((this->cines->getElement(1)) == NULL)?"ES NULL":"NO ES NULL");
+//            this->cines->beginIterator();
+//            while(this->cines->getElement() != NULL){
+//                cout << "\nchuppame " << this->cines->getElement()->toString();
+//                this->cines->next();
+//            }
 
 
 
@@ -295,7 +310,12 @@
             this->altaFuncion(5,f3,2,2,"Hola m");
             this->altaFuncion(5,f4,2,2,"Teens Russians");
 
-/*
+            cout << "\nSE CARGARON " << this->funciones->size() << " funciones. \n";
+
+            cout << "\nFuncion 1: " << (*funciones)[1].toString() << " . \n";
+            cout << "\nFuncion 2: " << (*funciones)[2].toString() << " . \n";
+            cout << "\nFuncion 3: " << (*funciones)[3].toString() << " . \n";
+            cout << "\nFuncion 4: " << (*funciones)[4].toString() << " . \n";
 
             this->crearReserva("A",12,1,"BROU", 5);
             this->crearReserva("B",5,2,"Abitab",5,10);
@@ -316,7 +336,7 @@
             this->crearReserva("A",4,2,"BROU",5);
             this->eliminarPelicula("Teens Russians");
             return d;
-*/
+
 			DtTest v;
 
 			return v;

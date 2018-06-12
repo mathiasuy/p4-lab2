@@ -1,5 +1,5 @@
 #include "../../include/logica/Funcion.h"
-
+#include <iostream>
 #include "../../include/logica/Pelicula.h"
 #include "../../include/logica/Sala.h"
 
@@ -43,7 +43,7 @@ void Funcion::setSala(Sala* sala){
 
 
 string Funcion::toString(){
-    return "Esta es la funcion: " + this->getID();
+    return "Esta es la funcion: " + Utils::aString(this->getID());
 };
 
 bool Funcion::isEqual(Funcion* funcion){
@@ -53,7 +53,9 @@ bool Funcion::isEqual(Funcion* funcion){
 
 Funcion::Funcion(float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *pelicula){
     this->asientosReservados = 0;
+
     this->id = ++idGlobal;
+    //cout << "ID DE LA FUNC: " << Utils::aString(this->id);
     this->precioEntrada = precioEntrada;
     this->setFecha(fecha);
     this->setPelicula(pelicula);

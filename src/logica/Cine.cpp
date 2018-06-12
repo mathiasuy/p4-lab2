@@ -13,7 +13,7 @@ Cine::Cine(string direccion, vector<int> salas)
 //        cout << "Capacidad; " << i << "\n";
     	Sala* sala = new Sala(++j,i,this);
         this->salas[sala->getID()] = sala;
-        cout << this->salas[sala->getID()]->toString();
+        //11111cout << this->salas[sala->getID()]->toString();
     }
     this->setDireccion(direccion);
 }

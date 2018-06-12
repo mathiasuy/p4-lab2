@@ -16,10 +16,8 @@
 
         /*  OPERACIONES BASICAS */
         bool ManejadorFunciones::add(Funcion* funcion){
-            int t1 = this->funciones.size();
             this->funciones[funcion->getID()] = funcion;
-            int t2 = this->funciones.size();
-            return t1 == t2;
+            return true;
         }
 
         bool ManejadorFunciones::remove(int id){
@@ -40,7 +38,7 @@
         bool ManejadorFunciones::isEmpty(){
             return this->funciones.empty();
         }
-        bool ManejadorFunciones::size(){
+        int ManejadorFunciones::size(){
             return this->funciones.size();
         }
 

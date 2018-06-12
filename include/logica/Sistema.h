@@ -54,6 +54,8 @@ class Sistema : public ISistema
         ListaDt<string,DtPelicula> listarPeliculas();
         /* LISTAR TODOS LOS CINES */
         ListaDt<int,DtCine> listarCines();
+        /* LISTAR TODAS LAS FUNCIONES */
+        ListaDt<int,DtFuncion> listarFunciones();
         /* LISTAR SALAS X CINE */
         ListaDt<int,DtSala> listarSalas(int idCine);
         /* LISTAR CINES X PELICULA */

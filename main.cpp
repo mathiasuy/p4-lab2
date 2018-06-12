@@ -28,6 +28,9 @@ void pantallaInicial(){
     cout << "********************************"<<endl;
     cout << ((tipoUsuario>=0)?"1 - Ver info Pelicula.":"") << endl;
     cout << ((tipoUsuario>=0)?"2 - Ver comentarios y puntaje de pelicula.":"") << endl;
+    cout << ((tipoUsuario>=0)?"20 - Listar cines.":"") << endl;
+    cout << ((tipoUsuario>=0)?"21 - Listar peliculas.":"") << endl;
+    cout << ((tipoUsuario>=0)?"22 - Listar Funciones.":"") << endl;
     cout << " *******************************"<<endl;
     cout << ((tipoUsuario==1)?"3 - Crear Reserva.\n":"");
     cout << ((tipoUsuario==1)?"4 - Ver Reservas.\n":"");
@@ -77,9 +80,6 @@ int main()
         pantallaInicial();
         cin >> opcion;
         switch (opcion){
-            case 20 :
-                cout << interface->listarCines().toString();
-            break;
             case 1 : if (tipoUsuario>=0){
                             string titulo;
                             ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
@@ -354,6 +354,17 @@ int main()
 
                         };
                         break;
+            case 20 :
+                            cout << interface->listarCines().toString();
+                        break;
+            case 21 :
+                            cout << interface->listarPeliculas().toString();
+                        break;
+            case 22 :
+                            cout << interface->listarFunciones().toString();
+
+                        break;
+
         }
     }while(opcion != 0);
 

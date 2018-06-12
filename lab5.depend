@@ -2101,7 +2101,7 @@
 	"ISistema.h"
 	"ISistema.h"
 
-1528760564 c:\cygwin64\home\tareas\tareatv\include\isistema.h
+1528776425 c:\cygwin64\home\tareas\tareatv\include\isistema.h
 	<vector>
 	<map>
 	<string>
@@ -2182,7 +2182,7 @@
 	"../datatypes/DtPuntaje.h"
 	"../Utils.h"
 
-1528758545 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorfunciones.h
+1528777926 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorfunciones.h
 	<iostream>
 	<string>
 	<utility>
@@ -2190,7 +2190,7 @@
 	<iomanip>
 	"../logica/Funcion.h"
 
-1528758545 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorpeliculas.h
+1528777350 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorpeliculas.h
 	<iostream>
 	<string>
 	<utility>
@@ -2206,7 +2206,7 @@
 	"../manejadores/ListaDt.h"
 	"../datatypes/DtPelicula.h"
 
-1528762963 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorusuarios.h
+1528777428 c:\cygwin64\home\tareas\tareatv\include\manejadores\manejadorusuarios.h
 	"../logica/Usuario.h"
 	<map>
 
@@ -2232,13 +2232,13 @@
 	"Tarjeta.h"
 	"../datatypes/DtDebito.h"
 
-1528760554 c:\cygwin64\home\tareas\tareatv\include\logica\sistema.h
+1528776465 c:\cygwin64\home\tareas\tareatv\include\logica\sistema.h
 	"../ISistema.h"
 
 1528772617 source:c:\cygwin64\home\tareas\tareatv\src\utils.cpp
 	"../include/Utils.h"
 
-1528774366 source:c:\cygwin64\home\tareas\tareatv\main.cpp
+1528778618 source:c:\cygwin64\home\tareas\tareatv\main.cpp
 	"include/ISistema.h"
 	"include/Factory.h"
 	<iostream>
@@ -2258,7 +2258,7 @@
 1528758546 source:c:\cygwin64\home\tareas\tareatv\src\datatypes\dttest.cpp
 	"../../include/datatypes/DtTest.h"
 
-1528774332 source:c:\cygwin64\home\tareas\tareatv\src\logica\cine.cpp
+1528777180 source:c:\cygwin64\home\tareas\tareatv\src\logica\cine.cpp
 	"../../include/logica/Cine.h"
 	<iostream>
 
@@ -2271,8 +2271,9 @@
 1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\debito.cpp
 	"../../include/logica/Debito.h"
 
-1528758546 source:c:\cygwin64\home\tareas\tareatv\src\logica\funcion.cpp
+1528778507 source:c:\cygwin64\home\tareas\tareatv\src\logica\funcion.cpp
 	"../../include/logica/Funcion.h"
+	<iostream>
 	"../../include/logica/Pelicula.h"
 	"../../include/logica/Sala.h"
 
@@ -2305,15 +2306,15 @@
 1528769427 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorcines.cpp
 	"../../include/manejadores/ManejadorCines.h"
 
-1528758546 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorfunciones.cpp
+1528776914 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorfunciones.cpp
 	"../../include/manejadores/ManejadorFunciones.h"
 
-1528763828 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorpeliculas.cpp
+1528775896 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorpeliculas.cpp
 	"../../include/manejadores/ManejadorPeliculas.h"
 
 1528763009 source:c:\cygwin64\home\tareas\tareatv\src\manejadores\manejadorusuarios.cpp
 	"../../include/manejadores/ManejadorUsuarios.h"
 
-1528775072 source:c:\cygwin64\home\tareas\tareatv\src\logica\sistema.cpp
+1528778759 source:c:\cygwin64\home\tareas\tareatv\src\logica\sistema.cpp
 	"../../include/logica/Sistema.h"
 

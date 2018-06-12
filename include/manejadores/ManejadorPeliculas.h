@@ -31,6 +31,9 @@ class ManejadorPeliculas
         void beginIterator();
         void next();
         Pelicula* getElement();
+        Pelicula* operator[] (string x){
+            return (this->peliculas[x]);
+        };
 
         /*  DESTRUCTOR */
         virtual ~ManejadorPeliculas();

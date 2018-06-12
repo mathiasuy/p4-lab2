@@ -25,6 +25,9 @@ class ManejadorUsuarios
         void beginIterator();
         void next();
         Usuario* getElement();
+        Usuario* operator[] (string x){
+            return (this->usuarios[x]);
+        };
 
         /*  DESTRUCTOR */
         virtual ~ManejadorUsuarios();
