@@ -15,7 +15,7 @@
 
         /*  OPERACIONES BASICAS */
         bool ManejadorPeliculas::add(Pelicula* pelicula){
-            cout << "Titulo: " + pelicula->getID();
+            cout << "Titulo: " + pelicula->getID() + " ";
             this->peliculas[pelicula->getID()] = pelicula;
             return true;
         }
