@@ -318,8 +318,7 @@ int main()
                         vector<int> v1;
                         //bucle para ir preguntando por salas
                         while (seguirAgregando){
-                            cout << "Escriba la cantidad de asientos de la sala: " << endl;
-                            std::cin.ignore();
+                            cout << "Escriba la cantidad de asientos que tiene la sala: " << endl;
                             cin >> asientos;
                             v1.push_back(asientos);
                             cout << "¿Desea seguir agregando salas? " << endl;
