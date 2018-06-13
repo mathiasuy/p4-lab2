@@ -49,7 +49,7 @@ int DtFecha::getMinuto(){
 }
 
 string DtFecha::toString(){
-    return "DD/MM/AA - 00:00";
+    return "toString FALTA IMPLEMENTAR";
 }
 
 

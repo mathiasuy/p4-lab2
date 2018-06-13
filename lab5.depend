@@ -2318,7 +2318,7 @@
 1528778759 source:c:\cygwin64\home\tareas\tareatv\src\logica\sistema.cpp
 	"../../include/logica/Sistema.h"
 
-1528864165 source:c:\cygwin64\home\tareas\fing2\main.cpp
+1528864559 source:c:\cygwin64\home\tareas\fing2\main.cpp
 	"include/ISistema.h"
 	"include/Factory.h"
 	<iostream>

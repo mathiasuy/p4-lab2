@@ -47,7 +47,7 @@ void pantallaInicial(){
         cout << ((tipoUsuario>=0)?"------------------------------------------------------------\n":"");
     }        cout << "10 - " << ((tipoUsuario>0)?"Logout":"Login")<< endl;
         cout << ((tipoUsuario==2)?((horaFijada)?"12 - Cambiar hora\n":"12 - Establecer hora\n"):"");
-        cout << "11 - " << ((tipoUsuario==0)?"Test\n":"");
+        cout << ((tipoUsuario==0)?"11 - Test\n":"");
     cout << "0 - Salir." << endl;
     cout << "************************************************************" << endl;
 }
