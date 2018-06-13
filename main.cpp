@@ -94,7 +94,7 @@ int main()
         /*****************************************************************/
         /*****************************************************************/
             case 1 : if (tipoUsuario>=0 && horaFijada){
-                cout << "/************ VER INFORMACION DE LA PELICULA... ************\/" <<endl;
+                cout << "/************ VER INFORMACION DE LA PELICULA... ************/ \n" <<endl;
 //VER INFO PELICULA
                             string titulo;
                             ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
@@ -146,7 +146,7 @@ int main()
         /*****************************************************************/
                         /*  */
             case 2 : if (tipoUsuario>=0 && horaFijada){
-                cout << "/************ VER COMENTARIOS Y PUNTAJE DE LA PELICULA... ************\/" <<endl;
+                cout << "/************ VER COMENTARIOS Y PUNTAJE DE LA PELICULA... ************/ \n" <<endl;
 // VER COMENTARIOS Y PUNTAJE PELICULA
                         string titulo;
                         ListaDt<string,DtPelicula> listaDePeliculas = interface->listarPeliculas();
@@ -192,7 +192,7 @@ int main()
 
 
           case 3 : if (tipoUsuario==1 && horaFijada){
-              cout << "/************ CREAR RESERVA ************\/" <<endl;
+              cout << "/************ CREAR RESERVA ************/ \n" <<endl;
 //CREAR RESERVA
 
        int b = 1;
@@ -337,7 +337,7 @@ int main()
         /*****************************************************************/
 
             case 4 : if (tipoUsuario==1 && horaFijada){
-                cout << "/************ LISTAR RESERVAS ************\/" <<endl;
+                cout << "/************ LISTAR RESERVAS ************/ \n" <<endl;
                             cout << "Se listan las reservas para el usuario " << nickName << endl;
                             ListaDt<int,DtReserva> l = interface->listarReservas(nickName);
                             cout << "Se encontraron " << l.size() << endl;
@@ -355,7 +355,7 @@ int main()
         /*****************************************************************/
 
            case 5 : if (tipoUsuario==1 && horaFijada){//PUNTUAR PELICULA
-                cout << "/************ PUNTUAR PELICULA ************\/" <<endl;
+                cout << "/************ PUNTUAR PELICULA ************/ \n" <<endl;
                                                //DECLARACIONES DE VARIABLES
                                                 string nomPelicula;
                                                 int respuesta;
@@ -394,7 +394,7 @@ int main()
         /*****************************************************************/
 
             case 6 : if (tipoUsuario==1 && horaFijada){  //CASO DE USO COMENTAR PELICULA
-                cout << "/************ COMENTAR PELICULA ************\/" <<endl;
+                cout << "/************ COMENTAR PELICULA ************/ \n" <<endl;
                                                                             string nomPelicula, come; //DECLARACION DE VARIABLES
                                                                             int respuesta, esRespuestaDeID;
                                                                             bool hecho;
@@ -435,7 +435,7 @@ int main()
         /*****************************************************************/
 
             case 7 : if (tipoUsuario==2 && horaFijada){
-                cout << "/************ DAR DE ALTA CINES ************\/" <<endl;
+                cout << "/************ DAR DE ALTA CINES ************/ \n" <<endl;
 //CREAR CINE
                         bool seguirAgregando = true;
                         bool a;
@@ -480,7 +480,7 @@ int main()
         /*****************************************************************/
 
             case 8 : if (tipoUsuario==2 && horaFijada){
-                cout << "/************ DAR DE ALTA FUNCIONES ************\/" <<endl;
+                cout << "/************ DAR DE ALTA FUNCIONES ************/ \n" <<endl;
 //ALTA FUNCION
                         string titulo, titulo2;
                         int res, id, dia, mes, anio, minuto, hora;
@@ -529,7 +529,7 @@ int main()
         /*****************************************************************/
 
             case 9 : if (tipoUsuario>0 && horaFijada){
-                cout << "/************ ELIMINAR PELICULA ************\/" <<endl;
+                cout << "/************ ELIMINAR PELICULA ************/ \n" <<endl;
 //ELIMINAR PELICULA
                            string titulo;
                            ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
@@ -558,7 +558,7 @@ int main()
         /*****************************************************************/
 
             case 10 : if (tipoUsuario>0){
-                cout << "/************ SESION CERRADA ************\/" <<endl;
+                cout << "/************ SESION CERRADA ************/ \n" <<endl;
                          tipoUsuario = 0;
                             nickName = "";
                             cout << "Hasta luego." << endl;
@@ -591,7 +591,7 @@ int main()
         /*****************************************************************/
         /*****************************************************************/
             case 12 : if (tipoUsuario==2){
-                cout << "/************ "<< ((horaFijada)?"CAMBIAR HORA":"ESTABLECER HORA") <<" ************\/" <<endl;
+                cout << "/************ "<< ((horaFijada)?"CAMBIAR HORA":"ESTABLECER HORA") <<" ************/ \n" <<endl;
                             /* cambiar hora */
                             cout << "No implementado.";
                             horaFijada = true;
@@ -603,7 +603,7 @@ int main()
         /*****************************************************************/
         /*****************************************************************/
             case 20 :{
-                cout << "/************ LISTADO DE TODOS LOS CINES ************\/" <<endl;
+                cout << "/************ LISTADO DE TODOS LOS CINES ************/ \n" <<endl;
                             cout << interface->listarCines().toString();
               }
 
@@ -615,7 +615,7 @@ int main()
         /*****************************************************************/
         /*****************************************************************/
             case 21 :{
-                cout << "/************ LISTADO DE TODAS LAS PELICULAS ************\/" <<endl;
+                cout << "/************ LISTADO DE TODAS LAS PELICULAS ************/ \n" <<endl;
                             cout << interface->listarPeliculas().toString();
             }
                         break;
@@ -625,7 +625,7 @@ int main()
         /*****************************************************************/
         /*****************************************************************/
             case 22 :{
-                cout << "/************ LISTADO DE TODAS LAS FUNCIONES ************\/" <<endl;
+                cout << "/************ LISTADO DE TODAS LAS FUNCIONES ************/ \n" <<endl;
                             ListaDt<int,DtFuncion> l = interface->listarFunciones();
 
                             cout << "La lista tiene " << l.size() << " funciones" << endl;
@@ -635,7 +635,7 @@ int main()
 
                         break;
             default:
-                cout << "\n\n/************ OPCION INCORRECTA!  O.O ************/" <<endl;
+                cout << "\n\n/************ OPCION INCORRECTA!  O.O ************/ \n" <<endl;
 
         }
         cout << "\n\nPresione una tecla para continuar";
