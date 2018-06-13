@@ -27,8 +27,7 @@ class Sistema : public ISistema
         /* RELOJ */
         DtFecha getFechaActual();
         void setFechaActual(int dia, int mes, int anio, int hora, int minuto);
-        DtFecha CrearDtFecha(int dia,int mes,int anio,int hora,int minuto);
-        
+
         /*    CINE    */
         bool altaCine(string direccion, vector<int> capacidadSalas) ;
 

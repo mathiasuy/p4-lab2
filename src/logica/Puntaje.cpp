@@ -1,7 +1,8 @@
 #include "../../include/logica/Puntaje.h"
-
+#include "iostream"
 
     void Puntaje::setPuntaje(float puntaje){
+        //cout << puntaje  << << "ES EL PUNT";
         this->puntaje = puntaje;
     };
 

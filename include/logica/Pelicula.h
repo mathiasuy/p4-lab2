@@ -31,7 +31,6 @@ class Pelicula
         void agregarComentario(string nickname, string comentario);
         void agregarComentario(string nickname, string comentario, int esRespuestaDeID);
         void modificarComentario(int id, string comentario);
-        void agregarPuntaje(string nickName, float puntaje);
         float getPuntaje(string nickName);
         void setPuntaje(string nickName, float puntaje);
         DtPelicula getDtPuntaje(string nickName);

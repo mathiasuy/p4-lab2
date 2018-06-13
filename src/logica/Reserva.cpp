@@ -28,7 +28,7 @@ void Reserva::setFuncion(Funcion* funcion){
 };
 
 std::string Reserva::toString(){
-    return "Reserva n� "+ this->getID();
+    return "Reserva num "+ this->getID();
 };
 
 //Reserva::~Reserva(){}

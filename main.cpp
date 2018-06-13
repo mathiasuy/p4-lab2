@@ -19,32 +19,33 @@ ISistema* interface = Factory::getSistema();
 int tipoUsuario;
 string nickName;
 string entrada;
-
+bool horaFijada = false;
 
 /*  PANTALLA INICIAL  */
 void pantallaInicial(){
     cout << "********************************"<<endl;
     cout << "********************************"<<endl;
     cout << "********************************"<<endl;
-    cout << ((tipoUsuario>=0)?"1 - Ver info Pelicula.":"") << endl;
-    cout << ((tipoUsuario>=0)?"2 - Ver comentarios y puntaje de pelicula.":"") << endl;
-    cout << ((tipoUsuario>=0)?"20 - Listar cines.":"") << endl;
-    cout << ((tipoUsuario>=0)?"21 - Listar peliculas.":"") << endl;
-    cout << ((tipoUsuario>=0)?"22 - Listar Funciones.":"") << endl;
-    cout << " *******************************"<<endl;
-    cout << ((tipoUsuario==1)?"3 - Crear Reserva.\n":"");
-    cout << ((tipoUsuario==1)?"4 - Ver Reservas.\n":"");
-    cout << ((tipoUsuario==1)?"5 - Puntuar Pelicula.\n":"");
-    cout << ((tipoUsuario==1)?"6 - Comentar Pelicula.\n":"");
-    cout << " ********************************"<< endl;
-    cout << ((tipoUsuario==2)?"7 - Alta Cine.\n":"");
-    cout << ((tipoUsuario==2)?"8 - Alta Funcion.\n":"");
-    cout << ((tipoUsuario==2)?"9 - Eliminar Pelicula.\n":"");
-    cout << "********************************"<<endl;
-    cout << "10 - " << ((tipoUsuario>0)?"Logout":"Login")<< endl;
-    cout << "11 - " << ((tipoUsuario==0)?"Test\n":"")<< endl;
-    cout << "13 - " << ((tipoUsuario>=0)?"Cambiar hora\n":"")<< endl;
-
+    if (horaFijada){
+        cout << ((tipoUsuario>=0)?"1 - Ver info Pelicula.":"") << endl;
+        cout << ((tipoUsuario>=0)?"2 - Ver comentarios y puntaje de pelicula.":"") << endl;
+        cout << ((tipoUsuario>=0)?"20 - Listar cines.":"") << endl;
+        cout << ((tipoUsuario>=0)?"21 - Listar peliculas.":"") << endl;
+        cout << ((tipoUsuario>=0)?"22 - Listar Funciones.":"") << endl;
+        cout << " *******************************"<<endl;
+        cout << ((tipoUsuario==1)?"3 - Crear Reserva.\n":"");
+        cout << ((tipoUsuario==1)?"4 - Ver Reservas.\n":"");
+        cout << ((tipoUsuario==1)?"5 - Puntuar Pelicula.\n":"");
+        cout << ((tipoUsuario==1)?"6 - Comentar Pelicula.\n":"");
+        cout << " ********************************"<< endl;
+        cout << ((tipoUsuario==2)?"7 - Alta Cine.\n":"");
+        cout << ((tipoUsuario==2)?"8 - Alta Funcion.\n":"");
+        cout << ((tipoUsuario==2)?"9 - Eliminar Pelicula.\n":"");
+        cout << "********************************"<<endl;
+    }
+        cout << "10 - " << ((tipoUsuario>0)?"Logout":"Login")<< endl;
+        cout << "11 - " << ((tipoUsuario==0)?"Test\n":"")<< endl;
+        cout << ((tipoUsuario==2)?((horaFijada)?"13 - Cambiar hora\n":"13 - Establecer hora\n"):"");
     cout << "0 - Salir." << endl;
     cout << "********************************"<<endl;
 }
@@ -66,7 +67,7 @@ void login(){
         cout << "Bienvenido " << nickName << endl;
         tipoUsuario = (nickName == "ale_ulises")?2:1;
     }else{
-        cout << "Error";
+        cout << "Error"<<endl;
     }
 }
 
@@ -74,13 +75,21 @@ void login(){
 int main()
 {
         int opcion;
-    tipoUsuario = 2;
-    do{
+        nickName = "B";
+        tipoUsuario = 2;
+        horaFijada = true;
+
+        do{
 
         pantallaInicial();
         cin >> opcion;
         switch (opcion){
-            case 1 : if (tipoUsuario>=0){
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          VER INFO PELICULA  *************/
+        /*****************************************************************/
+        /*****************************************************************/
+            case 1 : if (tipoUsuario>=0 && horaFijada){
 //VER INFO PELICULA
                             string titulo;
                             ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
@@ -101,31 +110,46 @@ int main()
                                 int e;
                                 cin >> e;
                                 if (e==1){
-                                        ListaDt<int,DtCine> cines = interface->listarCines();
-                            cout << cines.toString();
-
-                                    cout << interface->listarCines(titulo).toString();
+                                        ListaDt<int,DtCine> cines = interface->listarCines(titulo);
+                                        cout << cines.toString();
                                 }
-                                cout << "Seleccione un cine:";
+                                cout << "Seleccione un cine:"<<endl;
+                                int idCine;
+                                cin >> idCine;
+
+                                cout << "Listar funciones para ese cine?: 1- Si/ 2- No"<<endl;
                                 cin >> e;
+
                                 if (e == 1){
-                                    DtFecha f = interface->getFechaActual();
-                                    cout << interface->listarFunciones(e,titulo,f).toString();
+                                    //DtFecha f = interface->getFechaActual();
+                                    DtFecha f = DtFecha(12,6,2019,0,0);
+                                    ListaDt<int,DtFuncion> l = interface->listarFunciones(idCine,titulo,f);
+                                    cout << "Cantidad de Funciones encontradas: " << l.size() << endl;
+                                    cout << "------------- " << endl;
+                                    cout << l.toString();
+                                    cout << "------------- " << endl;
                                 }
                             }
                             //pantallaVerInfoPelicula(titulo);
 
                         };
                         break;
-            case 2 : if (tipoUsuario>=0){
+        /*****************************************************************/
+        /*****************************************************************/
+        /******          Ver comentarios y puntaje de pelicula  **********/
+        /*****************************************************************/
+        /*****************************************************************/
+                        /*  */
+            case 2 : if (tipoUsuario>=0 && horaFijada){
 // VER COMENTARIOS Y PUNTAJE PELICULA
-                          string titulo;
+                        string titulo;
                         ListaDt<string,DtPelicula> listaDePeliculas = interface->listarPeliculas();
 
                         //REVISEN DESDE ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                         listaDePeliculas.start();
                         while(listaDePeliculas.end()){
-                         string texto = (listaDePeliculas.getElement()).getTitulo() + (listaDePeliculas.getElement()).getPoster();
+                         string texto = (listaDePeliculas.getElement()).getTitulo() + " " + (listaDePeliculas.getElement()).getPoster();
+                         listaDePeliculas.next();
                          cout << texto;
                         }
 
@@ -143,7 +167,7 @@ int main()
                           cout << "Puntaje promedio: " << p.getPuntajePromedio() << " (" << a << " usuarios)"<<endl;
                           //ahora los comentarios
                           cout << "Comentarios" <<endl;
-                          cout << interface->listarComentarios(titulo).toString();
+                         cout << interface->listarComentarios(titulo).toString();
                           //Y AHORA FALTAN LOS PUNTAJES
                           cout << "Puntajes" <<endl;
                           cout << interface->listarPuntajes(titulo).toString();
@@ -152,7 +176,16 @@ int main()
 
                              };
                         break;
-          case 3 : if (tipoUsuario==1){
+
+                        /*****************************************************************/
+                        /*****************************************************************/
+                        /**********          Crear Reserva   *************/
+                        /*****************************************************************/
+                        /*****************************************************************/
+
+
+
+          case 3 : if (tipoUsuario==1 && horaFijada){
 //CREAR RESERVA
 
        int b = 1;
@@ -179,7 +212,7 @@ int main()
          DtPelicula p = peliculas[titulo];
          cout << p.getPoster();
          cout << p.getSinopsis();
-         cout << "¿Ver lista de cines con esa pelicula?";
+         cout << "¿Ver lista de cines con esa pelicula?"<<endl;
          cout << "1- Si." <<endl;
          cout << "2- No." <<endl;
 
@@ -290,31 +323,120 @@ int main()
 
 
                         break;
-            case 4 : if (tipoUsuario==1){
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          Listar Reservas   *************/
+        /*****************************************************************/
+        /*****************************************************************/
+
+            case 4 : if (tipoUsuario==1 && horaFijada){
+                            cout << "Se listan las reservas para el usuario " << nickName << endl;
+                            ListaDt<int,DtReserva> l = interface->listarReservas(nickName);
+                            cout << "Se encontraron " << l.size() << endl;
+                            cout << "---------------" << endl;
+                            cout << l.toString() << endl;
+                            cout << "---------------" << endl;
+                        };
+                        break;
+
+
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          Puntuar Pelicula   *************/
+        /*****************************************************************/
+        /*****************************************************************/
+
+           case 5 : if (tipoUsuario==1 && horaFijada){//PUNTUAR PELICULA
+
+                                               //DECLARACIONES DE VARIABLES
+                                                string nomPelicula;
+                                                int respuesta;
+                                                float puntajeNuevo;
+
+                                                ListaDt<string, DtPelicula> peliculas = interface->listarPeliculas();
+                                                cout << peliculas.toString();
+                                                cout << "Ingrese el nombre de la película que desea puntuar: "<<endl;
+                                                std::cin.ignore();
+                                                std::getline(cin,nomPelicula);
+                                                //DtPelicula p = peliculas[nomPelicula];
+                                                if (interface->getPuntajePelicula(nickName, nomPelicula) != -1) {
+                                                    cout << "Su actual punta    je a esta película es: " + Utils::aString(interface->getPuntajePelicula(nickName, nomPelicula)); //CREO QUE FALTA UN "BARRA" N ACA
+                                                    cout << "Desea modificar el puntaje de la pelicula?    1- Sí       2- No "<<endl;
+                                                    cin >> respuesta;
+                                                                if (respuesta == 1) {
+                                                                    cout << "Ingrese el nuevo puntaje de la pelicula"<<endl;
+                                                                    cin >> puntajeNuevo;
+                                                                    interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
+                                                                }
+                                                }
+                                            //SI ENTRO ACA ES PORQUE NO TENIA NINGUN PUNTAJE ESA PELICULA (ACORDARSE QUE RETORNA -1 SI NO ESTA PUNTUADA)
+                                                else {
+                                                                        cout << "Ingrese el nuevo puntaje de la pelicula"<<endl;
+                                                                    cin >> puntajeNuevo;
+                                                                    interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
+                                                        }      //END ELSE
+
+                        }; //END CASO DE USO
+                        break;
+
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          Comentar Pelicula   *************/
+        /*****************************************************************/
+        /*****************************************************************/
+
+            case 6 : if (tipoUsuario==1 && horaFijada){  //CASO DE USO COMENTAR PELICULA
+                                                                            string nomPelicula, come; //DECLARACION DE VARIABLES
+                                                                            int respuesta, esRespuestaDeID;
+                                                                            bool hecho;
+                                                                            ListaDt<string, DtPelicula> peliculas = interface->listarPeliculas();
+                                                                            cout << peliculas.toString();
+                                                                            cout << "Ingrese el nombre de la película que desea comentar: "<<endl;
+                                                                            std::cin.ignore();
+                                                                            std::getline(cin,nomPelicula);
+                                                                            do{
+                                                                           ListaDt<int,DtComentario> comentarios = interface->listarComentarios(nomPelicula);
+                                                                           cout << comentarios.toString();
+                                                                            cout << "Que acción desea realizar?   1- Comentar       2- Responder comentario     3- Salir"<<endl;
+                                                                            cin >>respuesta;
+                                                                                    if  (respuesta == 1) {
+                                                                                                 cout << "Ingrese su comentario:"<<endl;
+                                                                                                 std::cin.ignore();
+                                                                                                 std::getline(cin,come);
+                                                                                                 hecho = interface->comentarPelicula(nickName, nomPelicula, come);
+                                                                                                 cout << "Comentario ingresado correctamente !"<<endl;
+                                                                                    }
+                                                                                    else if (respuesta == 2) {
+                                                                                        cout << "Ingrese el ID de el comentario que desea responder:"<<endl;
+                                                                                        cin >> esRespuestaDeID;
+                                                                                        cout << "Ingrese su comentario: "<<endl;
+                                                                                        std::cin.ignore();
+                                                                                        std::getline(cin,come);
+                                                                                        hecho = interface->comentarPelicula(nickName, nomPelicula, come, esRespuestaDeID);
+                                                                                    }
+                                                                            }
+                                                                            while (respuesta != 3);
 
                         };
                         break;
-            case 5 : if (tipoUsuario==1){
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          Alta Cine   *************/
+        /*****************************************************************/
+        /*****************************************************************/
 
-                        };
-                        break;
-            case 6 : if (tipoUsuario==2){
-
-                        };
-                        break;
-            case 7 : if (tipoUsuario==2){
+            case 7 : if (tipoUsuario==2 && horaFijada){
 //CREAR CINE
                         bool seguirAgregando = true;
                         bool a;
                         string titulo;
                         int asientos, res;
-                        
+
                         cout << "Escriba la direccion del cine: " << endl;
                         std::cin.ignore();
                         std::getline(cin,titulo);
-                        
+
                         //Creo vector donde ingreso las salas
-                        int m1[10] ;
                         vector<int> v1;
                         //bucle para ir preguntando por salas
                         while (seguirAgregando){
@@ -322,7 +444,7 @@ int main()
                             cin >> asientos;
                             v1.push_back(asientos);
                             cout << "¿Desea seguir agregando salas? " << endl;
-                            cout <<"1- Si."<<endl;1
+                            cout <<"1- Si."<<endl;
                             cout <<"2- No."<<endl;
                             cin >> res;
                             if(res == 2){
@@ -341,8 +463,14 @@ int main()
                         };
                         };
                         break;
-            case 8 : if (tipoUsuario==2){
-//ALTA FUNCION              
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          Alta Funcion   *************/
+        /*****************************************************************/
+        /*****************************************************************/
+
+            case 8 : if (tipoUsuario==2 && horaFijada){
+//ALTA FUNCION
                         string titulo, titulo2;
                         int res, id, dia, mes, anio, minuto, hora;
                         float precio;
@@ -353,37 +481,43 @@ int main()
                         std::cin.ignore();
                         std::getline(cin,titulo);
                         //Listar cines con esa pelicula
-                        ListaDt<string,DtCine> cines = interface->listarCines(titulo);
-                        cout << interface->cines.toString();
+                        ListaDt<int,DtCine> cines = interface->listarCines(titulo);
+                        cout << cines.toString();
                         cout << "Escriba el cine donde desea agregar una funcion:" << endl;
                         cin >> id;
-                        ListaDt<int,DtSala> salas = interface->listarSalas(id);  
+                        ListaDt<int,DtSala> salas = interface->listarSalas(id);
                         //Listar salas x cine con esa pelicula
                         cout << salas.toString();   //poner cantidad de asientos libres y ocupados
                         cout << "Escriba la sala donde desea agregar una funcion:" << endl;
                         cin >> res;
-                        
+
                         //ingresa fecha y hora
-                        cout << "Ingrese el año: ";
+                        cout << "Ingrese el año: "<<endl;
                         cin >> anio  ;
-                        cout << "Ingrese el mes: ";
+                        cout << "Ingrese el mes: "<<endl;
                         cin >> mes  ;
-                        cout << "Ingrese el dia: ";
+                        cout << "Ingrese el dia: "<<endl;
                         cin >> dia ;
-                        cout << "Ingrese la hora: ";
-                        cin >> mes  ;
-                        cout << "Ingrese los minutos: ";
-                        cin >> anio  ;
-                        DtFecha f = interface->CrearDtFecha(dia, mes, anio, hora, minuto);
-                                            
+                        cout << "Ingrese la hora: "<<endl;
+                        cin >> hora  ;
+                        cout << "Ingrese los minutos: "<<endl;
+                        cin >> minuto  ;
+                        DtFecha f = DtFecha(dia, mes, anio, hora, minuto);
+
                         //VERIFICAR
-                        cout << "Ingrese el precio de la entrada: ";
+                        cout << "Ingrese el precio de la entrada: "<<endl;
                         cin >> precio;
-                        
-                        cout <<((interface->altaFuncion(precio, f, res, id, titulo)?"La pelicula se elimino con exito.":"No se pudo eliminar")<<endl;
-                        };                                               
+
+                        //cout <<((interface->altaFuncion(precio, f, res, id, titulo)?"La pelicula se elimino con exito.":"No se pudo eliminar")<<endl;
+                        };
                         break;
-            case 9 : if (tipoUsuario>0){
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          Eliminar Pelicula   *************/
+        /*****************************************************************/
+        /*****************************************************************/
+
+            case 9 : if (tipoUsuario>0 && horaFijada){
 //ELIMINAR PELICULA
                            string titulo;
                            ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
@@ -405,6 +539,12 @@ int main()
                            }
                         };
                         break;
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          LOGOUT   *************/
+        /*****************************************************************/
+        /*****************************************************************/
+
             case 10 : if (tipoUsuario>0){
                          tipoUsuario = 0;
                             nickName = "";
@@ -413,28 +553,63 @@ int main()
                             login();
                         };
                         break;
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          SALIR   *************/
+        /*****************************************************************/
+        /*****************************************************************/
             case 0 : if (tipoUsuario>=0){
                             cout << "Hasta luego." << endl;
                         };
                         break;
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          TEST   *************/
+        /*****************************************************************/
+        /*****************************************************************/
             case 11 : if (tipoUsuario>=0){
                             interface->test();
                             cout << "Datos cargados correctamente." << endl;
                         };
                         break;
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          CAMBIAR HORA   *************/
+        /*****************************************************************/
+        /*****************************************************************/
             case 12 : if (tipoUsuario>=0){
                             /* cambiar hora */
 
                         };
                         break;
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          LISTAR CINES   *************/
+        /*****************************************************************/
+        /*****************************************************************/
             case 20 :
                             cout << interface->listarCines().toString();
                         break;
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********          LISTAR PELICULAS   *************/
+        /*****************************************************************/
+        /*****************************************************************/
             case 21 :
                             cout << interface->listarPeliculas().toString();
                         break;
-            case 22 :
-                            cout << interface->listarFunciones().toString();
+        /*****************************************************************/
+        /*****************************************************************/
+        /**********         LISTAR FUNCIONES   *************/
+        /*****************************************************************/
+        /*****************************************************************/
+            case 22 :{
+                            ListaDt<int,DtFuncion> l = interface->listarFunciones();
+
+                            cout << "La lista tiene " << l.size() << " funciones" << endl;
+                            cout << "" << l.toString() << endl;
+            }
+
 
                         break;
 

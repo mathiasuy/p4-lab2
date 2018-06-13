@@ -40,11 +40,6 @@
             reloj->setMinuto(minuto);
         }
 
-        DtFecha Sistema::CrearDtFecha(int dia,int mes,int anio,int hora,int minuto){
-            return DtFecha f =  DtFecha(dia, mes, anio, hora, minuto);
-        };
-
-
         /*   CINES   */
         bool Sistema::altaCine(string direccion, vector<int> capacidadSalas){
             Cine* cineNuevo = new Cine(direccion, capacidadSalas);
@@ -54,12 +49,13 @@
         /*  PELICULA */
         bool Sistema::altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula){
             Sala* sala = this->cines->find(idCine)->getSala(idSala);
-            cout << "\nSALA: " << sala->toString();
+            //cout << "\nSALA: " << sala->toString();
             Pelicula* pelicula = this->peliculas->find(tituloPelicula);
-            cout << "\nPELICULA: " << pelicula->toString();
+            //cout << "\nPELICULA: " << pelicula->toString();
             Funcion* fnueva = new Funcion(precioEntrada, fecha, sala, pelicula);
-            cout << "\nFUNCION: " << fnueva->toString();
+            //cout << "\nFUNCION: " << fnueva->toString();
             this->funciones->add(fnueva);
+            pelicula->agregarFuncion(fnueva);
             return true;
         };
         float Sistema::getPuntajePelicula(string nickName, string tituloPelicula){
@@ -70,7 +66,9 @@
         };
         bool Sistema::puntuarPelicula(string nickName, string tituloPelicula, float puntaje){
             if (peliculas->isMember(tituloPelicula)){
-                peliculas->find(tituloPelicula)->setPuntaje(nickName, puntaje);
+                Pelicula* p = peliculas->find(tituloPelicula);
+                cout << (p->getDt().toString());
+                p->setPuntaje(nickName, puntaje);
                 return true;
             }else
                 return false;
@@ -94,27 +92,40 @@
                 //aca tengo un puntero al objeto
                 Pelicula* pelicula = peliculas->find(titulo);
                 map<int,Funcion*> funciones = pelicula->listarFunciones();
-                for (std::map<int, Funcion*>::iterator it = funciones.begin(); it != funciones.end(); ++it)
+
+                //cout << funciones.size() << "CANMTIDAD" << endl;
+
+                std::map<int, Funcion*>::iterator it = funciones.begin();
+
+                while (it != funciones.end())
                 {
                   Funcion* funcion = it->second;
                   usuarios->beginIterator();
+
                   while(usuarios->getElement() != NULL){
-                      if(usuarios->getElement()->tieneReservaFuncion(funcion->getID())){
+                      Usuario* u = usuarios->getElement();
+                        int idF = funcion->getID();
+                        bool k = u->tieneReservaFuncion(idF);
+                      if(k){
                           usuarios->getElement()->eliminarReservaConFuncion(funcion->getID());
                       };
                       usuarios->next();
                   }
+
                   Sala *sala = funcion->getSala();
                   if (sala->tieneFuncion(funcion->getID())){
                       sala->quitarFuncion(funcion);
                   }
                   pelicula->quitarFuncion(funcion->getID());
+                  this->funciones->remove(funcion->getID());
                   delete funcion;
+                  it++;
                 }
-                this->peliculas->remove(titulo);
                 delete pelicula;
-                return true;
+
+                return this->peliculas->remove(titulo);
             }
+
             else return false;
         };
         /* USUARIO */
@@ -127,6 +138,8 @@
             else
                 return false;
         };
+
+        /*  CREDITO  */
         bool Sistema::crearReserva(string nickName,int cantAsientos,int idFuncion,string financiera, float descuento, float montoTotal){
             Funcion* funcion = this->funciones->find(idFuncion);
             if (funcion->getAsientosLibres()>cantAsientos){
@@ -136,10 +149,14 @@
                 return false;
             }
         };
+
+        /*  DEBITO  */
         bool Sistema::crearReserva(string nickName, int cantAsientos,int idFuncion,string banco, float montoTotal){
             Funcion* funcion = this->funciones->find(idFuncion);
-            if (funcion->getAsientosLibres()>cantAsientos){
-                this->usuarios->find(nickName)->agregarReservaDebito(cantAsientos, funcion, banco, montoTotal);
+            if (funcion->getAsientosLibres() > cantAsientos){
+                //cout << "Se va a crear una reserva " << endl;
+                Usuario* u = this->usuarios->find(nickName);
+                u->agregarReservaDebito(cantAsientos, funcion, banco, montoTotal);
                 return true;
             }else{
                 return false;
@@ -182,7 +199,8 @@
             this->funciones->beginIterator();
             ListaDt<int,DtFuncion> dt;
             while (this->funciones->getElement() != NULL){
-               //dt.add(this->funciones->getElement()->getDt());
+             cout << this->funciones->getElement()->getDt().toString();
+               dt.add(this->funciones->getElement()->getDt());
                this->funciones->next();
             }
             return dt;
@@ -216,11 +234,12 @@
 
         /* LISTAR FUNCIONES X PELICULA Y CINE */
         ListaDt<int,DtFuncion> Sistema::listarFunciones(int idCine, string titulo, DtFecha fecha){
-            map<int,Funcion*> fs = this->peliculas->find(titulo)->listarFunciones();
+            Pelicula* p = this->peliculas->find(titulo);
+            map<int,Funcion*> fs = p->listarFunciones();
             map<int,Funcion*>::iterator it = fs.begin();
             ListaDt<int,DtFuncion> dt;
             while (it != fs.end()){
-                if (!(it->second->getSala()->esDeCine(idCine))){
+                if (it->second->getSala()->esDeCine(idCine)){
                     dt.add(it->second->getDt());
                 }
                 it++;
@@ -270,9 +289,10 @@
 
 
             cout << "Cantidad de Cines: "<< this->cines->size() << endl;
-            //int m1[] = {3, 2, 1, 0, 4, 6, 7, 8};
-            //vector<int> v1(m1, m1 + sizeof(m1) / sizeof (*m1) );
-            cout << ((this->altaCine("18 de Julio 2042",{3, 2, 1, 0, 4, 6, 7, 8}))?"":"MAL") << endl;
+            int m1[] = {3, 2, 1, 0, 4, 6, 7, 8};
+            vector<int> v1(m1, m1 + sizeof(m1) / sizeof (*m1) );
+
+            cout << ((this->altaCine("18 de Julio 2042",v1))?"":"MAL") << endl;
 
             cout << "Cantidad de Cines: "<< this->cines->size() << endl;
             int m2[] = {3, 2, 1, 0, 4, 6, 7, 8};
@@ -320,16 +340,24 @@
             cout << "\nFuncion 3: " << (*funciones)[3].toString() << " . \n";
             cout << "\nFuncion 4: " << (*funciones)[4].toString() << " . \n";
 
-            this->crearReserva("A",12,1,"BROU", 5);
+            this->crearReserva("A",3,1,"BROU", 5);
+
             this->crearReserva("B",5,2,"Abitab",5,10);
 
             this->comentarPelicula("A","La Matanza","Sin palabras.");
+
             this->comentarPelicula("B","La Matanza","Conmovedora");
+
             this->puntuarPelicula("A","La Matanza",5);
+
             this->puntuarPelicula("B","Hola m",4);
+
             this->comentarPelicula("A","Teens Russians","Yo no la vi, no puedo opinar.");
+
             int a = this->getPuntajePelicula("A","La Matanza");
+
             int b = this->getPuntajePelicula("B","Hola m");
+
             DtTest d(a,b);
 
             this->comentarPelicula("C","La matanza","Si.",1);
@@ -337,9 +365,11 @@
             this->login("A","A");
             this->login("A","B");
             this->crearReserva("A",4,2,"BROU",5);
-            this->eliminarPelicula("Teens Russians");
-            return d;
 
+            this->eliminarPelicula("Teens Russians");
+/*
+            return d;
+*/
 			DtTest v;
 
 			return v;

@@ -5,15 +5,18 @@ int Cine::idGlobal = 0;
 
 Cine::Cine(string direccion, vector<int> salas)
 {
+
     this->id = ++idGlobal;
 //    cout << "Direccion; " << direccion;
 
     int j = 0;
-    for (int i : salas){
-//        cout << "Capacidad; " << i << "\n";
-    	Sala* sala = new Sala(++j,i,this);
+    vector<int>::iterator it = salas.begin();
+    while (it != salas.end()){
+        //cout << "Capacidad de la sala n°" << j << " " << salas[j] << "\n";
+    	Sala* sala = new Sala(++j,*it,this);
         this->salas[sala->getID()] = sala;
-        //11111cout << this->salas[sala->getID()]->toString();
+        //cout << this->salas[sala->getID()]->toString();
+        it++;
     }
     this->setDireccion(direccion);
 }

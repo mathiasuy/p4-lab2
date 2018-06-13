@@ -1,13 +1,24 @@
 #include "../../include/logica/Pelicula.h"
+#include "iostream"
 
         Pelicula::~Pelicula()
         {
-            std::map<string,Puntaje*>::iterator it;
-            for (it = puntajes.begin(); it != puntajes.end(); ++it)
-                delete it->second;
-            std::map<int,Comentario*>::iterator it2;
-            for (it2 = comentarios.begin(); it2 != comentarios.end(); ++it2)
-                delete it->second;
+
+            std::map<string,Puntaje*>::iterator it = puntajes.begin();
+
+            while ( it != puntajes.end()){
+                Puntaje* p = it->second;
+                delete p;
+                it++;
+            }
+
+            std::map<int,Comentario*>::iterator it2 = comentarios.begin();
+            while (it2 != comentarios.end()){
+                Comentario* c = it2->second;
+                delete c;
+                it2++;
+            }
+
         }
 
         void Pelicula::setPoster(string poster){
@@ -34,24 +45,25 @@
         }
 
         map<int,Funcion*> Pelicula::listarFunciones(){
+            //cout << funciones.size() << "CANTIDAD EN EL CPP";
             return this->funciones;
+        }
+
+        bool Pelicula::agregarFuncion(Funcion* f){
+            return this->funciones[f->getID()] = f;
         }
 
         bool Pelicula::quitarFuncion(int id){
             return this->funciones.erase(id);
         }
 
-        void Pelicula::agregarPuntaje(string nickName, float puntaje){
-            Puntaje* puntaj = new Puntaje(nickName, puntaje);
-            this->puntajes[puntaj->getID()] = puntaj;
-        }
-
         void Pelicula::setPuntaje(string nickName, float puntaje) {
-            Puntaje* punt = this->puntajes.find(nickName)->second;
-            if (punt != NULL){
-                punt->setPuntaje(puntaje);
+            if (this->puntajes.find(nickName) != puntajes.end()){
+                Puntaje* puntaj = this->puntajes.find(nickName)->second;
+                puntaj->setPuntaje(puntaje);
             }else{
-                this->agregarPuntaje(nickName,puntaje);
+                Puntaje* puntaj = new Puntaje(nickName, puntaje);
+                this->puntajes[puntaj->getID()] = puntaj;
             }
         }
 

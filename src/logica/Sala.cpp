@@ -42,6 +42,7 @@ DtSala Sala::getDt(){
     return DtSala(this->getID(),this->getCapacidad(), cine->getDt());
 };
 
+
 bool Sala::perteneceA(Cine* cine){
     return this->cine->isEqual(cine);
 }

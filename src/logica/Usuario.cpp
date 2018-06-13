@@ -1,5 +1,5 @@
 #include "../../include/logica/Usuario.h"
-
+#include "iostream"
 Usuario::~Usuario()
 {
     //dtor
@@ -43,6 +43,9 @@ Usuario::Usuario(string nickName, string imagen, string password){
 bool Usuario::agregarReservaDebito(int cantAsientos, Funcion* funcion, string  banco, float montoTotal){
     Reserva* reserva = new Reserva(cantAsientos,funcion,banco,montoTotal);
     this->reservas[reserva->getID()] = reserva;
+//    cout << this->getImagen()   << endl;
+//    cout << reservas.size()     << endl;
+//    cout << this->getImagen()   << endl;
     return true;
 };
 
@@ -51,7 +54,10 @@ void Usuario::eliminarReservaConFuncion(int idFuncion){
     bool encontre = false;
     while (it != this->reservas.end() && !encontre){
         if (it->second->tieneFuncion(idFuncion)){
+            encontre = true;
             delete it->second;
+        }else{
+            it++;
         }
     }
 };
@@ -76,6 +82,7 @@ bool Usuario::tieneReservaFuncion(int id){
         if (it->second->getFuncion()->getID() == id){
             return true;
         }
+        it++;
     }
     return false;
 };
