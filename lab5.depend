@@ -2318,7 +2318,7 @@
 1528778759 source:c:\cygwin64\home\tareas\tareatv\src\logica\sistema.cpp
 	"../../include/logica/Sistema.h"
 
-1528860849 source:c:\cygwin64\home\tareas\fing2\main.cpp
+1528864165 source:c:\cygwin64\home\tareas\fing2\main.cpp
 	"include/ISistema.h"
 	"include/Factory.h"
 	<iostream>
@@ -2326,6 +2326,7 @@
 	<stdlib.h>
 	<stdexcept>
 	<stddef.h>
+	<conio.h>
 
 1528842007 c:\cygwin64\home\tareas\fing2\include\isistema.h
 	<vector>
@@ -2364,8 +2365,9 @@
 	<stdio.h>
 	<stdlib.h>
 
-1528841836 c:\cygwin64\home\tareas\fing2\include\datatypes\dtfecha.h
+1528863645 c:\cygwin64\home\tareas\fing2\include\datatypes\dtfecha.h
 	<ctime>
+	<string>
 
 1528841836 c:\cygwin64\home\tareas\fing2\include\datatypes\dtcine.h
 	<vector>
@@ -2527,7 +2529,7 @@
 1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtdebito.cpp
 	"../../include/datatypes/DtDebito.h"
 
-1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtfecha.cpp
+1528863607 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtfecha.cpp
 	"../../include/datatypes/DtFecha.h"
 
 1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtfuncion.cpp

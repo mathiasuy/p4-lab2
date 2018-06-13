@@ -48,6 +48,9 @@ int DtFecha::getMinuto(){
     return this->minuto;
 }
 
+string DtFecha::toString(){
+    return "DD/MM/AA - 00:00";
+}
 
 
 DtFecha::~DtFecha()
