@@ -1,0 +1,53 @@
+/*
+                                for (int i = 1; i <= lc.size(); i++){
+                                        cout << lc[i].toString() + "\n";
+                                        for (int k = i; k <= lc.size(); k++){
+                                            if (lc[i].getID() == lc[k].getEsRespuestaDeID()){
+                                                    if (lc[i].getEsRespuestaDeID() != -1 ){
+                                                        cout << "   ";
+                                                    }
+                                                    cout << lc[k].toString() + "\n";
+
+                                            }
+                                        }
+                                }
+*/
+
+/*
+                              ListaDt<int,DtComentario> lc = interface->listarComentarios(titulo);
+                              while(lc[í].getElement() != lc.end()){
+                                 cout << lc[i].toString() + "\n";
+                                   for(k = i; k<= lc.size(); k++){
+                                       if (lc[i].getID() == lc[k].getEsRespuestaDeID()){
+                                                    if (lc[i].getEsRespuestaDeID() != -1 ){
+                                                        cout << "   ";
+                                                    }
+                                                    cout << lc[k].toString() + "\n";
+                                                    lc[k].erase();
+
+                                            }
+                                        }
+
+
+                                         }
+
+*/
+
+                                vector <DtComentario> aImprimir(NULL,lc.size());
+
+                                vector<bool> impresos(false,lc.size());
+                                for (int i = 1; i <= lc.size(); i++){
+                                        if (!impresos[i]){
+                                              cout << lc[i].toString() + "\n";
+                                              impresos[i] = true;
+                                        }
+                                        for (int k = i+1; k <= lc.size(); k++){
+                                            if (!impresos[k] && lc[i].getID() == lc[k].getEsRespuestaDeID()){
+                                                    if (lc[i].getEsRespuestaDeID() != -1){
+                                                        cout << "   ";
+                                                    }
+                                                    cout << "   "lc[k].toString() + "\n";
+                                                    impresos[k] = true;
+                                            }
+                                        }
+                                }

@@ -29,6 +29,7 @@ namespace Util{
             void add(T t);
             void add(map<K,T> lista);
             void start();
+            void erase(K x);
             bool end();
             int size();
             T& getElement();

@@ -30,7 +30,14 @@ float DtPelicula::getPuntajePromedio(){
 };
 
 string DtPelicula::toString(){
-    return this->getID() + "\n";
+        string b = "";
+        b += "**********\n";
+        b += this->getID() + "\n";
+        b += this->getPoster() + "\n";
+        b += string("*********") + "\n";
+        b += this->getSinopsis() + "\n";
+        b += "*********\n";
+    return b;
 };
 
 DtPelicula::~DtPelicula()

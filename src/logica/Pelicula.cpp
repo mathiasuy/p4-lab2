@@ -1,4 +1,5 @@
 #include "../../include/logica/Pelicula.h"
+#include "../../include/Utils.h"
 #include "iostream"
 
         Pelicula::~Pelicula()
@@ -12,9 +13,9 @@
                 it++;
             }
 
-            std::map<int,Comentario*>::iterator it2 = comentarios.begin();
+            std::vector<Comentario*>::iterator it2 = comentarios.begin();
             while (it2 != comentarios.end()){
-                Comentario* c = it2->second;
+                Comentario* c = *it2;
                 delete c;
                 it2++;
             }
@@ -28,17 +29,23 @@
         void Pelicula::setSinopsis(string sinopsis){
             this->sinopsis = sinopsis;
         };
+
         void Pelicula::agregarComentario(string nickname, string comentario) {
             Comentario* comentari = new Comentario(nickname, comentario);
-            comentarios[comentari->getID()] = comentari;
+            comentarios.push_back(comentari);
         }
+
         void Pelicula::agregarComentario(string nickname, string comentario, int esRespuestaDeID) {
             Comentario* comentari = new Comentario(nickname, comentario, esRespuestaDeID);
-            comentarios[comentari->getID()] = comentari;
+            comentarios.push_back(NULL);
+            for (int i = comentarios.size(); i>esRespuestaDeID-1; i--){
+                comentarios[i]=comentarios[i-1];
+            }
+            comentarios[esRespuestaDeID] = comentari;
         }
 
         void Pelicula::modificarComentario(int id, string comentario) {
-           Comentario* comen = this->comentarios.find(id)->second;
+           Comentario* comen = this->comentarios[id];
            if (comen != NULL){
                comen->setComentairo(comentario);
            }
@@ -68,10 +75,10 @@
         }
 
         Util::ListaDt<int,DtComentario> Pelicula::listarDtComentarios(){
-            map<int,Comentario*>::iterator it = this->comentarios.begin();
+            vector<Comentario*>::iterator it = this->comentarios.begin();
             Util::ListaDt<int, DtComentario> dt;
             while (it != this->comentarios.end()){
-                dt.add(it->second->getDt());
+                dt.add((*it)->getDt());
                 it++;
             }
             return dt;
@@ -94,12 +101,14 @@
         };
 
         DtPelicula Pelicula::getDt(){
-            return  DtPelicula(this->titulo, this->poster, this->sinopsis, this->getPuntajePromedio());
+            return  DtPelicula(this->titulo, this->poster, this->sinopsis, this->comentarios.size());
         };
 
         Util::ListaDt<string,DtPuntaje> Pelicula::listarDtPuntajes(){
             Util::ListaDt<string,DtPuntaje> dt;
+            //cout << "as: " << puntajes.size();
             map<string, Puntaje*>::iterator it = puntajes.begin();
+//            cout << "paso";
             while (it != puntajes.end()){
                 dt.add(it->second->getDt());
                 it++;

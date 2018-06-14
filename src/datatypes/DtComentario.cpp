@@ -54,12 +54,8 @@
 
         string DtComentario::toString(){
             string retornar;
-            cout << "llego 1" << endl;
-            if (this->getEsRespuestaDeID() != -1){
-                retornar = Utils::aString(this->getID()) + ": " + this->getNickName() + ":" + this->getComentario();
-            }else{
-                retornar = " //----> " + Utils::aString(this->getID()) + ": " + this->getNickName() + ":" + this->getComentario();
-            }
-            cout << "llego 2" << endl;
+//            cout << "llego 1" << endl;
+              retornar = Utils::aString(this->getID()) + ": " + this->getNickName() + ":" + this->getComentario();
+//            cout << "llego 2" << endl;
             return retornar;
         };

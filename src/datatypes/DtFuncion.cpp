@@ -31,7 +31,7 @@ bool DtFuncion::isEqual(DtFuncion* Funcion){
 };
 
  string DtFuncion::toString(){
-     return "Datos de la funcion " + Utils::aString(this->getID()) + this->sala.toString();
+     return "Funcion ID: " + Utils::aString(this->getID()) + " " + this->sala.toString() + "\n";
  };
 
 
