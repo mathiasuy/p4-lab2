@@ -2318,7 +2318,7 @@
 1528778759 source:c:\cygwin64\home\tareas\tareatv\src\logica\sistema.cpp
 	"../../include/logica/Sistema.h"
 
-1528947137 source:c:\cygwin64\home\tareas\fing2\main.cpp
+1528864559 source:c:\cygwin64\home\tareas\fing2\main.cpp
 	"include/ISistema.h"
 	"include/Factory.h"
 	<iostream>
@@ -2326,10 +2326,9 @@
 	<stdlib.h>
 	<stdexcept>
 	<stddef.h>
-	<stdio.h>
 	<conio.h>
 
-1528927033 c:\cygwin64\home\tareas\fing2\include\isistema.h
+1528842007 c:\cygwin64\home\tareas\fing2\include\isistema.h
 	<vector>
 	<map>
 	<string>
@@ -2433,7 +2432,7 @@
 	"../datatypes/DtFecha.h"
 	"../datatypes/DtFuncion.h"
 
-1528935602 c:\cygwin64\home\tareas\fing2\include\manejadores\listadt.h
+1528841836 c:\cygwin64\home\tareas\fing2\include\manejadores\listadt.h
 	<map>
 	"../datatypes/DtTest.h"
 	"../datatypes/DtCine.h"
@@ -2476,9 +2475,8 @@
 	<iomanip>
 	"../logica/Pelicula.h"
 
-1528946867 c:\cygwin64\home\tareas\fing2\include\logica\pelicula.h
+1528854921 c:\cygwin64\home\tareas\fing2\include\logica\pelicula.h
 	<map>
-	<vector>
 	"Funcion.h"
 	"Comentario.h"
 	"Puntaje.h"
@@ -2519,42 +2517,41 @@
 	"../../include/datatypes/DtCine.h"
 	"../../include/Utils.h"
 
-1528942766 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtcomentario.cpp
+1528845677 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtcomentario.cpp
 	"../../include/datatypes/DtComentario.h"
 	"../../include/Utils.h"
 	<iostream>
 
-1528928287 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtcredito.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtcredito.cpp
 	"../../include/datatypes/DtCredito.h"
 	"../../include/Utils.h"
 
-1528928318 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtdebito.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtdebito.cpp
 	"../../include/datatypes/DtDebito.h"
 
 1528864982 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtfecha.cpp
 	"../../include/datatypes/DtFecha.h"
 
-1528928955 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtfuncion.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtfuncion.cpp
 	"../../include/datatypes/DtFuncion.h"
 	"../../include/Utils.h"
 
-1528931523 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtpelicula.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtpelicula.cpp
 	"../../include/datatypes/DtPelicula.h"
 
-1528933820 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtpuntaje.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtpuntaje.cpp
 	"../../include/datatypes/DtPuntaje.h"
 	"../../include/Utils.h"
 
-1528928630 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtreserva.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtreserva.cpp
 	"../../include/datatypes/DtReserva.h"
 	"../../include/datatypes/DtFuncion.h"
-	"../../include/Utils.h"
 
-1528928444 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtsala.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dtsala.cpp
 	"../../include/datatypes/DtSala.h"
 	"../../include/Utils.h"
 
-1528928226 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dttarjeta.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\datatypes\dttarjeta.cpp
 	"../../include/datatypes/DtTarjeta.h"
 	"../../include/Utils.h"
 
@@ -2565,14 +2562,14 @@
 	"../include/Factory.h"
 	"../include/logica/Sistema.h"
 
-1528927030 c:\cygwin64\home\tareas\fing2\include\logica\sistema.h
+1528842121 c:\cygwin64\home\tareas\fing2\include\logica\sistema.h
 	"../ISistema.h"
 
 1528857243 source:c:\cygwin64\home\tareas\fing2\src\logica\cine.cpp
 	"../../include/logica/Cine.h"
 	<iostream>
 
-1528933467 source:c:\cygwin64\home\tareas\fing2\src\logica\comentario.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\logica\comentario.cpp
 	"../../include/logica/Comentario.h"
 
 1528841837 source:c:\cygwin64\home\tareas\fing2\src\logica\credito.cpp
@@ -2587,9 +2584,8 @@
 	"../../include/logica/Pelicula.h"
 	"../../include/logica/Sala.h"
 
-1528950178 source:c:\cygwin64\home\tareas\fing2\src\logica\pelicula.cpp
+1528857189 source:c:\cygwin64\home\tareas\fing2\src\logica\pelicula.cpp
 	"../../include/logica/Pelicula.h"
-	"../../include/Utils.h"
 	"iostream"
 
 1528854172 source:c:\cygwin64\home\tareas\fing2\src\logica\puntaje.cpp
@@ -2607,7 +2603,7 @@
 	"../../include/logica/Cine.h"
 	<iostream>
 
-1528929504 source:c:\cygwin64\home\tareas\fing2\src\logica\sistema.cpp
+1528860280 source:c:\cygwin64\home\tareas\fing2\src\logica\sistema.cpp
 	"../../include/logica/Sistema.h"
 
 1528841837 source:c:\cygwin64\home\tareas\fing2\src\logica\tarjeta.cpp
@@ -2617,7 +2613,7 @@
 	"../../include/logica/Usuario.h"
 	"iostream"
 
-1528935636 source:c:\cygwin64\home\tareas\fing2\src\manejadores\listadt.cpp
+1528841837 source:c:\cygwin64\home\tareas\fing2\src\manejadores\listadt.cpp
 	"../../include/manejadores/ListaDt.h"
 
 1528841837 source:c:\cygwin64\home\tareas\fing2\src\manejadores\manejadorcines.cpp
@@ -2632,7 +2628,6 @@
 1528841837 source:c:\cygwin64\home\tareas\fing2\src\manejadores\manejadorusuarios.cpp
 	"../../include/manejadores/ManejadorUsuarios.h"
 
-1528916474 source:c:\cygwin64\home\tareas\fing2\src\utils.cpp
+1528852578 source:c:\cygwin64\home\tareas\fing2\src\utils.cpp
 	"../include/Utils.h"
-	<string>
 

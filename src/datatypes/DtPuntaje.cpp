@@ -24,7 +24,7 @@
     };
 
     string DtPuntaje::toString(){
-        return "" + this->getNickName() + ": " + Utils::aString(this->getPuntaje());
+        return "Puntaje: " + Utils::aString(this->getPuntaje());
     };
 
     DtPuntaje::~DtPuntaje() {

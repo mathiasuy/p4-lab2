@@ -31,19 +31,12 @@
         this->i++;
     };
 
-    template <typename K, typename T>
-    void Util::ListaDt<K,T>::erase(K x){
-        this->_map.erase(x);
-    };
-
      template <typename K, typename T>
      string Util::ListaDt<K,T>::toString(){
         typename map<K,T>::iterator it = _map.begin();
         string st="";
         while (it != _map.end()){
-            st += "\n////////////\n";
             st += it->second.toString();
-            st += "\n////////////";
             st += "\n";
             it++;
         }

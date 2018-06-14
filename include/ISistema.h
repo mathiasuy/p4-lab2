@@ -81,7 +81,6 @@ class ISistema {
         /***********************************************************************/
 
         virtual DtTest test()=0;
-        virtual DtTest testInCo()=0;
 };
 
 #endif // ISISTEMA_H_INCLUDED

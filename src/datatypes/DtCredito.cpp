@@ -20,7 +20,7 @@ float DtCredito:: getDescuento(){
 }
 
 string DtCredito::toString(){
-    return DtTarjeta::toString() + " (credito) \nDescuento: " + Utils::aString(this->getDescuento()) + " de la financiera: " + this->getFinanciera();
+    return DtTarjeta::toString() + "credito: " + Utils::aString(this->getDescuento()) + this->getFinanciera();
 }
 
 DtCredito::~DtCredito()

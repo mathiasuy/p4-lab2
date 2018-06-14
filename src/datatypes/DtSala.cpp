@@ -22,7 +22,7 @@ int DtSala::getCantAsientos(){
 };
 
 string DtSala::toString(){
-   return "Sala: ID: S" + Utils::aString(this->getID()) + " \nCantidad de asientos: " + Utils::aString(this->getCantAsientos()) + "\nDireccion: " + this->cine.getDireccion();
+   return "Datos de la sala " + Utils::aString(this->getID()) + ": " + Utils::aString(this->getCantAsientos()) + this->cine.toString();
 };
 
 
