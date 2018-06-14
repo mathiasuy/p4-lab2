@@ -266,6 +266,80 @@
         /***********************************************************************/
         /***********************************************************************/
 
+        DtTest Sistema::testInCo(){
+                ///********************CINES******************
+
+                            cout << "Cantidad de Cines: "<< this->cines->size() << endl;
+                            int m2[] = {20, 60, 30};
+                            vector<int> v2(m2, m2 + sizeof(m2) / sizeof (*m2) );
+                            cout << ((this->altaCine("21 de Septiembre 6658",v2))?"":"MAL");
+                            cout << "Cantidad de Cines: "<< this->cines->size() << endl;
+                            int m3[] = {60, 200};
+                            vector<int> v3(m3, m3 + sizeof(m3) / sizeof (*m3) );
+                            cout << ((this->altaCine("Miguel Barreiro 4588",v3))?"":"MAL");
+
+                            cout << "Cantidad de Cines: "<< this->cines->size() << endl;
+
+                /// ********************PELICULAS******************
+
+                            Pelicula* p = new Pelicula("tv","/home/accion/posters/vindicators.png","Tercera entrega de la saga de superheroes.");
+                            this->peliculas->add(p);
+                            p = new Pelicula("sdc","/home/accion/posters/scampeones.png","Documental");
+                            this->peliculas->add(p);
+                            p = new Pelicula("El insulto"," /home/accion/posters/elinsulto.png","Drama libanés");
+                            this->peliculas->add(p);
+                            p = new Pelicula("La noche que no se repite","/home/accion/posters/nr.png","Tremenda pelicula uruguaya");
+                            this->peliculas->add(p);
+
+                /// *******************FUNCIONES***************** */
+                            DtFecha f1(15,6,2018,14,0);
+                            DtFecha f2(15,6,2018,16,30);
+                            DtFecha f3(15,6,2018,14,0);
+                            DtFecha f4(15,6,2018,22,0);
+                            this->altaFuncion(300,f1,1,1,"tv");
+                            this->altaFuncion(300,f2,1,1,"sdc");
+                            this->altaFuncion(250,f3,1,2,"tv");
+                            this->altaFuncion(300,f4,3,1,"El insulto");
+
+                            cout << "\nSE CARGARON " << this->funciones->size() << " funciones. \n";
+
+                            cout << "\nFuncion 1: " << (*funciones)[1].toString() << " . \n";
+                            cout << "\nFuncion 2: " << (*funciones)[2].toString() << " . \n";
+                            cout << "\nFuncion 3: " << (*funciones)[3].toString() << " . \n";
+                            cout << "\nFuncion 4: " << (*funciones)[4].toString() << " . \n";
+
+                // *******************uSUARIOS*****************
+
+                            Usuario* u = new Usuario("chachoElNumberOne","/users/registered/chachoElNumberOne.png","jorgeP4");
+                            this->usuarios->add(u);
+                            u = new Usuario("carmeBeiro2010","/users/registered/carmeBeiro2010.png","carmela5688");
+                            this->usuarios->add(u);
+                            u = new Usuario("ale_ulises","/admin/registered/ale_ulises.png","p4eslomejor21");
+                            this->usuarios->add(u);
+
+                // *******************FINANCIERAS*****************
+
+
+                // *******************COMENTARIOS*****************
+
+                            this->comentarPelicula("chachoElNumberOne","tv","Es tremenda pelicula. La mejor parte es cuando aparecen Rick y Morty.");
+                            this->comentarPelicula("carmeBeiro2010","tv","Esta muy buena pero la mejor parte es cuando explota el planeta con los malo",1);
+                            this->comentarPelicula("chachoElNumberOne","tv","Callateee no cuentes el final!!",2);
+
+                /// *******************PUNTAJES*****************
+
+                            this->puntuarPelicula("chachoElNumberOne","tv",9);
+                            this->puntuarPelicula("carmeBeiro2010","La noche que no se repite",6);
+
+                /// *******************RESERVAS*****************
+
+                            this->crearReserva("chachoElNumberOne",7,1,"BROU",300);
+                            this->crearReserva("carmeBeiro2010",8,1,"OCA",15,300);
+/*
+*/
+            DtTest d;
+            return d;
+        }
 
         DtTest Sistema::test(){
 
@@ -366,8 +440,8 @@
             this->login("A","B");
             this->crearReserva("A",4,2,"BROU",5);
 
-            this->eliminarPelicula("Teens Russians");
 /*
+            this->eliminarPelicula("Teens Russians");
             return d;
 */
 			DtTest v;
@@ -375,5 +449,3 @@
 			return v;
 
         };
-
-

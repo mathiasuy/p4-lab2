@@ -79,6 +79,7 @@ class Sistema : public ISistema
 
         /*  SISTEMA  */
         DtTest test();
+        DtTest testInCo();
         static Sistema* getInstance();
         ~Sistema(){};
 };

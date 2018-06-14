@@ -3,14 +3,14 @@
 	"../../include/logica/Cine.h"
 	"../Utils.h"
 
-1528374688 h"
+1528841836 h"
 
 1527634172 c:\tareas\lab5\include\logica\cine.h
 	<string>
 	<map>
 	"Sala.h"
 
-1528374688 
+1528860173 
 
 1527620018 source:c:\tareas\lab5\src\manejadores\manejadorcines.cpp
 	"ManejadorCines.h"
@@ -32,14 +32,14 @@
 1527615030 source:c:\tareas\lab5\src\datatypes\dtcine.cpp
 	"../../include/datatypes/DtCine.h"
 
-1528374688 lude/datatypes/DtCine.h"
+1528841836 lude/datatypes/DtCine.h"
 
 1527611027 c:\tareas\lab5\include\datatypes\dtcine.h
 
 1527615033 source:c:\tareas\lab5\src\datatypes\dtcomentario.cpp
 	"../../include/datatypes/DtComentario.h"
 
-1528374688 lude/datatypes/DtComentario.h"
+1528758545 lude/datatypes/DtComentario.h"
 
 1527611038 c:\tareas\lab5\include\dtcomentario.h
 
@@ -53,14 +53,14 @@
 1527615036 source:c:\tareas\lab5\src\datatypes\dtdebito.cpp
 	"../../include/datatypes/DtDebito.h"
 
-1528374688 lude/datatypes/DtDebito.h"
+1528841837 lude/datatypes/DtDebito.h"
 
 1527611169 c:\tareas\lab5\include\datatypes\dtdebito.h
 
 1527615041 source:c:\tareas\lab5\src\datatypes\dtfecha.cpp
 	"../../include/datatypes/DtFecha.h"
 
-1528374688 lude/datatypes/DtFecha.h"
+1528864982 lude/datatypes/DtFecha.h"
 
 1527610858 c:\tareas\lab5\include\datatypes\dtfecha.h
 
@@ -74,7 +74,7 @@
 1527615050 source:c:\tareas\lab5\src\datatypes\dtfuncion.cpp
 	"../../include/datatypes/DtFuncion.h"
 
-1528374688 lude/datatypes/DtFuncion.h"
+1528841837 lude/datatypes/DtFuncion.h"
 
 1527611065 c:\tareas\lab5\include\datatypes\dtfuncion.h
 
@@ -88,7 +88,7 @@
 1527615053 source:c:\tareas\lab5\src\datatypes\dtpelicula.cpp
 	"../../include/datatypes/DtPelicula.h"
 
-1528374688 lude/datatypes/DtPelicula.h"
+1528841837 lude/datatypes/DtPelicula.h"
 
 1527610969 c:\tareas\lab5\include\datatypes\dtpelicula.h
 
@@ -116,7 +116,7 @@
 1527611096 source:c:\tareas\lab5\src\datatypes\dtusuario.cpp
 	"DtUsuario.h"
 
-1528377625 .h"
+1528841836 .h"
 
 1527611047 c:\tareas\lab5\include\dtusuario.h
 
@@ -137,18 +137,18 @@
 1527632360 source:c:\tareas\lab5\src\logica\credito.cpp
 	"../../include/logica/Credito.h"
 
-1528374688 lude/logica/Credito.h"
+1528841837 lude/logica/Credito.h"
 
 1527641963 c:\tareas\lab5\include\logica\credito.h
 	"../datatypes/DtFinanciera.h"
 	"Tarjeta.h"
 
-1528374688 "
+1528841836 "
 
 1527632370 source:c:\tareas\lab5\src\logica\debito.cpp
 	"../../include/logica/Debito.h"
 
-1528374688 lude/logica/Debito.h"
+1528841837 lude/logica/Debito.h"
 
 1527632338 c:\tareas\lab5\include\logica\debito.h
 	"Tarjeta.h"
@@ -180,7 +180,7 @@
 1527623869 source:c:\tareas\lab5\src\logica\pelicula.cpp
 	"../../include/logica/Pelicula.h"
 
-1528380737 lude/logica/Pelicula.h"
+1528763868 lude/logica/Pelicula.h"
 
 1527623854 c:\tareas\lab5\include\logica\pelicula.h
 	"Comentario.h"
@@ -190,7 +190,7 @@
 1527624427 source:c:\tareas\lab5\src\logica\puntaje.cpp
 	"../../include/logica/Puntaje.h"
 
-1528374688 lude/logica/Puntaje.h"
+1528758546 lude/logica/Puntaje.h"
 
 1527624379 c:\tareas\lab5\include\logica\puntaje.h
 	<string>
@@ -198,7 +198,7 @@
 1527639725 source:c:\tareas\lab5\src\logica\reserva.cpp
 	"../../include/logica/Reserva.h"
 
-1527628926 lude/logica/Reserva.h"
+1528857243 lude/logica/Reserva.h"
 
 1527639844 c:\tareas\lab5\include\logica\reserva.h
 	"../datatypes/DtFuncion.h"
@@ -208,7 +208,7 @@
 1527634137 source:c:\tareas\lab5\src\logica\sala.cpp
 	"../../include/logica/Sala.h"
 
-1527623338 lude/logica/Sala.h"
+1528850117 lude/logica/Sala.h"
 
 1527634080 c:\tareas\lab5\include\logica\sala.h
 	<string>
@@ -216,7 +216,7 @@
 1527632530 source:c:\tareas\lab5\src\logica\tarjeta.cpp
 	"../../include/logica/Tarjeta.h"
 
-1528374688 lude/logica/Tarjeta.h"
+1528841837 lude/logica/Tarjeta.h"
 
 1527632299 c:\tareas\lab5\include\logica\tarjeta.h
 	<string>
@@ -224,7 +224,7 @@
 1527633707 source:c:\tareas\lab5\src\logica\usuario.cpp
 	"../../include/logica/Usuario.h"
 
-1527974884 lude/logica/Usuario.h"
+1528758546 lude/logica/Usuario.h"
 
 1527633729 c:\tareas\lab5\include\logica\usuario.h
 	<map>
@@ -256,7 +256,7 @@
 1527616624 source:c:\tareas\lab5\src\manejadores\manejadorusuarios.cpp
 	"../../include/manejadores/ManejadorUsuarios.h"
 
-1528374688 lude/manejadores/ManejadorUsuarios.h"
+1528841837 lude/manejadores/ManejadorUsuarios.h"
 
 1527616547 c:\tareas\lab5\include\manejadores\manejadorusuarios.h
 
@@ -280,7 +280,7 @@
 1527623373 source:c:\tareas\lab5\src\manejadores\manejadorpeliculas.cpp
 	"../../include/manejadores/ManejadorPeliculas.h"
 
-1528374688 lude/manejadores/ManejadorPeliculas.h"
+1528841837 lude/manejadores/ManejadorPeliculas.h"
 
 1527623352 c:\tareas\lab5\include\manejadores\manejadorpeliculas.h
 	<iostream>
@@ -290,7 +290,7 @@
 	<iomanip>
 	"../logica/Pelicula.h"
 
-1528378565 /Pelicula.h"
+1528841836 /Pelicula.h"
 
 1527611096 c:\tareas\lab5\include\datatypes\dtusuario.h
 
@@ -497,7 +497,7 @@
 1527707593 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Sistema.cpp
 	"../../include/logica/Sistema.h"
 
-1528374688 lude/logica/Sistema.h"
+1528860280 lude/logica/Sistema.h"
 
 1527621732 source:/ens/devel01/p4gr33/tareas/lab5/src/logica/Tarjeta.cpp
 	"../../include/logica/Tarjeta.h"
@@ -765,7 +765,7 @@
 1527977984 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/manejadores/ManejadorCines.cpp
 	"../../include/manejadores/ManejadorCines.h"
 
-1528374688 lude/manejadores/ManejadorCines.h"
+1528841837 lude/manejadores/ManejadorCines.h"
 
 1527977964 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/manejadores/ManejadorCines.h
 	<iostream>
@@ -775,7 +775,7 @@
 	<iomanip>
 	"../logica/Cine.h"
 
-1528374688 /Cine.h"
+1528841836 /Cine.h"
 
 1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/manejadores/ManejadorPeliculas.cpp
 	"../../include/manejadores/ManejadorPeliculas.h"
@@ -795,7 +795,7 @@
 	"../logica/Usuario.h"
 	<map>
 
-1528374688 /Usuario.h"
+1528841836 /Usuario.h"
 
 1527974884 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/Utils.cpp
 	"../include/Utils.h"
@@ -810,7 +810,7 @@
 1527978114 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/manejadores/ManejadorFunciones.cpp
 	"../../include/manejadores/ManejadorFunciones.h"
 
-1528374688 lude/manejadores/ManejadorFunciones.h"
+1528841837 lude/manejadores/ManejadorFunciones.h"
 
 1527978024 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/manejadores/ManejadorFunciones.h
 	<iostream>
@@ -820,7 +820,7 @@
 	<iomanip>
 	"../logica/Funcion.h"
 
-1528374688 /Funcion.h"
+1528841836 /Funcion.h"
 
 1527981685 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/ISistema.h
 	<vector>
@@ -879,7 +879,7 @@
 1528046512 c:\cygwin64\home\tareas\lab1\include\datatypes\dtdebito.h
 	"../datatypes/DtTarjeta.h"
 
-1528377628 pes/DtTarjeta.h"
+1528841836 pes/DtTarjeta.h"
 
 1528060319 c:\cygwin64\home\tareas\lab1\include\datatypes\dtfecha.h
 	<ctime>
@@ -991,12 +991,12 @@
 1528063323 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtusuario.cpp
 	"../../include/datatypes/DtUsuario.h"
 
-1528374688 lude/datatypes/DtUsuario.h"
+1528488218 lude/datatypes/DtUsuario.h"
 
 1528066130 source:c:\cygwin64\home\tareas\lab1\src\logica\comentario.cpp
 	"../../include/logica/Comentario.h"
 
-1528374688 lude/logica/Comentario.h"
+1528841837 lude/logica/Comentario.h"
 
 1528067263 c:\cygwin64\home\tareas\lab1\include\utils.h
 	<string>
@@ -1025,7 +1025,7 @@
 1528075110 source:c:\cygwin64\home\tareas\lab1\src\utils.cpp
 	"../include/Utils.h"
 
-1528374688 e/Utils.h"
+1528852578 e/Utils.h"
 
 1528046195 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dtcine.cpp
 	"../../include/datatypes/DtCine.h"
@@ -1049,7 +1049,7 @@
 	"../include/Factory.h"
 	"../include/logica/Sistema.h"
 
-1528374688 e/logica/Sistema.h"
+1528841837 e/logica/Sistema.h"
 
 1528069533 c:\cygwin64\home\tareas\lab1\include\factory.h
 	"ISistema.h"
@@ -1058,12 +1058,12 @@
 1528073220 c:\cygwin64\home\tareas\lab1\include\logica\sistema.h
 	"../ISistema.h"
 
-1528378323 ma.h"
+1528842121 ma.h"
 
 1528071231 source:c:\cygwin64\home\tareas\lab1\src\logica\cine.cpp
 	"../../include/logica/Cine.h"
 
-1528380134 lude/logica/Cine.h"
+1528583501 lude/logica/Cine.h"
 
 1528066297 source:c:\cygwin64\home\tareas\lab1\src\logica\funcion.cpp
 	"../../include/logica/Funcion.h"
@@ -1114,7 +1114,7 @@
 1528073623 source:c:\cygwin64\home\tareas\lab1\src\datatypes\dttest.cpp
 	"../../include/datatypes/DtTest.h"
 
-1528374688 lude/datatypes/DtTest.h"
+1528841837 lude/datatypes/DtTest.h"
 
 1528374688 source:c:\cygwin64\home\lab1-master\main.cpp
 	"include/ISistema.h"
@@ -1213,7 +1213,7 @@
 	"Pelicula.h"
 	"../datatypes/DtFuncion.h"
 
-1528379715 pes/DtFuncion.h"
+1528841836 pes/DtFuncion.h"
 
 1528380437 c:\cygwin64\home\lab1-master\include\logica\pelicula.h
 	"Comentario.h"
@@ -1693,7 +1693,7 @@
 1528383359 c:\cygwin64\home\ultimo\src\manejadores\listadt.cpp
 	"../../include/manejadores/ListaDt.h"
 
-1528383359 lude/manejadores/ListaDt.h"
+1528841837 lude/manejadores/ListaDt.h"
 
 1528380807 source:c:\cygwin64\home\ultimo\src\logica\usuario.cpp
 	"../../include/logica/Usuario.h"
@@ -1731,6 +1731,8 @@
 	"manejadores/ManejadorPeliculas.h"
 	"manejadores/ManejadorUsuarios.h"
 	"manejadores/ListaDt.h"
+
+1528842007 es/ListaDt.h"
 
 1528488218 /ens/home01/m/mathias.battistella/Documents/lab1/include/datatypes/DtTest.h
 
@@ -1792,10 +1794,14 @@
 	"../Utils.h"
 	"../manejadores/ListaDt.h"
 
+1528841836 dores/ListaDt.h"
+
 1528576958 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Sala.h
 	<map>
 	"Funcion.h"
 	"../datatypes/DtSala.h"
+
+1528841836 pes/DtSala.h"
 
 1528583685 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Funcion.h
 	<string>
@@ -1810,6 +1816,8 @@
 	"Puntaje.h"
 	"../manejadores/ListaDt.h"
 	"../datatypes/DtPelicula.h"
+
+1528854921 pes/DtPelicula.h"
 
 1528577079 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Comentario.h
 	"../datatypes/DtComentario.h"
@@ -1845,6 +1853,8 @@
 	"../logica/Funcion.h"
 	"../logica/Comentario.h"
 	"../logica/Puntaje.h"
+
+1528841836 /Puntaje.h"
 
 1528488218 /ens/home01/m/mathias.battistella/Documents/lab1/include/manejadores/ManejadorFunciones.h
 	<iostream>
@@ -1887,6 +1897,8 @@
 1528503977 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtCine.cpp
 	"../../include/datatypes/DtCine.h"
 	"../../include/Utils.h"
+
+1528841837 lude/Utils.h"
 
 1528583969 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/datatypes/DtComentario.cpp
 	"../../include/datatypes/DtComentario.h"
@@ -1945,12 +1957,16 @@
 	"Tarjeta.h"
 	"../datatypes/DtCredito.h"
 
+1528841836 pes/DtCredito.h"
+
 1528583380 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Debito.cpp
 	"../../include/logica/Debito.h"
 
 1528583130 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Debito.h
 	"Tarjeta.h"
 	"../datatypes/DtDebito.h"
+
+1528841836 pes/DtDebito.h"
 
 1528583904 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Funcion.cpp
 	"../../include/logica/Funcion.h"
@@ -2004,10 +2020,14 @@
 1528575045 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/logica/Reloj.cpp
 	"../../include/logica/Reloj.h"
 
+1528841837 lude/logica/Reloj.h"
+
 1528577735 /ens/home01/m/mathias.battistella/Documents/lab1/include/logica/Reloj.h
 	<string>
 	"../Utils.h"
 	"../datatypes/DtFecha.h"
+
+1528841836 pes/DtFecha.h"
 
 1528567908 source:/ens/home01/m/mathias.battistella/Documents/lab1/src/manejadores/ListaDt.cpp
 	"../../include/manejadores/ListaDt.h"
@@ -2630,4 +2650,630 @@
 
 1528852578 source:c:\cygwin64\home\tareas\fing2\src\utils.cpp
 	"../include/Utils.h"
+
+1529002736 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/main.cpp
+	"include/ISistema.h"
+	"include/Factory.h"
+	<iostream>
+	<string>
+	<stdlib.h>
+	<stdexcept>
+	<stddef.h>
+
+1529002404 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/ISistema.h
+	<vector>
+	<map>
+	<string>
+	"datatypes/DtTest.h"
+	"logica/Reloj.h"
+	"datatypes/DtCine.h"
+	"datatypes/DtComentario.h"
+	"datatypes/DtCredito.h"
+	"datatypes/DtDebito.h"
+	"datatypes/DtFecha.h"
+	"datatypes/DtFuncion.h"
+	"datatypes/DtPelicula.h"
+	"datatypes/DtPuntaje.h"
+	"datatypes/DtReserva.h"
+	"datatypes/DtSala.h"
+	"manejadores/ManejadorCines.h"
+	"manejadores/ManejadorFunciones.h"
+	"manejadores/ManejadorPeliculas.h"
+	"manejadores/ManejadorUsuarios.h"
+	"manejadores/ListaDt.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtTest.h
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Reloj.h
+	<string>
+	"../Utils.h"
+	"../datatypes/DtFecha.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/Utils.h
+	<string>
+	<sstream>
+	<iomanip>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtFecha.h
+	<ctime>
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtCine.h
+	<vector>
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtComentario.h
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtCredito.h
+	<string>
+	"DtTarjeta.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtTarjeta.h
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtDebito.h
+	<string>
+	"../datatypes/DtTarjeta.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtFuncion.h
+	<string>
+	"DtPelicula.h"
+	"DtSala.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtPelicula.h
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtSala.h
+	<string>
+	"../../include/datatypes/DtCine.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtPuntaje.h
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/datatypes/DtReserva.h
+	"DtTarjeta.h"
+	"DtFuncion.h"
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/manejadores/ManejadorCines.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Cine.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Cine.h
+	"Sala.h"
+	"../datatypes/DtCine.h"
+	"../Utils.h"
+	"../manejadores/ListaDt.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Sala.h
+	<map>
+	"Funcion.h"
+	"../datatypes/DtSala.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Funcion.h
+	<string>
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtFecha.h"
+	"../datatypes/DtFuncion.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/manejadores/ListaDt.h
+	<map>
+	"../datatypes/DtTest.h"
+	"../datatypes/DtCine.h"
+	"../datatypes/DtComentario.h"
+	"../datatypes/DtCredito.h"
+	"../datatypes/DtDebito.h"
+	"../datatypes/DtFecha.h"
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtPelicula.h"
+	"../datatypes/DtPuntaje.h"
+	"../datatypes/DtReserva.h"
+	"../datatypes/DtSala.h"
+	"../logica/Funcion.h"
+	"../logica/Comentario.h"
+	"../logica/Puntaje.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Comentario.h
+	"../datatypes/DtComentario.h"
+	"../Utils.h"
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Puntaje.h
+	<string>
+	"../datatypes/DtPuntaje.h"
+	"../Utils.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/manejadores/ManejadorFunciones.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Funcion.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/manejadores/ManejadorPeliculas.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Pelicula.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Pelicula.h
+	<map>
+	"Funcion.h"
+	"Comentario.h"
+	"Puntaje.h"
+	"../manejadores/ListaDt.h"
+	"../datatypes/DtPelicula.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/manejadores/ManejadorUsuarios.h
+	"../logica/Usuario.h"
+	<map>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Usuario.h
+	"Reserva.h"
+	"../manejadores/ListaDt.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Reserva.h
+	"../datatypes/DtReserva.h"
+	"Credito.h"
+	"Debito.h"
+	"Funcion.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Credito.h
+	"Tarjeta.h"
+	"../datatypes/DtCredito.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Tarjeta.h
+	<string>
+	"../datatypes/DtTarjeta.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Debito.h
+	"Tarjeta.h"
+	"../datatypes/DtDebito.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/Factory.h
+	"ISistema.h"
+	"ISistema.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtCine.cpp
+	"../../include/datatypes/DtCine.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtComentario.cpp
+	"../../include/datatypes/DtComentario.h"
+	"../../include/Utils.h"
+	<iostream>
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtCredito.cpp
+	"../../include/datatypes/DtCredito.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtDebito.cpp
+	"../../include/datatypes/DtDebito.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtFecha.cpp
+	"../../include/datatypes/DtFecha.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtFuncion.cpp
+	"../../include/datatypes/DtFuncion.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtPelicula.cpp
+	"../../include/datatypes/DtPelicula.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtPuntaje.cpp
+	"../../include/datatypes/DtPuntaje.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtReserva.cpp
+	"../../include/datatypes/DtReserva.h"
+	"../../include/datatypes/DtFuncion.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtSala.cpp
+	"../../include/datatypes/DtSala.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtTarjeta.cpp
+	"../../include/datatypes/DtTarjeta.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/datatypes/DtTest.cpp
+	"../../include/datatypes/DtTest.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/Factory.cpp
+	"../include/Factory.h"
+	"../include/logica/Sistema.h"
+
+1529002417 /ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/include/logica/Sistema.h
+	"../ISistema.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Cine.cpp
+	"../../include/logica/Cine.h"
+	<iostream>
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Comentario.cpp
+	"../../include/logica/Comentario.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Credito.cpp
+	"../../include/logica/Credito.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Debito.cpp
+	"../../include/logica/Debito.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Funcion.cpp
+	"../../include/logica/Funcion.h"
+	<iostream>
+	"../../include/logica/Pelicula.h"
+	"../../include/logica/Sala.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Pelicula.cpp
+	"../../include/logica/Pelicula.h"
+	"iostream"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Puntaje.cpp
+	"../../include/logica/Puntaje.h"
+	"iostream"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Reloj.cpp
+	"../../include/logica/Reloj.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Reserva.cpp
+	"../../include/logica/Reserva.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Sala.cpp
+	"../../include/logica/Sala.h"
+	"../../include/logica/Cine.h"
+	<iostream>
+
+1529002372 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Sistema.cpp
+	"../../include/logica/Sistema.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Tarjeta.cpp
+	"../../include/logica/Tarjeta.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/logica/Usuario.cpp
+	"../../include/logica/Usuario.h"
+	"iostream"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/manejadores/ListaDt.cpp
+	"../../include/manejadores/ListaDt.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/manejadores/ManejadorCines.cpp
+	"../../include/manejadores/ManejadorCines.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/manejadores/ManejadorFunciones.cpp
+	"../../include/manejadores/ManejadorFunciones.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/manejadores/ManejadorPeliculas.cpp
+	"../../include/manejadores/ManejadorPeliculas.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/manejadores/ManejadorUsuarios.cpp
+	"../../include/manejadores/ManejadorUsuarios.h"
+
+1529002233 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/Utils.cpp
+	"../include/Utils.h"
+
+1529004503 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/main.cpp
+	"include/ISistema.h"
+	"include/Factory.h"
+	<iostream>
+	<string>
+	<stdlib.h>
+	<stdexcept>
+	<stddef.h>
+	<conio.h>
+
+1529002404 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/ISistema.h
+	<vector>
+	<map>
+	<string>
+	"datatypes/DtTest.h"
+	"logica/Reloj.h"
+	"datatypes/DtCine.h"
+	"datatypes/DtComentario.h"
+	"datatypes/DtCredito.h"
+	"datatypes/DtDebito.h"
+	"datatypes/DtFecha.h"
+	"datatypes/DtFuncion.h"
+	"datatypes/DtPelicula.h"
+	"datatypes/DtPuntaje.h"
+	"datatypes/DtReserva.h"
+	"datatypes/DtSala.h"
+	"manejadores/ManejadorCines.h"
+	"manejadores/ManejadorFunciones.h"
+	"manejadores/ManejadorPeliculas.h"
+	"manejadores/ManejadorUsuarios.h"
+	"manejadores/ListaDt.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtTest.h
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Reloj.h
+	<string>
+	"../Utils.h"
+	"../datatypes/DtFecha.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/Utils.h
+	<string>
+	<sstream>
+	<iomanip>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtFecha.h
+	<ctime>
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtCine.h
+	<vector>
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtComentario.h
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtCredito.h
+	<string>
+	"DtTarjeta.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtTarjeta.h
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtDebito.h
+	<string>
+	"../datatypes/DtTarjeta.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtFuncion.h
+	<string>
+	"DtPelicula.h"
+	"DtSala.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtPelicula.h
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtSala.h
+	<string>
+	"../../include/datatypes/DtCine.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtPuntaje.h
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/datatypes/DtReserva.h
+	"DtTarjeta.h"
+	"DtFuncion.h"
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/manejadores/ManejadorCines.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Cine.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Cine.h
+	"Sala.h"
+	"../datatypes/DtCine.h"
+	"../Utils.h"
+	"../manejadores/ListaDt.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Sala.h
+	<map>
+	"Funcion.h"
+	"../datatypes/DtSala.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Funcion.h
+	<string>
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtFecha.h"
+	"../datatypes/DtFuncion.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/manejadores/ListaDt.h
+	<map>
+	"../datatypes/DtTest.h"
+	"../datatypes/DtCine.h"
+	"../datatypes/DtComentario.h"
+	"../datatypes/DtCredito.h"
+	"../datatypes/DtDebito.h"
+	"../datatypes/DtFecha.h"
+	"../datatypes/DtFuncion.h"
+	"../datatypes/DtPelicula.h"
+	"../datatypes/DtPuntaje.h"
+	"../datatypes/DtReserva.h"
+	"../datatypes/DtSala.h"
+	"../logica/Funcion.h"
+	"../logica/Comentario.h"
+	"../logica/Puntaje.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Comentario.h
+	"../datatypes/DtComentario.h"
+	"../Utils.h"
+	<string>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Puntaje.h
+	<string>
+	"../datatypes/DtPuntaje.h"
+	"../Utils.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/manejadores/ManejadorFunciones.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Funcion.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/manejadores/ManejadorPeliculas.h
+	<iostream>
+	<string>
+	<utility>
+	<map>
+	<iomanip>
+	"../logica/Pelicula.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Pelicula.h
+	<map>
+	"Funcion.h"
+	"Comentario.h"
+	"Puntaje.h"
+	"../manejadores/ListaDt.h"
+	"../datatypes/DtPelicula.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/manejadores/ManejadorUsuarios.h
+	"../logica/Usuario.h"
+	<map>
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Usuario.h
+	"Reserva.h"
+	"../manejadores/ListaDt.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Reserva.h
+	"../datatypes/DtReserva.h"
+	"Credito.h"
+	"Debito.h"
+	"Funcion.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Credito.h
+	"Tarjeta.h"
+	"../datatypes/DtCredito.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Tarjeta.h
+	<string>
+	"../datatypes/DtTarjeta.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Debito.h
+	"Tarjeta.h"
+	"../datatypes/DtDebito.h"
+
+1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/Factory.h
+	"ISistema.h"
+	"ISistema.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtCine.cpp
+	"../../include/datatypes/DtCine.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtComentario.cpp
+	"../../include/datatypes/DtComentario.h"
+	"../../include/Utils.h"
+	<iostream>
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtCredito.cpp
+	"../../include/datatypes/DtCredito.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtDebito.cpp
+	"../../include/datatypes/DtDebito.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtFecha.cpp
+	"../../include/datatypes/DtFecha.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtFuncion.cpp
+	"../../include/datatypes/DtFuncion.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtPelicula.cpp
+	"../../include/datatypes/DtPelicula.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtPuntaje.cpp
+	"../../include/datatypes/DtPuntaje.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtReserva.cpp
+	"../../include/datatypes/DtReserva.h"
+	"../../include/datatypes/DtFuncion.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtSala.cpp
+	"../../include/datatypes/DtSala.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtTarjeta.cpp
+	"../../include/datatypes/DtTarjeta.h"
+	"../../include/Utils.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtTest.cpp
+	"../../include/datatypes/DtTest.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/Factory.cpp
+	"../include/Factory.h"
+	"../include/logica/Sistema.h"
+
+1529002417 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Sistema.h
+	"../ISistema.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Cine.cpp
+	"../../include/logica/Cine.h"
+	<iostream>
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Comentario.cpp
+	"../../include/logica/Comentario.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Credito.cpp
+	"../../include/logica/Credito.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Debito.cpp
+	"../../include/logica/Debito.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Funcion.cpp
+	"../../include/logica/Funcion.h"
+	<iostream>
+	"../../include/logica/Pelicula.h"
+	"../../include/logica/Sala.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Pelicula.cpp
+	"../../include/logica/Pelicula.h"
+	"iostream"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Puntaje.cpp
+	"../../include/logica/Puntaje.h"
+	"iostream"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Reloj.cpp
+	"../../include/logica/Reloj.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Reserva.cpp
+	"../../include/logica/Reserva.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Sala.cpp
+	"../../include/logica/Sala.h"
+	"../../include/logica/Cine.h"
+	<iostream>
+
+1529002372 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Sistema.cpp
+	"../../include/logica/Sistema.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Tarjeta.cpp
+	"../../include/logica/Tarjeta.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Usuario.cpp
+	"../../include/logica/Usuario.h"
+	"iostream"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/manejadores/ListaDt.cpp
+	"../../include/manejadores/ListaDt.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/manejadores/ManejadorCines.cpp
+	"../../include/manejadores/ManejadorCines.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/manejadores/ManejadorFunciones.cpp
+	"../../include/manejadores/ManejadorFunciones.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/manejadores/ManejadorPeliculas.cpp
+	"../../include/manejadores/ManejadorPeliculas.h"
+
+1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/manejadores/ManejadorUsuarios.cpp
+	"../../include/manejadores/ManejadorUsuarios.h"
+
+1529004463 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/Utils.cpp
+	"../include/Utils.h"
+	<string>
 
