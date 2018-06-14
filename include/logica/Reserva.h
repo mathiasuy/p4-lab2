@@ -16,7 +16,7 @@ class Reserva
         int cantAsientos;
         Funcion* funcion;
         Tarjeta* tarjeta;
-        int idGlobal;
+        static int idGlobal;
 
     public:
         int getID();

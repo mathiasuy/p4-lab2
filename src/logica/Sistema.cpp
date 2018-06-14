@@ -154,7 +154,7 @@
         bool Sistema::crearReserva(string nickName, int cantAsientos,int idFuncion,string banco, float montoTotal){
             Funcion* funcion = this->funciones->find(idFuncion);
             if (funcion->getAsientosLibres() > cantAsientos){
-                //cout << "Se va a crear una reserva " << endl;
+                cout << "Se va a crear una reserva " << endl;
                 Usuario* u = this->usuarios->find(nickName);
                 u->agregarReservaDebito(cantAsientos, funcion, banco, montoTotal);
                 return true;
@@ -255,7 +255,11 @@
 
         /* LISTAR RESERVAS X USUARIO */
         ListaDt<int,DtReserva> Sistema::listarReservas(string nickName){
-            return this->usuarios->find(nickName)->listarDtReservas();
+            Usuario* u = this->usuarios->find(nickName);
+            cout << "Usuario: " << u->getNickName() <<endl;
+            cout << "Usuario: " << u->getNickName() <<endl;
+            ListaDt<int,DtReserva> r = u->listarDtReservas();
+            return r;
         };
 
 
@@ -363,18 +367,18 @@
 
 
             cout << "Cantidad de Cines: "<< this->cines->size() << endl;
-            int m1[] = {3, 2, 1, 0, 4, 6, 7, 8};
+            int m1[] = {30, 20, 10, 00, 40, 60, 70, 80};
             vector<int> v1(m1, m1 + sizeof(m1) / sizeof (*m1) );
 
             cout << ((this->altaCine("18 de Julio 2042",v1))?"":"MAL") << endl;
 
             cout << "Cantidad de Cines: "<< this->cines->size() << endl;
-            int m2[] = {3, 2, 1, 0, 4, 6, 7, 8};
+            int m2[] = {10, 20, 10, 05, 40, 60, 70, 80};
             vector<int> v2(m2, m2 + sizeof(m2) / sizeof (*m2) );
             cout << ((this->altaCine("Av. Garzon 555",v2))?"":"MAL");
 
             cout << "Cantidad de Cines: "<< this->cines->size() << endl;
-            int m3[] = {3, 2, 1, 0, 4, 6, 7, 8};
+            int m3[] = {30, 20, 10, 00, 40, 60, 70, 80};
             vector<int> v3(m3, m3 + sizeof(m3) / sizeof (*m3) );
             cout << ((this->altaCine("Julio Herrera y Reissing 565",v3))?"":"MAL");
 
@@ -414,8 +418,7 @@
             cout << "\nFuncion 3: " << (*funciones)[3].toString() << " . \n";
             cout << "\nFuncion 4: " << (*funciones)[4].toString() << " . \n";
 
-            this->crearReserva("A",3,1,"BROU", 5);
-
+            this->crearReserva("A",2,1,"BROU", 5);
             this->crearReserva("B",5,2,"Abitab",5,10);
 
             this->comentarPelicula("A","La Matanza","Sin palabras.");
@@ -437,11 +440,12 @@
             this->comentarPelicula("C","La matanza","Si.",1);
 
             this->login("A","A");
-            this->login("A","B");
+            //this->login("A","B");
             this->crearReserva("A",4,2,"BROU",5);
 
+
+            //this->eliminarPelicula("Teens Russians");
 /*
-            this->eliminarPelicula("Teens Russians");
             return d;
 */
 			DtTest v;

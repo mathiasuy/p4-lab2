@@ -2963,7 +2963,7 @@
 1529002233 source:/ens/home01/n/nicolas.zorrozua/Downloads/lab1-bb9eff8fd05b8fa504d0202444b48e419cd3e965/src/Utils.cpp
 	"../include/Utils.h"
 
-1529004503 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/main.cpp
+1529009366 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/main.cpp
 	"include/ISistema.h"
 	"include/Factory.h"
 	<iostream>
@@ -3136,7 +3136,7 @@
 	"Reserva.h"
 	"../manejadores/ListaDt.h"
 
-1528865308 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Reserva.h
+1529007948 /ens/home01/n/nicolas.zorrozua/Downloads/ulitma/include/logica/Reserva.h
 	"../datatypes/DtReserva.h"
 	"Credito.h"
 	"Debito.h"
@@ -3162,7 +3162,7 @@
 	"../../include/datatypes/DtCine.h"
 	"../../include/Utils.h"
 
-1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtComentario.cpp
+1529009892 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtComentario.cpp
 	"../../include/datatypes/DtComentario.h"
 	"../../include/Utils.h"
 	<iostream>
@@ -3177,7 +3177,7 @@
 1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtFecha.cpp
 	"../../include/datatypes/DtFecha.h"
 
-1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtFuncion.cpp
+1529008305 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtFuncion.cpp
 	"../../include/datatypes/DtFuncion.h"
 	"../../include/Utils.h"
 
@@ -3188,11 +3188,12 @@
 	"../../include/datatypes/DtPuntaje.h"
 	"../../include/Utils.h"
 
-1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtReserva.cpp
+1529008295 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtReserva.cpp
 	"../../include/datatypes/DtReserva.h"
 	"../../include/datatypes/DtFuncion.h"
+	"../../include/Utils.h"
 
-1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtSala.cpp
+1529008320 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/datatypes/DtSala.cpp
 	"../../include/datatypes/DtSala.h"
 	"../../include/Utils.h"
 
@@ -3223,7 +3224,7 @@
 1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Debito.cpp
 	"../../include/logica/Debito.h"
 
-1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Funcion.cpp
+1529005647 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Funcion.cpp
 	"../../include/logica/Funcion.h"
 	<iostream>
 	"../../include/logica/Pelicula.h"
@@ -3240,21 +3241,22 @@
 1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Reloj.cpp
 	"../../include/logica/Reloj.h"
 
-1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Reserva.cpp
+1529008346 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Reserva.cpp
 	"../../include/logica/Reserva.h"
+	"../../include/Utils.h"
 
 1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Sala.cpp
 	"../../include/logica/Sala.h"
 	"../../include/logica/Cine.h"
 	<iostream>
 
-1529002372 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Sistema.cpp
+1529008965 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Sistema.cpp
 	"../../include/logica/Sistema.h"
 
 1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Tarjeta.cpp
 	"../../include/logica/Tarjeta.h"
 
-1528865308 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Usuario.cpp
+1529007436 source:/ens/home01/n/nicolas.zorrozua/Downloads/ulitma/src/logica/Usuario.cpp
 	"../../include/logica/Usuario.h"
 	"iostream"
 

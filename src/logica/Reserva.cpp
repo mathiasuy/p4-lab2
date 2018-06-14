@@ -1,5 +1,7 @@
 #include "../../include/logica/Reserva.h"
+#include "../../include/Utils.h"
 
+int Reserva::idGlobal = 0;
 
 Reserva::~Reserva()
 {
@@ -28,7 +30,7 @@ void Reserva::setFuncion(Funcion* funcion){
 };
 
 std::string Reserva::toString(){
-    return "Reserva num "+ this->getID();
+    return "Reserva num "+ Utils::aString(this->getID());
 };
 
 //Reserva::~Reserva(){}

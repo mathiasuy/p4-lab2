@@ -1,5 +1,6 @@
 #include "../../include/datatypes/DtReserva.h"
 #include "../../include/datatypes/DtFuncion.h"
+#include "../../include/Utils.h"
 
 DtReserva::DtReserva(){
     this->id = 0;
@@ -28,7 +29,7 @@ bool DtReserva::isEqual(DtReserva* t){
 };
 
 string DtReserva::toString(){
-    return "Datos de la reserva " + this->getID() + this->getCantAsientos() + this->funcion.getID() + this->tarjeta.toString();
+    return "Datos de la reserva " + Utils::aString(this->getID()) +" " +  Utils::aString(this->getCantAsientos()) + " " + this->funcion.toString() + " " + this->tarjeta.toString();
 }
 DtReserva::~DtReserva()
 {

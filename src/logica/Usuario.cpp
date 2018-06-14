@@ -91,7 +91,8 @@ ListaDt<int,DtReserva> Usuario::listarDtReservas(){
     ListaDt<int,DtReserva> dt;
     map<int, Reserva*>::iterator it = reservas.begin();
     while (it != reservas.end()){
-        dt.add(it->second->getDt());
+        Reserva* reserva = it->second;
+        dt.add(reserva->getDt());
         it++;
     }
     return dt;
