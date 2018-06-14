@@ -1,7 +1,6 @@
 #ifndef PELICULA_H
 #define PELICULA_H
 #include <map>
-#include <vector>
 #include "Funcion.h"
 #include "Comentario.h"
 #include "Puntaje.h"
@@ -15,7 +14,7 @@ class Pelicula
     private:
         map<int, Funcion*> funciones;
         map<string,Puntaje*> puntajes;
-        vector<Comentario*> comentarios;
+        map<int,Comentario*> comentarios;
         string titulo;
         string poster;
         string sinopsis;

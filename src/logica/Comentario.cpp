@@ -34,7 +34,7 @@ int Comentario::getID(){
 };
 
 string Comentario::toString(){
-    return this->getDt().toString();
+    return "Comentario: " + this->getComentario() + " id: " + Utils::aString(this->getID());
 };
 
 
@@ -46,7 +46,6 @@ Comentario::Comentario(string nickName, string comentario){
     this->id = ++idGlobal;
     this->nickName = nickName;
     this->setComentairo(comentario);
-    this->esRespuestaDeID = -1;
 };
 
 Comentario::Comentario(string nickName, string comentario, int esRespuestaDeID){

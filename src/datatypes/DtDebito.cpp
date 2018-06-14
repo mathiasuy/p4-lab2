@@ -14,7 +14,7 @@ string DtDebito::getBanco(){
 };
 
 string DtDebito::toString(){
-    return DtTarjeta::toString() +  " (debito) del banco: " + this->getBanco();
+    return DtTarjeta::toString() + "Debito:" + this->getBanco();
 }
 
 DtDebito::~DtDebito()
