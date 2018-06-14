@@ -9,7 +9,7 @@
         float Sistema::getDescuento(string financiera){
             map<string,float> financieras;
             financieras["F1"] = 1;
-            financieras["F2"] = 2;
+            financieras["OCA"] = 15;
             financieras["SD"] = 0;
             financieras["F4"] = 4;
             return financieras[financiera];

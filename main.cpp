@@ -397,7 +397,7 @@ int main()
                                     cout << "Quiere confirmar la reserva?" <<endl;
                                     cout<< "1- Si."<<endl;
                                     cout <<"2- No."<<endl;
-
+                                    cin >> confres;
                                     if(confres == 1)
                                     {
                                         bool res;//DEVUELVE SI SE REALIZO LA RESERVA O NO
@@ -412,7 +412,12 @@ int main()
 
                                         else   //ACA VA EL DESCUENTO, METI UNO INVENTADO PARA QUE COMPILE
                                         {
-                                            float descuento = interface->getDescuento(nomfin);
+
+                                            float descuento = 0;
+                                            if(nomfin == "OCA") {
+                                                descuento = interface->getDescuento(nomfin);
+                                            }
+
                                             res=  interface->crearReserva(nickName, cantasien, func, nomfin,descuento );
 
                                         }//else
