@@ -548,11 +548,11 @@ int main()
         /**********          Comentar Pelicula   *************/
         /*****************************************************************/
         /*****************************************************************/
-
+/*
         case 6 :
             if (tipoUsuario==1 && horaFijada)   //CASO DE USO COMENTAR PELICULA
             {
-                cout << "/************ COMENTAR PELICULA ************/ \n" <<endl;
+                cout << "/************ COMENTAR PELICULA  \n" <<endl;
                 //CASO DE USO COMENTAR PELICULA
                 string nomPelicula, come; //DECLARACION DE VARIABLES
                 int respuesta, esRespuestaDeID;
@@ -590,12 +590,10 @@ int main()
                 while (respuesta != 3);
 
 
-
-
             };
 
             break;
-
+*/
         /*****************************************************************/
         /*****************************************************************/
         /**********          Comentar Pelicula   *************/
