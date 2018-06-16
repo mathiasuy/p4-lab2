@@ -14,15 +14,16 @@ class DtFuncion
         float precioEntrada;
         DtSala sala;
         DtPelicula pelicula;
-        
+
     public:
         DtFuncion();
         DtFuncion(int id, int asientosReservados, float precioEntrada, DtSala sala, DtPelicula pelicula);
-        
+
         int getID();
         int getAsientosReservados();
         float getPrecio();
-        
+        DtPelicula getPelicula();
+
         string toString();
         bool isEqual(DtFuncion *funcion);
 

@@ -8,6 +8,7 @@
 
         float Sistema::getDescuento(string financiera){
             map<string,float> financieras;
+            cout << "entra a getDescuento" << endl;
             financieras["F1"] = 1;
             financieras["OCA"] = 15;
             financieras["SD"] = 0;
@@ -257,15 +258,11 @@
         ListaDt<int,DtReserva> Sistema::listarReservas(string nickName){
             Usuario* u = this->usuarios->find(nickName);
             cout << "Usuario: " << u->getNickName() <<endl;
-            cout << "Usuario: " << u->getNickName() <<endl;
             ListaDt<int,DtReserva> r = u->listarDtReservas();
             return r;
         };
 
 
-        /***********************************************************************/
-        /***********************************************************************/
-        /***********************************************************************/
         /***********************************************************************/
         /***********************************************************************/
         /***********************************************************************/

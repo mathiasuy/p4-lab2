@@ -143,8 +143,8 @@ void imprimirComentarios(ListaDt<int,DtComentario> lc, int indice, int esRespues
 int main()
 {
     int opcion;
-    nickName = "A";
-    tipoUsuario = 0;
+    nickName = "chachoElNumberOne";
+    tipoUsuario = 1;
     horaFijada = true;
 
     do
@@ -162,26 +162,23 @@ int main()
         case 1 :
             if (tipoUsuario>=0 && horaFijada)
             {
-                int exit = 1;
-                while (exit==1) {
                     clr();
                     cout << "/************ VER INFORMACION DE LA PELICULA... ************/ \n" <<endl;
-    //VER INFO PELICULA
                     string titulo;
                     ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
                     cout << "Cantidad de peliculas encontradas: " << peliculas.size() << endl;
                     cout << "------------- " << endl;
                     cout << peliculas.toString();
                     cout << "------------- " << endl;
-                    cout << "Escriba el titulo de la pelicula que desea ver (0 para cancelar):" <<endl;
+                    cout << "Escriba el titulo de la pelicula que desea ver (vacio para cancelar):" <<endl;
                     std::cin.ignore();
                     getline (cin, titulo);
-                    if ((titulo != "") || (titulo != "0"))// Si el usuario quiere cancelar, que aprete Enter (string vacio)
-                    {
+
+   //                 cin >> titulo;
+                    if ((titulo != "")){
                         /*  EN CASO mues-- */
                         DtPelicula p = peliculas[titulo];
 
-                        if ((p.getTitulo() != "")){
                             cout << "------------- " << endl;
                             cout << "Titulo: " << p.getTitulo() << endl ;
                             cout << "Poster: " << p.getPoster() << endl;
@@ -214,30 +211,8 @@ int main()
                                     readKey();
                                 }
 
-
-                            }else{
-                            exit = 0 ; }
-                        }else{
-                            if (titulo == "0"){
-                                exit=0;
-                                clr();
-                                pantallaInicial();
-                            }else{
-                                cout << "La pelicula ingresada no existe";
-                                //std::cin.ignore();
-
-
                             }
-                        }
-
-                    }else{
-                        exit = 0 ;
-                        clr();
-                        pantallaInicial();
-
-                    }
-                }
-
+                            }
             };
             break;
         /*****************************************************************/
@@ -245,14 +220,14 @@ int main()
         /*****************************************************************/
         /*  */
         case 2 :
+
             if (tipoUsuario>=0 && horaFijada)
             {
+                int exit = 1;
                 cout << "/************ VER COMENTARIOS Y PUNTAJE DE LA PELICULA... ************/ \n" <<endl;
-// VER COMENTARIOS Y PUNTAJE PELICULA
                 string titulo;
                 ListaDt<string,DtPelicula> listaDePeliculas = interface->listarPeliculas();
 
-                //REVISEN DESDE ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                 listaDePeliculas.start();
                 while(listaDePeliculas.end())
                 {
@@ -261,27 +236,23 @@ int main()
                     listaDePeliculas.next();
                 }
 
-                cout << "Escriba el titulo de la pelicula que desea ver (deja en blanco para cancelar):" <<endl;
+                cout << "Escriba el titulo de la pelicula que desea ver (0 para cancelar):" <<endl;
                 std::cin.ignore();
                 std::getline(cin,titulo);
-                //ACA NO DICE QUE EL USUARIO PUEDE CANCELAR
-                if (titulo != "")
+
+                 if ((titulo != ""))
                 {
                     DtPelicula p = listaDePeliculas[titulo];
 
                     //VOY A VER CUANTOS USUARIOS PUNTUARON ESA PELICULA PARA ESO NECESITO RECORRER
                     //LA COLECCION DE PUNTAJES DE ESA PELICULA
-                    int a = interface->listarPuntajes(titulo).size(); //supuestamente aca devuelvo el total de usuarios que puntuaron la pelicula
+                    int a = interface->listarPuntajes(titulo).size();
 
-                    //AHORA NECESITO LOS COMENTARIOS DE LA PELICULA
-
-                    cout << p.getTitulo() <<endl;
+                      //AHORA NECESITO LOS COMENTARIOS DE LA PELICULA
                     cout << "Puntaje promedio: " << p.getPuntajePromedio() << " (" << a << " usuarios)"<<endl;
                     //ahora los comentarios
                     cout << "Comentarios: " <<endl;
                     ListaDt<int,DtComentario> lc = interface->listarComentarios(titulo);
-
-                    //vector <DtComentario> aImprimir(NULL,lc.size());
 
                     vector<bool> impresos(false,lc.size());
                     for (int i = 1; i <= lc.size(); i++){
@@ -299,34 +270,17 @@ int main()
                                 }
                             }
                     }
-
-
-
-                    /*
-                    int k = 1;
-                    for (lc.start(); lc.end(); lc.next())
-                    {
-                        imprimirComentarios(lc,1,lc[k].getEsRespuestaDeID());
-                        k++;
-                    }
-                    */
-
                     //Y AHORA FALTAN LOS PUNTAJES
                     cout << "Puntajes: " <<endl;
                     cout << interface->listarPuntajes(titulo).toString();
                     readKey();
-
-                    //NO SE SI TERMINA ACA O QUE
-
-                }
+                    }
             };
             break;
 
         /*****************************************************************/
         /**********          Crear Reserva   *************/
         /*****************************************************************/
-
-
 
         case 3 :
             if (tipoUsuario==1 && horaFijada)
@@ -335,8 +289,7 @@ int main()
 //CREAR RESERVA
 
                 int b = 1;
-                while(b == 1)
-                {
+                while(b == 1){
                     //VARIABLES
                     string titulo;
                     int k = 0;
@@ -350,98 +303,73 @@ int main()
 
                     ListaDt<string, DtPelicula> peliculas = interface->listarPeliculas();
                     cout << peliculas.toString();
-                    cout << "Escriba el titulo de la pelicula que desea ver:" <<endl;
+                    cout << "Escriba el titulo de la pelicula que desea ver:  (0 para cancelar)"  <<endl;
                     std::cin.ignore();
                     getline (cin, titulo);
-
-                    if (titulo != "")// Si el usuario quiere cancelar, que aprete Enter (string vacio)
-                    {
+                    // Si el usuario quiere cancelar, que aprete Enter (string vacio)
+                    if (titulo != "0"){
                         DtPelicula p = peliculas[titulo];
-                        cout << p.getPoster();
-                        cout << p.getSinopsis();
+                        cout << "Poster: " << p.getPoster() << endl;
+                        cout << "Sinopsis: " << p.getSinopsis() << endl;
                         cout << "¿Ver lista de cines con esa pelicula?"<<endl;
                         cout << "1- Si." <<endl;
                         cout << "2- No." <<endl;
-
                         cin >> k;
-                        if(k==1)
-                        {
-                            cout << interface->listarCines(titulo).toString();
+                        if(k==1){
                             cout << "Seleccione un cine:"<<endl;
+                            cout << interface->listarCines(titulo).toString();
                             cout << "0- Salir"<<endl;
-
                             cin >> e;
-                            if (e != 0)
-                            {
+                            if (e != 0){
                                 DtFecha f = interface->getFechaActual();
-                                cout <<  interface->listarFunciones(e,titulo,f).toString();
                                 cout << "Seleccione la funcion que desea reservar: "<<endl;
+                                cout <<  interface->listarFunciones(e,titulo,f).toString();
                                 cout << "0- Salir."<<endl;
                                 cin >> func;
-                                if(func!=0)
-                                {
-
+                                if(func!=0){
                                     //AHORA CUANTOS ASIENTOS QUIERE
                                     cout << "Seleccione la cantidad de asientos que desea reservar: " <<endl;
                                     //ACA HAY QUE VER CON EXCEPCIONES QUE PONGA ASIENTOS MAYOR A 0, LUEGO LO VEO BIEN
-
                                     cin >>cantasien;
                                     cout << "Seleccione metodo de pago: " <<endl;
                                     cout << "1- Credito." <<endl;
                                     cout << "2- Debito." <<endl;
-
                                     cin >> tipotar;
-
-                                    if(tipotar == 2)
-                                    {
+                                    if(tipotar == 2){
                                         cout << "Ingrese el nombre del banco que la emite: "<<endl;
-
                                         cin >> nombanc;
-                                    }
-                                    else
-                                    {
-                                        while(cantasien > 2)
-                                        {
+                                    }else{
+                                        while(cantasien > 2){
                                             cout << "No puede reservar mas de 2 asientos, por favor introduzca de nuevo la cantidad de asientos:"<<endl;
                                             cin >>cantasien;
                                         }
-                                        //ACA YA PIDIO ASIENTOS BIEN
                                         cout << "Ingrese el nombre de la financiera que la emite: "<<endl;
-
                                         cin >> nomfin;
-                                    }//else
-
-
-                                    //AHORA SE VA A CREAR LA RESERVA
-                                    cout << "Quiere confirmar la reserva?" <<endl;
-                                    cout<< "1- Si."<<endl;
-                                    cout <<"2- No."<<endl;
-                                    cin >> confres;
-                                    if(confres == 1)
-                                    {
-                                        bool res;//DEVUELVE SI SE REALIZO LA RESERVA O NO
-
-                                        if(tipotar == 2) //DEBITO
-                                        {
-                                            ListaDt<int,DtFuncion>  a = interface->listarFunciones(e,titulo,f);
-                                            //a[e].getPrecio();
-                                            res=  interface->crearReserva(nickName, cantasien, func, nombanc, a[e].getPrecio());
-
-                                        }//tipotar==2
-
-                                        else   //ACA VA EL DESCUENTO, METI UNO INVENTADO PARA QUE COMPILE
-                                        {
-
-                                            float descuento = 0;
+                                    }
+                                    float descuento = 1;
                                             if(nomfin == "OCA") {
                                                 descuento = interface->getDescuento(nomfin);
                                             }
 
-                                            res=  interface->crearReserva(nickName, cantasien, func, nomfin,descuento );
-
+                                    int monto;
+                                   //COMO OBTENGO EL PRECIO DE LA ENTRADA???
+                                    monto =  cantasien*555;
+                                    cout << "Precio final: " <<  monto  << endl;
+                                    cout << "Desea confirmar la reserva?" <<endl;
+                                    cout<< "1- Si."<<endl;
+                                    cout <<"2- No."<<endl;
+                                    cin >> confres;
+                                    if(confres == 1){
+                                        bool res;//DEVUELVE SI SE REALIZO LA RESERVA O NO
+                                        //DEBITO
+                                        if(tipotar == 2){
+                                            ListaDt<int,DtFuncion>  a = interface->listarFunciones(e,titulo,f);
+                                            //a[e].getPrecio();
+                                            res=  interface->crearReserva(nickName, cantasien, func, nombanc, monto);
+                                        }else {/* tipotar==2 */
+                                            res=  interface->crearReserva(nickName, cantasien, func, nomfin,descuento,monto);
                                         }//else
-                                        if(res)
-                                        {
+                                        if(res){
                                             cout << "Su reserva se realizo con exito." <<endl;
                                             cout << "¿Quiere realizar otra reserva para otra pelicula?"<<endl;
                                             cout << "1- Si."<<endl;
@@ -451,39 +379,23 @@ int main()
                                             if(b == 2){
                                              ciclo = 0;
                                              }*/
-                                        }//res
-                                        else
-                                        {
+                                        }else{
                                             cout << "No hay asientos disponibles para esta funcion."<<endl;
                                             cout << "¿Quiere realizar otra reserva para otra pelicula?"<<endl;
                                             cout << "1- Si."<<endl;
                                             cout << "2- No."<<endl;
                                         }
-                                        int b;
                                         cin >>b;
                                     }//confres
-
-
                                 }//if func!=0
-
-
                             }//if e!=0
-
-
                         }//if k==1
-
-
-                    }//if titulo
-
-                    else
-                        b = 2; //el usuario quiere salir
+                    //if titulo
+                    }else
+                       b = 2; //el usuario quiere salir
                 }//while
 
             };//case
-
-
-
-
 
             break;
         /*****************************************************************/
@@ -496,7 +408,7 @@ int main()
                 cout << "/************ LISTAR RESERVAS ************/ \n" <<endl;
                 cout << "Se listan las reservas para el usuario " << nickName << endl;
                 ListaDt<int,DtReserva> l = interface->listarReservas(nickName);
-                cout << "Se encontraron " << l.size() << endl;
+                cout << "Se encontraron " << l.size() << "reservas."  << endl;
                 cout << "---------------" << endl;
                 cout << l.toString() << endl;
                 cout << "---------------" << endl;
@@ -806,7 +718,6 @@ int main()
             };
             break;
         /*****************************************************************/
-        /*****************************************************************/
         /**********          SALIR   *************/
         /*****************************************************************/
         case 0 :
@@ -816,9 +727,7 @@ int main()
             };
             break;
         /*****************************************************************/
-        /*****************************************************************/
         /**********          TEST   *************/
-        /*****************************************************************/
         /*****************************************************************/
         case 11 :
             if (tipoUsuario>=0 && !datosCargados)
@@ -828,11 +737,8 @@ int main()
                 cout << "Datos cargados correctamente." << endl;
             };
             break;
-
-        /*****************************************************************/
         /*****************************************************************/
         /**********          TEST   *************/
-        /*****************************************************************/
         /*****************************************************************/
         case 12 :
             if (tipoUsuario>=0 && !datosCargadosInCo)
@@ -844,9 +750,7 @@ int main()
             break;
 
         /*****************************************************************/
-        /*****************************************************************/
         /**********          CAMBIAR HORA   *************/
-        /*****************************************************************/
         /*****************************************************************/
         case 13 :
             if (tipoUsuario==2)
@@ -858,9 +762,7 @@ int main()
             };
             break;
         /*****************************************************************/
-        /*****************************************************************/
         /**********          LISTAR CINES   *************/
-        /*****************************************************************/
         /*****************************************************************/
         case 20 :
         {
@@ -868,12 +770,9 @@ int main()
             cout << interface->listarCines().toString();
         }
 
-
         break;
         /*****************************************************************/
-        /*****************************************************************/
         /**********          LISTAR PELICULAS   *************/
-        /*****************************************************************/
         /*****************************************************************/
         case 21 :
         {
@@ -882,9 +781,7 @@ int main()
         }
         break;
         /*****************************************************************/
-        /*****************************************************************/
         /**********         LISTAR FUNCIONES   *************/
-        /*****************************************************************/
         /*****************************************************************/
         case 22 :
         {
@@ -898,10 +795,8 @@ int main()
 
         break;
         /*****************************************************************/
-        /*****************************************************************/
         /**********         SET USER   *************/
-        /*****************************************************************/
-        /*****************************************************************/
+          /*****************************************************************/
         case 30 :
         {
             cout << "/************ SET USER ************/ \n" <<endl;

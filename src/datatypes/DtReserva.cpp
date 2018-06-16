@@ -29,7 +29,13 @@ bool DtReserva::isEqual(DtReserva* t){
 };
 
 string DtReserva::toString(){
-    return "Datos de la reserva " + Utils::aString(this->getID()) +" " +  Utils::aString(this->getCantAsientos()) + " " + this->funcion.toString() + " " + this->tarjeta.toString();
+    return "Reserva: " + Utils::aString(this->getID()) +" | "
+    + "Pelicula: " + this->funcion.getPelicula().getTitulo() +" | "
+    + "Fecha de funcion " + " | "
+    + "Asientos: " + Utils::aString(this->getCantAsientos()) +" | "
+    + this->tarjeta.toString() +" | " /*FALTA CREDITO O DEBITO */
+    + "Cine: " ;// COMO ACCEDO A CINE DESDE DTFUNCION??
+
 }
 DtReserva::~DtReserva()
 {

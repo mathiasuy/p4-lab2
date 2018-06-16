@@ -29,6 +29,7 @@
         }
 
         string DtCine::toString(){
-            return  Utils::aString(this->getID()) + ": " + this->getDireccion();
+            return  "Cine: " + Utils::aString(this->getID()) + " | "
+            + "Direcccion: " + this->getDireccion();
         };
 

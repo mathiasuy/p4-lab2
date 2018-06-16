@@ -22,8 +22,13 @@ int DtFuncion::getID(){
 int DtFuncion::getAsientosReservados(){
     return this->asientosReservados;
 };
+
 float DtFuncion::getPrecio(){
     return this->precioEntrada;
+};
+
+DtPelicula DtFuncion::getPelicula(){
+    return this->pelicula;
 };
 
 bool DtFuncion::isEqual(DtFuncion* Funcion){
@@ -31,7 +36,8 @@ bool DtFuncion::isEqual(DtFuncion* Funcion){
 };
 
  string DtFuncion::toString(){
-     return "Datos de la funcion " + Utils::aString(this->getID()) +" " +  this->sala.toString();
+     return "Funcion: " + Utils::aString(this->getID()) + " | "
+     + this->sala.toString() + " | ";
  };
 
 

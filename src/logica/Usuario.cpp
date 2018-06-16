@@ -63,8 +63,11 @@ void Usuario::eliminarReservaConFuncion(int idFuncion){
 };
 
 bool Usuario::agregarReservaCredito(int cantAsientos, Funcion* funcion,string financiera, float descuento, float montoTotal){
+    cout << "llego5" << endl;
     Reserva* reserva = new Reserva(cantAsientos,funcion,financiera,descuento,montoTotal);
+        cout << "llego6" << endl;
     this->reservas[reserva->getID()] = reserva;
+        cout << "llego7" << endl;
     return true;
 };
 
