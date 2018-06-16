@@ -560,28 +560,28 @@ int main()
 
                 ListaDt<string, DtPelicula> peliculas = interface->listarPeliculas();
                 cout << peliculas.toString();
-                cout << "Ingrese el nombre de la película que desea comentar: ";
+                cout << "Ingrese el nombre de la película que desea comentar: " <<endl;
                 std::cin.ignore();
                 std::getline(cin,nomPelicula);
                 do
                 {
                     ListaDt<int,DtComentario> comentarios = interface->listarComentarios(nomPelicula);
                     cout << comentarios.toString();
-                    cout << "Que acción desea realizar?   1- Comentar       2- Responder comentario     3- Salir";
+                    cout << "Que acción desea realizar?   1- Comentar       2- Responder comentario     3- Salir" <<endl;
                     cin >>respuesta;
                     if  (respuesta == 1)
                     {
-                        cout << "Ingrese su comentario:";
+                        cout << "Ingrese su comentario:" <<endl;
                         std::cin.ignore();
                         std::getline(cin,come);
                         hecho = interface->comentarPelicula(nickName, nomPelicula, come);
-                        cout << "Comentario ingresado correctamente !";
+                        cout << "Comentario ingresado correctamente !" <<endl;
                     }
                     else if (respuesta == 2)
                     {
-                        cout << "Ingrese el ID de el comentario que desea responder:";
+                        cout << "Ingrese el ID de el comentario que desea responder:" <<endl;
                         cin >> esRespuestaDeID;
-                        cout << "Ingrese su comentario: ";
+                        cout << "Ingrese su comentario: " <<endl;
                         std::cin.ignore();
                         std::getline(cin,come);
                         hecho = interface->comentarPelicula(nickName, nomPelicula, come, esRespuestaDeID);
