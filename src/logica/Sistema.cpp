@@ -286,9 +286,9 @@
 
                 /// ********************PELICULAS******************
 
-                            Pelicula* p = new Pelicula("tv","/home/accion/posters/vindicators.png","Tercera entrega de la saga de superheroes.");
+                            Pelicula* p = new Pelicula("The Vindicators 3","/home/accion/posters/vindicators.png","Tercera entrega de la saga de superheroes.");
                             this->peliculas->add(p);
-                            p = new Pelicula("sdc","/home/accion/posters/scampeones.png","Documental");
+                            p = new Pelicula("Sangre de campeones","/home/accion/posters/scampeones.png","Documental");
                             this->peliculas->add(p);
                             p = new Pelicula("El insulto"," /home/accion/posters/elinsulto.png","Drama libanés");
                             this->peliculas->add(p);
@@ -300,8 +300,8 @@
                             DtFecha f2(15,6,2018,16,30);
                             DtFecha f3(15,6,2018,14,0);
                             DtFecha f4(15,6,2018,22,0);
-                            this->altaFuncion(300,f1,1,1,"tv");
-                            this->altaFuncion(300,f2,1,1,"sdc");
+                            this->altaFuncion(300,f1,1,1,"The Vindicators 3");
+                            this->altaFuncion(300,f2,1,1,"Sangre de campeones");
                             this->altaFuncion(250,f3,1,2,"tv");
                             this->altaFuncion(300,f4,3,1,"El insulto");
 
@@ -326,13 +326,13 @@
 
                 // *******************COMENTARIOS*****************
 
-                            this->comentarPelicula("chachoElNumberOne","tv","Es tremenda pelicula. La mejor parte es cuando aparecen Rick y Morty.");
-                            this->comentarPelicula("carmeBeiro2010","tv","Esta muy buena pero la mejor parte es cuando explota el planeta con los malo",1);
-                            this->comentarPelicula("chachoElNumberOne","tv","Callateee no cuentes el final!!",2);
+                            this->comentarPelicula("chachoElNumberOne","The Vindicators 3","Es tremenda pelicula. La mejor parte es cuando aparecen Rick y Morty.");
+                            this->comentarPelicula("carmeBeiro2010","The Vindicators 3","Esta muy buena pero la mejor parte es cuando explota el planeta con los malo",1);
+                            this->comentarPelicula("chachoElNumberOne","The Vindicators 3","Callateee no cuentes el final!!",2);
 
                 /// *******************PUNTAJES*****************
 
-                            this->puntuarPelicula("chachoElNumberOne","tv",9);
+                            this->puntuarPelicula("chachoElNumberOne","The Vindicators 3",9);
                             this->puntuarPelicula("carmeBeiro2010","La noche que no se repite",6);
 
                 /// *******************RESERVAS*****************
