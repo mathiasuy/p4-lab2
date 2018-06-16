@@ -29,6 +29,6 @@
         }
 
         string DtCine::toString(){
-            return "C" + Utils::aString(this->getID()) + ": " + this->getDireccion();
+            return  Utils::aString(this->getID()) + ": " + this->getDireccion();
         };
 

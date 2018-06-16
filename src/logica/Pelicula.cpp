@@ -138,8 +138,8 @@
 
         Pelicula::Pelicula(string titulo, string poster, string sinopsis){
             this->titulo = titulo;
-            this->setPoster("N/D");
-            this->setSinopsis("N/D");
+            this->setPoster(poster);
+            this->setSinopsis(sinopsis);
         };
 
 

@@ -60,7 +60,8 @@ bool datosCargadosInCo = false;
 /*  PANTALLA INICIAL  */
 void pantallaInicial()
 {
-    cout << ((horaFijada)?interface->getFechaActual().toString() + " :)":"Hora no establecida :(") <<" -----"<< (tipoUsuario<1?"Bienvenido invitado!":" Sesion iniciada con el usuario: " + nickName) <<"\n"<< endl;
+    cout << ((horaFijada)?interface->getFechaActual().toString() + " :)":"Hora no establecida :(")
+    <<" -----"<< (tipoUsuario<1?"Bienvenido invitado!":" Sesion iniciada con el usuario: " + nickName) <<"\n"<< endl;
     cout << "*************************BIENVENIDO*************************"<<endl;
     cout << "************************************************************"<<endl;
     if (horaFijada)
@@ -143,7 +144,7 @@ int main()
 {
     int opcion;
     nickName = "A";
-    tipoUsuario = 1;
+    tipoUsuario = 0;
     horaFijada = true;
 
     do
@@ -156,71 +157,91 @@ int main()
         switch (opcion)
         {
         /*****************************************************************/
-        /*****************************************************************/
-        /*****************************************************************/
-        /*****************************************************************/
-        /*****************************************************************/
-        /*****************************************************************/
         /**********          VER INFO PELICULA  *************/
-        /*****************************************************************/
         /*****************************************************************/
         case 1 :
             if (tipoUsuario>=0 && horaFijada)
             {
-                cout << "/************ VER INFORMACION DE LA PELICULA... ************/ \n" <<endl;
-//VER INFO PELICULA
-                string titulo;
-                ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
-                cout << "Cantidad de peliculas encontradas: " << peliculas.size() << endl;
-                cout << "------------- " << endl;
-                cout << peliculas.toString();
-                cout << "------------- " << endl;
-                cout << "Escriba el titulo de la pelicula que desea ver (o deje en blanco para cancelar):" <<endl;
-                std::cin.ignore();
-                getline (cin, titulo);
-                if (titulo != "")// Si el usuario quiere cancelar, que aprete Enter (string vacio)
-                {
-                    /*  EN CASO mues-- */
-                    DtPelicula p = peliculas[titulo];
+                int exit = 1;
+                while (exit==1) {
+                    clr();
+                    cout << "/************ VER INFORMACION DE LA PELICULA... ************/ \n" <<endl;
+    //VER INFO PELICULA
+                    string titulo;
+                    ListaDt<string,DtPelicula> peliculas = interface->listarPeliculas();
+                    cout << "Cantidad de peliculas encontradas: " << peliculas.size() << endl;
                     cout << "------------- " << endl;
-                    cout << p.toString();
+                    cout << peliculas.toString();
                     cout << "------------- " << endl;
-                    cout << "\nVer lista de cines con esa pelicula? (1-Si/ 2-No)"<<endl;
-                    int e;
-                    cin >> e;
-                    if (e==1)
+                    cout << "Escriba el titulo de la pelicula que desea ver (0 para cancelar):" <<endl;
+                    std::cin.ignore();
+                    getline (cin, titulo);
+                    if ((titulo != "") || (titulo != "0"))// Si el usuario quiere cancelar, que aprete Enter (string vacio)
                     {
-                        ListaDt<int,DtCine> cines = interface->listarCines(titulo);
-                        cout << "Cantidad de Cines encontradas: " << cines.size() << endl;
-                        cout << "------------- " << endl;
-                        cout << cines.toString();
-                        cout << "------------- " << endl;
-                        cout << "Seleccione un cine:"<<endl;
-                        int idCine;
-                        cin >> idCine;
-                        cout << "Listar funciones para ese cine?: (1- Si/ 2- No)"<<endl;
-                        cin >> e;
-                        if (e == 1)
-                        {
-                            //DtFecha f = interface->getFechaActual();
-                            DtFecha f = DtFecha(12,6,2019,0,0);
-                            ListaDt<int,DtFuncion> l = interface->listarFunciones(idCine,titulo,f);
-                            cout << "Cantidad de Funciones encontradas: " << l.size() << endl;
+                        /*  EN CASO mues-- */
+                        DtPelicula p = peliculas[titulo];
+
+                        if ((p.getTitulo() != "")){
                             cout << "------------- " << endl;
-                            cout << l.toString();
+                            cout << "Titulo: " << p.getTitulo() << endl ;
+                            cout << "Poster: " << p.getPoster() << endl;
+                            cout << "Sinopsis: " << p.getSinopsis() << endl;
                             cout << "------------- " << endl;
-                            readKey();
+                            cout << "\nVer lista de cines con esa pelicula? (1-Si/ 2-No)"<<endl;
+                            int e;
+                            cin >> e;
+                            if (e==1)
+                            {
+                                ListaDt<int,DtCine> cines = interface->listarCines(titulo);
+                                cout << "Cantidad de Cines encontradas: " << cines.size() << endl;
+                                cout << "------------- " << endl;
+                                cout << cines.toString();
+                                cout << "------------- " << endl;
+                                cout << "Seleccione un cine:"<<endl;
+                                int idCine;
+                                cin >> idCine;
+                                cout << "Listar funciones para ese cine?: (1- Si/ 2- No)"<<endl;
+                                cin >> e;
+                                if (e == 1)
+                                {
+                                    //DtFecha f = interface->getFechaActual();
+                                    DtFecha f = DtFecha(12,6,2019,0,0);
+                                    ListaDt<int,DtFuncion> l = interface->listarFunciones(idCine,titulo,f);
+                                    cout << "Cantidad de Funciones encontradas: " << l.size() << endl;
+                                    cout << "------------- " << endl;
+                                    cout << l.toString();
+                                    cout << "------------- " << endl;
+                                    readKey();
+                                }
+
+
+                            }else{
+                            exit = 0 ; }
+                        }else{
+                            if (titulo == "0"){
+                                exit=0;
+                                clr();
+                                pantallaInicial();
+                            }else{
+                                cout << "La pelicula ingresada no existe";
+                                //std::cin.ignore();
+
+
+                            }
                         }
+
+                    }else{
+                        exit = 0 ;
+                        clr();
+                        pantallaInicial();
+
                     }
                 }
-                //pantallaVerInfoPelicula(titulo);
 
             };
             break;
         /*****************************************************************/
-        /*****************************************************************/
         /******          Ver comentarios y puntaje de pelicula  **********/
-        /*****************************************************************/
         /*****************************************************************/
         /*  */
         case 2 :
@@ -302,9 +323,7 @@ int main()
             break;
 
         /*****************************************************************/
-        /*****************************************************************/
         /**********          Crear Reserva   *************/
-        /*****************************************************************/
         /*****************************************************************/
 
 
@@ -468,9 +487,7 @@ int main()
 
             break;
         /*****************************************************************/
-        /*****************************************************************/
         /**********          Listar Reservas   *************/
-        /*****************************************************************/
         /*****************************************************************/
 
         case 4 :
@@ -489,9 +506,7 @@ int main()
 
 
         /*****************************************************************/
-        /*****************************************************************/
         /**********          Puntuar Pelicula   *************/
-        /*****************************************************************/
         /*****************************************************************/
 
          case 5 :
@@ -522,7 +537,7 @@ int main()
                         while (puntajeNuevo > 5) {
                             cout << "El puntaje no puede ser superior a 5. Ingrese el nuevo puntaje de la pelicula"<<endl;
                         cin >> puntajeNuevo;
-                        } 
+                        }
                         interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
                     }else{
                         readKey();
@@ -536,7 +551,7 @@ int main()
                      while (puntajeNuevo > 5) {
                             cout << "El puntaje no puede ser superior a 5. Ingrese el nuevo puntaje de la pelicula"<<endl;
                         cin >> puntajeNuevo;
-                        } 
+                        }
                     interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
                 }      //END ELSE
 
@@ -544,9 +559,7 @@ int main()
             break;
 
         /*****************************************************************/
-        /*****************************************************************/
         /**********          Comentar Pelicula   *************/
-        /*****************************************************************/
         /*****************************************************************/
 /*
         case 6 :
@@ -595,9 +608,7 @@ int main()
             break;
 */
         /*****************************************************************/
-        /*****************************************************************/
         /**********          Comentar Pelicula   *************/
-        /*****************************************************************/
         /*****************************************************************/
 
         case 6 :
@@ -647,9 +658,7 @@ int main()
 
             break;
         /*****************************************************************/
-        /*****************************************************************/
         /**********          Alta Cine   *************/
-        /*****************************************************************/
         /*****************************************************************/
 
         case 7 :
@@ -698,9 +707,7 @@ int main()
             };
             break;
         /*****************************************************************/
-        /*****************************************************************/
-        /**********          Alta Funcion   *************/
-        /*****************************************************************/
+       /**********          Alta Funcion   *************/
         /*****************************************************************/
 
         case 8 :
@@ -749,9 +756,7 @@ int main()
             };
             break;
         /*****************************************************************/
-        /*****************************************************************/
         /**********          Eliminar Pelicula   *************/
-        /*****************************************************************/
         /*****************************************************************/
 
         case 9 :
@@ -781,12 +786,10 @@ int main()
                 }
             };
             break;
-        /*****************************************************************/
+
         /*****************************************************************/
         /**********          LOGOUT   *************/
         /*****************************************************************/
-        /*****************************************************************/
-
         case 10 :
             if (tipoUsuario>0)
             {
@@ -806,13 +809,10 @@ int main()
         /*****************************************************************/
         /**********          SALIR   *************/
         /*****************************************************************/
-        /*****************************************************************/
         case 0 :
             if (tipoUsuario>=0)
             {
-                cout << "" << endl;
-                cout << "" << endl;
-                cout << "CHAU." << endl;
+                cout<<endl<<endl<< "Gracias por elegirnos..." << endl;
             };
             break;
         /*****************************************************************/

@@ -302,7 +302,7 @@
                             DtFecha f4(15,6,2018,22,0);
                             this->altaFuncion(300,f1,1,1,"The Vindicators 3");
                             this->altaFuncion(300,f2,1,1,"Sangre de campeones");
-                            this->altaFuncion(250,f3,1,2,"tv");
+                            this->altaFuncion(250,f3,1,2,"The Vindicators 3");
                             this->altaFuncion(300,f4,3,1,"El insulto");
 
                             cout << "\nSE CARGARON " << this->funciones->size() << " funciones. \n";
@@ -319,6 +319,9 @@
                             u = new Usuario("carmeBeiro2010","/users/registered/carmeBeiro2010.png","carmela5688");
                             this->usuarios->add(u);
                             u = new Usuario("ale_ulises","/admin/registered/ale_ulises.png","p4eslomejor21");
+                            this->usuarios->add(u);
+
+                            u = new Usuario("nico","/admin/registered/nico.png","1234");
                             this->usuarios->add(u);
 
                 // *******************FINANCIERAS*****************
