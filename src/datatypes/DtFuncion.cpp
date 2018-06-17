@@ -7,12 +7,13 @@ DtFuncion::DtFuncion(){
     this->precioEntrada = 0;//ctor
 }
 
-DtFuncion::DtFuncion(int id, int asientosReservados, float precioEntrada, DtSala sala, DtPelicula pelicula){
+DtFuncion::DtFuncion(int id, int asientosReservados, DtFecha f, float precioEntrada, DtSala sala, DtPelicula pelicula){
     this->id = id;
     this->asientosReservados = asientosReservados;
     this->precioEntrada = precioEntrada;
     this->sala = sala;
     this->pelicula = pelicula;
+    this->fecha = f;
 };
 
 int DtFuncion::getID(){
@@ -30,6 +31,15 @@ float DtFuncion::getPrecio(){
 DtPelicula DtFuncion::getPelicula(){
     return this->pelicula;
 };
+
+DtFecha DtFuncion::getFecha(){
+   return this->fecha;
+};
+
+DtSala DtFuncion::getSala(){
+    return this->sala;
+};
+
 
 bool DtFuncion::isEqual(DtFuncion* Funcion){
     return this->getID() == Funcion->getID();

@@ -19,5 +19,5 @@ DtTarjeta::~DtTarjeta()
 }
 
 string DtTarjeta::toString(){
-    return "Monto total $" + Utils::aString(this->getMontoTotal());
+    return "Monto total: $" + Utils::aString(this->getMontoTotal());
 };

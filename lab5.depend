@@ -3279,7 +3279,7 @@
 	"../include/Utils.h"
 	<string>
 
-1529261169 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/main.cpp
+1529266737 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/main.cpp
 	"include/ISistema.h"
 	"include/Factory.h"
 	<iostream>
@@ -3349,24 +3349,26 @@
 	<string>
 	"../datatypes/DtTarjeta.h"
 
-1529190148 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtFuncion.h
+1529266150 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtFuncion.h
 	<string>
 	"DtPelicula.h"
 	"DtSala.h"
+	"DtFecha.h"
 
 1528808754 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtPelicula.h
 	<string>
 
-1528808754 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtSala.h
+1529266331 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtSala.h
 	<string>
 	"../../include/datatypes/DtCine.h"
 
 1528808754 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtPuntaje.h
 	<string>
 
-1528808754 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtReserva.h
+1529263883 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtReserva.h
 	"DtTarjeta.h"
 	"DtFuncion.h"
+	"DtCredito.h"
 	<string>
 
 1528808754 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/manejadores/ManejadorCines.h
@@ -3484,17 +3486,17 @@
 	"../../include/Utils.h"
 	<iostream>
 
-1528808755 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtCredito.cpp
+1529264386 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtCredito.cpp
 	"../../include/datatypes/DtCredito.h"
 	"../../include/Utils.h"
 
-1528808755 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtDebito.cpp
+1529264386 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtDebito.cpp
 	"../../include/datatypes/DtDebito.h"
 
 1529254737 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtFecha.cpp
 	"../../include/datatypes/DtFecha.h"
 
-1529191316 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtFuncion.cpp
+1529266125 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtFuncion.cpp
 	"../../include/datatypes/DtFuncion.h"
 	"../../include/Utils.h"
 
@@ -3505,16 +3507,16 @@
 	"../../include/datatypes/DtPuntaje.h"
 	"../../include/Utils.h"
 
-1529191126 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtReserva.cpp
+1529266586 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtReserva.cpp
 	"../../include/datatypes/DtReserva.h"
 	"../../include/datatypes/DtFuncion.h"
 	"../../include/Utils.h"
 
-1529191316 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtSala.cpp
+1529266302 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtSala.cpp
 	"../../include/datatypes/DtSala.h"
 	"../../include/Utils.h"
 
-1528808755 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtTarjeta.cpp
+1529264733 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtTarjeta.cpp
 	"../../include/datatypes/DtTarjeta.h"
 	"../../include/Utils.h"
 
@@ -3541,7 +3543,7 @@
 1528808755 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Debito.cpp
 	"../../include/logica/Debito.h"
 
-1529258526 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Funcion.cpp
+1529265466 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Funcion.cpp
 	"../../include/logica/Funcion.h"
 	<iostream>
 	"../../include/logica/Pelicula.h"
@@ -3558,7 +3560,7 @@
 1528808755 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Reloj.cpp
 	"../../include/logica/Reloj.h"
 
-1529012748 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Reserva.cpp
+1529265357 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Reserva.cpp
 	"../../include/logica/Reserva.h"
 	"../../include/Utils.h"
 

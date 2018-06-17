@@ -18,6 +18,7 @@ public:
 
     int getID();
     int getCantAsientos();
+    DtCine getCine();
     string toString();
 
     virtual ~DtSala();

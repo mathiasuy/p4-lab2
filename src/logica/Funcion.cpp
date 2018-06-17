@@ -21,7 +21,7 @@ float Funcion::getPrecio(){
 
 DtFuncion Funcion::getDt(){
     DtPelicula p;
-    return DtFuncion(this->id,this->asientosReservados,this->precioEntrada,this->sala->getDt(),this->pelicula->getDt());
+    return DtFuncion(this->id,this->asientosReservados, this->fecha, this->precioEntrada,this->sala->getDt(),this->pelicula->getDt());
 };
 
 void Funcion::setFecha(DtFecha fecha){

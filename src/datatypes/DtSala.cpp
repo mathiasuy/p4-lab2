@@ -21,6 +21,12 @@ int DtSala::getCantAsientos(){
     return this->cantAsientos;
 };
 
+
+DtCine DtSala::getCine(){
+    return this->cine;
+};
+
+
 string DtSala::toString(){
    return "Sala: " + Utils::aString(this->getID()) + " | "
    + "Cantidad de Asientos: " + Utils::aString(this->getCantAsientos()) + " | "

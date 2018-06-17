@@ -3,6 +3,7 @@
 #include <string>
 #include "DtPelicula.h"
 #include "DtSala.h"
+#include "DtFecha.h"
 
 using namespace std;
 
@@ -14,14 +15,17 @@ class DtFuncion
         float precioEntrada;
         DtSala sala;
         DtPelicula pelicula;
+        DtFecha fecha;
 
     public:
         DtFuncion();
-        DtFuncion(int id, int asientosReservados, float precioEntrada, DtSala sala, DtPelicula pelicula);
+        DtFuncion(int id, int asientosReservados, DtFecha f, float precioEntrada, DtSala sala, DtPelicula pelicula);
 
         int getID();
         int getAsientosReservados();
         float getPrecio();
+        DtSala getSala();
+        DtFecha getFecha();
         DtPelicula getPelicula();
 
         string toString();

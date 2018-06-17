@@ -29,13 +29,18 @@ bool DtReserva::isEqual(DtReserva* t){
 };
 
 string DtReserva::toString(){
+
+    string TipoT = "Debito";
+    if ( dynamic_cast<DtCredito*> (&this->tarjeta) != NULL){
+            TipoT = "Credito";
+    }
+
     return "Reserva: " + Utils::aString(this->getID()) +" | "
     + "Pelicula: " + this->funcion.getPelicula().getTitulo() +" | "
-    + "Fecha de funcion " + " | "
+    + "Fecha de funcion: " +this->funcion.getFecha().toString() + " | "
     + "Asientos: " + Utils::aString(this->getCantAsientos()) +" | "
-    + this->tarjeta.toString() +" | " /*FALTA CREDITO O DEBITO */
-    + "Cine: " ;// COMO ACCEDO A CINE DESDE DTFUNCION??
-
+    + this->tarjeta.toString() + " | " + "Tipo tarjeta: "+ TipoT +" | "
+    + "Cine: " + this->funcion->getSala()->getCine().getID();
 }
 DtReserva::~DtReserva()
 {

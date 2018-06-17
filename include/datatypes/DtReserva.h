@@ -2,6 +2,7 @@
 #define DTRESERVA_H
 #include "DtTarjeta.h"
 #include "DtFuncion.h"
+#include "DtCredito.h"
 #include <string>
 
 using namespace std;

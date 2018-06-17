@@ -78,13 +78,13 @@ void pantallaInicial()
         cout << ((tipoUsuario==2)?"8 - Alta Funcion.\n":"");
         cout << ((tipoUsuario==2)?"9 - Eliminar Pelicula.\n":"");
         cout << ((tipoUsuario==2)?"------------------------------------------------------------\n":"");
-        cout << ((tipoUsuario>=0)?"20 - Listar cines.":"") << endl;
-        cout << ((tipoUsuario>=0)?"21 - Listar peliculas.":"") << endl;
-        cout << ((tipoUsuario>=0)?"22 - Listar Funciones.":"") << endl;
-        cout << ((tipoUsuario>=0)?"------------------------------------------------------------\n":"");
+//        cout << ((tipoUsuario>=0)?"20 - Listar cines.":"") << endl;
+//       cout << ((tipoUsuario>=0)?"21 - Listar peliculas.":"") << endl;
+//        cout << ((tipoUsuario>=0)?"22 - Listar Funciones.":"") << endl;
+//       cout << ((tipoUsuario>=0)?"------------------------------------------------------------\n":"");
     }
     cout << "10 - " << ((tipoUsuario>0)?"Logout":"Login")<< endl;
-    cout << ((tipoUsuario==0 && !datosCargados)?"11 - Test\n":"");
+//    cout << ((tipoUsuario==0 && !datosCargados)?"11 - Test\n":"");
     cout << ((tipoUsuario==0 && !datosCargados)?"12 - Test InCo\n":"");
     cout << ((tipoUsuario==0)?((horaFijada)?"13 - Cambiar hora\n":"13 - Establecer hora\n"):"");
     cout << "0 - Salir." << endl;
@@ -348,9 +348,7 @@ int main()
                             if (e != 0){
                                 DtFecha f = interface->getFechaActual();
                                 cout << "Seleccione la funcion que desea reservar: "<<endl;
-
                                 cout <<  interface->listarFunciones(e,titulo,f).toString();
-
                                 cout << "0- Salir."<<endl;
                                 cin >> func;
                                 while(func <0  || func> interface->listarFunciones(e,titulo,f).size()){
