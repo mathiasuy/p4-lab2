@@ -3279,7 +3279,7 @@
 	"../include/Utils.h"
 	<string>
 
-1529189075 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/main.cpp
+1529196613 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/main.cpp
 	"include/ISistema.h"
 	"include/Factory.h"
 	<iostream>
@@ -3326,9 +3326,10 @@
 	<stdio.h>
 	<stdlib.h>
 
-1529016764 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtFecha.h
+1529194824 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtFecha.h
 	<ctime>
 	<string>
+	"../Utils.h"
 
 1528808754 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/datatypes/DtCine.h
 	<vector>
@@ -3474,7 +3475,7 @@
 	"ISistema.h"
 	"ISistema.h"
 
-1529184601 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtCine.cpp
+1529191316 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtCine.cpp
 	"../../include/datatypes/DtCine.h"
 	"../../include/Utils.h"
 
@@ -3490,10 +3491,10 @@
 1528808755 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtDebito.cpp
 	"../../include/datatypes/DtDebito.h"
 
-1529016764 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtFecha.cpp
+1529194848 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtFecha.cpp
 	"../../include/datatypes/DtFecha.h"
 
-1529190562 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtFuncion.cpp
+1529191316 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtFuncion.cpp
 	"../../include/datatypes/DtFuncion.h"
 	"../../include/Utils.h"
 
@@ -3509,7 +3510,7 @@
 	"../../include/datatypes/DtFuncion.h"
 	"../../include/Utils.h"
 
-1529184940 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtSala.cpp
+1529191316 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/datatypes/DtSala.cpp
 	"../../include/datatypes/DtSala.h"
 	"../../include/Utils.h"
 
@@ -3524,7 +3525,7 @@
 	"../include/Factory.h"
 	"../include/logica/Sistema.h"
 
-1529012748 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Sistema.h
+1529193826 /ens/home01/g/gonzalo.rivero/Desktop/lab1/include/logica/Sistema.h
 	"../ISistema.h"
 
 1529012748 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Cine.cpp
@@ -3566,7 +3567,7 @@
 	"../../include/logica/Cine.h"
 	<iostream>
 
-1529188823 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Sistema.cpp
+1529195224 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Sistema.cpp
 	"../../include/logica/Sistema.h"
 
 1528808755 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Tarjeta.cpp

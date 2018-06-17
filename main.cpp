@@ -187,8 +187,7 @@ int main()
                             cout << "\nVer lista de cines con esa pelicula? (1-Si/ 2-No)"<<endl;
                             int e;
                             cin >> e;
-                            if (e==1)
-                            {
+                            if (e==1){
                                 ListaDt<int,DtCine> cines = interface->listarCines(titulo);
                                 cout << "Cantidad de Cines encontradas: " << cines.size() << endl;
                                 cout << "------------- " << endl;
@@ -199,18 +198,20 @@ int main()
                                 cin >> idCine;
                                 cout << "Listar funciones para ese cine?: (1- Si/ 2- No)"<<endl;
                                 cin >> e;
-                                if (e == 1)
-                                {
-                                    //DtFecha f = interface->getFechaActual();
-                                    DtFecha f = DtFecha(12,6,2019,0,0);
+                                if (e == 1){
+                                    DtFecha f = interface->getFechaActual();
+                                   // DtFecha f = DtFecha(12,6,2019,0,0);
                                     ListaDt<int,DtFuncion> l = interface->listarFunciones(idCine,titulo,f);
-                                    cout << "Cantidad de Funciones encontradas: " << l.size() << endl;
-                                    cout << "------------- " << endl;
-                                    cout << l.toString();
-                                    cout << "------------- " << endl;
-                                    readKey();
-                                }
+                                    if ( l.size() != 0){
+                                        cout << "Cantidad de Funciones encontradas: " << l.size() << endl;
+                                        cout << "------------- " << endl;
+                                        cout << l.toString();
+                                        cout << "------------- " << endl;
+                                        readKey();
+                                    }else
+                                        cout << "No hay funciones para esta pelicula." << endl;
 
+                                }
                             }
                             }
             };
@@ -753,11 +754,24 @@ int main()
         /**********          CAMBIAR HORA   *************/
         /*****************************************************************/
         case 13 :
-            if (tipoUsuario==2)
+            if ((tipoUsuario==2) || (tipoUsuario==0))
             {
                 cout << "/************ "<< ((horaFijada)?"CAMBIAR HORA":"ESTABLECER HORA") <<" ************/ \n" <<endl;
                 /* cambiar hora */
-                cout << "No implementado.";
+
+                int anio, mes, dia, hora, minuto;
+                 //ingresa fecha y hora
+                cout << "Ingrese el año: "<<endl;
+                cin >> anio  ;
+                cout << "Ingrese el mes: "<<endl;
+                cin >> mes  ;
+                cout << "Ingrese el dia: "<<endl;
+                cin >> dia ;
+                cout << "Ingrese la hora: "<<endl;
+                cin >> hora  ;
+                cout << "Ingrese los minutos: "<<endl;
+                cin >> minuto  ;
+                interface->setFechaActual(dia, mes, anio, hora, minuto);
                 horaFijada = true;
             };
             break;

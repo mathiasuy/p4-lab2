@@ -27,6 +27,41 @@ DtFecha::DtFecha(int dia, int mes, int ano, int minuto, int hora)
   this->hora = hora;  //ctor
 }
 
+bool DtFecha::operator <(const DtFecha& f){
+    	bool retorno = false;
+    	if (this->ano < f.ano){
+    		retorno = true;
+    	}else if (this->ano > f.ano){
+    		retorno = false;
+    	}else{
+    		if (this->mes < f.mes){
+    			retorno = true;
+    		}else if (this->mes > f.mes){
+    			retorno = false;
+    		}else{
+    			if (this->dia < f.dia){
+    				retorno = true;
+    			}else if(this->dia > f.dia){
+    				retorno = false;
+    			}else{
+                     if (this->hora < f.hora){
+                            retorno = true;
+                        }else if(this->hora > f.hora){
+                            retorno = false;
+                        }else{
+                            if (this->minuto < f.minuto){
+                                retorno = true;
+                            }else if(this->minuto > f.minuto){
+                                retorno = false;
+                            }else
+                                retorno = false;
+                              }
+                    }
+                }
+            }
+        return retorno;
+};
+
 int DtFecha::getAno() {
     return this->ano;
 }
@@ -49,7 +84,11 @@ int DtFecha::getMinuto(){
 }
 
 string DtFecha::toString(){
-    return "toString FALTA IMPLEMENTAR";
+    return     Utils::aString(this->dia)     + "/"
+    + Utils::aString(this->mes)     + "/"
+    + Utils::aString(this->ano)     + " "
+    + Utils::aString(this->hora)    + ":"
+    + Utils::aString(this->minuto);
 }
 
 

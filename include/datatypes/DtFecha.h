@@ -2,6 +2,7 @@
 #define DTFECHA_H
 #include <ctime>
 #include <string>
+#include "../Utils.h"
 using namespace std;
 class DtFecha
 {
@@ -17,6 +18,7 @@ class DtFecha
         int getAno();
         int getHora();
         int getMinuto();
+        bool operator <(const DtFecha& f);
         string toString();
         DtFecha getFechaActual();
         DtFecha();

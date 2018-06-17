@@ -8,7 +8,6 @@
 
         float Sistema::getDescuento(string financiera){
             map<string,float> financieras;
-            cout << "entra a getDescuento" << endl;
             financieras["F1"] = 1;
             financieras["OCA"] = 15;
             financieras["SD"] = 0;
@@ -40,6 +39,8 @@
             reloj->setHora(hora);
             reloj->setMinuto(minuto);
         }
+
+
 
         /*   CINES   */
         bool Sistema::altaCine(string direccion, vector<int> capacidadSalas){
@@ -196,13 +197,18 @@
 
         /* LISTAR TODAS LAS FUNCIONES */
         ListaDt<int,DtFuncion> Sistema::listarFunciones(){
-            cout << "llegosdsd";
             this->funciones->beginIterator();
             ListaDt<int,DtFuncion> dt;
+            DtFecha factual = this->getFechaActual();
             while (this->funciones->getElement() != NULL){
-             cout << this->funciones->getElement()->getDt().toString();
-               dt.add(this->funciones->getElement()->getDt());
-               this->funciones->next();
+                DtFecha ffuncion = this->funciones->getElement()->getFecha();
+
+;               if (factual < ffuncion){
+                   cout << this->funciones->getElement()->getDt().toString();
+                   dt.add(this->funciones->getElement()->getDt());
+                   this->funciones->next();
+                }else
+                   this->funciones->next();
             }
             return dt;
         };
@@ -239,11 +245,16 @@
             map<int,Funcion*> fs = p->listarFunciones();
             map<int,Funcion*>::iterator it = fs.begin();
             ListaDt<int,DtFuncion> dt;
+//            DtFecha factual = this->getFechaActual();
             while (it != fs.end()){
-                if (it->second->getSala()->esDeCine(idCine)){
-                    dt.add(it->second->getDt());
-                }
-                it++;
+  //              DtFecha ffuncion = this->funciones->getElement()->getFecha();
+            //    if (factual < ffuncion){
+                    if (it->second->getSala()->esDeCine(idCine)){
+                        dt.add(it->second->getDt());
+                    }
+                    it++;
+    //            }else
+      //             it++;
             }
             return dt;
         };
