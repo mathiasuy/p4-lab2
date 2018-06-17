@@ -176,14 +176,14 @@ int main()
    
    //ACA miro si la pelicula que me pasan existe
    
-                interface->listarPeliculas().start();
+                peliculas.start();
                 bool encontre = false;
-                while(!encontre && interface->listarPeliculas().end())
+                while(!encontre && peliculas.end())
                 {
-                    if(interface->listarPeliculas().toString() == titulo){
+                    if(peliculas.toString() == titulo){
                         encontre = true;
                     }
-                    listarPeliculas().next();
+                    peliculas.next();
                 }
            //encontre solo es true si esta la pelicula
                     if (encontre && (titulo != "")){
