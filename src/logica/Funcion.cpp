@@ -19,9 +19,6 @@ float Funcion::getPrecio(){
 
 };
 
-
-
-
 DtFuncion Funcion::getDt(){
     DtPelicula p;
     return DtFuncion(this->id,this->asientosReservados,this->precioEntrada,this->sala->getDt(),this->pelicula->getDt());
@@ -56,13 +53,14 @@ bool Funcion::isEqual(Funcion* funcion){
 
 Funcion::Funcion(float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *pelicula){
     this->asientosReservados = 0;
-
     this->id = ++idGlobal;
-    //cout << "ID DE LA FUNC: " << Utils::aString(this->id);
     this->precioEntrada = precioEntrada;
     this->setFecha(fecha);
     this->setPelicula(pelicula);
     this->setSala(sala);
+
+    this->sala->setOcupado(fecha.getHora());
+    this->sala->setOcupado(fecha.getHora()+1);
 };
 
 int Funcion::getAsientosReservados(){

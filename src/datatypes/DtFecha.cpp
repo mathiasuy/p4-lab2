@@ -18,7 +18,7 @@ DtFecha::DtFecha() //CONSTRUCTOR HORA ACTUAL
     this->minuto = 14;
 }
 
-DtFecha::DtFecha(int dia, int mes, int ano, int minuto, int hora)
+DtFecha::DtFecha(int dia, int mes, int ano, int hora, int minuto)
 {
   this->dia = dia;
   this->mes = mes;

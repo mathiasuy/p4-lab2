@@ -143,8 +143,8 @@ void imprimirComentarios(ListaDt<int,DtComentario> lc, int indice, int esRespues
 int main()
 {
     int opcion;
-    nickName = "chachoElNumberOne";
-    tipoUsuario = 1;
+    nickName = "ale_ulises";
+    tipoUsuario = 2;
     horaFijada = true;
 
     do
@@ -187,13 +187,13 @@ int main()
                             cout << "\nVer lista de cines con esa pelicula? (1-Si/ 2-No)"<<endl;
                             int e;
                             cin >> e;
-                        while(e != 1 && e!= 2){
-                              cout << "Ingrese una opcion valida: \n";
-                                cin >> e;
-                           }
-//                            if (cines.size() > 0){
+                            while(e != 1 && e!= 2){
+                                  cout << "Ingrese una opcion valida: \n";
+                                  cin >> e;
+                            }
                             if (e==1){
-                                ListaDt<int,DtCine> cines = interface->listarCines(titulo);
+                             ListaDt<int,DtCine> cines = interface->listarCines(titulo);
+                             if (cines.size() > 0){
                                 cout << "Cantidad de Cines encontradas: " << cines.size() << endl;
                                 cout << "------------- " << endl;
                                 cout << cines.toString();
@@ -208,9 +208,9 @@ int main()
                                 cout << "Listar funciones para ese cine?: (1- Si/ 2- No)"<<endl;
                                 cin >> e;
                                 while(e != 1 && e!= 2){
-                                cout << "Ingrese una opcion valida: \n";
-                                cin >> e;
-                            }
+                                    cout << "Ingrese una opcion valida: \n";
+                                    cin >> e;
+                                }
                                 if (e == 1){
                                     DtFecha f = interface->getFechaActual();
                                    // DtFecha f = DtFecha(12,6,2019,0,0);
@@ -223,10 +223,14 @@ int main()
                                         readKey();
                                     }else
                                         cout << "No hay funciones para esta pelicula." << endl;
+                                        readKey();
 
                                 }
+                            }else
+                               cout << "No hay cine para esta pelicula." << endl;
+                               readKey();
                             }
-                            }
+ }
             };
             break;
         /*****************************************************************/
@@ -329,7 +333,7 @@ int main()
                         cout << "2- No." <<endl;
                         cin >> k;
                         while(k != 1 && k!= 2){
-                                cout << "Ingrese una opcion valida: "<<endl;
+                                cout << "Ingrese una opcion valida: \n";
                                 cin >> k;
                             }
                         if(k==1){
@@ -338,7 +342,7 @@ int main()
                             cout << "0- Salir"<<endl;
                             cin >> e;
                             while(e <0  || e> interface->listarCines(titulo).size()){
-                                cout << "Ingrese una opcion valida: "<<endl;
+                                cout << "Ingrese una opcion valida: \n";
                                 cin >> e;
                             }
                             if (e != 0){
@@ -350,7 +354,7 @@ int main()
                                 cout << "0- Salir."<<endl;
                                 cin >> func;
                                 while(func <0  || func> interface->listarFunciones(e,titulo,f).size()){
-                                    cout << "Ingrese una opcion valida: "<<endl;
+                                    cout << "Ingrese una opcion valida: \n";
                                     cin >> e;
                                 }
                                 if(func!=0){
@@ -363,14 +367,14 @@ int main()
                                     cout << "2- Debito." <<endl;
                                     cin >> tipotar;
                                      while(tipotar != 1 && tipotar != 2){
-                                        cout << "Ingrese una opcion valida: "<<endl;
+                                        cout << "Ingrese una opcion valida: \n";
                                         cin >> tipotar;
                                     }
                                     if(tipotar == 2){
                                         cout << "Ingrese el nombre del banco que la emite: "<<endl;
                                         cin >> nombanc;
                                         while(nombanc == ""){
-                                            cout << "Ingrese una opcion valida: "<<endl;
+                                            cout << "Ingrese una opcion valida: \n";
                                             cin >> nombanc;
                                         }
                                     }else{
@@ -381,7 +385,7 @@ int main()
                                         cout << "Ingrese el nombre de la financiera que la emite: "<<endl;
                                         cin >> nomfin;
                                         while(nomfin == ""){
-                                            cout << "Ingrese una opcion valida: "<<endl;
+                                            cout << "Ingrese una opcion valida: \n";
                                             cin >> nomfin;
                                         }
                                     }
@@ -398,7 +402,7 @@ int main()
                                     cout <<"2- No."<<endl;
                                     cin >> confres;
                                     while(confres != 1 && confres != 2){
-                                        cout << "Ingrese una opcion valida: "<<endl;
+                                        cout << "Ingrese una opcion valida: \n";
                                         cin >> confres;
                                     }
                                     if(confres == 1){
@@ -423,7 +427,7 @@ int main()
                                         }
                                         cin >>b;
                                         while(b != 1 && b != 2){
-                                            cout << "Ingrese una opcion valida: "<<endl;
+                                            cout << "Ingrese una opcion valida: \n";
                                             cin >>b;
                                         }//confres
                                     }//if func!=0
@@ -485,7 +489,7 @@ int main()
                         cout << "Ingrese el nuevo puntaje de la pelicula"<<endl;
                         cin >> puntajeNuevo;
                         while (puntajeNuevo > 5) {
-                            cout << "El puntaje no puede ser superior a 5. Ingrese el nuevo puntaje de la pelicula"<<endl;
+                            cout << "El puntaje no puede ser superior a 5. Ingrese el nuevo puntaje de la pelicula \n";
                         cin >> puntajeNuevo;
                         }
                         interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
@@ -702,7 +706,16 @@ int main()
                 cout << "Ingrese el precio de la entrada: "<<endl;
                 cin >> precio;
 
-                //cout <<((interface->altaFuncion(precio, f, res, id, titulo)?"La pelicula se elimino con exito.":"No se pudo eliminar")<<endl;
+
+                bool a = interface->altaFuncion(precio, f, res, id, titulo);
+                if (a){
+                    cout << "*****La funcion se agrego correctamente*****" << endl;
+                    readKey();
+                }else{
+                    cout << "*****La funcion no se pudo agregar, sala ocupada.*****" << endl;
+                    readKey();
+                }
+
             };
             break;
         /*****************************************************************/
@@ -727,6 +740,7 @@ int main()
                 int res;
                 cin >> res;
                 while (res != 1 && res != 2){
+                    cout << "Ingrese una opcion valida: \n";
                     cin >> res;
                 }
                 if(res == 1){

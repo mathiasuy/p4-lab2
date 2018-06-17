@@ -51,15 +51,16 @@
         /*  PELICULA */
         bool Sistema::altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula){
             Sala* sala = this->cines->find(idCine)->getSala(idSala);
-            //cout << "\nSALA: " << sala->toString();
-            Pelicula* pelicula = this->peliculas->find(tituloPelicula);
-            //cout << "\nPELICULA: " << pelicula->toString();
-            Funcion* fnueva = new Funcion(precioEntrada, fecha, sala, pelicula);
-            //cout << "\nFUNCION: " << fnueva->toString();
-            this->funciones->add(fnueva);
-            pelicula->agregarFuncion(fnueva);
-            return true;
+            if (sala->getOcupado(fecha.getHora()) == false){
+                Pelicula* pelicula = this->peliculas->find(tituloPelicula);
+                Funcion* fnueva = new Funcion(precioEntrada, fecha, sala, pelicula);
+                this->funciones->add(fnueva);
+                pelicula->agregarFuncion(fnueva);
+                return true;
+            }else
+                return false;
         };
+
         float Sistema::getPuntajePelicula(string nickName, string tituloPelicula){
             if (peliculas->isMember(tituloPelicula)){
                 return peliculas->find(tituloPelicula)->getPuntaje(nickName);
@@ -244,16 +245,22 @@
             map<int,Funcion*> fs = p->listarFunciones();
             map<int,Funcion*>::iterator it = fs.begin();
             ListaDt<int,DtFuncion> dt;
-//            DtFecha factual = this->getFechaActual();
+            DtFecha factual = this->getFechaActual();
+            cout << "Fecha actual \n";
+            cout << factual.toString();
+
             while (it != fs.end()){
-  //              DtFecha ffuncion = this->funciones->getElement()->getFecha();
-            //    if (factual < ffuncion){
+                DtFecha ffuncion = it->second->getFecha();
+               // DtFecha ffuncion = this->funciones->getElement()->getFecha();
+               cout << "Fecha funcion \n";
+               cout << ffuncion.toString();
+               if (factual < ffuncion){
                     if (it->second->getSala()->esDeCine(idCine)){
                         dt.add(it->second->getDt());
                     }
                     it++;
-    //            }else
-      //             it++;
+                }else
+                   it++;
             }
             return dt;
         };

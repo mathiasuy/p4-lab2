@@ -42,6 +42,16 @@ DtSala Sala::getDt(){
     return DtSala(this->getID(),this->getCapacidad(), cine->getDt());
 };
 
+void Sala::setOcupado(int hora){
+    this->ocupado[hora] = true;
+};
+
+
+bool Sala::getOcupado(int hora){
+    return this->ocupado[hora];
+};
+
+
 
 bool Sala::perteneceA(Cine* cine){
     return this->cine->isEqual(cine);
@@ -65,6 +75,7 @@ Sala::Sala(int id, int capacidad, Cine* cine){
     //creo map de punteros
     std::map<int, Funcion*> mymap;
     this->funciones = mymap;
+    this->ocupado[24] = false;
 };
 
 Sala::~Sala(){};
