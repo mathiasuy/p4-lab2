@@ -2,7 +2,8 @@
 #include "include/Factory.h"
 #include <iostream>
 #include <string>
-
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <stdexcept>
 #include <stddef.h>
@@ -143,9 +144,9 @@ void imprimirComentarios(ListaDt<int,DtComentario> lc, int indice, int esRespues
 int main()
 {
     int opcion;
-//    nickName = "ale_ulises";
- //   tipoUsuario = 2;
-    horaFijada = false;
+    nickName = "ale_ulises";
+    tipoUsuario = 1;
+    horaFijada = true;
 
     do
     {
@@ -173,19 +174,27 @@ int main()
                     cout << "Escriba el titulo de la pelicula que desea ver (vacio para cancelar):" <<endl;
                     std::cin.ignore();
                     getline (cin, titulo);
-   
+
    //ACA miro si la pelicula que me pasan existe
-   
-                peliculas.start();
+
+
+
+
+
+
+               peliculas.start();
                 bool encontre = false;
-                while(!encontre && peliculas.end())
+                while((!encontre) && peliculas.end())
                 {
-                    if(peliculas.toString() == titulo){
+                    if((peliculas.getElement()).getTitulo() == titulo){
                         encontre = true;
                     }
                     peliculas.next();
                 }
+                //!titulo.compare(peliculas.toString())
+                //strcmp((peliculas.toString().c_str()), titulo.c_str()) == 0
            //encontre solo es true si esta la pelicula
+                    //int x = strcmp(peliculas.toString(), titulo);
                     if (encontre && (titulo != "")){
                         /*  EN CASO mues-- */
                         DtPelicula p = peliculas[titulo];
@@ -198,9 +207,12 @@ int main()
                             cout << "\nVer lista de cines con esa pelicula? (1-Si/ 2-No)"<<endl;
                             int e;
                             cin >> e;
-                            while(e != 1 && e!= 2){
+
+                            while(e != 1 && e!= 2 ){
                                   cout << "Ingrese una opcion valida: \n";
+
                                   cin >> e;
+
                             }
                             if (e==1){
                              ListaDt<int,DtCine> cines = interface->listarCines(titulo);
@@ -268,8 +280,17 @@ int main()
                 cout << "Escriba el titulo de la pelicula que desea ver (0 para cancelar):" <<endl;
                 std::cin.ignore();
                 std::getline(cin,titulo);
+                 listaDePeliculas.start();
+                bool encontre = false;
+                while((!encontre) && listaDePeliculas.end())
+                {
+                    if((listaDePeliculas.getElement()).getTitulo() == titulo){
+                        encontre = true;
+                    }
+                    listaDePeliculas.next();
+                }
 
-                 if ((titulo != ""))
+                 if (encontre && (titulo != ""))
                 {
                     DtPelicula p = listaDePeliculas[titulo];
 
@@ -334,8 +355,21 @@ int main()
                     cout << "Escriba el titulo de la pelicula que desea ver:  (0 para cancelar)"  <<endl;
                     std::cin.ignore();
                     getline (cin, titulo);
+
+                     peliculas.start();
+                bool encontre = false;
+                while((!encontre) && peliculas.end())
+                {
+                    if((peliculas.getElement()).getTitulo() == titulo){
+                        encontre = true;
+                    }
+                    peliculas.next();
+                }
+
+
+
                     // Si el usuario quiere cancelar, que aprete Enter (string vacio)
-                    if (titulo != "0"){
+                    if (encontre && titulo != "0"){
                         DtPelicula p = peliculas[titulo];
                         cout << "Poster: " << p.getPoster() << endl;
                         cout << "Sinopsis: " << p.getSinopsis() << endl;
@@ -495,10 +529,10 @@ int main()
 
                     if (respuesta == 1)
                     {
-                        cout << "Ingrese el nuevo puntaje de la pelicula"<<endl;
+                        cout << "Ingrese el nuevo puntaje de la pelicula: "<<endl;
                         cin >> puntajeNuevo;
                         while (puntajeNuevo > 5) {
-                            cout << "El puntaje no puede ser superior a 5. Ingrese el nuevo puntaje de la pelicula \n";
+                            cout << "El puntaje no puede ser superior a 5. Ingrese el nuevo puntaje de la pelicula: \n";
                         cin >> puntajeNuevo;
                         }
                         interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
@@ -509,10 +543,10 @@ int main()
                 //SI ENTRO ACA ES PORQUE NO TENIA NINGUN PUNTAJE ESA PELICULA (ACORDARSE QUE RETORNA -1 SI NO ESTA PUNTUADA)
                 else
                 {
-                    cout << "Ingrese el nuevo puntaje de la pelicula"<<endl;
+                    cout << "Ingrese el nuevo puntaje de la pelicula: "<<endl;
                     cin >> puntajeNuevo;
                      while (puntajeNuevo > 5) {
-                            cout << "El puntaje no puede ser superior a 5. Ingrese el nuevo puntaje de la pelicula"<<endl;
+                            cout << "El puntaje no puede ser superior a 5. Ingrese el nuevo puntaje de la pelicula: \n";
                         cin >> puntajeNuevo;
                         }
                     interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
