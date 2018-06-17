@@ -173,9 +173,20 @@ int main()
                     cout << "Escriba el titulo de la pelicula que desea ver (vacio para cancelar):" <<endl;
                     std::cin.ignore();
                     getline (cin, titulo);
-
-   //                 cin >> titulo;
-                    if ((titulo != "")){
+   
+   //ACA miro si la pelicula que me pasan existe
+   
+                interface->listarPeliculas.start();
+                bool encontre = false;
+                while(!encontre && interface->listaDePeliculas.end())
+                {
+                    if(interface->listaDePeliculas.toString == titulo){
+                        encontre = true;
+                    }
+                    listaDePeliculas.next();
+                }
+           //encontre solo es true si esta la pelicula
+                    if (encontre && (titulo != "")){
                         /*  EN CASO mues-- */
                         DtPelicula p = peliculas[titulo];
 
