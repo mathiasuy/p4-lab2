@@ -679,7 +679,7 @@ int main()
                 std::cin.ignore();
                 std::getline(cin,titulo);
                 //Listar cines con esa pelicula
-                ListaDt<int,DtCine> cines = interface->listarCines(titulo);
+                ListaDt<int,DtCine> cines = interface->listarCines();
                 cout << cines.toString();
                 cout << "Escriba el cine donde desea agregar una funcion:" << endl;
                 cin >> id;

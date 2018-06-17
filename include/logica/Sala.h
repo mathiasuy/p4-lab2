@@ -13,7 +13,7 @@ class Sala
         int capacidad;
         Cine* cine;
         map<int, Funcion*> funciones;
-        bool ocupado[24];
+        bool ocupado[31][24];
 
     public:
         int getID();
@@ -28,8 +28,9 @@ class Sala
         bool tieneFuncion(int id);
         bool perteneceA(Cine* cine);
 
-        void setOcupado(int hora);
-        bool getOcupado(int hora);
+        void setOcupado(int dia,int hora);
+        bool getOcupado(int dia,int hora);
+        void setOcupadolibre(int dia,int hora);
 
         bool isEqual(Sala* sala);
         string toString();

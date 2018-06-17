@@ -51,7 +51,7 @@
         /*  PELICULA */
         bool Sistema::altaFuncion(float precioEntrada, DtFecha fecha, int idSala, int idCine, string tituloPelicula){
             Sala* sala = this->cines->find(idCine)->getSala(idSala);
-            if (sala->getOcupado(fecha.getHora()) == false){
+            if (sala->getOcupado(fecha.getDia(),fecha.getHora()) == false){
                 Pelicula* pelicula = this->peliculas->find(tituloPelicula);
                 Funcion* fnueva = new Funcion(precioEntrada, fecha, sala, pelicula);
                 this->funciones->add(fnueva);
@@ -92,30 +92,23 @@
         }
         bool Sistema::eliminarPelicula(string titulo){
             if(peliculas->isMember(titulo)){
-                //aca tengo un puntero al objeto
                 Pelicula* pelicula = peliculas->find(titulo);
                 map<int,Funcion*> funciones = pelicula->listarFunciones();
-
-                //cout << funciones.size() << "CANMTIDAD" << endl;
-
                 std::map<int, Funcion*>::iterator it = funciones.begin();
-
-                while (it != funciones.end())
-                {
+                while (it != funciones.end()){
                   Funcion* funcion = it->second;
                   usuarios->beginIterator();
-
                   while(usuarios->getElement() != NULL){
                       Usuario* u = usuarios->getElement();
-                        int idF = funcion->getID();
-                        bool k = u->tieneReservaFuncion(idF);
+                      int idF = funcion->getID();
+                      bool k = u->tieneReservaFuncion(idF);
                       if(k){
                           usuarios->getElement()->eliminarReservaConFuncion(funcion->getID());
                       };
                       usuarios->next();
                   }
-
                   Sala *sala = funcion->getSala();
+                  sala->setOcupadolibre(funcion->getFecha().getDia(),funcion->getFecha().getHora());
                   if (sala->tieneFuncion(funcion->getID())){
                       sala->quitarFuncion(funcion);
                   }
@@ -125,10 +118,8 @@
                   it++;
                 }
                 delete pelicula;
-
                 return this->peliculas->remove(titulo);
             }
-
             else return false;
         };
         /* USUARIO */
@@ -246,14 +237,8 @@
             map<int,Funcion*>::iterator it = fs.begin();
             ListaDt<int,DtFuncion> dt;
             DtFecha factual = this->getFechaActual();
-            cout << "Fecha actual \n";
-            cout << factual.toString();
-
             while (it != fs.end()){
-                DtFecha ffuncion = it->second->getFecha();
-               // DtFecha ffuncion = this->funciones->getElement()->getFecha();
-               cout << "Fecha funcion \n";
-               cout << ffuncion.toString();
+               DtFecha ffuncion = it->second->getFecha();
                if (factual < ffuncion){
                     if (it->second->getSala()->esDeCine(idCine)){
                         dt.add(it->second->getDt());

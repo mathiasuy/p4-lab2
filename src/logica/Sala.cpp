@@ -42,13 +42,18 @@ DtSala Sala::getDt(){
     return DtSala(this->getID(),this->getCapacidad(), cine->getDt());
 };
 
-void Sala::setOcupado(int hora){
-    this->ocupado[hora] = true;
+void Sala::setOcupado(int dia,int hora){
+    this->ocupado[dia][hora] = true;
+};
+
+void Sala::setOcupadolibre(int dia,int hora){
+    this->ocupado[dia][hora] = false;
+    this->ocupado[dia][hora+1] = false;
 };
 
 
-bool Sala::getOcupado(int hora){
-    return this->ocupado[hora];
+bool Sala::getOcupado(int dia, int hora){
+    return this->ocupado[dia][hora];
 };
 
 
@@ -75,7 +80,7 @@ Sala::Sala(int id, int capacidad, Cine* cine){
     //creo map de punteros
     std::map<int, Funcion*> mymap;
     this->funciones = mymap;
-    this->ocupado[24] = false;
+    this->ocupado[31][24] = false;
 };
 
 Sala::~Sala(){};

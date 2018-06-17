@@ -59,8 +59,8 @@ Funcion::Funcion(float precioEntrada, DtFecha fecha, Sala* sala , Pelicula *peli
     this->setPelicula(pelicula);
     this->setSala(sala);
 
-    this->sala->setOcupado(fecha.getHora());
-    this->sala->setOcupado(fecha.getHora()+1);
+    this->sala->setOcupado(fecha.getDia(),fecha.getHora());
+    this->sala->setOcupado(fecha.getDia(),fecha.getHora()+1);
 };
 
 int Funcion::getAsientosReservados(){
