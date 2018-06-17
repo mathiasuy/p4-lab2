@@ -143,9 +143,9 @@ void imprimirComentarios(ListaDt<int,DtComentario> lc, int indice, int esRespues
 int main()
 {
     int opcion;
-    nickName = "ale_ulises";
-    tipoUsuario = 2;
-    horaFijada = true;
+//    nickName = "ale_ulises";
+ //   tipoUsuario = 2;
+    horaFijada = false;
 
     do
     {
