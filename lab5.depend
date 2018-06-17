@@ -3279,7 +3279,7 @@
 	"../include/Utils.h"
 	<string>
 
-1529196613 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/main.cpp
+1529248043 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/main.cpp
 	"include/ISistema.h"
 	"include/Factory.h"
 	<iostream>
@@ -3567,7 +3567,7 @@
 	"../../include/logica/Cine.h"
 	<iostream>
 
-1529195224 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Sistema.cpp
+1529197660 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Sistema.cpp
 	"../../include/logica/Sistema.h"
 
 1528808755 source:/ens/home01/g/gonzalo.rivero/Desktop/lab1/src/logica/Tarjeta.cpp

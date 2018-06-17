@@ -202,8 +202,7 @@
             DtFecha factual = this->getFechaActual();
             while (this->funciones->getElement() != NULL){
                 DtFecha ffuncion = this->funciones->getElement()->getFecha();
-
-;               if (factual < ffuncion){
+                if (factual < ffuncion){
                    cout << this->funciones->getElement()->getDt().toString();
                    dt.add(this->funciones->getElement()->getDt());
                    this->funciones->next();

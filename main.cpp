@@ -187,10 +187,11 @@ int main()
                             cout << "\nVer lista de cines con esa pelicula? (1-Si/ 2-No)"<<endl;
                             int e;
                             cin >> e;
-                            while(e != 1 && e!= 2){
-                                cout << "Ingrese una opcion valida: "<<endl;
+                        while(e != 1 && e!= 2){
+                              cout << "Ingrese una opcion valida: \n";
                                 cin >> e;
-                            }
+                           }
+//                            if (cines.size() > 0){
                             if (e==1){
                                 ListaDt<int,DtCine> cines = interface->listarCines(titulo);
                                 cout << "Cantidad de Cines encontradas: " << cines.size() << endl;
@@ -201,20 +202,20 @@ int main()
                                 int idCine;
                                 cin >> idCine;
                                 while(idCine < 1 || idCine > cines.size()){
-                                    cout << "Ingrese una opcion valida: "<<endl;
+                                    cout << "Ingrese una opcion valida: \n";
                                     cin >> idCine;
-                                    }
+                                }
                                 cout << "Listar funciones para ese cine?: (1- Si/ 2- No)"<<endl;
                                 cin >> e;
                                 while(e != 1 && e!= 2){
-                                cout << "Ingrese una opcion valida: "<<endl;
+                                cout << "Ingrese una opcion valida: \n";
                                 cin >> e;
                             }
                                 if (e == 1){
                                     DtFecha f = interface->getFechaActual();
                                    // DtFecha f = DtFecha(12,6,2019,0,0);
                                     ListaDt<int,DtFuncion> l = interface->listarFunciones(idCine,titulo,f);
-                                    if ( l.size() != 0){
+                                    if ( l.size() > 0){
                                         cout << "Cantidad de Funciones encontradas: " << l.size() << endl;
                                         cout << "------------- " << endl;
                                         cout << l.toString();
@@ -300,7 +301,6 @@ int main()
             {
                 cout << "/************ CREAR RESERVA ************/ \n" <<endl;
 //CREAR RESERVA
-
                 int b = 1;
                 while(b == 1){
                     //VARIABLES
@@ -328,7 +328,7 @@ int main()
                         cout << "1- Si." <<endl;
                         cout << "2- No." <<endl;
                         cin >> k;
-                         while(k != 1 && k!= 2){
+                        while(k != 1 && k!= 2){
                                 cout << "Ingrese una opcion valida: "<<endl;
                                 cin >> k;
                             }
@@ -337,20 +337,22 @@ int main()
                             cout << interface->listarCines(titulo).toString();
                             cout << "0- Salir"<<endl;
                             cin >> e;
-                             while(e <0  || e> cines.size()){
+                            while(e <0  || e> interface->listarCines(titulo).size()){
                                 cout << "Ingrese una opcion valida: "<<endl;
                                 cin >> e;
                             }
                             if (e != 0){
                                 DtFecha f = interface->getFechaActual();
                                 cout << "Seleccione la funcion que desea reservar: "<<endl;
+
                                 cout <<  interface->listarFunciones(e,titulo,f).toString();
+
                                 cout << "0- Salir."<<endl;
                                 cin >> func;
                                 while(func <0  || func> interface->listarFunciones(e,titulo,f).size()){
-                                cout << "Ingrese una opcion valida: "<<endl;
-                                cin >> e;
-                            }
+                                    cout << "Ingrese una opcion valida: "<<endl;
+                                    cin >> e;
+                                }
                                 if(func!=0){
                                     //AHORA CUANTOS ASIENTOS QUIERE
                                     cout << "Seleccione la cantidad de asientos que desea reservar: " <<endl;
@@ -361,16 +363,16 @@ int main()
                                     cout << "2- Debito." <<endl;
                                     cin >> tipotar;
                                      while(tipotar != 1 && tipotar != 2){
-                                cout << "Ingrese una opcion valida: "<<endl;
-                                cin >> tipotar;
-                                }
+                                        cout << "Ingrese una opcion valida: "<<endl;
+                                        cin >> tipotar;
+                                    }
                                     if(tipotar == 2){
                                         cout << "Ingrese el nombre del banco que la emite: "<<endl;
                                         cin >> nombanc;
-                                         while(nombanc == ""){
-                                cout << "Ingrese una opcion valida: "<<endl;
-                                cin >> nombanc;
-                            }
+                                        while(nombanc == ""){
+                                            cout << "Ingrese una opcion valida: "<<endl;
+                                            cin >> nombanc;
+                                        }
                                     }else{
                                         while(cantasien > 2){
                                             cout << "No puede reservar mas de 2 asientos, por favor introduzca de nuevo la cantidad de asientos:"<<endl;
@@ -379,15 +381,14 @@ int main()
                                         cout << "Ingrese el nombre de la financiera que la emite: "<<endl;
                                         cin >> nomfin;
                                         while(nomfin == ""){
-                                cout << "Ingrese una opcion valida: "<<endl;
-                                cin >> nomfin;
-                            }
+                                            cout << "Ingrese una opcion valida: "<<endl;
+                                            cin >> nomfin;
+                                        }
                                     }
                                     float descuento = 1;
-                                            if(nomfin == "OCA") {
-                                                descuento = interface->getDescuento(nomfin);
-                                            }
-
+                                    if(nomfin == "OCA") {
+                                       descuento = interface->getDescuento(nomfin);
+                                    }
                                     int monto;
                                    //COMO OBTENGO EL PRECIO DE LA ENTRADA???
                                     monto =  cantasien*555;
@@ -397,15 +398,14 @@ int main()
                                     cout <<"2- No."<<endl;
                                     cin >> confres;
                                     while(confres != 1 && confres != 2){
-                                cout << "Ingrese una opcion valida: "<<endl;
-                                cin >> confres;
-                            }
+                                        cout << "Ingrese una opcion valida: "<<endl;
+                                        cin >> confres;
+                                    }
                                     if(confres == 1){
                                         bool res;//DEVUELVE SI SE REALIZO LA RESERVA O NO
                                         //DEBITO
                                         if(tipotar == 2){
                                             ListaDt<int,DtFuncion>  a = interface->listarFunciones(e,titulo,f);
-                                            //a[e].getPrecio();
                                             res=  interface->crearReserva(nickName, cantasien, func, nombanc, monto);
                                         }else {/* tipotar==2 */
                                             res=  interface->crearReserva(nickName, cantasien, func, nomfin,descuento,monto);
@@ -415,12 +415,6 @@ int main()
                                             cout << "¿Quiere realizar otra reserva para otra pelicula?"<<endl;
                                             cout << "1- Si."<<endl;
                                             cout << "2- No."<<endl;
-                            
-                                            /*int b;
-                                            cin >>b;
-                                            if(b == 2){
-                                             ciclo = 0;
-                                             }*/
                                         }else{
                                             cout << "No hay asientos disponibles para esta funcion."<<endl;
                                             cout << "¿Quiere realizar otra reserva para otra pelicula?"<<endl;
@@ -429,19 +423,18 @@ int main()
                                         }
                                         cin >>b;
                                         while(b != 1 && b != 2){
-                                cout << "Ingrese una opcion valida: "<<endl;
-                                cin >>b;
-                                    }//confres
-                                }//if func!=0
-                            }//if e!=0
-                        }//if k==1
-                    //if titulo
-                    }else
-                       b = 2; //el usuario quiere salir
-                }//while
-
-            };//case
-
+                                            cout << "Ingrese una opcion valida: "<<endl;
+                                            cin >>b;
+                                        }//confres
+                                    }//if func!=0
+                                }//if e!=0
+                            }//if k==1
+                        //if titulo
+                        }else
+                        b = 2; //el usuario quiere salir
+                    }//while
+                    }
+                };//case
             break;
         /*****************************************************************/
         /**********          Listar Reservas   *************/
@@ -733,12 +726,10 @@ int main()
                 cout <<"2- No."<<endl;
                 int res;
                 cin >> res;
-                while (res != 1 && res != 2)
-                {
+                while (res != 1 && res != 2){
                     cin >> res;
                 }
-                if(res == 1)
-                {
+                if(res == 1){
                     cout <<((interface->eliminarPelicula(p.getTitulo()))?"La pelicula se elimino con exito.":"No se pudo eliminar")<<endl;
                 }
             };
