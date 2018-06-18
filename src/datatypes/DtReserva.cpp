@@ -40,7 +40,8 @@ string DtReserva::toString(){
     + "Fecha de funcion: " +this->funcion.getFecha().toString() + " | "
     + "Asientos: " + Utils::aString(this->getCantAsientos()) +" | "
     + this->tarjeta.toString() + " | " + "Tipo tarjeta: "+ TipoT +" | "
-    + "Cine: "; // + this->funcion->getSala()->getCine().getID();
+    + "Cine: "+ Utils::aString(this->funcion.getSala().getCine().getID());
+    // + this->funcion->getSala()->getCine().getID();
 }
 DtReserva::~DtReserva()
 {
