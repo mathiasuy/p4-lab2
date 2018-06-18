@@ -520,6 +520,18 @@ int main()
                 cout << "Ingrese el nombre de la película que desea puntuar: "<<endl;
                 std::cin.ignore();
                 std::getline(cin,nomPelicula);
+                       peliculas.start();
+                bool encontre = false;
+                while((!encontre) && peliculas.end())
+                {
+                    if((peliculas.getElement()).getTitulo() == nomPelicula){
+                        encontre = true;
+                    }
+                    peliculas.next();
+                }
+                
+                if(encontre && nomPeliculas != ""){
+                
                 //DtPelicula p = peliculas[nomPelicula];
                 if (interface->getPuntajePelicula(nickName, nomPelicula) != -1)
                 {
@@ -551,7 +563,7 @@ int main()
                         }
                     interface->puntuarPelicula(nickName, nomPelicula, puntajeNuevo);
                 }      //END ELSE
-
+                }
             }; //END CASO DE USO
             break;
 
@@ -622,6 +634,17 @@ int main()
                 cout << "Ingrese el nombre de la película que desea comentar: ";
                 std::cin.ignore();
                 std::getline(cin,nomPelicula);
+                peliculas.start();
+                bool encontre = false;
+                while((!encontre) && peliculas.end())
+                {
+                    if((peliculas.getElement()).getTitulo() == nomPelicula){
+                        encontre = true;
+                    }
+                    peliculas.next();
+                }
+                
+                if(encontre && nomPeliculas!= ""){
                 do
                 {
                     ListaDt<int,DtComentario> comentarios = interface->listarComentarios(nomPelicula);
@@ -647,7 +670,7 @@ int main()
                     }
                 }
                 while (respuesta != 3);
-
+                }
 
 
 
@@ -721,6 +744,16 @@ int main()
                 cout << "Escriba el titulo de la pelicula donde desea agregar una funcion:" << endl;
                 std::cin.ignore();
                 std::getline(cin,titulo);
+                peliculas.start();
+                bool encontre = false;
+                while((!encontre) && peliculas.end())
+                {
+                    if((peliculas.getElement()).getTitulo() == nomPelicula){
+                        encontre = true;
+                    }
+                    peliculas.next();
+                }
+                if(encontre && titulo != ""){
                 //Listar cines con esa pelicula
                 ListaDt<int,DtCine> cines = interface->listarCines();
                 cout << cines.toString();
@@ -758,7 +791,7 @@ int main()
                     cout << "*****La funcion no se pudo agregar, sala ocupada.*****" << endl;
                     readKey();
                 }
-
+                }
             };
             break;
         /*****************************************************************/
@@ -776,6 +809,16 @@ int main()
                 cout << "Escriba el titulo de la pelicula que desea eliminar:" << endl;
                 std::cin.ignore();
                 std::getline(cin,titulo);
+                        peliculas.start();
+                bool encontre = false;
+                while((!encontre) && peliculas.end())
+                {
+                    if((peliculas.getElement()).getTitulo() == nomPelicula){
+                        encontre = true;
+                    }
+                    peliculas.next();
+                }
+                if(encontre && titulo != ""){
                 DtPelicula p = peliculas[titulo];
                 cout << "¿Seguro que desea eliminar " << p.getTitulo() <<"?" <<endl;
                 cout <<"1- Si."<<endl;
@@ -788,6 +831,7 @@ int main()
                 }
                 if(res == 1){
                     cout <<((interface->eliminarPelicula(p.getTitulo()))?"La pelicula se elimino con exito.":"No se pudo eliminar")<<endl;
+                }
                 }
             };
             break;
