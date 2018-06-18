@@ -145,7 +145,7 @@ int main()
 {
     int opcion;
     nickName = "ale_ulises";
-    tipoUsuario = 1;
+    tipoUsuario = 2;
     horaFijada = true;
 
     do
@@ -352,11 +352,11 @@ int main()
 
                     ListaDt<string, DtPelicula> peliculas = interface->listarPeliculas();
                     cout << peliculas.toString();
-                    cout << "Escriba el titulo de la pelicula que desea ver:  (0 para cancelar)"  <<endl;
+                     cout << "Escriba el titulo de la pelicula que desea ver (vacio para cancelar):" <<endl;
                     std::cin.ignore();
                     getline (cin, titulo);
 
-                     peliculas.start();
+                peliculas.start();
                 bool encontre = false;
                 while((!encontre) && peliculas.end())
                 {
@@ -369,7 +369,7 @@ int main()
 
 
                     // Si el usuario quiere cancelar, que aprete Enter (string vacio)
-                    if (encontre && titulo != "0"){
+                    if (encontre && titulo != ""){
                         DtPelicula p = peliculas[titulo];
                         cout << "Poster: " << p.getPoster() << endl;
                         cout << "Sinopsis: " << p.getSinopsis() << endl;
@@ -386,20 +386,42 @@ int main()
                             cout << interface->listarCines(titulo).toString();
                             cout << "0- Salir"<<endl;
                             cin >> e;
-                            while(e <0  || e> interface->listarCines(titulo).size()){
-                                cout << "Ingrese una opcion valida: \n";
-                                cin >> e;
-                            }
-                            if (e != 0){
+
+                       /* //ACA TENGO QUE VER EL ID NO LA POSICION
+                        ListaDt<int,DtCine> cines = interface->listarCines();
+                        encontre = false;
+                        while((!encontre) && cines.end())
+                {
+                    if((cines.getElement()).getID() == e){
+                        encontre = true;
+                    }
+                    cines.next();
+                }
+                    */
+
+
+                            if( e!= 0){
+
+
                                 DtFecha f = interface->getFechaActual();
                                 cout << "Seleccione la funcion que desea reservar: "<<endl;
                                 cout <<  interface->listarFunciones(e,titulo,f).toString();
                                 cout << "0- Salir."<<endl;
-                                cin >> func;
-                                while(func <0  || func> interface->listarFunciones(e,titulo,f).size()){
-                                    cout << "Ingrese una opcion valida: \n";
-                                    cin >> e;
-                                }
+
+                             cin >> func;
+
+                          /*  ListaDt<int,DtCine> funcion = interface->listarCines();
+                        encontre = false;
+                        while((!encontre) && funcion.end())
+                {
+                    if((funcion.getElement()).getID() == func){
+                        encontre = true;
+                    }
+                    funcion.next();
+                }
+               */
+
+
                                 if(func!=0){
                                     //AHORA CUANTOS ASIENTOS QUIERE
                                     cout << "Seleccione la cantidad de asientos que desea reservar: " <<endl;
@@ -480,6 +502,7 @@ int main()
                         }else
                         b = 2; //el usuario quiere salir
                     }//while
+                    else b=0;
                     }
                 };//case
             break;
@@ -529,9 +552,9 @@ int main()
                     }
                     peliculas.next();
                 }
-                
-                if(encontre && nomPeliculas != ""){
-                
+
+                if(encontre && nomPelicula != ""){
+
                 //DtPelicula p = peliculas[nomPelicula];
                 if (interface->getPuntajePelicula(nickName, nomPelicula) != -1)
                 {
@@ -643,8 +666,8 @@ int main()
                     }
                     peliculas.next();
                 }
-                
-                if(encontre && nomPeliculas!= ""){
+
+                if(encontre && nomPelicula!= ""){
                 do
                 {
                     ListaDt<int,DtComentario> comentarios = interface->listarComentarios(nomPelicula);
@@ -748,7 +771,7 @@ int main()
                 bool encontre = false;
                 while((!encontre) && peliculas.end())
                 {
-                    if((peliculas.getElement()).getTitulo() == nomPelicula){
+                    if((peliculas.getElement()).getTitulo() == titulo){
                         encontre = true;
                     }
                     peliculas.next();
@@ -813,7 +836,7 @@ int main()
                 bool encontre = false;
                 while((!encontre) && peliculas.end())
                 {
-                    if((peliculas.getElement()).getTitulo() == nomPelicula){
+                    if((peliculas.getElement()).getTitulo() == titulo){
                         encontre = true;
                     }
                     peliculas.next();
