@@ -143,10 +143,10 @@ void imprimirComentarios(ListaDt<int,DtComentario> lc, int indice, int esRespues
 
 int main()
 {
-    int opcion;
+    int opcion;/*
     nickName = "ale_ulises";
     tipoUsuario = 2;
-    horaFijada = true;
+    horaFijada = true;*/
 
     do
     {
@@ -385,6 +385,9 @@ int main()
                             cout << "Seleccione un cine:"<<endl;
                             cout << interface->listarCines(titulo).toString();
                             cout << "0- Salir"<<endl;
+
+
+
                             cin >> e;
 
                        /* //ACA TENGO QUE VER EL ID NO LA POSICION
@@ -460,7 +463,27 @@ int main()
                                     }
                                     int monto;
                                    //COMO OBTENGO EL PRECIO DE LA ENTRADA???
-                                    monto =  cantasien*555;
+
+                            ListaDt<int,DtFuncion> x = interface->listarFunciones(e,titulo,f);
+
+
+                            float precio = 0;
+
+                            x.start();
+                          bool encontre1 = false;
+                         while((!encontre1) && x.end())
+                       {
+                         if( ((x.getElement()).getPelicula()).getTitulo() == titulo){
+                         precio = ((x.getElement()).getPrecio());
+                         encontre1 = true;
+                      }
+                       x.next();
+                        }
+
+
+
+
+                                    monto =  cantasien*precio;
                                     cout << "Precio final: " <<  monto  << endl;
                                     cout << "Desea confirmar la reserva?" <<endl;
                                     cout<< "1- Si."<<endl;
